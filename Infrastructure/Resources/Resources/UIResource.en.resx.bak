@@ -1,0 +1,546 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AccountData" xml:space="preserve">
+    <value>Account details</value>
+  </data>
+  <data name="RequestDate" xml:space="preserve">
+    <value>The date of application</value>
+  </data>
+  <data name="ThankYouForParticipaate" xml:space="preserve">
+    <value>Thank you for your opinion of the service</value>
+  </data>
+  <data name="TakeAction" xml:space="preserve">
+    <value>Need to take action</value>
+  </data>
+  <data name="Mobile" xml:space="preserve">
+    <value>Mobile number</value>
+  </data>
+  <data name="MobileMessage" xml:space="preserve">
+    <value>Mobile number must be entered</value>
+  </data>
+  <data name="Nationality" xml:space="preserve">
+    <value>Nationality</value>
+  </data>
+  <data name="NewFirst" xml:space="preserve">
+    <value>Sort newest first</value>
+  </data>
+  <data name="NoThankYou" xml:space="preserve">
+    <value>No Thank You</value>
+  </data>
+  <data name="StartSurvey" xml:space="preserve">
+    <value>Start the survey</value>
+  </data>
+  <data name="OldFirst" xml:space="preserve">
+    <value>Sort oldest first</value>
+  </data>
+  <data name="ParticipateToImprove" xml:space="preserve">
+    <value>Share your opinion to improve the service</value>
+  </data>
+  <data name="Pass" xml:space="preserve">
+    <value>Skip</value>
+  </data>
+  <data name="IdexpireDate" xml:space="preserve">
+    <value>ID expiration date</value>
+  </data>
+  <data name="PersonalData" xml:space="preserve">
+    <value>User data</value>
+  </data>
+  <data name="WriteYourObinion" xml:space="preserve">
+    <value>Write your opinion here</value>
+  </data>
+  <data name="SelectAnswer" xml:space="preserve">
+    <value>Choose the answer</value>
+  </data>
+  <data name="SearchForRequest" xml:space="preserve">
+    <value>Search for orders</value>
+  </data>
+  <data name="SaveTemp" xml:space="preserve">
+    <value>Temporary save</value>
+  </data>
+  <data name="ReSendOTP" xml:space="preserve">
+    <value>Resend confirmation code</value>
+  </data>
+  <data name="RequestSubmit" xml:space="preserve">
+    <value>The request has been submitted successfully</value>
+  </data>
+  <data name="ProfilePageTitle" xml:space="preserve">
+    <value>Profile personly</value>
+  </data>
+  <data name="ProfileSave" xml:space="preserve">
+    <value>Update contact information</value>
+  </data>
+  <data name="RequestOrder" xml:space="preserve">
+    <value>Order orders</value>
+  </data>
+  <data name="RateQuestion" xml:space="preserve">
+    <value>What is your evaluation of the service?</value>
+  </data>
+  <data name="Recived" xml:space="preserve">
+    <value>Received</value>
+  </data>
+  <data name="RequestNumberII" xml:space="preserve">
+    <value>Order number</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="ThankYouForParticipaateMessage" xml:space="preserve">
+    <value>For more effective participation in improving the services of the digital portal, please fill out the opinion survey</value>
+  </data>
+  <data name="Idnumber" xml:space="preserve">
+    <value>ID Number</value>
+  </data>
+  <data name="RequestNumber" xml:space="preserve">
+    <value>The report number</value>
+  </data>
+  <data name="VoteResult" xml:space="preserve">
+    <value>Voting results</value>
+  </data>
+  <data name="ContactData" xml:space="preserve">
+    <value>Contact information</value>
+  </data>
+  <data name="VoteSend" xml:space="preserve">
+    <value>Send vote</value>
+  </data>
+  <data name="BirthDate" xml:space="preserve">
+    <value>Date of Birth</value>
+  </data>
+  <data name="VotePageTitle" xml:space="preserve">
+    <value>Vote</value>
+  </data>
+  <data name="Done" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="EmailMessage" xml:space="preserve">
+    <value>Email must be entered</value>
+  </data>
+  <data name="EnglishFullName" xml:space="preserve">
+    <value>English name</value>
+  </data>
+  <data name="ByStatus" xml:space="preserve">
+    <value>Sort by status</value>
+  </data>
+  <data name="AllRequest" xml:space="preserve">
+    <value>All orders</value>
+  </data>
+  <data name="Video" xml:space="preserve">
+    <value>Intro video</value>
+  </data>
+  <data name="Aggree" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="UnderProcessing" xml:space="preserve">
+    <value>Under the procedure</value>
+  </data>
+  <data name="FullName" xml:space="preserve">
+    <value>User name</value>
+  </data>
+  <data name="ActivationCodeMessage" xml:space="preserve">
+    <value>Verification code must be entered</value>
+  </data>
+  <data name="ActivationCode" xml:space="preserve">
+    <value>Verification Code</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data name="vote" xml:space="preserve">
+    <value>Vote</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Closed</value>
+  </data>
+  <data name="PublicCommunicationsServiceMessage" xml:space="preserve">
+    <value>A government service provided to individuals, companies, government agencies</value>
+  </data>
+  <data name="ServiceProvidersMessageA" xml:space="preserve">
+    <value>A unified platform for electronic services.</value>
+  </data>
+  <data name="TargetAudienceMessage" xml:space="preserve">
+    <value>All consumers of telecommunications services in the country, including individuals, the business sector, and the government sector</value>
+  </data>
+  <data name="CopyRight" xml:space="preserve">
+    <value>All rights reserved © 2021 Communications, Space and Technology Commission</value>
+  </data>
+  <data name="AllServices" xml:space="preserve">
+    <value>All services</value>
+  </data>
+  <data name="ReturnBack" xml:space="preserve">
+    <value>Back to main</value>
+  </data>
+  <data name="BusinessEstablishments" xml:space="preserve">
+    <value>Business establishments</value>
+  </data>
+  <data name="CategoryTypeService" xml:space="preserve">
+    <value>Category and type of service</value>
+  </data>
+  <data name="author" xml:space="preserve">
+    <value>Communications, Space and Technology Commission</value>
+  </data>
+  <data name="keywords" xml:space="preserve">
+    <value>Communications, Space and Technology Commission</value>
+  </data>
+  <data name="Complan" xml:space="preserve">
+    <value>Inquiries and suggestions</value>
+  </data>
+  <data name="ServiceCondetion" xml:space="preserve">
+    <value>Conditions for obtaining the service</value>
+  </data>
+  <data name="PageTitle" xml:space="preserve">
+    <value>Digital Portal - Communications, Space and Technology Commission</value>
+  </data>
+  <data name="LoginToService" xml:space="preserve">
+    <value>Entering the service</value>
+  </data>
+  <data name="FAQ" xml:space="preserve">
+    <value>common questions</value>
+  </data>
+  <data name="GateEntry" xml:space="preserve">
+    <value>Gate Entry</value>
+  </data>
+  <data name="GovernmentsMessageA" xml:space="preserve">
+    <value>Government digital interconnection.</value>
+  </data>
+  <data name="Governments" xml:space="preserve">
+    <value>Governments</value>
+  </data>
+  <data name="HelpCenter" xml:space="preserve">
+    <value>Help Center</value>
+  </data>
+  <data name="PollMoreOption" xml:space="preserve">
+    <value>If you have any suggestions, please mention them</value>
+  </data>
+  <data name="FontSizeBig" xml:space="preserve">
+    <value>Increase font size</value>
+  </data>
+  <data name="IndividualPortal" xml:space="preserve">
+    <value>Individual Portal</value>
+  </data>
+  <data name="IntroVideo" xml:space="preserve">
+    <value>Intro video</value>
+  </data>
+  <data name="ServiceDescription" xml:space="preserve">
+    <value>Introduction to the service</value>
+  </data>
+  <data name="KnowMore" xml:space="preserve">
+    <value>Learn more</value>
+  </data>
+  <data name="PollMorePaceHolder" xml:space="preserve">
+    <value>Please write your suggestions to develop the Authority's electronic services</value>
+  </data>
+  <data name="Privacy" xml:space="preserve">
+    <value>Privacy policy</value>
+  </data>
+  <data name="PublicCommunicationsService" xml:space="preserve">
+    <value>Public Communications Service</value>
+  </data>
+  <data name="PollPageTitle" xml:space="preserve">
+    <value>Poll</value>
+  </data>
+  <data name="Poll" xml:space="preserve">
+    <value>Poll</value>
+  </data>
+  <data name="FontSizeSmall" xml:space="preserve">
+    <value>Reduce font size</value>
+  </data>
+  <data name="RegisterOffshoreFacilityAccount" xml:space="preserve">
+    <value>Register an offshore facility account</value>
+  </data>
+  <data name="FontSizeDefault" xml:space="preserve">
+    <value>Restore default size</value>
+  </data>
+  <data name="SearchForService" xml:space="preserve">
+    <value>Searching for a service...</value>
+  </data>
+  <data name="PollSend" xml:space="preserve">
+    <value>Send a poll</value>
+  </data>
+  <data name="ServiceExecutionTime" xml:space="preserve">
+    <value>Service execution time</value>
+  </data>
+  <data name="ServiceFees" xml:space="preserve">
+    <value>Service fee</value>
+  </data>
+  <data name="PDFFile" xml:space="preserve">
+    <value>Service file (PDF)</value>
+  </data>
+  <data name="PollTitleA" xml:space="preserve">
+    <value>Service Level Evaluation Questionnaire</value>
+  </data>
+  <data name="ServiceProviders" xml:space="preserve">
+    <value>Service Providers</value>
+  </data>
+  <data name="ServiceSteps" xml:space="preserve">
+    <value>Service request steps</value>
+  </data>
+  <data name="Services" xml:space="preserve">
+    <value>Services</value>
+  </data>
+  <data name="BusinessEstablishmentsMessageB" xml:space="preserve">
+    <value>Dedicated services for business establishments provided by the Communications, Space and Technology Commission to open new horizons for investment in the Kingdom.</value>
+  </data>
+  <data name="ServicesForYou" xml:space="preserve">
+    <value>Services designed especially for you...</value>
+  </data>
+  <data name="OnlyFavorits" xml:space="preserve">
+    <value>Show favourites only</value>
+  </data>
+  <data name="StartService" xml:space="preserve">
+    <value>Start service</value>
+  </data>
+  <data name="TermsOfUse" xml:space="preserve">
+    <value>Terms of use</value>
+  </data>
+  <data name="description" xml:space="preserve">
+    <value>The Communications, Space and Technology Commission is the authority responsible for regulating the communications and information technology sector in the Kingdom of Saudi Arabia. The Communications Regulations issued by Cabinet Resolution No. (74) on 5/3/1422 AH and its Executive Regulations issued by Ministerial Resolution No. (11) on 5/17/1423 AH define the legal framework for organizing the sector</value>
+  </data>
+  <data name="GovernmentsMessageB" xml:space="preserve">
+    <value>The e-services portal of the Communications, Space and Technology Commission for e-Government Transactions.</value>
+  </data>
+  <data name="ServiceCondetionMessage" xml:space="preserve">
+    <value>The following recipients should</value>
+  </data>
+  <data name="IndividualPortalMessage" xml:space="preserve">
+    <value>The individuals portal provides a set of services that meet the needs of individuals in the fields of communications and information technology in the Kingdom</value>
+  </data>
+  <data name="PollTitleB" xml:space="preserve">
+    <value>The introduction, which aims to continuously raise the satisfaction of the beneficiaries of the electronic services portal of the Communications, Space and Technology Commission</value>
+  </data>
+  <data name="ServiceDocument" xml:space="preserve">
+    <value>The required documents</value>
+  </data>
+  <data name="TargetAudience" xml:space="preserve">
+    <value>The target audience</value>
+  </data>
+  <data name="no_poll" xml:space="preserve">
+    <value>There are no surveys at the moment</value>
+  </data>
+  <data name="ServiceProvidersMessageB" xml:space="preserve">
+    <value>To achieve interconnection between service providers and the Communications, Space and Technology Commission quickly and securely.</value>
+  </data>
+  <data name="BusinessEstablishmentsMessageA" xml:space="preserve">
+    <value>Together to grow your business...</value>
+  </data>
+  <data name="ServiceNote" xml:space="preserve">
+    <value>You should know</value>
+  </data>
+  <data name="AccountDataManagement" xml:space="preserve">
+    <value>Account data management</value>
+  </data>
+  <data name="Daleel" xml:space="preserve">
+    <value>Service Guide</value>
+  </data>
+  <data name="ElectronicSevice" xml:space="preserve">
+    <value>Electronic services</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="MyRequests" xml:space="preserve">
+    <value>Follow my orders</value>
+  </data>
+  <data name="NotificationCounts" xml:space="preserve">
+    <value>Number of alerts</value>
+  </data>
+  <data name="ReviewMyRequests" xml:space="preserve">
+    <value>Review my requests</value>
+  </data>
+  <data name="welcome" xml:space="preserve">
+    <value>Welcome</value>
+  </data>
+  <data name="Choosecommunication" xml:space="preserve">
+    <value>Choose the method of communication</value>
+  </data>
+  <data name="ChooseMessage" xml:space="preserve">
+    <value>Choose the message</value>
+  </data>
+  <data name="ChooseTypeQuestion" xml:space="preserve">
+    <value>Choose the type of question</value>
+  </data>
+  <data name="CloseII" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="complaint" xml:space="preserve">
+    <value>Inquiry</value>
+  </data>
+  <data name="Generalization" xml:space="preserve">
+    <value>Generalization</value>
+  </data>
+  <data name="MessageType" xml:space="preserve">
+    <value>Message type</value>
+  </data>
+  <data name="MobileII" xml:space="preserve">
+    <value>Cell phone</value>
+  </data>
+  <data name="Nevershowagain" xml:space="preserve">
+    <value>Never show again</value>
+  </data>
+  <data name="Notice" xml:space="preserve">
+    <value>Notice</value>
+  </data>
+  <data name="Preferredcommunication" xml:space="preserve">
+    <value>Preferred method of communication</value>
+  </data>
+  <data name="SendSuggestion" xml:space="preserve">
+    <value>Send a suggestion or inquiry</value>
+  </data>
+  <data name="Suggestion" xml:space="preserve">
+    <value>Suggestion</value>
+  </data>
+  <data name="Writeyourquestionhere" xml:space="preserve">
+    <value>Write your question here</value>
+  </data>
+  <data name="Yourquestionmaximum" xml:space="preserve">
+    <value>Your question will be answered within 48 hours maximum</value>
+  </data>
+  <data name="favAddMessage" xml:space="preserve">
+    <value>The service has been added to favorite services</value>
+  </data>
+  <data name="favRemoveMessage" xml:space="preserve">
+    <value>The service has been removed from the list of favorite services</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="more" xml:space="preserve">
+    <value>More</value>
+  </data>
+  <data name="Notifications" xml:space="preserve">
+    <value>Notifications</value>
+  </data>
+  <data name="View Request" xml:space="preserve">
+    <value>View Request</value>
+  </data>
+  <data name="AssetsManagement" xml:space="preserve">
+    <value>Assets Management</value>
+  </data>
+  <data name="FoundationAccountDelegation" xml:space="preserve">
+    <value>Account Delegation</value>
+  </data>
+  <data name="FoundationAccountManagement" xml:space="preserve">
+    <value>Account Data Management</value>
+  </data>
+  <data name="RequestsTracking" xml:space="preserve">
+    <value>Requests Tracking</value>
+  </data>
+</root>

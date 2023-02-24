@@ -1,0 +1,63 @@
+﻿@inject IOptions<WebSettings> webSettings
+@using TemplateFw.Domain.Models.Announces
+
+@{
+    Layout = null;
+    int itemNo = Model.FirstItemNo;
+}
+@model PagedList<VwAnnounceFullData>;
+
+<h6 class="card-title-small align-items-center paging-items-info">
+    <i class="fad fa-stream text-muted"></i>&nbsp;
+    عرض البيانات <span id="spItemsCount" class="text-primary">( @(Model.Items.Count()) )</span> عنصر من اجمالي <span id="spTotalCount" class="text-primary">( @(Model.TotalCount ) )</span>
+</h6>
+
+<div class="table-responsive">
+    <table class="table table-responsive-md table-hover">
+        <thead>
+            <tr>
+                <th><strong>#</strong></th>
+                <th><strong>التعميم</strong></th>
+                <th class="text-center"><strong>البوابة</strong></th>
+                <th class="text-center"><strong>الحالة</strong></th>
+                <th class="text-center"><strong> تاريخ الاضافة </strong></th>
+                <th class="text-center"><strong> تفعيل/ ايقاف</strong></th>
+                <th class="text-center"><strong>تعديل</strong></th>
+                <th class="text-center"><strong>حذف</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Items)
+            {
+                <tr data-id="@item.AnnounceId" data-id-encode="@StringCipher.Encrypt(item.AnnounceId.ToString())" data-activation-count="@item.ActivationCount"
+                data-name="@item.Content.SubstringByMax(70)" data-portal-id="@item.PortalId"
+                data-is-default="@item.IsEnabled.ToString().ToLower()" data-to-post='{"id":"@item.AnnounceId"}'>
+                    <td><strong>@(itemNo++)</strong></td>
+                    <td class="td-title"></td>
+                    <td class="text-center"><span class="text-primary"><b>@item.PortalName</b></span></td>
+                    <td class="td-status text-center"></td>
+                    <td class="text-center">
+                         @Html.Raw(item.CreationDate.ConvertToGridDateTime())
+                    </td>
+                    <td class="td-actions text-center"></td>
+                    <td class="td-edit text-center"></td>
+                    <td class="td-delete text-center"></td>
+                </tr>
+            }
+
+            @if (Model.Items.Count() <= 0 || Model == null)
+            {
+                <tr>
+                    <td colspan="8" class="text-center">
+                        @localizer["ThereIsNoData"]
+                    </td>
+                </tr>
+            }
+        </tbody>
+
+
+    </table>
+</div>
+
+@Html.Partial("/Views/Shared/paging.cshtml", Model)
+<script>announceListController.drawAllRowsActions();</script>

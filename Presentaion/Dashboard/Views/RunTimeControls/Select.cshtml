@@ -1,0 +1,43 @@
+﻿@using System;
+@using System.Collections.Generic;
+@using System.Linq;
+@using System.Web;
+@using TemplateFw.Shared.Dto;
+@model TemplateFw.Shared.Dto.RunTimeSelectControl;
+@{
+    var dto = Model;
+    List<StandardLookupDto> options = null;
+    if (dto == null)
+    {
+        dto = new RunTimeSelectControl();
+    }
+    if(!string.IsNullOrEmpty(dto.ApiUrl))
+    {
+        options = ApiHelper.GetFromApi<List<StandardLookupDto>>(dto.ApiUrl);
+      
+    }
+    if (options == null) {
+      options = new List<StandardLookupDto>();
+    }
+
+    if (dto.AddDefaultOption)
+    {
+        options.Insert(0,new StandardLookupDto() { Text = dto.DefaultText, Id = dto.DefaultValue });
+    }
+    var val = dto.Value;
+    string required = (dto.Required)?"required":"";
+    string selected = "";
+    string disabled = "";
+}
+
+<select class="form-control form-select select2"  id="@dto.Id"  name="@dto.Id" @required
+@Html.Raw(dto.AdditionalAttributes)>
+  @if(options!=null && options.Count>0)
+  {
+    foreach(var op in options){
+       selected = (val == op.Id) ? "selected" : "";
+       disabled = (op.Disabled) ? "disabled" : "";
+       @Html.Raw($"<option value=\"{op.Id}\" {selected} {disabled} >{op.Text}</option>")
+    }
+  }
+</select>

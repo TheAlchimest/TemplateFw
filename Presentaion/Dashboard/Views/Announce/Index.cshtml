@@ -1,0 +1,27 @@
+﻿@inject IOptions<WebSettings> webSettings
+@using TemplateFw.Domain.Models.Announces
+
+@{
+    int itemNo = Model.FirstItemNo;
+}
+@model PagedList<VwAnnounceFullData>;
+
+<div class="form-head mb-sm-5 mb-3 d-flex flex-wrap align-items-center">
+    <div class=" mr-auto">
+        <h3 class="font-w600 mb-2">@localizer["Announce"]</h3>
+        <p class="mb-0">@localizer["AnnounceManagement"]</p>
+    </div>
+    <a href="/#!/announce/add" class="btn btn-outline-primary mr-3">
+        <i class="fas fa-layer-plus fa-lg mr-2"></i> اضافة تعميم جديد
+    </a>
+</div>
+
+@Html.Partial("/Views/Shared/_GridFilter.cshtml", 
+new GridFilterDto { Url = "/announce/IndexContent", PageNo = Model.PageNo, HasPortalsFilter = true })
+<div class="card">
+    <div style="visibility:hidden" class="loader-box">جاري التحميل ...</div>
+  
+    <div class="card-body" id="containerBox">
+        @Html.Partial("/Views/Announce/IndexContent.cshtml", Model)
+    </div>
+</div>

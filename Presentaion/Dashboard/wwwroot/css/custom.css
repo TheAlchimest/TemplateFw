@@ -1,0 +1,30 @@
+.swal2-popup,
+.swal2-popup .swal2-styled,
+.swal2-popup .swal2-styled.swal2-confirm,
+.swal2-popup .swal2-styled.swal2-cancel,
+.swal2-container.swal2-center > .swal2-popup {
+	border-radius: var(--border-radius);
+}
+.swal2-popup .swal2-styled.swal2-confirm{
+	background-color: var(--primary);
+}
+.swal2-popup .swal2-styled:focus,
+.swal2-styled.swal2-default-outline:focus,
+.swal2-styled.swal2-confirm:focus,
+.swal2-styled.swal2-cancel:focus{
+	box-shadow: none !important;
+}
+
+.has-error > input {
+	background-color: #fff6f6;
+	border-color: #f5dfdf;
+}
+
+.has-feedback .smk-error-msg {
+	position: inherit;
+	right: 0px;
+	font-size: 12px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	color: rgb(220, 53, 69);
+}

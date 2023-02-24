@@ -1,0 +1,146 @@
+﻿@using TemplateFw.Shared.Domain.Enums
+@inject IOptions<WebSettings> webSettings
+@model TemplateFw.Dtos.FAQ.FaqDto
+
+@{
+    bool isUpdateMode = (Model.FaqId != 0);
+    string isUpdateModeString = isUpdateMode.ToString().ToLower();
+}
+<form method="post" id="frmForm" name="frmForm" action="/Faq/Save" data-is-update-mode="@(isUpdateModeString)">
+    <div class="form-head mb-sm-5 mb-3 d-flex flex-wrap align-items-center ">
+        <div class=" mr-auto">
+            <h3 class="font-w600 mb-2">@localizer["FAQ"]</h3>
+            <p class="mb-0">@localizer["FaqManagement"]</p>
+        </div>
+    </div>
+    <div class="card master-form">
+        <div class="card-header">
+            <h4 class="card-title fs-16 text-primary">
+                <i class="fal fa-hand-pointer fa-lg mr-1"></i>
+                <strong>يرجى تحديد البوابة والخدمة المراد اضافة السؤال لها ...</strong>
+            </h4>
+        </div>
+        <div class="card-body">
+            <input type="hidden" name="FaqId" value="@(Model.FaqId)">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="font-w600 px-4">
+                            البوابة
+                            <small class="text-danger small mx-1">
+                                <i class="fas fa-asterisk fs-10"></i>
+                            </small>
+                        </label>
+                            @await Html.PartialAsync("/Views/RunTimeControls/Select.cshtml", 
+                            new TemplateFw.Shared.Dto.RunTimeSelectControl(){ 
+                                Id="PortalId",
+                                AdditionalAttributes = "",
+                                ApiUrl = webSettings.Value.LookupApiUrl+ "lookup/portals", 
+                                Value = Model.PortalId.ToString(),
+                                DefaultValue="",
+                                DefaultText="اختر البوابة",
+                                AddDefaultOption=(!isUpdateMode)
+                            });
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="font-w600 px-4">الخدمة</label>
+                        <select class="select2 select-dynamic"
+                                id="ServiceId"
+                                name="ServiceId"
+                                data-value="@(Model.ServiceId)"
+                                data-cascade-api-url="@(webSettings.Value.LookupApiUrl)lookup/services"
+                                data-default-val=""
+                                data-default-text="اختر الخدمة"
+                                data-cascade-with="PortalId">
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="font-w600 px-4">السؤال باللغة العربية</label>
+                        <input type="arabictext"
+                               value="@Model.QuestionAr"
+                               class="form-control input-default"
+                               id="QuestionAr"
+                               name="QuestionAr"
+                               required maxlength="500">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="font-w600 px-4">السؤال باللغة الانجليزية</label>
+                        <input type="englishtext"
+                               value="@Model.QuestionEn"
+                               class="form-control input-default"
+                               id="QuestionEn"
+                               name="QuestionEn"
+                               required maxlength="500">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="font-w600 px-4">اجابة السؤال باللغة العربية</label>
+                        <textarea type="arabictext"
+                                  class="form-control input-default py-2"
+                                  data-label="اجابة السؤال باللغة العربية"
+                                  rows="6"
+                                  id="AnswerAr"
+                                  name="AnswerAr"
+                                  placeholder="اجابة السؤال باللغة العربية"
+                                  required maxlength="2000">@Model.AnswerAr</textarea>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="font-w600 px-4">اجابة السؤال باللغة الانجليزية</label>
+                        <textarea type="arabictext"
+                                  class="form-control input-default py-2"
+                                  data-label="اجابة السؤال باللغة الانجليزية"
+                                  rows="6"
+                                  id="AnswerEn"
+                                  name="AnswerEn"
+                                  placeholder="اجابة السؤال باللغة الانجليزية"
+                                  required maxlength="2000">@Model.AnswerEn</textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="text-center">
+        <button type="button" id="Send" class="btn btn-primary font-size-13 font-weight-bold"
+                onclick="saveForm(this,event)"
+                on-sccess-redirect-url="/#!/Faq/"
+                data-is-update-mode="@(isUpdateModeString)">
+            <i class="far fa-lg fa-check"></i> ارسال
+        </button>
+
+
+        <a id="backActionBtn" href="/#!/Faq" class="btn btn-danger mr-3">
+            <i class="fas fa-times fa-lg fa-arrow-left"></i> العودة
+        </a>
+
+    </div>
+</form>
+
+
+<script>
+
+    $("#frmForm :input").change(function () {
+        $("#frmForm").data("changed", true);
+    });
+
+    function saveForm(obj, event) {
+
+        if ($("#frmForm").data("changed") || $("#frmForm").attr("data-is-update-mode") === 'false') {
+            app.form.submit(obj, event)
+        }
+        else {
+            swal.fire("لا يوجد تعديل", "لا يوجد بيانات تم تعديلها", "info");
+            window.location = $("#backActionBtn").attr("href");
+        }
+    }
+</script>

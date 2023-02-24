@@ -1,0 +1,173 @@
+﻿@inject IOptions<WebSettings> webSettings
+@using TemplateFw.Dtos.Dtos.Common;
+@using TemplateFw.Shared.Domain.Enums
+@model TemplateFw.Dtos.Announces.AnnounceResponseDto
+@{
+    TemplateFw.Dtos.Announces.AnnounceResponseDetailDto detail = null;
+    List<LookupDto> languages = ViewBag.Languages;
+    int index = -1;
+    bool isUpdateMode = (Model.Id != 0);
+    string isUpdateModeString = isUpdateMode.ToString().ToLower();
+}
+
+<form method="post" id="frmForm" name="frmForm" action="/Announce/Save" data-is-lingual="True" data-is-update-mode="@(isUpdateModeString)">
+
+    <div class="form-head mb-sm-5 mb-3 d-flex flex-wrap align-items-center ">
+        <div class=" mr-auto">
+            <h3 class="font-w600 mb-2">@localizer["Announce"]</h3>
+            <p class="mb-0">@localizer["AnnounceManagement"]</p>
+        </div>
+    </div>
+
+    @if (Model.Id != 0)
+    {
+        @Html.Partial("/Views/Shared/_ModificationData.cshtml",
+    new ItemModificationDto { CreatedBy = Model.CreatedBy,
+    LastModifiedBy = Model.LastModifiedBy,
+    CreationDate = Model.CreationDate,
+    LastModificationDate = Model.LastModificationDate })
+    }
+
+    <div class="card master-form">
+        <div class="card-header">
+            <h4 class="card-title fs-16 text-primary">
+                <i class="fal fa-hand-pointer fa-lg mr-1"></i>
+                <strong>يرجى تحديد البوابة المراد اضافة التعميم لها ...</strong>
+            </h4>
+        </div>
+        <div class="card-body">
+            <input type="hidden" name="Id" value="@(Model.Id)">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="font-w600 px-4">
+                            البوابة
+                            <small class="text-danger small mx-1">
+                                <i class="fas fa-asterisk fs-10"></i>
+                            </small>
+                        </label>
+                        <select class="select2 select-dynamic"
+                                id="PortalId"
+                                name="PortalId"
+                                required
+                                data-api-url="@(webSettings.Value.LookupApiUrl)lookup/portals"
+                                data-value="@(Model.PortalId)"
+                                smk-error-msg-required="يجب اختيار البوابة">
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+
+                        <div class="form-group">
+                            <label class="font-w600 px-4">
+                                حالة التفعيل
+                                <small class="text-danger small mx-1">
+                                    <i class="fas fa-asterisk fs-10"></i>
+                                </small>
+                            </label>
+                            <select class="select2 select-dynamic"
+                                    id="IsEnabled"
+                                    name="IsEnabled"
+                                    required
+                                    data-value="@(Model.IsEnabled)">
+                                @Html.Raw("<option value=\"false\"" +  ((!Model.IsEnabled)?"selected":"")+">غير مفعل</option>")
+                                @Html.Raw("<option value=\"true\"" +  ((Model.IsEnabled)?"selected":"")+">مفعل</option>")
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title fs-16 text-primary">
+                <i class="las la-pen-fancy fa-lg mr-1"></i>
+                <strong>يرجى ادخال بيانات التعميم  ...</strong>
+            </h4>
+        </div>
+        <div class="card-body row detail-form ">
+
+            @foreach (var lang in languages)
+            {
+                ++index;
+                detail = Model.AnnounceDetails.Where(e => e.LanguageId == lang.Id).FirstOrDefault();
+                if (detail == null)
+                {
+                    detail = new TemplateFw.Dtos.Announces.AnnounceResponseDetailDto();
+                }
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="nav flex-column nav-pills mb-3">
+                                <span class="nav-link active show rounded-left">
+                                    <i class="fal fa-globe"></i>&nbsp; @lang.Text
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="tab-content">
+                                <div id="v-pills-arabic" class="tab-pane fade active show">
+                                    <input type="hidden" name="AnnounceDetails[@(index)].LanguageId" value="@(lang.Id)">
+                                    <div class="form-group">
+                                        <label class="font-w600 px-2 fs-14"
+                                           for="AnnounceDetails_@(index)_Content">
+                                            الرسالة
+                                            <small class="text-danger small mx-1">
+                                                <i class="fas fa-asterisk fs-10"></i>
+                                            </small>
+                                        </label>
+                                        <input type="@((lang.Id == (int)EnumLanguage.Arabic)?"arabictext":"englishtext")" value="@detail.Content"
+                                           class="form-control input-default"
+                                           id="AnnounceDetails_@(index)_Content"
+                                           name="AnnounceDetails[@(index)].Content"
+                                           required maxlength="2000"
+                                           >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="my-5"></div>
+                </div>
+            }
+        </div>
+    </div>
+    <div class="text-center">
+        <button type="button" id="Send"
+                class="btn btn-primary font-size-13 font-weight-bold"
+                onclick="saveForm(this,event)"
+                on-sccess-redirect-url="/#!/Announce/"
+                data-is-update-mode="@(isUpdateModeString)">
+            <i class="far fa-lg fa-check"></i> ارسال
+        </button>
+        <a id="backActionBtn" href="/#!/Announce" class="btn btn-danger mr-3">
+            <i class="fas fa-times fa-lg fa-arrow-left"></i> العودة
+        </a>
+
+    </div>
+</form>
+
+
+<script>
+    $("#frmForm :input").change(function() {
+       $("#frmForm").data("changed",true);
+    });
+
+    function saveForm(obj,event){
+
+        if ($("#frmForm").data("changed") || $("#frmForm").attr("data-is-update-mode") === 'false')  {
+            app.form.submit(obj,event)
+        }
+        else
+        {
+            swal.fire("لا يوجد تعديل", "لا يوجد بيانات تم تعديلها", "info");
+            window.location = $("#backActionBtn").attr("href");
+        }
+
+    }
+</script>

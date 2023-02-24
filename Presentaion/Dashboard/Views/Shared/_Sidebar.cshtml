@@ -1,0 +1,46 @@
+﻿@using TemplateFw.Dashboard.Auth;
+<div class="deznav">
+    <div class="deznav-scroll">
+        <ul class="metismenu" id="menu">
+            <li>
+                <a href="/" class="ai-icon" aria-expanded="false">
+                    <img src="~/images/icons/dashboard.svg" width="48" class="icon-img" />
+                    <span class="nav-text">الاحصائيات العامة</span>
+                </a>
+            </li>
+
+
+            
+            @if (User.IsInRole(RoleProvider.FAQS_ADMIN))
+            {
+                <li>
+                    <a href="#!/faq/" class="ai-icon" aria-expanded="false">
+                        <img src="~/images/icons/file-question-alt.svg" width="48" class="icon-img" />
+                        <span class="nav-text">الأسئلة الشائعة</span>
+                    </a>
+                </li>
+            }
+
+
+            @if (User.IsInRole(RoleProvider.ANNOUNCING_ADMIN))
+            {
+                <li>
+                    <a href="#!/Announce/" class="ai-icon" aria-expanded="false">
+                        <img src="~/images/icons/megaphone.svg" width="48" class="icon-img" />
+                        <span class="nav-text">التعاميم</span>
+                    </a>
+                </li>
+            }
+
+           @* @if (User.IsInRole(RoleProvider.SUPER_ADMIN))
+            {
+                <li>
+                    <a href="#!/Identity" class="ai-icon" aria-expanded="false">
+                        <img src="~/images/icons/setting.svg" width="48" class="icon-img" />
+                        <span class="nav-text">إدارة مديري النظام</span>
+                    </a>
+                </li>
+            }*@
+        </ul>
+    </div>
+</div>

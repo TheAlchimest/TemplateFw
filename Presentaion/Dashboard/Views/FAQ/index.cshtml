@@ -1,0 +1,24 @@
+﻿@using TemplateFw.Dtos.FAQ
+@inject IOptions<WebSettings> webSettings
+@model PagedList<FaqInfoDto>
+@{
+    int itemNo = Model.FirstItemNo;
+}
+<div class="form-head mb-sm-5 mb-3 d-flex flex-wrap align-items-center">
+    <div class=" mr-auto">
+        <h3 class="font-w600 mb-2">ادارة الأسئلة الشائعة</h3>
+        <p class="mb-0">ادارة بيانات الأسئلة الشائعة للخدمات</p>
+    </div>
+    <a href="/#!/faq/add" class="btn btn-outline-primary mr-3">
+        <i class="fas fa-layer-plus fa-lg mr-2"></i> اضافة سؤال جديد
+    </a>
+</div>
+
+@Html.Partial("/Views/Shared/_GridFilter.cshtml",
+       new GridFilterDto { Url = "/faq/IndexContent", PageNo = Model.PageNo, HasPortalsFilter = true, HasServicesFilter = true })
+<div class="card">
+    <div style="visibility:hidden" class="loader-box">جاري التحميل ...</div>
+    <div class="card-body" id="containerBox">
+        @Html.Partial("/Views/Faq/IndexContent.cshtml", Model)
+    </div>
+</div>
