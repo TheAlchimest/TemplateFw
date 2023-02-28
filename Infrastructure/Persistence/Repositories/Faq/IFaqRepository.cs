@@ -15,6 +15,7 @@ namespace TemplateFw.Persistence.Repositories
         Task<Faq> GetOneByIdAsync(int id);
         Task<FaqInfoDto> GetInfoByIdAsync(int id, EnumLanguage lang = EnumLanguage.Arabic);
         Task<PagedList<FaqInfoDto>> GetPagedListAsync(FaqGridFilter filter);
+        Task<PagedList<FaqInfoDto>> GetPageByPageAsync(FaqGridFilter filter);
         Task<bool> CreateAsync(Faq entity);
         Task<bool> UpdateAsync(FaqDto dto);
     }

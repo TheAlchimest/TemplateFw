@@ -102,5 +102,11 @@ namespace TemplateFw.Application.Services.FAQ
         }
         #endregion
 
+        #region GetPageByPageAsync
+        public async Task<PagedList<FaqInfoDto>> GetPageByPageAsync(FaqGridFilter filter)
+        {
+            return await _repository.GetPageByPageAsync(filter);
+        }
+        #endregion
     }
 }

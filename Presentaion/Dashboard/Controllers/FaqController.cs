@@ -14,6 +14,7 @@ using TemplateFw.Shared.Helpers;
 using TemplateFw.Shared.Domain.Enums;
 using Urls = Dashboard.Common.WebClientHelpers.InternalApiDictionary.FaqsUrls;
 using LookupsUrls = Dashboard.Common.WebClientHelpers.InternalApiDictionary.LookupsUrls;
+using Azure;
 
 namespace TemplateFw.Dashboard.Controllers
 {
@@ -45,17 +46,8 @@ namespace TemplateFw.Dashboard.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            try
-            {
-                FaqGridFilter filter = new FaqGridFilter();
-                var apiResult = await _api.PostAsync<GenericApiResponse<PagedList<FaqInfoDto>>>(Urls.GetAll, filter);
-                return ReturnViewResponse(apiResult, OperationTypes.GetContent);
-            }
-            catch (System.Exception ex)
-            {
-                return ReturnViewResponse(ex, OperationTypes.GetContent);
-            }
-
+            FaqGridFilter filter = new FaqGridFilter();
+            return await ReturnViewResponse<GenericApiResponse<PagedList<FaqInfoDto>>>(_api, Urls.GetPaged, filter, OperationTypes.GetContent);
         }
         #endregion
 
@@ -64,16 +56,7 @@ namespace TemplateFw.Dashboard.Controllers
         [HttpGet]
         public async Task<IActionResult> IndexContent([FromQuery] GridFilter filter)
         {
-            try
-            {
-                string apiUrl = Urls.GetAll;
-                var apiResult = await _api.PostAsync<GenericApiResponse<PagedList<FaqInfoDto>>>(apiUrl, filter);
-                return ReturnViewResponse(apiResult, OperationTypes.GetContent);
-            }
-            catch (System.Exception ex)
-            {
-                return ReturnViewResponse(ex, OperationTypes.GetContent);
-            }
+            return await ReturnViewResponse<GenericApiResponse<PagedList<FaqInfoDto>>>(_api, Urls.GetPaged, filter, OperationTypes.GetContent);
         }
         #endregion
 

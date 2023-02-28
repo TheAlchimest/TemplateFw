@@ -77,6 +77,16 @@ namespace TemplateFw.DashboardApi.Controllers
         [ProducesResponseType(201)]
         [ProducesResponseType(400)]
         [ProducesResponseType(500)]
+        [Route("get-paged")]
+        public async Task<GenericApiResponse<PagedList<FaqInfoDto>>> GetPagedList(FaqGridFilter filter)
+        {
+            return await GenericApiResponse(() => _faqService.GetPageByPageAsync(filter), OperationTypes.GetList);
+        }
+
+        [HttpPost]
+        [ProducesResponseType(201)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(500)]
         [Route("delete/{id}")]
         public async Task<ApiResponse> Delete(int id)
         {

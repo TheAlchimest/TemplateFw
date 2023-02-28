@@ -30,6 +30,8 @@ namespace Dashboard.Common.WebClientHelpers
             public const string Save = "Faq/Save";
             public const string Delete = "Faq/Delete/{0}";
             public const string GetAll = "Faq/getall";
+            public const string GetPaged = "Faq/get-paged";
+            
             public const string GetViewAll = "Faq/getallview";
             public const string GetOne = "Faq/getone/{0}";
             public const string Info = "Faq/info/{0}";

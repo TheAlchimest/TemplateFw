@@ -26,10 +26,10 @@
     },
     applyPlugins: function ($content) {
         let ctrl = this;
+        app.fireEngine();
         $content.find("select.select2").select2();
         ctrl.bindDateTime();
         ctrl.handleMenuSelection();
-        app.fireEngine();
     },
     date2str: function (x, y) {
         let z = {

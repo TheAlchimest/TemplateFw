@@ -7,6 +7,11 @@ using TemplateFw.Shared.Domain.GenericResponse;
 using TemplateFw.Shared.Domain.Enums;
 using TemplateFw.Dashboard.Extensions;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
+using static TemplateFw.Utilities.FbUrls;
+using TemplateFw.Dtos.Common;
+using TemplateFw.Dtos.FAQ;
+using TemplateFw.Shared.Dtos.Collections;
+using Dashboard.Common.WebClientHelpers;
 
 namespace TemplateFw.Dashboard.Controllers
 {
@@ -50,6 +55,18 @@ namespace TemplateFw.Dashboard.Controllers
 
 
         #region  ApiErrorForViewResult
+        public async Task<IActionResult> ReturnViewResponse<T>(RequestUrlHelper _api,string apiUrl, object dto, OperationTypes operation = OperationTypes.Unknown)
+        {
+            try
+            {
+                var apiResult = await _api.PostAsync<GenericApiResponse<PagedList<FaqInfoDto>>>(apiUrl, dto);
+                return ReturnViewResponse(apiResult, operation);
+            }
+            catch (System.Exception ex)
+            {
+                return ReturnViewResponse(ex, OperationTypes.GetContent);
+            }
+        }
         public ViewResult ReturnViewResponse<T>(GenericApiResponse<T> apiResult, OperationTypes operation = OperationTypes.Unknown)
         {
             if ((apiResult is null) || (!apiResult.Status))

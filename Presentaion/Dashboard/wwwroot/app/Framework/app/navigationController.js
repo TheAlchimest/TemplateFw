@@ -28,7 +28,7 @@
         debugger;
         let jqxhr = $.get(url)
             .done(function (html, status, xhr) {
-                if (jqxhr.Targer == null || jqxhr.Targer == location.hash) {
+                if (jqxhr.Target == null || jqxhr.Target == location.hash) {
                     app.ui.refresh(html);
                 }
                 else {
@@ -49,7 +49,7 @@
             });
 
         if (ctrl.isDefaultAsRestricedMode) {
-            jqxhr.Targer = location.hash;
+            jqxhr.Target = location.hash;
 
         }
     }

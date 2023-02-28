@@ -91,7 +91,11 @@ namespace TemplateFw.Persistence.Repositories
             return list;
         }
         #endregion
-        #region GetAllAsync
+
+        
+
+
+        #region GetInfoByIdAsync
         public async Task<FaqInfoDto> GetInfoByIdAsync(int id , EnumLanguage lang = EnumLanguage.Arabic)
         {
             dynamic parameters = new ExpandoObject();
@@ -128,6 +132,18 @@ namespace TemplateFw.Persistence.Repositories
         }
 
         #endregion
+
+        #region GetAllAsync
+        public async Task<PagedList<FaqInfoDto>> GetPageByPageAsync(FaqGridFilter filter)
+        {
+            var parameters = filter.ConvertToParameters(); 
+            var countP = parameters.AddOutputParameterInteger("Count");
+            var list = dbHelper.SqlHelperRead.ExecuteReaderForList<FaqInfoDto>("[dbo].[Faq_GetPageByPage]", parameters);
+            int count = (int)countP.Value;
+            var pagedList = new PagedList<FaqInfoDto>(list, filter.PageNo, filter.PageSize, count);
+            return pagedList;
+        }
+        #endregion
         /*
         #region GetPagedListAsync
         public async Task<PagedList<VwFaqFullData>> GetPagedListAsync(FaqGridFilter filter)
@@ -161,7 +177,7 @@ namespace TemplateFw.Persistence.Repositories
 
         #endregion
         */
-        
+
 
         #endregion
 

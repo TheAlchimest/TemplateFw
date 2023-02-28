@@ -14,6 +14,7 @@ namespace TemplateFw.Application.Services.FAQ
         Task<bool> UpdateAsync(FaqDto dto);
         Task<bool> DeleteAsync(int id);
         Task<PagedList<FaqInfoDto>> GetPagedListAsync(FaqGridFilter filter);
+        Task<PagedList<FaqInfoDto>> GetPageByPageAsync(FaqGridFilter filter);
         Task<List<FaqInfoDto>> GetAllAsync(FaqGridFilter filter);
         Task<FaqDto> GetOneByIdAsync(int id);
         Task<FaqInfoDto> GetInfoByIdAsync(int id, EnumLanguage lang);
