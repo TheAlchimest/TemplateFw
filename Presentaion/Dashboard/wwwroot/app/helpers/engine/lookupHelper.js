@@ -65,7 +65,13 @@ var lookupHelper = {
 
     loadSelectDataFromApi: function ($element, apiUrl) {
         let helper = lookupHelper;
-
+        debugger;
+        if ($element.hasClass("select2")) {
+            $element.parent().find(".select2-container").addClass("partial-loading-box");
+        }
+        else {
+            $element.parent().addClass("partial-loading-box");
+        }
         let get = $.ajax({
             url: helper.getLookupUrl(apiUrl),
             type: 'GET',
@@ -131,6 +137,13 @@ var lookupHelper = {
             }
             else {
             }
+            if ($element.hasClass("select2")) {
+                $element.parent().find(".select2-container").removeClass("partial-loading-box");
+            }
+            else {
+                $element.parent().removeClass("partial-loading-box");
+            }
+
         });
     },
 
