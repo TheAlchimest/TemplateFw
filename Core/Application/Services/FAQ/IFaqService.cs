@@ -1,10 +1,9 @@
-using TemplateFw.Shared.Domain.Enums;
-using TemplateFw.Domain.Models;
-using TemplateFw.Dtos.Common;
-using TemplateFw.Dtos.FAQ;
-using TemplateFw.Shared.Dtos.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using TemplateFw.Dtos.Common;
+using TemplateFw.Dtos.FAQ;
+using TemplateFw.Shared.Domain.Enums;
+using TemplateFw.Shared.Dtos.Collections;
 
 namespace TemplateFw.Application.Services.FAQ
 {

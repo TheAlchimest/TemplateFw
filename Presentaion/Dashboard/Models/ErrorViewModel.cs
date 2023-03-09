@@ -1,10 +1,4 @@
-﻿using TemplateFw.Resources;
-using TemplateFw.Shared.Domain.Enums;
-using Microsoft.Extensions.Localization;
-using Microsoft.AspNetCore.Http;
-using TemplateFw.Shared.Domain.GenericResponse;
-
-namespace TemplateFw.Dashboard.Models
+﻿namespace TemplateFw.Dashboard.Models
 {
     public class ErrorViewModel
     {
@@ -21,5 +15,5 @@ namespace TemplateFw.Dashboard.Models
         public string Icon { get; set; }
 
     }
-  
+
 }

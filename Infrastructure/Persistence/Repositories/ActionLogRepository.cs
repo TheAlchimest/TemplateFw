@@ -1,11 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using TemplateFw.Persistence.IRepositories;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Threading.Tasks;
-using TemplateFw.Shared.Helpers.SqlDataHelpers;
-using Microsoft.Extensions.Configuration;
-using TemplateFw.Persistence.Persistent.Db;
 using TemplateFw.Domain.Models;
+using TemplateFw.Persistence.IRepositories;
+using TemplateFw.Persistence.Persistent.Db;
+using TemplateFw.Shared.Helpers.SqlDataHelpers;
 
 namespace TemplateFw.Persistence.Repositories
 {

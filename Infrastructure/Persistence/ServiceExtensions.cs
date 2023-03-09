@@ -1,10 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using TemplateFw.Persistence.IRepositories;
-using TemplateFw.Persistence.Repositories;
-using Microsoft.Extensions.Configuration;
-using TemplateFw.Shared.Helpers;
 using TemplateFw.Persistence.Persistent.Db;
+using TemplateFw.Persistence.Repositories;
 using TemplateFw.Shared.Helpers.SqlDataHelpers;
 
 namespace TemplateFw.Persistence

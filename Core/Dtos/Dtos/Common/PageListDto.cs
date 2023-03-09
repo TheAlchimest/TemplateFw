@@ -9,20 +9,16 @@ namespace TemplateFw.Dtos.Dtos.Common
         public int PageSize { get; set; }
         public int PageIndex { get; set; }
 
-        public bool ShowPageIndex
-        {
-            get
-            {
+        public bool ShowPageIndex {
+            get {
                 if (TotalCount > PageSize)
                     return true;
                 return false;
             }
         }
 
-        public int PageIndexCount
-        {
-            get
-            {
+        public int PageIndexCount {
+            get {
                 if (PageSize == 0)
                     return 0;
                 var totalPageIndex = Math.Floor(Convert.ToDecimal(TotalCount / PageSize));

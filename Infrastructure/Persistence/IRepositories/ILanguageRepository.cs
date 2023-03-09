@@ -1,6 +1,6 @@
-﻿using TemplateFw.Dtos.Dtos.Common;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
+using TemplateFw.Dtos.Dtos.Common;
 
 namespace TemplateFw.Persistence.IRepositories
 {

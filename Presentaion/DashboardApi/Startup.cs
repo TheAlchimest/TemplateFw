@@ -1,20 +1,11 @@
+using Microsoft.AspNetCore.Localization;
+using Microsoft.Extensions.Options;
+using Microsoft.OpenApi.Models;
+using System.Globalization;
 using TemplateFw.Application;
 using TemplateFw.DashboardApi.Utils;
 using TemplateFw.Persistence;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Localization;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Options;
-using Microsoft.OpenApi.Models;
-using System.Collections.Generic;
-using System.Globalization;
 using TemplateFw.Shared.Configuration;
-using TemplateFw.Shared.Helpers;
-using TemplateFw.Persistence.Persistent.Db;
 
 namespace TemplateFw.DashboardApi
 {

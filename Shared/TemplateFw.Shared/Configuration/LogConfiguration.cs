@@ -1,11 +1,8 @@
-﻿using TemplateFw.Shared.Helpers;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using Serilog;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using TemplateFw.Shared.Helpers;
 
 namespace TemplateFw.Shared.Configuration
 {

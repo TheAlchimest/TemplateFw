@@ -1,6 +1,5 @@
-﻿using TemplateFw.Shared.Domain.Interfaces;
-using System;
-using System.Collections.Generic;
+﻿using System;
+using TemplateFw.Shared.Domain.Interfaces;
 
 #nullable disable
 

@@ -1,6 +1,6 @@
-﻿using TemplateFw.Shared.Application.Services;
+﻿using Microsoft.Extensions.DependencyInjection;
+using TemplateFw.Shared.Application.Services;
 using TemplateFw.Shared.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace TemplateFw.Shared.Application
 {
@@ -8,7 +8,7 @@ namespace TemplateFw.Shared.Application
     {
 
         #region AddSharedServices
-        public static IServiceCollection AddSharedServices(this IServiceCollection services, 
+        public static IServiceCollection AddSharedServices(this IServiceCollection services,
             SystemConfiguration config)
         {
             services.AddSingleton(config);

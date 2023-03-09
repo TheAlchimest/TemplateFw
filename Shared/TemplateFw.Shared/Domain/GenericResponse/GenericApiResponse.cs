@@ -21,22 +21,24 @@ namespace TemplateFw.Shared.Domain.GenericResponse
     {
         public HttpStatusCode StatusCode { get; set; } = HttpStatusCode.OK;
         public bool Status { get; set; }
-        public string Title   { get; set; }
+        public string Title { get; set; }
         public string Icon { get; set; }
 
         public string ErrorCodes { get; set; }
 
         public List<string> Messages { get; set; }
-        public string Message { set {
+        public string Message {
+            set {
                 Messages.Add(value);
-            } }
+            }
+        }
         public WebResponse()
         {
             Messages = new List<string>();
         }
     }
 
-    public class GenericWebResponse<T>: WebResponse
+    public class GenericWebResponse<T> : WebResponse
     {
         public T Data { get; set; }
     }

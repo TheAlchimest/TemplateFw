@@ -1,15 +1,13 @@
 using Microsoft.EntityFrameworkCore;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Dynamic.Core;
 using System.Threading.Tasks;
-using System.Collections.Generic;
 using TemplateFw.Domain.Models;
 using TemplateFw.Dtos.Dtos.Common;
 using TemplateFw.Persistence.IRepositories;
 using TemplateFw.Persistence.Persistent.Db;
-using TemplateFw.Shared.Helpers.SqlDataHelpers;
-using Microsoft.Extensions.Configuration;
 
 namespace TemplateFw.Persistence.Repositories
 {

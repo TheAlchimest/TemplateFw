@@ -1,16 +1,14 @@
 ﻿using Dashboard.Common.WebClientHelpers;
-using TemplateFw.Dashboard.Auth;
-using TemplateFw.Shared.Domain.GenericResponse;
-using TemplateFw.Dtos.Common;
-using TemplateFw.Shared.Dtos.Identity;
-using TemplateFw.Shared.Dtos.Collections;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
-using TemplateFw.Shared.Helpers;
+using TemplateFw.Dashboard.Auth;
+using TemplateFw.Dtos.Common;
 using TemplateFw.Shared.Domain.Enums;
+using TemplateFw.Shared.Domain.GenericResponse;
+using TemplateFw.Shared.Dtos.Collections;
+using TemplateFw.Shared.Dtos.Identity;
+using TemplateFw.Shared.Helpers;
 using Urls = Dashboard.Common.WebClientHelpers.InternalApiDictionary.AdminUrls;
-using LookupsUrls = Dashboard.Common.WebClientHelpers.InternalApiDictionary.LookupsUrls;
 
 
 namespace TemplateFw.Dashboard.Controllers
@@ -98,7 +96,7 @@ namespace TemplateFw.Dashboard.Controllers
             }
         }
 
-       
+
 
         [HttpPost]
         public async Task<IActionResult> Delete(int id)
@@ -125,7 +123,7 @@ namespace TemplateFw.Dashboard.Controllers
         public async Task<string> GetFullName(string id)
         {
             try
-            {              
+            {
                 string url = string.Format(Urls.Getfullname, id);
                 var apiResult = await _api.GetAsync<string>(url);
                 return apiResult;

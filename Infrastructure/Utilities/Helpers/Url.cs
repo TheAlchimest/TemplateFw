@@ -1,8 +1,8 @@
-﻿using System;
+﻿using Dashboard.Common.Extensions;
+using System;
 using System.Collections.Specialized;
 using System.Text.RegularExpressions;
 using System.Web;
-using Dashboard.Common.Extensions;
 
 namespace Dashboard.Common.Helpers
 {
@@ -15,7 +15,7 @@ namespace Dashboard.Common.Helpers
             if (!IsValid(path)) throw new ArgumentException("Invalid Url");
 
             UriBuilder = new UriBuilder(path);
-            Path       = HttpUtility.ParseQueryString(UriBuilder.Query);
+            Path = HttpUtility.ParseQueryString(UriBuilder.Query);
         }
 
         public UriBuilder UriBuilder { get; set; }
@@ -32,8 +32,7 @@ namespace Dashboard.Common.Helpers
 
         public static explicit operator Url(string url) => new(url);
 
-        public string this[string name]
-        {
+        public string this[string name] {
             get => Path[name];
             set => Path[name] = value;
         }
@@ -48,7 +47,7 @@ namespace Dashboard.Common.Helpers
         {
             if (parts == null) throw new ArgumentNullException(nameof(parts));
 
-            var  result  = string.Empty;
+            var result = string.Empty;
             bool inQuery = false, inFragment = false;
 
             static string CombineEnsureSingleSeparator(string a, string b, char separator)
@@ -75,7 +74,7 @@ namespace Dashboard.Common.Helpers
 
                 if (part.OrdinalContains("#"))
                 {
-                    inQuery    = false;
+                    inQuery = false;
                     inFragment = true;
                 }
                 else if (!inFragment && part.OrdinalContains("?"))
@@ -84,7 +83,7 @@ namespace Dashboard.Common.Helpers
                 }
             }
 
-            return (Url) EncodeIllegalCharacters(result);
+            return (Url)EncodeIllegalCharacters(result);
         }
 
         /// <summary>
@@ -109,11 +108,11 @@ namespace Dashboard.Common.Helpers
             if (s.Length > MaxUrlLength)
             {
                 // Uri.EscapeDataString is going to throw because the string is "too long", so break it into pieces and concat them
-                var parts = new string[(int) Math.Ceiling((double) s.Length / MaxUrlLength)];
+                var parts = new string[(int)Math.Ceiling((double)s.Length / MaxUrlLength)];
                 for (var i = 0; i < parts.Length; i++)
                 {
                     var start = i * MaxUrlLength;
-                    var len   = Math.Min(MaxUrlLength, s.Length - start);
+                    var len = Math.Min(MaxUrlLength, s.Length - start);
                     parts[i] = Uri.EscapeDataString(s.Substring(start, len));
                 }
 

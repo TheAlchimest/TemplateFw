@@ -1,11 +1,11 @@
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Dynamic.Core;
 using System.Threading;
 using System.Threading.Tasks;
-using TemplateFw.Shared.Dtos.Collections;
 using TemplateFw.Dtos.Common;
-using System.Collections.Generic;
+using TemplateFw.Shared.Dtos.Collections;
 
 namespace TemplateFw.Persistence.Extensions
 {

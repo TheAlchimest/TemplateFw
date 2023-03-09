@@ -1,25 +1,15 @@
+using Adoler;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
-using TemplateFw.Domain.Models;
-using TemplateFw.Persistence.IRepositories;
-using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.Data.SqlClient;
-using Microsoft.Data;
-using TemplateFw.Shared.Helpers.SqlDataHelpers;
-using TemplateFw.Dtos.FAQ;
-using TemplateFw.Shared.Dtos.Collections;
+using TemplateFw.Domain.Models;
 using TemplateFw.Dtos.Common;
-using TemplateFw.Persistence.Extensions;
-using Microsoft.Extensions.Configuration;
-using TemplateFw.Utilities.Helpers;
+using TemplateFw.Dtos.FAQ;
 using TemplateFw.Shared.Domain.Enums;
-using TemplateFw.Shared.Helpers;
-using TemplateFw.Persistence.Persistent.Db;
-
-using Adoler;
-using System.Dynamic;
+using TemplateFw.Shared.Dtos.Collections;
 
 namespace TemplateFw.Persistence.Repositories
 {
@@ -92,11 +82,11 @@ namespace TemplateFw.Persistence.Repositories
         }
         #endregion
 
-        
+
 
 
         #region GetInfoByIdAsync
-        public async Task<FaqInfoDto> GetInfoByIdAsync(int id , EnumLanguage lang = EnumLanguage.Arabic)
+        public async Task<FaqInfoDto> GetInfoByIdAsync(int id, EnumLanguage lang = EnumLanguage.Arabic)
         {
             dynamic parameters = new ExpandoObject();
             parameters.LangId = lang;
@@ -136,7 +126,7 @@ namespace TemplateFw.Persistence.Repositories
         #region GetAllAsync
         public async Task<PagedList<FaqInfoDto>> GetPageByPageAsync(FaqGridFilter filter)
         {
-            var parameters = filter.ConvertToParameters(); 
+            var parameters = filter.ConvertToParameters();
             var countP = parameters.AddOutputParameterInteger("Count");
             var list = dbHelper.SqlHelperRead.ExecuteReaderForList<FaqInfoDto>("[dbo].[Faq_GetPageByPage]", parameters);
             int count = (int)countP.Value;

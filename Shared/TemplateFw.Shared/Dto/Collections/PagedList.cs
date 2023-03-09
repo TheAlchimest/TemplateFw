@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace TemplateFw.Shared.Dtos.Collections
 {
-    public class Pager  
+    public class Pager
     {
         public int PageNo { get; set; }
         public int PageIndex { get { return PageNo - 1; } }
@@ -81,7 +81,7 @@ namespace TemplateFw.Shared.Dtos.Collections
             FirstItemNo = ((pageNo - 1) * pageSize) + 1;
         }
     }
-    public class PagedList<T>  : Pager
+    public class PagedList<T> : Pager
     {
         public PagedList()
         {
@@ -89,7 +89,7 @@ namespace TemplateFw.Shared.Dtos.Collections
         }
 
         public IEnumerable<T> Items { get; set; }
-        public PagedList(IEnumerable<T> source, int pageNo, int pageSize, int count):base(pageNo,  pageSize,  count)
+        public PagedList(IEnumerable<T> source, int pageNo, int pageSize, int count) : base(pageNo, pageSize, count)
         {
             Items = source;
         }

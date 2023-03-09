@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Specialized;
+﻿using Microsoft.AspNetCore.Http;
 using System.Linq;
-using System.Text.RegularExpressions;
-using System.Web;
-using Dashboard.Common.Extensions;
 using TemplateFw.Shared.Helpers;
-using Microsoft.AspNetCore.Http;
 
 namespace TemplateFw.Utilities
 {

@@ -1,5 +1,5 @@
-﻿using System;
-using RestSharp;
+﻿using RestSharp;
+using System;
 
 namespace Dashboard.Common.WebClientHelpers.Base
 {
@@ -16,7 +16,7 @@ namespace Dashboard.Common.WebClientHelpers.Base
         }
         public BaseClient(string host, string url)
         {
-            BaseUrl = new Uri($"{ host}{url}");
+            BaseUrl = new Uri($"{host}{url}");
             Timeout = System.Threading.Timeout.Infinite;
         }
 

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TemplateFw.Dtos.Dtos
+﻿namespace TemplateFw.Dtos.Dtos
 {
     //public class UserImageViewDto
     //{

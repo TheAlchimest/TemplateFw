@@ -1,6 +1,3 @@
-using System.Runtime.InteropServices;
-using System.Threading.Tasks;
-
 namespace Dashboard.Common.WebClientHelpers.AccountsApiDictionary
 {
     public static class FoundationAccountControllersUrls
@@ -90,7 +87,7 @@ namespace Dashboard.Common.WebClientHelpers.AccountsApiDictionary
     {
         public const string GetUserData = "{0}/get-user-data";
         public const string GetUserDataByFoundationId = "{0}/get-user-data/{1}";
-        public const string GetUserFoundationData = "{0}/get-foundation-data"; 
+        public const string GetUserFoundationData = "{0}/get-foundation-data";
         public const string GetUserFoundationDataByEncryptedFoundationNo = "{0}/get-foundation-data?encfoundationNo={1}";
     }
 

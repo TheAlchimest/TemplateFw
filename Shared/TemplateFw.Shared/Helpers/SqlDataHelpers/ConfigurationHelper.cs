@@ -1,10 +1,4 @@
 ﻿using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TemplateFw.Shared.Domain.Enums;
 
 namespace TemplateFw.Shared.Helpers.SqlDataHelpers
 {
@@ -30,7 +24,7 @@ namespace TemplateFw.Shared.Helpers.SqlDataHelpers
             }
             return writeConnectionString;
         }
-        
+
     }
-    
+
 }

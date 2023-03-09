@@ -1,15 +1,11 @@
+using Microsoft.AspNetCore.Mvc;
 using TemplateFw.Application.Services.FAQ;
-using TemplateFw.Shared.Domain.GenericResponse;
-using TemplateFw.Domain.Models;
+using TemplateFw.DashboardApi.Controllers.Base;
 using TemplateFw.Dtos.Common;
 using TemplateFw.Dtos.FAQ;
-using TemplateFw.DashboardApi.Controllers.Base;
-using TemplateFw.Shared.Dtos.Collections;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using TemplateFw.Shared.Domain.Enums;
+using TemplateFw.Shared.Domain.GenericResponse;
+using TemplateFw.Shared.Dtos.Collections;
 
 namespace TemplateFw.DashboardApi.Controllers
 {
@@ -100,7 +96,7 @@ namespace TemplateFw.DashboardApi.Controllers
         [Route("getallview")]
         public async Task<GenericApiResponse<List<FaqInfoDto>>> GetAllView(FaqGridFilter filter)
         {
-            return await GenericApiResponse(() => _faqService.GetAllAsync(filter),OperationTypes.GetList);
+            return await GenericApiResponse(() => _faqService.GetAllAsync(filter), OperationTypes.GetList);
         }
     }
 }

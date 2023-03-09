@@ -1,11 +1,4 @@
-﻿using TemplateFw.Shared.Domain.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TemplateFw.Shared.Dto
+﻿namespace TemplateFw.Shared.Dto
 {
     public class NotificationEmailDto
     {

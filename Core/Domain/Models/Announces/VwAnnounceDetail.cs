@@ -16,6 +16,6 @@ namespace TemplateFw.Domain.Models.Announces
         public DateTime? EndActivationDate { get; set; }
         public int ActivationCount { get; set; }
         public int LanguageId { get; set; }
-        public string Content { get; set; }    
+        public string Content { get; set; }
     }
 }

@@ -11,7 +11,7 @@ namespace Dashboard.Common.WebClientHelpers
         {
             public const string Portals = "lookup/portals";
             public const string Services = "lookup/services/{0}";
-            public const string ServicesWithLanguage = "lookup/ServicesWithLanguage/{0}/{1}"; 
+            public const string ServicesWithLanguage = "lookup/ServicesWithLanguage/{0}/{1}";
             public const string Languages = "lookup/languages";
             public const string ServiceCategories = "lookup/serviceCategory";
             public const string ServiceSectors = "lookup/serviceSector";
@@ -31,7 +31,7 @@ namespace Dashboard.Common.WebClientHelpers
             public const string Delete = "Faq/Delete/{0}";
             public const string GetAll = "Faq/getall";
             public const string GetPaged = "Faq/get-paged";
-            
+
             public const string GetViewAll = "Faq/getallview";
             public const string GetOne = "Faq/getone/{0}";
             public const string Info = "Faq/info/{0}";
@@ -51,7 +51,7 @@ namespace Dashboard.Common.WebClientHelpers
             public const string GetOne = "Poll/getone/{0}";
             public const string Info = "Poll/info/{0}";
             public const string GetActiveForClient = "Poll/GetActiveForClient/{0}";
-            public const string IsThereActiveForClient = "Poll/IsThereActiveForClient/{0}"; 
+            public const string IsThereActiveForClient = "Poll/IsThereActiveForClient/{0}";
             public const string SaveAnswer = "Poll/SaveAnswer";
             public const string GetResults = "Poll/Results/{0}";
             public const string GetResultDetails = "Poll/Results/Details/{0}";
@@ -64,12 +64,12 @@ namespace Dashboard.Common.WebClientHelpers
         public static class ProfileUrls
         {
             public const string Get = "Profile/Get/{0}";
-            public const string GetUserFullData = "Profile/GetUserFullData"; 
+            public const string GetUserFullData = "Profile/GetUserFullData";
             public const string Save = "Profile/Save";
             public const string SendOTP = "Profile/SendOTP";
             public const string SaveProfileImage = "Profile/SaveImage";
             public const string GetProfileImage = "Profile/GetImage/{0}";
-            public const string RemoveProfileImage = "Profile/RemoveProfileImage"; 
+            public const string RemoveProfileImage = "Profile/RemoveProfileImage";
         }
 
 
@@ -120,7 +120,7 @@ namespace Dashboard.Common.WebClientHelpers
             public const string ListAllForClient = "ServiceCategory/listallForClient/{0}";
             public const string GetOne = "ServiceCategory/getone/{0}";
             public const string GetAllWithServices = "ServiceCategory/GetAllWithServices";
-            public const string GetLookupsBySector = "ServiceCategory/GetLookupsBySector/{0}/{1}"; 
+            public const string GetLookupsBySector = "ServiceCategory/GetLookupsBySector/{0}/{1}";
         }
 
         public static class ServiceSectorsUrls
@@ -186,7 +186,7 @@ namespace Dashboard.Common.WebClientHelpers
             public const string GetPaging = "Service/getPaging";
             public const string GetOne = "Service/getone/{0}";
             public const string GetAll = "Service/getall";
-            public const string GetTopServices = "Service/GetTopServices/{0}"; 
+            public const string GetTopServices = "Service/GetTopServices/{0}";
             public const string GetForCount = "Service/getforcount";
             public const string GetOneView = "Service/getoneview/{0}";
             public const string GetOneViewByServiceCode = "Service/getoneviewByServiceCode/{0}";
@@ -203,7 +203,7 @@ namespace Dashboard.Common.WebClientHelpers
 
             public const string GetSeviceRates = "Service/Rates";
 
-            public const string GetLookupByCategory = "Service/GetLookupByCategory/{0}"; 
+            public const string GetLookupByCategory = "Service/GetLookupByCategory/{0}";
 
             //public const string GetAllPaging = "Service/GetAll";
             //public const string Save = "Service";
@@ -309,7 +309,7 @@ namespace Dashboard.Common.WebClientHelpers
         {
             public const string SaveMaintenance = "Mobile/save-maintenance";
             public const string GetMaintenance = "Mobile/get-maintenance";
-            public const string SaveBlockedVersion   = "Mobile/save-blocked-version";
+            public const string SaveBlockedVersion = "Mobile/save-blocked-version";
             public const string DeleteBlockedVersion = "Mobile/delete-blocked-version/{0}";
             public const string GetAllBlockedVersions = "Mobile/getall-blocked-versions";
         }
@@ -328,7 +328,7 @@ namespace Dashboard.Common.WebClientHelpers
             public const string Edit = "UserDocument/Edit/{0}/{1}";
             public const string Search = "UserDocument/Search/{0}/{1}";
             public const string Counts = "UserDocument/Counts/{0}/{1}";
-            public const string ManageUsers = "UserDocument/ManageUsers/{0}/{1}"; 
+            public const string ManageUsers = "UserDocument/ManageUsers/{0}/{1}";
         }
 
         public static class UserRequestUrls
@@ -345,7 +345,7 @@ namespace Dashboard.Common.WebClientHelpers
             public const string GetLatestForHome = "UserRequest/GetLatestForHome/{0}/{1}";
             public const string GetSummary = "UserRequest/GetSummary/{0}/{1}";
             public const string TotalRequests = "UserRequest/TotalRequests/{0}/{1}";
-            public const string ManageUsers = "UserRequest/ManageUsers/{0}/{1}"; 
+            public const string ManageUsers = "UserRequest/ManageUsers/{0}/{1}";
         }
     }
 }

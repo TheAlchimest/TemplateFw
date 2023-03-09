@@ -1,20 +1,18 @@
-using System.Collections.Generic;
-using System.Globalization;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc.Razor;
+using System.Globalization;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
     public static class ServiceCollectionExtensions
     {
-       /* public static IServiceCollection AddWebDependancies(this IServiceCollection services)
-        {
-            services.AddScoped<ICurrentUserService, CurrentUserService>();
+        /* public static IServiceCollection AddWebDependancies(this IServiceCollection services)
+         {
+             services.AddScoped<ICurrentUserService, CurrentUserService>();
 
-            return services;
-        }
-        */
+             return services;
+         }
+         */
         public static IServiceCollection AddMultiLingualSupport(this IServiceCollection services)
         {
             services.AddLocalization(options => options.ResourcesPath = "Resources");

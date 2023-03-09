@@ -11,9 +11,9 @@ namespace TemplateFw.Dtos.Announces
         }
 
         public int Id { get; set; }
-        public int PortalId { get; set; }        
+        public int PortalId { get; set; }
         public string CreatedBy { get; set; }
-        public bool IsEnabled { get; set; }        
+        public bool IsEnabled { get; set; }
         public string LastModifiedBy { get; set; }
         public DateTime CreationDate { get; set; }
         public DateTime? LastModificationDate { get; set; }

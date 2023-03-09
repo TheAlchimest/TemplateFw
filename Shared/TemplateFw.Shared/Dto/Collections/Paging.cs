@@ -15,50 +15,42 @@ namespace TemplateFw.Shared.Dtos.Collections
         private int _NextPageIndex;
         private int _PaggingCount = 5;
 
-        public int PageSize
-        {
+        public int PageSize {
             get => this._PageSize;
             set => this._PageSize = value;
         }
 
-        public int TotalRecords
-        {
+        public int TotalRecords {
             get => this._TotalCount;
             set => this._TotalCount = value;
         }
 
-        public int PageNo
-        {
+        public int PageNo {
             get => this._PageNo;
             set => this._PageNo = value;
         }
 
-        public int StartPage
-        {
+        public int StartPage {
             get => this._StartPage;
             set => this._StartPage = value;
         }
 
-        public int EndPage
-        {
+        public int EndPage {
             get => this._EndPage;
             set => this._EndPage = value;
         }
 
-        public int TotalPages
-        {
+        public int TotalPages {
             get => this._TotalPages;
             set => this._TotalPages = value;
         }
 
-        public int PreviousPageIndex
-        {
+        public int PreviousPageIndex {
             get => this._PreviousPageIndex;
             set => this._PreviousPageIndex = value;
         }
 
-        public int NextPageIndex
-        {
+        public int NextPageIndex {
             get => this._NextPageIndex;
             set => this._NextPageIndex = value;
         }
@@ -99,7 +91,7 @@ namespace TemplateFw.Shared.Dtos.Collections
             else
             {
 
-               
+
 
                 if (this._PageNo > this.previousPages + 1)
                     this._StartPage = this._PageNo - this.previousPages;

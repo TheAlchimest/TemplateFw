@@ -1,13 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using TemplateFw.Shared.Domain.GenericResponse;
-using System.Threading.Tasks;
-using TemplateFw.Dtos.Announces;
-using TemplateFw.DashboardApi.Controllers.Base;
-using TemplateFw.Shared.Dtos.Collections;
 using TemplateFw.Application.Services.Announces;
+using TemplateFw.DashboardApi.Controllers.Base;
 using TemplateFw.Domain.Models.Announces;
+using TemplateFw.Dtos.Announces;
 using TemplateFw.Shared.Domain.Enums;
+using TemplateFw.Shared.Domain.GenericResponse;
+using TemplateFw.Shared.Dtos.Collections;
 
 namespace TemplateFw.DashboardApi.Controllers
 {

@@ -16,10 +16,10 @@ namespace UnifiedPortalIntegerationPoc.Dto
     {
         public string ServiceCode { get; set; }
         public RequestStatus? Status { get; set; }
-        
+
         public string FoundationNo { get; set; }
-        
-        public ProcessType? ProcessType { get; set; }       
+
+        public ProcessType? ProcessType { get; set; }
 
     }
 
@@ -64,7 +64,7 @@ namespace UnifiedPortalIntegerationPoc.Dto
     {
         public int ServiceId { get; set; }
     }
-    public class InternalGenericServiceIntegrationRequestsStatistics: GenericServiceIntegrationRequestsStatistics
+    public class InternalGenericServiceIntegrationRequestsStatistics : GenericServiceIntegrationRequestsStatistics
     {
         public int ServiceId { get; set; }
     }

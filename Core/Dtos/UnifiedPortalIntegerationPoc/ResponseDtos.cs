@@ -8,7 +8,7 @@ namespace UnifiedPortalIntegerationPoc.Dto
 
 
 
-    public class RequestsPagingDto 
+    public class RequestsPagingDto
     {
         public int CurrentPage { get; set; } = 1;
         public int Count { get; set; }
@@ -65,13 +65,16 @@ namespace UnifiedPortalIntegerationPoc.Dto
         public int TotalRequests { get; set; }
         public int CompletedRequests { get; set; }
         public int PendingRequests { get; set; }
-        public decimal CompletedRequestsPecentage { get {
+        public decimal CompletedRequestsPecentage {
+            get {
                 decimal percentage = 0;
-                if (TotalRequests > 0) {
+                if (TotalRequests > 0)
+                {
                     percentage = ((CompletedRequests * 100) / TotalRequests);
                 }
                 return Math.Round(percentage, 0);
-            } }
+            }
+        }
         public List<RequestSubTypeStatsItemDto> SubTypes { get; set; }
     }
     public class AssetsSummaryDto

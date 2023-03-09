@@ -1,9 +1,8 @@
 
-using TemplateFw.Resources;
 using FluentValidation;
 using Microsoft.Extensions.Localization;
 using System;
-using System.Collections.Generic;
+using TemplateFw.Resources;
 
 namespace TemplateFw.Dtos.FAQ
 {
@@ -24,7 +23,7 @@ namespace TemplateFw.Dtos.FAQ
 
     }
 
-    public  class FaqInfoDto
+    public class FaqInfoDto
     {
         public int FaqId { get; set; }
         public string Question { get; set; }
@@ -32,7 +31,7 @@ namespace TemplateFw.Dtos.FAQ
         public int PortalId { get; set; }
         public int? ServiceId { get; set; }
         public bool IsAvailable { get; set; }
-        public string PortalName{ get; set; }
+        public string PortalName { get; set; }
         public string ServiceName { get; set; }
         public string CreatedBy { get; set; }
         public DateTime CreationDate { get; set; }

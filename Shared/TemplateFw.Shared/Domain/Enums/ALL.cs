@@ -1,5 +1,3 @@
-using TemplateFw.Shared.Configuration;
-
 namespace TemplateFw.Shared.Domain.Enums
 {
     public enum OperationResult
@@ -53,7 +51,7 @@ namespace TemplateFw.Shared.Domain.Enums
         Arabic = 1,
         English = 2
     }
-   
+
     public enum EmailTemplate
     {
         ComplaintResponse,
@@ -68,6 +66,6 @@ namespace TemplateFw.Shared.Domain.Enums
     }
 
 
-    
+
 
 }

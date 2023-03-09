@@ -1,6 +1,6 @@
-﻿using TemplateFw.Shared.Domain.Interfaces;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using TemplateFw.Shared.Domain.Interfaces;
 
 namespace TemplateFw.Domain.Models.Announces
 {

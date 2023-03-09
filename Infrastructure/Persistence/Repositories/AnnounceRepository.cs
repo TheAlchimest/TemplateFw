@@ -1,22 +1,20 @@
 using Microsoft.EntityFrameworkCore;
-using TemplateFw.Persistence.IRepositories;
+using Microsoft.Extensions.Configuration;
+using Serilog;
 using System;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
-using System.Data;
-using TemplateFw.Shared.Helpers.SqlDataHelpers;
+using TemplateFw.Domain.Models.Announces;
 using TemplateFw.Dtos.Announces;
 using TemplateFw.Persistence.Extensions;
-using TemplateFw.Shared.Dtos.Collections;
-using Microsoft.Extensions.Configuration;
-using TemplateFw.Domain.Models.Announces;
-using TemplateFw.Shared.Domain.Enums;
-using TemplateFw.Utilities.Helpers;
-using TemplateFw.Shared.Helpers;
+using TemplateFw.Persistence.IRepositories;
 using TemplateFw.Persistence.Persistent.Db;
+using TemplateFw.Shared.Domain.Enums;
+using TemplateFw.Shared.Dtos.Collections;
+using TemplateFw.Shared.Helpers;
 using TemplateFw.Shared.Helpers.SqlDataHelpers;
-using Serilog;
 
 namespace TemplateFw.Persistence.Repositories
 {
@@ -200,7 +198,7 @@ namespace TemplateFw.Persistence.Repositories
             {
                 if (filter.PortalId.HasValue && filter.PortalId.Value > 0)
                 {
-                        query = query.Where(f => f.PortalId == filter.PortalId.Value);
+                    query = query.Where(f => f.PortalId == filter.PortalId.Value);
                 }
                 if (!string.IsNullOrWhiteSpace(filter.Search))
                 {

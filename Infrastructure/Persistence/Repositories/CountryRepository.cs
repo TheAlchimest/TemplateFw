@@ -1,15 +1,11 @@
-﻿using TemplateFw.Domain.Models.Countries;
-using TemplateFw.Persistence.IRepositories;
-using TemplateFw.Persistence.Persistent.Db;
-using TemplateFw.Shared.Helpers;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using TemplateFw.Shared.Helpers.SqlDataHelpers;
+using TemplateFw.Domain.Models.Countries;
+using TemplateFw.Persistence.IRepositories;
+using TemplateFw.Persistence.Persistent.Db;
 
 namespace TemplateFw.Persistence.Repositories
 {

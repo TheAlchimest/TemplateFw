@@ -1,9 +1,6 @@
 ﻿using Dashboard.Common.WebClientHelpers;
-using TemplateFw.Shared.Dtos.Identity;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using System.Linq;
 using TemplateFw.Shared.Domain.GenericResponse;
+using TemplateFw.Shared.Dtos.Identity;
 
 namespace TemplateFw.Dashboard.Auth
 {
@@ -103,7 +100,7 @@ namespace TemplateFw.Dashboard.Auth
             {
                 result.Add(SUPER_ADMIN);
             }
-            if(result.Count > 0)
+            if (result.Count > 0)
             {
                 result.Add(ADMIN);
             }

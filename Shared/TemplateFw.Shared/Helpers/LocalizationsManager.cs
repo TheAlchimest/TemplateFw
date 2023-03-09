@@ -1,11 +1,8 @@
-﻿using TemplateFw.Shared.Domain.Enums;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Globalization;
 using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
+using TemplateFw.Shared.Domain.Enums;
 
 namespace TemplateFw.Shared.Helpers
 {
@@ -60,7 +57,7 @@ namespace TemplateFw.Shared.Helpers
                     return LanguageAR;
             }
         }
-        
+
         public static int GetLanguage()
         {
             switch (Thread.CurrentThread.CurrentCulture.Name)
@@ -118,7 +115,7 @@ namespace TemplateFw.Shared.Helpers
                     return "ar";
             }
         }
-                public static string GetLanguageDirection()
+        public static string GetLanguageDirection()
         {
             switch (GetLanguage())
             {
@@ -176,9 +173,10 @@ namespace TemplateFw.Shared.Helpers
 
     }
 
-    public class LanguageData {
+    public class LanguageData
+    {
 
-        public int LangId { get; set; }        
+        public int LangId { get; set; }
         public EnumLanguage Language { get; set; }
         public string Code { get; set; }
         public string Direction { get; set; }

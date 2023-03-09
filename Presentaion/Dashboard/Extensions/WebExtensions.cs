@@ -1,17 +1,16 @@
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using System.Collections.Generic;
-using System.Linq;
 using Microsoft.Extensions.Localization;
+using TemplateFw.Dashboard.Controllers;
 using TemplateFw.Dtos.Dtos.Common;
 using TemplateFw.Resources;
 using TemplateFw.Shared.Domain.Enums;
 using TemplateFw.Shared.Domain.GenericResponse;
-using TemplateFw.Dashboard.Controllers;
-using Microsoft.AspNetCore.Mvc;
 
 namespace TemplateFw.Dashboard.Extensions
 {
-    public static class LookupExtensions {
+    public static class LookupExtensions
+    {
         public static SelectList ToSelectList(this List<LookupDto> lokupList)
         {
             return new SelectList(lokupList, nameof(LookupDto.Id), nameof(LookupDto.Text));
@@ -19,7 +18,7 @@ namespace TemplateFw.Dashboard.Extensions
     }
 
     public static class WebResponseExtensions
-    {   
+    {
         private static string ToErrorMessage(this OperationTypes operation, IStringLocalizer<SharedResource> localizer)
         {
             return localizer[$"OperationFailed_{(int)operation}"].Value;
@@ -45,7 +44,7 @@ namespace TemplateFw.Dashboard.Extensions
             errors.ToList().ForEach(e => messages.Add(localizer[$"Exception{e}"].Value));
             return messages;
         }
-        
+
         public static void PopulateErrorResponse(this WebResponse response, OperationTypes operation, IStringLocalizer<SharedResource> localizer)
         {
             response.ErrorCodes = operation.ToErrorCodes();
@@ -119,7 +118,8 @@ namespace TemplateFw.Dashboard.Extensions
     }
 
 
-    public static class ControllersExtensions {
+    public static class ControllersExtensions
+    {
 
         public static JsonResult ReturnJsonxResponse<T>(this LocalizedController controller, GenericApiResponse<T> apiResult, OperationTypes operation = OperationTypes.Unknown)
         {

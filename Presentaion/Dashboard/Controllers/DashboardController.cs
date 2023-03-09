@@ -1,11 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using System.Threading.Tasks;
-using Dashboard.Common.WebClientHelpers;
-using TemplateFw.Shared.Domain.GenericResponse;
+﻿using Dashboard.Common.WebClientHelpers;
 using Microsoft.AspNetCore.Authorization;
-using Urls = Dashboard.Common.WebClientHelpers.InternalApiDictionary.DashoardHomeUrls;
-using LookupsUrls = Dashboard.Common.WebClientHelpers.InternalApiDictionary.LookupsUrls;
+using Microsoft.AspNetCore.Mvc;
 
 
 namespace TemplateFw.Dashboard.Controllers
@@ -27,7 +22,7 @@ namespace TemplateFw.Dashboard.Controllers
             return View();
         }
 
-        
+
         public IActionResult Privacy()
         {
             return View();

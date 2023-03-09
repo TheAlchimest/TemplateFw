@@ -29,7 +29,7 @@ namespace TemplateFw.Utilities.Helpers
             string dateString = "";
             if (date > DateTime.MinValue)
             {
-                dateString = (((date.Hour) > 11) ? "م" : "ص") + " " + date.ToString("hh:mm")+ " " + date.ToString("dd/MM/yyyy");
+                dateString = (((date.Hour) > 11) ? "م" : "ص") + " " + date.ToString("hh:mm") + " " + date.ToString("dd/MM/yyyy");
             }
             return dateString;
         }

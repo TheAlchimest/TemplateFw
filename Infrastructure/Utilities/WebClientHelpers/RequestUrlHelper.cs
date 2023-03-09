@@ -1,20 +1,15 @@
 using Dashboard.Common.WebClientHelpers.Base;
-using TemplateFw.Shared.Dtos.Identity;
-using TemplateFw.Shared.Helpers;
-using TemplateFw.Utilities.Helpers;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 using RestSharp;
 using Serilog;
 using System;
-using System.Data.Common;
-using System.Diagnostics;
 using System.IO;
 using System.Net;
-using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
+using TemplateFw.Shared.Helpers;
 
 namespace Dashboard.Common.WebClientHelpers
 {

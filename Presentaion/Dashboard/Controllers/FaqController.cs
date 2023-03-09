@@ -1,20 +1,16 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using TemplateFw.Dtos.FAQ;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using Dashboard.Common.WebClientHelpers;
+﻿using Dashboard.Common.WebClientHelpers;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using TemplateFw.Dashboard.Auth;
+using TemplateFw.Dtos.Common;
 using TemplateFw.Dtos.Dtos.Common;
+using TemplateFw.Dtos.FAQ;
+using TemplateFw.Shared.Domain.Enums;
 using TemplateFw.Shared.Domain.GenericResponse;
 using TemplateFw.Shared.Dtos.Collections;
-using TemplateFw.Domain.Models;
-using TemplateFw.Dtos.Common;
-using Microsoft.AspNetCore.Authorization;
-using TemplateFw.Dashboard.Auth;
 using TemplateFw.Shared.Helpers;
-using TemplateFw.Shared.Domain.Enums;
-using Urls = Dashboard.Common.WebClientHelpers.InternalApiDictionary.FaqsUrls;
 using LookupsUrls = Dashboard.Common.WebClientHelpers.InternalApiDictionary.LookupsUrls;
-using Azure;
+using Urls = Dashboard.Common.WebClientHelpers.InternalApiDictionary.FaqsUrls;
 
 namespace TemplateFw.Dashboard.Controllers
 {
@@ -77,7 +73,7 @@ namespace TemplateFw.Dashboard.Controllers
             catch (System.Exception ex)
             {
                 return ReturnViewResponse(ex, OperationTypes.GetContent);
-            } 
+            }
 
         }
 
@@ -87,7 +83,7 @@ namespace TemplateFw.Dashboard.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> Save([FromBody]FaqDto dto)
+        public async Task<IActionResult> Save([FromBody] FaqDto dto)
         {
             try
             {
@@ -102,7 +98,7 @@ namespace TemplateFw.Dashboard.Controllers
             catch (System.Exception ex)
             {
                 OperationTypes operation = (dto.FaqId > 0) ? OperationTypes.Update : OperationTypes.Add;
-                return ReturnJsonResponse(ex,operation);
+                return ReturnJsonResponse(ex, operation);
             }
 
         }
@@ -126,9 +122,9 @@ namespace TemplateFw.Dashboard.Controllers
             catch (System.Exception ex)
             {
 
-                return ReturnJsonResponse(ex, OperationTypes.Delete );
+                return ReturnJsonResponse(ex, OperationTypes.Delete);
             }
-           
+
         }
         #endregion
 

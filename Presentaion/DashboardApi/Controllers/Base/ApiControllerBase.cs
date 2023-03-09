@@ -1,13 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Localization;
-using Microsoft.Extensions.Logging;
-using TemplateFw.Shared.Domain.GenericResponse;
-using TemplateFw.Shared.Domain.Enums;
-using TemplateFw.Shared.Application.Exceptions;
+﻿using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Mvc;
 using System.Net;
+using TemplateFw.Shared.Application.Exceptions;
+using TemplateFw.Shared.Domain.Enums;
+using TemplateFw.Shared.Domain.GenericResponse;
 
 namespace TemplateFw.DashboardApi.Controllers.Base
 {
@@ -19,18 +15,14 @@ namespace TemplateFw.DashboardApi.Controllers.Base
 
         public string CurrentUserName => this.User?.Identity?.Name;
 
-        protected bool IsArabic
-        {
-            get
-            {
+        protected bool IsArabic {
+            get {
                 var rqf = Request.HttpContext.Features.Get<IRequestCultureFeature>();
                 return rqf.RequestCulture.Culture.Name.ToLower().Contains("ar");
             }
         }
-        protected EnumLanguage CurrentLanguage
-        {
-            get
-            {
+        protected EnumLanguage CurrentLanguage {
+            get {
                 var rqf = Request.HttpContext.Features.Get<IRequestCultureFeature>();
                 return (IsArabic) ? EnumLanguage.Arabic : EnumLanguage.English;
             }
@@ -44,7 +36,7 @@ namespace TemplateFw.DashboardApi.Controllers.Base
         {
             return new ApiResponse
             {
-                ErrorCodes = new int[] {(int) error},
+                ErrorCodes = new int[] { (int)error },
                 Status = false,
             };
         }
@@ -68,7 +60,7 @@ namespace TemplateFw.DashboardApi.Controllers.Base
                 return HandleException<T>(ex, operation);
             }
         }
-        protected async Task<GenericApiResponse<T>> GenericApiResponse<T>(Func<Task<T>> funcCall, OperationTypes operation= OperationTypes.Unknown)
+        protected async Task<GenericApiResponse<T>> GenericApiResponse<T>(Func<Task<T>> funcCall, OperationTypes operation = OperationTypes.Unknown)
         {
             try
             {
@@ -98,7 +90,7 @@ namespace TemplateFw.DashboardApi.Controllers.Base
                 var response = new GenericApiResponse<T>
                 {
                     Data = result,
-                    Status = true   
+                    Status = true
                 };
                 return response;
             }
@@ -116,7 +108,7 @@ namespace TemplateFw.DashboardApi.Controllers.Base
                 return new object();
             });
         }
-     
+
 
         private GenericApiResponse<T> HandleException<T>(Exception ex, OperationTypes operation)
         {

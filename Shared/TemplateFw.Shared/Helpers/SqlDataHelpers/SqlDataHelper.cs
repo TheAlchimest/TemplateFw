@@ -1,11 +1,8 @@
-﻿using TemplateFw.Shared.Helpers.SqlDataHelpers;
-using System;
-using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.Data;
 using System.Data.SqlClient;
-using System.Dynamic;
 using System.Linq;
 using System.Reflection;
 
@@ -13,7 +10,7 @@ using System.Reflection;
 namespace TemplateFw.Shared.Helpers.SqlDataHelpers
 {
 
-    public  class SqlDataHelper
+    public class SqlDataHelper
     {
         private string _connectionString = null;
         public SqlDataHelper(string connectionString)
@@ -29,7 +26,8 @@ namespace TemplateFw.Shared.Helpers.SqlDataHelpers
         }
         #endregion
 
-        public List<T> RetrieveEntityList<T>(string procedureName, params SqlParameter[] commandParameters) {
+        public List<T> RetrieveEntityList<T>(string procedureName, params SqlParameter[] commandParameters)
+        {
             return RetrieveEntityList<T>(procedureName, commandParameters.ToList());
         }
         public List<T> RetrieveEntityList<T>(string procedureName, List<SqlParameter> parameters)
@@ -206,8 +204,8 @@ namespace TemplateFw.Shared.Helpers.SqlDataHelpers
         }
         #endregion
 
-        
-        
+
+
 
         #region --------------RetrieveEntityList--------------
         public List<T> RetrieveEntityList<T>(string procedureName)

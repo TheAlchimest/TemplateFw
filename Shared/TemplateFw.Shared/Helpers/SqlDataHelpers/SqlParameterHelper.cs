@@ -1,11 +1,9 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Collections;
-using System.Data;
-using System.Linq.Expressions;
-using TemplateFw.Shared.Helpers.SqlDataHelpers;
 
 namespace TemplateFw.Shared.Helpers.SqlDataHelpers
 {
@@ -29,7 +27,8 @@ namespace TemplateFw.Shared.Helpers.SqlDataHelpers
     public class QueryParamIgnoreAttribute : Attribute
     {
     }
-    public static class SqlParametersHelper {
+    public static class SqlParametersHelper
+    {
 
         public static SqlParameter NewParameter(string parameterName, object value)
         {

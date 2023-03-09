@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TemplateFw.Shared.Configuration
+﻿namespace TemplateFw.Shared.Configuration
 {
     public class WebSettings
     {
         public string ModulesInternalApiUrl { get; set; }
         public string AccountsInternalApiUrl { get; set; }
-        public string ExternalApiUrl { get; set; } 
+        public string ExternalApiUrl { get; set; }
         public string LookupApiUrl { get; set; }
         public string CDN { get; set; }
         public string CDNUrl { get; set; }

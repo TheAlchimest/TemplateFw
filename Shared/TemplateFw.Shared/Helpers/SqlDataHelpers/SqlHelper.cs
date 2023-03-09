@@ -23,15 +23,14 @@
 // ==============================================================================
 
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Globalization;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
-using System.Collections;
 using System.Xml;
-using TemplateFw.Shared.Helpers.SqlDataHelpers;
 
 namespace TemplateFw.Shared.Helpers.SqlDataHelpers
 {
@@ -75,7 +74,7 @@ namespace TemplateFw.Shared.Helpers.SqlDataHelpers
             }
         }
         public static void AttachParameters(SqlCommand command, object obj)
-        { 
+        {
             List<SqlParameter> plist = obj.ToSqlParamsList();
             AttachParameters(command, plist);
         }
@@ -85,8 +84,8 @@ namespace TemplateFw.Shared.Helpers.SqlDataHelpers
             List<SqlParameter> plist = obj.ToSqlParamsList();
             AttachParameters(command, plist);
         }
-        
-        public static SqlCommand CreateSpCommand(string sp, SqlConnection connection )
+
+        public static SqlCommand CreateSpCommand(string sp, SqlConnection connection)
         {
             SqlCommand command = new SqlCommand(sp, connection);
             command.CommandType = CommandType.StoredProcedure;
@@ -271,8 +270,8 @@ namespace TemplateFw.Shared.Helpers.SqlDataHelpers
             return ExecuteNonQuery(connectionString, commandType, commandText, null);
         }
 
-        
-        public static int ExecuteStoedProcedure(string connectionString,  string commandText, params SqlParameter[] commandParameters)
+
+        public static int ExecuteStoedProcedure(string connectionString, string commandText, params SqlParameter[] commandParameters)
         {
             return ExecuteNonQuery(connectionString, CommandType.StoredProcedure, commandText, commandParameters.ToList());
         }
@@ -791,7 +790,7 @@ namespace TemplateFw.Shared.Helpers.SqlDataHelpers
         public static DataSet ExecuteDataset(string connectionString, CommandType commandType, string commandText)
         {
             // Pass through the call providing null for the set of SqlParameters
-            return ExecuteDataset(connectionString, commandType, commandText,null);
+            return ExecuteDataset(connectionString, commandType, commandText, null);
         }
 
         /// <summary>
@@ -871,7 +870,7 @@ namespace TemplateFw.Shared.Helpers.SqlDataHelpers
         public static DataSet ExecuteDataset(SqlConnection connection, CommandType commandType, string commandText)
         {
             // Pass through the call providing null for the set of SqlParameters
-            return ExecuteDataset(connection, commandType, commandText,null);
+            return ExecuteDataset(connection, commandType, commandText, null);
         }
 
         /// <summary>
@@ -965,7 +964,7 @@ namespace TemplateFw.Shared.Helpers.SqlDataHelpers
         public static DataSet ExecuteDataset(SqlTransaction transaction, CommandType commandType, string commandText)
         {
             // Pass through the call providing null for the set of SqlParameters
-            return ExecuteDataset(transaction, commandType, commandText,null);
+            return ExecuteDataset(transaction, commandType, commandText, null);
         }
 
         /// <summary>
@@ -1143,7 +1142,7 @@ namespace TemplateFw.Shared.Helpers.SqlDataHelpers
         public static Task<DataSet> ExecuteDatasetAsync(SqlConnection connection, CommandType commandType, string commandText)
         {
             // Pass through the call providing null for the set of SqlParameters
-            return ExecuteDatasetAsync(connection, commandType, commandText,null);
+            return ExecuteDatasetAsync(connection, commandType, commandText, null);
         }
 
         /// <summary>
@@ -1236,7 +1235,7 @@ namespace TemplateFw.Shared.Helpers.SqlDataHelpers
         public static Task<DataSet> ExecuteDatasetAsync(SqlTransaction transaction, CommandType commandType, string commandText)
         {
             // Pass through the call providing null for the set of SqlParameters
-            return ExecuteDatasetAsync(transaction, commandType, commandText,null);
+            return ExecuteDatasetAsync(transaction, commandType, commandText, null);
         }
 
         /// <summary>
@@ -1402,7 +1401,7 @@ namespace TemplateFw.Shared.Helpers.SqlDataHelpers
         public static SqlDataReader ExecuteReader(string connectionString, CommandType commandType, string commandText)
         {
             // Pass through the call providing null for the set of SqlParameters
-            return ExecuteReader(connectionString, commandType, commandText,null);
+            return ExecuteReader(connectionString, commandType, commandText, null);
         }
 
         /// <summary>
@@ -1486,7 +1485,7 @@ namespace TemplateFw.Shared.Helpers.SqlDataHelpers
         public static SqlDataReader ExecuteReader(SqlConnection connection, CommandType commandType, string commandText)
         {
             // Pass through the call providing null for the set of SqlParameters
-            return ExecuteReader(connection, commandType, commandText,null);
+            return ExecuteReader(connection, commandType, commandText, null);
         }
 
         /// <summary>
@@ -1555,7 +1554,7 @@ namespace TemplateFw.Shared.Helpers.SqlDataHelpers
         public static SqlDataReader ExecuteReader(SqlTransaction transaction, CommandType commandType, string commandText)
         {
             // Pass through the call providing null for the set of SqlParameters
-            return ExecuteReader(transaction, commandType, commandText,null);
+            return ExecuteReader(transaction, commandType, commandText, null);
         }
 
         /// <summary>
@@ -1699,7 +1698,7 @@ namespace TemplateFw.Shared.Helpers.SqlDataHelpers
         public static Task<SqlDataReader> ExecuteReaderAsync(string connectionString, CommandType commandType, string commandText)
         {
             // Pass through the call providing null for the set of SqlParameters
-            return ExecuteReaderAsync(connectionString, commandType, commandText,null);
+            return ExecuteReaderAsync(connectionString, commandType, commandText, null);
         }
 
         /// <summary>
@@ -1783,7 +1782,7 @@ namespace TemplateFw.Shared.Helpers.SqlDataHelpers
         public static Task<SqlDataReader> ExecuteReaderAsync(SqlConnection connection, CommandType commandType, string commandText)
         {
             // Pass through the call providing null for the set of SqlParameters
-            return ExecuteReaderAsync(connection, commandType, commandText,null);
+            return ExecuteReaderAsync(connection, commandType, commandText, null);
         }
 
         /// <summary>
@@ -1852,7 +1851,7 @@ namespace TemplateFw.Shared.Helpers.SqlDataHelpers
         public static Task<SqlDataReader> ExecuteReaderAsync(SqlTransaction transaction, CommandType commandType, string commandText)
         {
             // Pass through the call providing null for the set of SqlParameters
-            return ExecuteReaderAsync(transaction, commandType, commandText,null);
+            return ExecuteReaderAsync(transaction, commandType, commandText, null);
         }
 
         /// <summary>
@@ -1930,7 +1929,7 @@ namespace TemplateFw.Shared.Helpers.SqlDataHelpers
         public static object ExecuteScalar(string connectionString, CommandType commandType, string commandText)
         {
             // Pass through the call providing null for the set of SqlParameters
-            return ExecuteScalar(connectionString, commandType, commandText,null);
+            return ExecuteScalar(connectionString, commandType, commandText, null);
         }
 
         /// <summary>
@@ -2009,7 +2008,7 @@ namespace TemplateFw.Shared.Helpers.SqlDataHelpers
         public static object ExecuteScalar(SqlConnection connection, CommandType commandType, string commandText)
         {
             // Pass through the call providing null for the set of SqlParameters
-            return ExecuteScalar(connection, commandType, commandText,null);
+            return ExecuteScalar(connection, commandType, commandText, null);
         }
 
         /// <summary>
@@ -2097,7 +2096,7 @@ namespace TemplateFw.Shared.Helpers.SqlDataHelpers
         public static object ExecuteScalar(SqlTransaction transaction, CommandType commandType, string commandText)
         {
             // Pass through the call providing null for the set of SqlParameters
-            return ExecuteScalar(transaction, commandType, commandText,null);
+            return ExecuteScalar(transaction, commandType, commandText, null);
         }
 
         /// <summary>
@@ -2187,7 +2186,7 @@ namespace TemplateFw.Shared.Helpers.SqlDataHelpers
         public static Task<object> ExecuteScalarAsync(string connectionString, CommandType commandType, string commandText)
         {
             // Pass through the call providing null for the set of SqlParameters
-            return ExecuteScalarAsync(connectionString, commandType, commandText,null);
+            return ExecuteScalarAsync(connectionString, commandType, commandText, null);
         }
 
         /// <summary>
@@ -2266,7 +2265,7 @@ namespace TemplateFw.Shared.Helpers.SqlDataHelpers
         public static Task<object> ExecuteScalarAsync(SqlConnection connection, CommandType commandType, string commandText)
         {
             // Pass through the call providing null for the set of SqlParameters
-            return ExecuteScalarAsync(connection, commandType, commandText,null);
+            return ExecuteScalarAsync(connection, commandType, commandText, null);
         }
 
         /// <summary>
@@ -2353,7 +2352,7 @@ namespace TemplateFw.Shared.Helpers.SqlDataHelpers
         public static Task<object> ExecuteScalarAsync(SqlTransaction transaction, CommandType commandType, string commandText)
         {
             // Pass through the call providing null for the set of SqlParameters
-            return ExecuteScalarAsync(transaction, commandType, commandText,null);
+            return ExecuteScalarAsync(transaction, commandType, commandText, null);
         }
 
         /// <summary>
@@ -2440,7 +2439,7 @@ namespace TemplateFw.Shared.Helpers.SqlDataHelpers
         public static XmlReader ExecuteXmlReader(SqlConnection connection, CommandType commandType, string commandText)
         {
             // Pass through the call providing null for the set of SqlParameters
-            return ExecuteXmlReader(connection, commandType, commandText,null);
+            return ExecuteXmlReader(connection, commandType, commandText, null);
         }
 
         /// <summary>
@@ -2533,7 +2532,7 @@ namespace TemplateFw.Shared.Helpers.SqlDataHelpers
         public static XmlReader ExecuteXmlReader(SqlTransaction transaction, CommandType commandType, string commandText)
         {
             // Pass through the call providing null for the set of SqlParameters
-            return ExecuteXmlReader(transaction, commandType, commandText,null);
+            return ExecuteXmlReader(transaction, commandType, commandText, null);
         }
 
         /// <summary>
@@ -2621,7 +2620,7 @@ namespace TemplateFw.Shared.Helpers.SqlDataHelpers
         public static Task<XmlReader> ExecuteXmlReaderAsync(SqlConnection connection, CommandType commandType, string commandText)
         {
             // Pass through the call providing null for the set of SqlParameters
-            return ExecuteXmlReaderAsync(connection, commandType, commandText,null);
+            return ExecuteXmlReaderAsync(connection, commandType, commandText, null);
         }
 
         /// <summary>
@@ -2714,7 +2713,7 @@ namespace TemplateFw.Shared.Helpers.SqlDataHelpers
         public static Task<XmlReader> ExecuteXmlReaderAsync(SqlTransaction transaction, CommandType commandType, string commandText)
         {
             // Pass through the call providing null for the set of SqlParameters
-            return ExecuteXmlReaderAsync(transaction, commandType, commandText,null);
+            return ExecuteXmlReaderAsync(transaction, commandType, commandText, null);
         }
 
         /// <summary>
@@ -3498,7 +3497,7 @@ namespace TemplateFw.Shared.Helpers.SqlDataHelpers
             if (string.IsNullOrEmpty(spName)) throw new ArgumentNullException("spName");
 
             // Create a SqlCommand
-            var cmd = new SqlCommand(spName, connection) {CommandType = CommandType.StoredProcedure};
+            var cmd = new SqlCommand(spName, connection) { CommandType = CommandType.StoredProcedure };
 
             // If we receive parameter values, we need to figure out where they go
             if ((sourceColumns != null) && (sourceColumns.Length > 0))
@@ -4391,7 +4390,7 @@ namespace TemplateFw.Shared.Helpers.SqlDataHelpers
             if (connection == null) throw new ArgumentNullException("connection");
             if (string.IsNullOrEmpty(spName)) throw new ArgumentNullException("spName");
 
-            var cmd = new SqlCommand(spName, connection) {CommandType = CommandType.StoredProcedure};
+            var cmd = new SqlCommand(spName, connection) { CommandType = CommandType.StoredProcedure };
 
             connection.Open();
             SqlCommandBuilder.DeriveParameters(cmd);

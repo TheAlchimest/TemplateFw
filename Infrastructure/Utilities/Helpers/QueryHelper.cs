@@ -15,7 +15,7 @@
             foreach (var (val, name) in pr)
                 str += val is not null ? $"{name}={val}&" : string.Empty;
 
-            str = str.Remove(str.Length -1);
+            str = str.Remove(str.Length - 1);
 
             return str;
         }

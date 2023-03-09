@@ -1,8 +1,6 @@
-﻿using TemplateFw.Dashboard.Auth;
-using Microsoft.AspNetCore.Http;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authentication;
+﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Negotiate;
+using TemplateFw.Dashboard.Auth;
 
 namespace Microsoft.Extensions.DependencyInjection
 {

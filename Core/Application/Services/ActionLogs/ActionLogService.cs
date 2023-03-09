@@ -1,14 +1,9 @@
 ﻿using AutoMapper;
-using AutoMapper.Configuration;
+using System;
+using System.Threading.Tasks;
 using TemplateFw.Domain.Models;
 using TemplateFw.Persistence.IRepositories;
 using TemplateFw.Shared.Application.Services;
-using Microsoft.AspNetCore.Http;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using static TemplateFw.Domain.Models.ActionLog;
 
 namespace TemplateFw.Application.Services.ActionLogs

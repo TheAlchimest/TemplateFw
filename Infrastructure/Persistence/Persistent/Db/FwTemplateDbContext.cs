@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using TemplateFw.Domain.Models;
-using TemplateFw.Persistence.Persistent.Db.Configures;
 using TemplateFw.Domain.Models.Announces;
-using TemplateFw.Persistence.Persistent.Db.Configurations;
 using TemplateFw.Domain.Models.Countries;
+using TemplateFw.Persistence.Persistent.Db.Configurations;
+using TemplateFw.Persistence.Persistent.Db.Configures;
 
 #nullable disable
 
@@ -86,7 +86,7 @@ namespace TemplateFw.Persistence.Persistent.Db
 
             });
 
-           
+
 
 
 
@@ -109,7 +109,7 @@ namespace TemplateFw.Persistence.Persistent.Db
                     .HasMaxLength(50);
             });
 
-            
+
 
             modelBuilder.Entity<ActionLog>(entity =>
             {

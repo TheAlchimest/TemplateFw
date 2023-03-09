@@ -1,14 +1,13 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using System.Reflection;
+using TemplateFw.Application.Services.ActionLogs;
+using TemplateFw.Application.Services.Announces;
+using TemplateFw.Application.Services.Countries;
 using TemplateFw.Application.Services.FAQ;
 using TemplateFw.Application.Services.Languages;
-using System.Reflection;
-using TemplateFw.Application.Services.Announces;
-using TemplateFw.Shared.Application.Services;
-using TemplateFw.Shared.Application;
-using TemplateFw.Shared.Configuration;
-using TemplateFw.Application.Services.Countries;
 using TemplateFw.Application.Services.Lookup;
-using TemplateFw.Application.Services.ActionLogs;
+using TemplateFw.Shared.Application.Services;
+using TemplateFw.Shared.Configuration;
 
 namespace TemplateFw.Application
 {
@@ -17,7 +16,7 @@ namespace TemplateFw.Application
 
         #region AddAppilcationServices
         public static IServiceCollection AddAppilcationServices(this IServiceCollection services,
-            string notificationUrl,  SystemConfiguration config)
+            string notificationUrl, SystemConfiguration config)
         {
             // Auto Mapper Configurations
             var mapperAssembly = Assembly.GetExecutingAssembly();

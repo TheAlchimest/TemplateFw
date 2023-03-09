@@ -1,7 +1,7 @@
 ﻿
-using TemplateFw.Domain.Models.Announces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using TemplateFw.Domain.Models.Announces;
 
 namespace TemplateFw.Persistence.Persistent.Db.Configures
 {
@@ -63,7 +63,7 @@ namespace TemplateFw.Persistence.Persistent.Db.Configures
             entity.ToTable("AnnounceUsers");
 
             entity.HasKey(e => new { e.AnnounceId, e.UserId });
-       
+
             entity.HasOne(d => d.Announce)
                 .WithMany(p => p.AnnounceUsers)
                 .HasForeignKey(d => d.AnnounceId);
@@ -71,7 +71,7 @@ namespace TemplateFw.Persistence.Persistent.Db.Configures
         }
     }
 
-    
+
     internal class VwAnnounceDetailConfiguration : IEntityTypeConfiguration<VwAnnounceDetail>
     {
         public void Configure(EntityTypeBuilder<VwAnnounceDetail> entity)

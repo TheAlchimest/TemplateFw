@@ -1,9 +1,9 @@
-﻿using TemplateFw.Shared.Domain.Enums;
+﻿using System;
+using System.Threading.Tasks;
 using TemplateFw.Domain.Models.Announces;
 using TemplateFw.Dtos.Announces;
+using TemplateFw.Shared.Domain.Enums;
 using TemplateFw.Shared.Dtos.Collections;
-using System.Threading.Tasks;
-using System;
 
 namespace TemplateFw.Persistence.IRepositories
 {
@@ -15,7 +15,7 @@ namespace TemplateFw.Persistence.IRepositories
         Task<bool> DeleteAsync(int id, string user);
         Task<bool> ActivateAsync(int id, string user);
         Task<bool> DeactivateAsync(int id, string user);
-        Task<bool> PreventViewAgainAsync(int announceId, Guid userId);        
+        Task<bool> PreventViewAgainAsync(int announceId, Guid userId);
         Task<Announce> GetByIdAsync(int id);
         Task<VwAnnounceFullData> FullDataByIdAsync(int id, EnumLanguage lang);
         Task<VwAnnounceFullData> GetClientPortalAnnounceAsync(int portalId, Guid userId);

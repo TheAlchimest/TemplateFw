@@ -1,15 +1,15 @@
 using AutoMapper;
-using TemplateFw.Shared.Application.Exceptions;
-using TemplateFw.Shared.Domain.Enums;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using TemplateFw.Domain.Models;
 using TemplateFw.Dtos.Common;
 using TemplateFw.Dtos.FAQ;
-using TemplateFw.Shared.Dtos.Collections;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using TemplateFw.Shared.Application.Services;
 using TemplateFw.Persistence.Repositories;
-using System;
+using TemplateFw.Shared.Application.Exceptions;
+using TemplateFw.Shared.Application.Services;
+using TemplateFw.Shared.Domain.Enums;
+using TemplateFw.Shared.Dtos.Collections;
 
 namespace TemplateFw.Application.Services.FAQ
 {

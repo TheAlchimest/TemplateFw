@@ -1,41 +1,9 @@
-using Microsoft.EntityFrameworkCore;
-using TemplateFw.Domain.Models;
-using TemplateFw.Persistence.IRepositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.Data.SqlClient;
-using Microsoft.Data;
-using TemplateFw.Shared.Helpers.SqlDataHelpers;
-using TemplateFw.Dtos.FAQ;
-using TemplateFw.Shared.Dtos.Collections;
-using TemplateFw.Dtos.Common;
-using TemplateFw.Persistence.Extensions;
 using Microsoft.Extensions.Configuration;
-using TemplateFw.Utilities.Helpers;
-using TemplateFw.Shared.Domain.Enums;
-using TemplateFw.Shared.Helpers;
 using TemplateFw.Persistence.Persistent.Db;
-
-using Adoler;
+using TemplateFw.Shared.Helpers.SqlDataHelpers;
 
 namespace TemplateFw.Persistence.Repositories
 {
-    public class SqlHelperWrite : Adoler.SqlDataHelper
-    {
-        public SqlHelperWrite(IConfiguration configuration) : base(configuration.GetSharedModulesWriteConnectionString())
-        {
-        }
-
-    }
-    public class SqlHelperRead : Adoler.SqlDataHelper
-    {
-        public SqlHelperRead(IConfiguration configuration) : base(configuration.GetSharedModulesReadOnlyConnectionString())
-        {
-        }
-
-    }
     public class DbHelper : IDbHelper
     {
         public TemplateFwDbContext dbWrite { get; }

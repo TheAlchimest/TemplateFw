@@ -1,18 +1,16 @@
 ﻿using Dashboard.Common.WebClientHelpers;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using TemplateFw.Dashboard.Auth;
-using TemplateFw.Shared.Domain.GenericResponse;
 using TemplateFw.Domain.Models.Announces;
 using TemplateFw.Dtos.Announces;
 using TemplateFw.Dtos.Dtos.Common;
-using TemplateFw.Shared.Dtos.Collections;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
-using System.Threading.Tasks;
-using TemplateFw.Shared.Helpers;
 using TemplateFw.Shared.Domain.Enums;
-using Urls = Dashboard.Common.WebClientHelpers.InternalApiDictionary.AnnouncesUrls;
+using TemplateFw.Shared.Domain.GenericResponse;
+using TemplateFw.Shared.Dtos.Collections;
+using TemplateFw.Shared.Helpers;
 using LookupsUrls = Dashboard.Common.WebClientHelpers.InternalApiDictionary.LookupsUrls;
+using Urls = Dashboard.Common.WebClientHelpers.InternalApiDictionary.AnnouncesUrls;
 
 namespace TemplateFw.Dashboard.Controllers
 {
@@ -69,7 +67,7 @@ namespace TemplateFw.Dashboard.Controllers
             try
             {
                 var apiResult = await _api.PostAsync<GenericApiResponse<PagedList<VwAnnounceFullData>>>(Urls.GetAll, filter);
-                return  ReturnViewResponse(apiResult, OperationTypes.GetContent);
+                return ReturnViewResponse(apiResult, OperationTypes.GetContent);
             }
             catch (System.Exception ex)
             {
@@ -99,7 +97,7 @@ namespace TemplateFw.Dashboard.Controllers
             }
 
 
-            
+
         }
         #endregion
 
@@ -148,7 +146,7 @@ namespace TemplateFw.Dashboard.Controllers
 
                 return ReturnJsonResponse(ex, OperationTypes.Delete);
             }
-            
+
             //return Ok(result);
         }
         #endregion

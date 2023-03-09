@@ -1,14 +1,11 @@
 ﻿using AutoMapper;
-using TemplateFw.Domain.Models.Countries;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using TemplateFw.Dtos.Dtos.Common;
 using TemplateFw.Persistence.IRepositories;
 using TemplateFw.Shared.Application.Services;
 using TemplateFw.Shared.Domain.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TemplateFw.Application.Services.Countries
 {

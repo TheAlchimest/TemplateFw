@@ -1,9 +1,4 @@
-﻿using TemplateFw.Shared.Domain.Enums;
-using System.Globalization;
-using System.Linq;
-using System.Threading;
-
-namespace TemplateFw.Utilities.Helpers
+﻿namespace TemplateFw.Utilities.Helpers
 {
     //public class LocalizationsManager
     //{
@@ -18,7 +13,7 @@ namespace TemplateFw.Utilities.Helpers
     //        new CultureInfo(LanguageEN)
     //    };
 
-      
+
     //    public static int GetLanguage()
     //    {
     //        switch (Thread.CurrentThread.CurrentCulture.Name)

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TemplateFw.Utilities
 {
@@ -29,7 +25,7 @@ namespace TemplateFw.Utilities
         public string LanguageCode { get; set; }
         public string ServiceApiUrl { get; set; }
         public string ServiceWebUrl { get; set; }
-        public FBServiceExternalUrls(string serviceApiUrl, string serviceWebUrl, string serviceCode, string requestCode,string languageCode)
+        public FBServiceExternalUrls(string serviceApiUrl, string serviceWebUrl, string serviceCode, string requestCode, string languageCode)
         {
             ServiceApiUrl = (serviceApiUrl.EndsWith('/')) ? serviceApiUrl.Remove(serviceApiUrl.Length - 1) : serviceApiUrl;
             ServiceWebUrl = (serviceWebUrl.EndsWith('/')) ? serviceWebUrl.Remove(serviceWebUrl.Length - 1) : serviceWebUrl;
@@ -37,7 +33,7 @@ namespace TemplateFw.Utilities
             RequestCode = requestCode;
             LanguageCode = languageCode;
         }
-        public  string PrepareExternalUrl(string url)
+        public string PrepareExternalUrl(string url)
         {
             string newUrl = null;
             try

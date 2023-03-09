@@ -1,5 +1,5 @@
-﻿using TemplateFw.Shared.Domain.Enums;
-using System;
+﻿using System;
+using TemplateFw.Shared.Domain.Enums;
 
 namespace TemplateFw.Shared.Application.Exceptions
 {

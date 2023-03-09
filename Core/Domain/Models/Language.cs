@@ -1,7 +1,4 @@
-﻿using TemplateFw.Domain.Models.Announces;
-using System.Collections.Generic;
-
-#nullable disable
+﻿#nullable disable
 
 namespace TemplateFw.Domain.Models
 {

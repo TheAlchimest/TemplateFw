@@ -1,13 +1,13 @@
 using AutoMapper;
-using TemplateFw.Shared.Application.Exceptions;
-using TemplateFw.Shared.Domain.Enums;
-using TemplateFw.Shared.Domain.Interfaces;
+using System.Threading.Tasks;
 using TemplateFw.Domain.Models.Announces;
 using TemplateFw.Dtos.Announces;
 using TemplateFw.Persistence.IRepositories;
-using TemplateFw.Shared.Dtos.Collections;
-using System.Threading.Tasks;
+using TemplateFw.Shared.Application.Exceptions;
 using TemplateFw.Shared.Application.Services;
+using TemplateFw.Shared.Domain.Enums;
+using TemplateFw.Shared.Domain.Interfaces;
+using TemplateFw.Shared.Dtos.Collections;
 
 namespace TemplateFw.Application.Services.Announces
 {

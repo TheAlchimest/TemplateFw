@@ -6,7 +6,7 @@
         {
 
         }
-        public LookupDto(int id , string text)
+        public LookupDto(int id, string text)
         {
             Id = id;
             Text = text;

@@ -1,8 +1,8 @@
-using TemplateFw.Dtos.Common;
-using TemplateFw.Resources;
 using FluentValidation;
 using Microsoft.Extensions.Localization;
 using System.Collections.Generic;
+using TemplateFw.Dtos.Common;
+using TemplateFw.Resources;
 
 namespace TemplateFw.Dtos.Announces
 {

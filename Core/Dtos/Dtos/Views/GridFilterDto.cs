@@ -1,6 +1,5 @@
-﻿using TemplateFw.Shared.Domain.Enums;
+﻿using System;
 using TemplateFw.Utilities.Helpers;
-using System;
 
 namespace TemplateFw.Dtos.Views
 {
@@ -34,7 +33,7 @@ namespace TemplateFw.Dtos.Views
         public string ModificationAt {
             get {
                 if (LastModificationDate == null)
-                    return ""; 
+                    return "";
                 return LastModificationDate.Value.ConvertToDashboardInputTextDateTime();
             }
         }

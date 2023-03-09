@@ -1,22 +1,20 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Dashboard.Common.WebClientHelpers;
 using Microsoft.AspNetCore.Localization;
-using Microsoft.Extensions.Localization;
-using TemplateFw.Resources;
-using System.Globalization;
-using TemplateFw.Shared.Domain.GenericResponse;
-using TemplateFw.Shared.Domain.Enums;
-using TemplateFw.Dashboard.Extensions;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
-using static TemplateFw.Utilities.FbUrls;
-using TemplateFw.Dtos.Common;
+using Microsoft.Extensions.Localization;
+using System.Globalization;
+using TemplateFw.Dashboard.Extensions;
 using TemplateFw.Dtos.FAQ;
+using TemplateFw.Resources;
+using TemplateFw.Shared.Domain.Enums;
+using TemplateFw.Shared.Domain.GenericResponse;
 using TemplateFw.Shared.Dtos.Collections;
-using Dashboard.Common.WebClientHelpers;
 
 namespace TemplateFw.Dashboard.Controllers
 {
-    public class LocalizedController : Controller 
-    { 
+    public class LocalizedController : Controller
+    {
         private IStringLocalizer<SharedResource> _localizer;
         public IStringLocalizer<SharedResource> Localizer
             => _localizer ??= HttpContext.RequestServices.GetService<IStringLocalizer<SharedResource>>();
@@ -55,7 +53,7 @@ namespace TemplateFw.Dashboard.Controllers
 
 
         #region  ApiErrorForViewResult
-        public async Task<IActionResult> ReturnViewResponse<T>(RequestUrlHelper _api,string apiUrl, object dto, OperationTypes operation = OperationTypes.Unknown)
+        public async Task<IActionResult> ReturnViewResponse<T>(RequestUrlHelper _api, string apiUrl, object dto, OperationTypes operation = OperationTypes.Unknown)
         {
             try
             {

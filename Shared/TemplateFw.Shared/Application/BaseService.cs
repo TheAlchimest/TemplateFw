@@ -1,6 +1,6 @@
 using AutoMapper;
-using TemplateFw.Shared.Domain.Interfaces;
 using System;
+using TemplateFw.Shared.Domain.Interfaces;
 
 namespace TemplateFw.Shared.Application.Services
 {
@@ -22,7 +22,7 @@ namespace TemplateFw.Shared.Application.Services
 
         #region SetCreationData
         // currentDate for mutible insertion or master detail entities
-        public void SetCreationData(IAgregateEntity entity, DateTime? currentDate=null)
+        public void SetCreationData(IAgregateEntity entity, DateTime? currentDate = null)
         {
             var username = _userInfoService.GetCurrentUserName();
             if (!string.IsNullOrEmpty(username))

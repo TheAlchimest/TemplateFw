@@ -1,7 +1,7 @@
 ﻿
-using TemplateFw.Domain.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using TemplateFw.Domain.Models;
 
 namespace TemplateFw.Persistence.Persistent.Db.Configures
 {
@@ -37,7 +37,7 @@ namespace TemplateFw.Persistence.Persistent.Db.Configures
         }
     }
 
-    
+
 
 
     internal class VwFaqFullDetailConfiguration : IEntityTypeConfiguration<VwFaqFullData>

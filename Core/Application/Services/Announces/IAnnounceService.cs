@@ -1,9 +1,9 @@
 
-using TemplateFw.Shared.Domain.Enums;
+using System.Threading.Tasks;
 using TemplateFw.Domain.Models.Announces;
 using TemplateFw.Dtos.Announces;
+using TemplateFw.Shared.Domain.Enums;
 using TemplateFw.Shared.Dtos.Collections;
-using System.Threading.Tasks;
 
 namespace TemplateFw.Application.Services.Announces
 {
