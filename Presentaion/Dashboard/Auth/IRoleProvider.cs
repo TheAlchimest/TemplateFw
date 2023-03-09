@@ -13,7 +13,7 @@ namespace TemplateFw.Dashboard.Auth
     public class RoleProvider : IRoleProvider
     {
         public const string SERVICES_ADMIN = "Services";
-        public const string FAQS_ADMIN = "Faqs";
+        public const string Faq = "Faqs";
         public const string POLLS_ADMIN = "Polls";
         public const string VOTINGS_ADMIN = "Votings";
         public const string COMPLAINTS_ADMIN = "Complaints";
@@ -74,7 +74,7 @@ namespace TemplateFw.Dashboard.Auth
             }
             if (admin.CanManageFaqs == true)
             {
-                result.Add(FAQS_ADMIN);
+                result.Add(Faq);
             }
             if (admin.CanManagePolls == true)
             {

@@ -1,6 +1,6 @@
 ﻿@using TemplateFw.Shared.Domain.Enums
 @inject IOptions<WebSettings> webSettings
-@model TemplateFw.Dtos.FAQ.FaqDto
+@model TemplateFw.Dtos.FaqDto
 
 @{
     bool isUpdateMode = (Model.FaqId != 0);
@@ -9,7 +9,7 @@
 <form method="post" id="frmForm" name="frmForm" action="/Faq/Save" data-is-update-mode="@(isUpdateModeString)">
     <div class="form-head mb-sm-5 mb-3 d-flex flex-wrap align-items-center ">
         <div class=" mr-auto">
-            <h3 class="font-w600 mb-2">@localizer["FAQ"]</h3>
+            <h3 class="font-w600 mb-2">@localizer["Faq"]</h3>
             <p class="mb-0">@localizer["FaqManagement"]</p>
         </div>
     </div>

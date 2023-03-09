@@ -23,7 +23,7 @@ namespace TemplateFw.Persistence.Persistent.Db
         public virtual DbSet<Faq> Faqs { get; set; }
         public virtual DbSet<Language> Languages { get; set; }
         public virtual DbSet<Portal> Portals { get; set; }
-        public virtual DbSet<VwFaqFullData> VwFaqFullData { get; set; }
+        public virtual DbSet<VwFaq> VwFaq { get; set; }
         public virtual DbSet<VwPortalFullData> VwPortalDetails { get; set; }
         public virtual DbSet<Announce> Announces { get; set; }
         public virtual DbSet<AnnounceDetail> AnnounceDetails { get; set; }

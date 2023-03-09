@@ -2,7 +2,7 @@
 using TemplateFw.Domain.Models;
 using TemplateFw.Domain.Models.Announces;
 using TemplateFw.Dtos.Announces;
-using TemplateFw.Dtos.FAQ;
+using TemplateFw.Dtos;
 
 namespace TemplateFw.Application
 {

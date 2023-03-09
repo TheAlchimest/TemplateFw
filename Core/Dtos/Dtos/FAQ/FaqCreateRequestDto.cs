@@ -4,7 +4,7 @@ using Microsoft.Extensions.Localization;
 using System;
 using TemplateFw.Resources;
 
-namespace TemplateFw.Dtos.FAQ
+namespace TemplateFw.Dtos
 {
     public class FaqDto
     {

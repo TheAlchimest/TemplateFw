@@ -4,14 +4,14 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using TemplateFw.Domain.Models;
 using TemplateFw.Dtos.Common;
-using TemplateFw.Dtos.FAQ;
+using TemplateFw.Dtos;
 using TemplateFw.Persistence.Repositories;
 using TemplateFw.Shared.Application.Exceptions;
 using TemplateFw.Shared.Application.Services;
 using TemplateFw.Shared.Domain.Enums;
 using TemplateFw.Shared.Dtos.Collections;
 
-namespace TemplateFw.Application.Services.FAQ
+namespace TemplateFw.Application.Services
 {
     public class FaqService : BaseService, IFaqService
     {

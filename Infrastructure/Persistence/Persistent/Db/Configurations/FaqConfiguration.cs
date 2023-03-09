@@ -10,7 +10,7 @@ namespace TemplateFw.Persistence.Persistent.Db.Configures
     {
         public void Configure(EntityTypeBuilder<Faq> entity)
         {
-            entity.ToTable("FAQ");
+            entity.ToTable("Faq");
 
             entity.HasIndex(e => e.PortalId, "IX_FAQ_PortalId");
 
@@ -40,13 +40,13 @@ namespace TemplateFw.Persistence.Persistent.Db.Configures
 
 
 
-    internal class VwFaqFullDetailConfiguration : IEntityTypeConfiguration<VwFaqFullData>
+    internal class VwFaqFullDetailConfiguration : IEntityTypeConfiguration<VwFaq>
     {
-        public void Configure(EntityTypeBuilder<VwFaqFullData> entity)
+        public void Configure(EntityTypeBuilder<VwFaq> entity)
         {
             entity.HasNoKey();
 
-            entity.ToView("VwFaqFullData");
+            entity.ToView("VwFaq");
 
 
             entity.Property(e => e.CreatedBy)

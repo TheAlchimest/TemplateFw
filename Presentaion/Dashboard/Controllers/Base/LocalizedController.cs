@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.Extensions.Localization;
 using System.Globalization;
 using TemplateFw.Dashboard.Extensions;
-using TemplateFw.Dtos.FAQ;
+using TemplateFw.Dtos;
 using TemplateFw.Resources;
 using TemplateFw.Shared.Domain.Enums;
 using TemplateFw.Shared.Domain.GenericResponse;

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace TemplateFw.Dtos.FAQ.UserAccounts
+namespace TemplateFw.Dtos.UserAccounts
 {
     public class GovernmentAccountCreateRequestDto
     {

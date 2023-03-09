@@ -48,7 +48,7 @@ namespace TemplateFw.Dashboard.Auth
                     new Claim(RoleClaimType, RoleProvider.SERVICE_PROVIDERS_ACCOUNTS_ADMIN),
                     new Claim(RoleClaimType, RoleProvider.VOTINGS_ADMIN),
                     new Claim(RoleClaimType, RoleProvider.POLLS_ADMIN),
-                    new Claim(RoleClaimType, RoleProvider.FAQS_ADMIN),
+                    new Claim(RoleClaimType, RoleProvider.Faq),
                     new Claim(RoleClaimType, RoleProvider.COMPLAINTS_ADMIN),
                     new Claim(RoleClaimType, RoleProvider.ANNOUNCING_ADMIN),
                     new Claim(RoleClaimType, RoleProvider.SUPER_ADMIN),

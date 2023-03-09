@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using TemplateFw.Application.Services.FAQ;
+using TemplateFw.Application.Services;
 using TemplateFw.DashboardApi.Controllers.Base;
 using TemplateFw.Dtos.Common;
-using TemplateFw.Dtos.FAQ;
+using TemplateFw.Dtos;
 using TemplateFw.Shared.Domain.Enums;
 using TemplateFw.Shared.Domain.GenericResponse;
 using TemplateFw.Shared.Dtos.Collections;

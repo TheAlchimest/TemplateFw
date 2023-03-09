@@ -24,7 +24,7 @@ namespace Dashboard.Common.WebClientHelpers
             //public const string GetAllPaymentOptions    = "lookup/get-all-PaymentOptions";
             //public const string GetAllServiceUsers      = "lookup/get-all-ServiceUsers";
         }
-        public static class FaqsUrls
+        public static class FaqUrls
         {
             public const string Create = "Faq/Create";
             public const string Save = "Faq/Save";

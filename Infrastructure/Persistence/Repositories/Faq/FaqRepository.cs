@@ -7,7 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using TemplateFw.Domain.Models;
 using TemplateFw.Dtos.Common;
-using TemplateFw.Dtos.FAQ;
+using TemplateFw.Dtos;
 using TemplateFw.Shared.Domain.Enums;
 using TemplateFw.Shared.Dtos.Collections;
 
@@ -18,7 +18,7 @@ namespace TemplateFw.Persistence.Repositories
         readonly IDbHelper dbHelper;
         readonly DbSet<Faq> dbSetReadOnly;
         readonly DbSet<Faq> dbSetWrite;
-        readonly DbSet<VwFaqFullData> _fullDataView;
+        readonly DbSet<VwFaq> _fullDataView;
         readonly string _writeConnectionString = "";
         readonly string _readConnectionString = "";
 
@@ -35,10 +35,9 @@ namespace TemplateFw.Persistence.Repositories
             //dbSet ReadOnly for select operation
             dbSetReadOnly = dbHelper.dbReadOnly.Faqs;
             //db detail view
-            _fullDataView = dbHelper.dbReadOnly.VwFaqFullData;
+            _fullDataView = dbHelper.dbReadOnly.VwFaq;
 
         }
-        #region Write Operations
 
         #region InsertAsync
         public async Task<bool> CreateAsync(Faq entity)
@@ -82,9 +81,6 @@ namespace TemplateFw.Persistence.Repositories
         }
         #endregion
 
-
-
-
         #region GetInfoByIdAsync
         public async Task<FaqInfoDto> GetInfoByIdAsync(int id, EnumLanguage lang = EnumLanguage.Arabic)
         {
@@ -95,9 +91,6 @@ namespace TemplateFw.Persistence.Repositories
             return item;
         }
         #endregion
-
-        #endregion
-        #region Read Operations
 
         #region GetByIdAsync
         public async Task<Faq> GetOneByIdAsync(int id)
@@ -136,7 +129,7 @@ namespace TemplateFw.Persistence.Repositories
         #endregion
         /*
         #region GetPagedListAsync
-        public async Task<PagedList<VwFaqFullData>> GetPagedListAsync(FaqGridFilter filter)
+        public async Task<PagedList<VwFaq>> GetPagedListAsync(FaqGridFilter filter)
         {
             int langId = 1;
             var query = _fullDataView.AsNoTracking();
@@ -162,24 +155,11 @@ namespace TemplateFw.Persistence.Repositories
             //order by the latest items first
             query = query.OrderByDescending(e => e.FaqId);
             //ToPagedListAsync
-            return await query.ToPagedListAsync<VwFaqFullData>(filter);
+            return await query.ToPagedListAsync<VwFaq>(filter);
         }
 
         #endregion
         */
-
-
-        #endregion
-
-
-
-
-
-
-
-
-
-
 
     }
 }

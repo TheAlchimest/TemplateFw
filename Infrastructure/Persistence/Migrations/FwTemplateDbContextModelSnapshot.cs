@@ -410,7 +410,7 @@ namespace TemplateFw.Persistence.Migrations
 
                     b.HasIndex(new[] { "PortalId" }, "IX_FAQ_PortalId");
 
-                    b.ToTable("FAQ", (string)null);
+                    b.ToTable("Faq", (string)null);
                 });
 
             modelBuilder.Entity("TemplateFw.Domain.Models.FaqDetail", b =>
@@ -3303,7 +3303,7 @@ namespace TemplateFw.Persistence.Migrations
                     b.ToView("VwFaqDetail");
                 });
 
-            modelBuilder.Entity("TemplateFw.Domain.Models.VwFaqFullData", b =>
+            modelBuilder.Entity("TemplateFw.Domain.Models.VwFaq", b =>
                 {
                     b.Property<string>("Answer")
                         .IsRequired()
@@ -3362,7 +3362,7 @@ namespace TemplateFw.Persistence.Migrations
                     b.Property<string>("ServiceName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.ToView("VwFaqFullData");
+                    b.ToView("VwFaq");
                 });
 
             modelBuilder.Entity("TemplateFw.Domain.Models.VwPortalDetail", b =>

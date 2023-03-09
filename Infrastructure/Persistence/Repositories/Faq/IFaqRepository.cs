@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using TemplateFw.Domain.Models;
 using TemplateFw.Dtos.Common;
-using TemplateFw.Dtos.FAQ;
+using TemplateFw.Dtos;
 using TemplateFw.Shared.Domain.Enums;
 using TemplateFw.Shared.Dtos.Collections;
 

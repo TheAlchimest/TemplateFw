@@ -4,7 +4,7 @@
 
 namespace TemplateFw.Domain.Models
 {
-    public partial class VwFaqFullData
+    public partial class VwFaq
     {
         public int FaqId { get; set; }
         public string QuestionAr { get; set; }

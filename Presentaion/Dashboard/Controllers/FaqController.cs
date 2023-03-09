@@ -4,17 +4,17 @@ using Microsoft.AspNetCore.Mvc;
 using TemplateFw.Dashboard.Auth;
 using TemplateFw.Dtos.Common;
 using TemplateFw.Dtos.Dtos.Common;
-using TemplateFw.Dtos.FAQ;
+using TemplateFw.Dtos;
 using TemplateFw.Shared.Domain.Enums;
 using TemplateFw.Shared.Domain.GenericResponse;
 using TemplateFw.Shared.Dtos.Collections;
 using TemplateFw.Shared.Helpers;
 using LookupsUrls = Dashboard.Common.WebClientHelpers.InternalApiDictionary.LookupsUrls;
-using Urls = Dashboard.Common.WebClientHelpers.InternalApiDictionary.FaqsUrls;
+using Urls = Dashboard.Common.WebClientHelpers.InternalApiDictionary.FaqUrls;
 
 namespace TemplateFw.Dashboard.Controllers
 {
-    [Authorize(Roles = RoleProvider.FAQS_ADMIN)]
+    [Authorize(Roles = RoleProvider.Faq)]
     public class FaqController : WebBaseController<FaqController>
     {
         private readonly RequestUrlHelper _api = ApiRequestHelper.InternalAPI;
