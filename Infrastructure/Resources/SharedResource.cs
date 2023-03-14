@@ -27,4 +27,15 @@ namespace TemplateFw.Resources
 
         public static string LocalizeString(string name) => _localizer[name];
     }
+
+    public class ModulesResource
+    {
+        private static IStringLocalizer _localizer;
+
+        public ModulesResource(IStringLocalizer<ModulesResource> localizer) => _localizer = localizer;
+
+        public string this[string index] => _localizer[index];
+
+        public static string LocalizeString(string name) => _localizer[name];
+    }
 }
