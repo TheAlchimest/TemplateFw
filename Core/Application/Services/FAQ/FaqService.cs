@@ -27,11 +27,11 @@ namespace TemplateFw.Application.Services
         #endregion
 
         #region CreateAsync
-        public async Task<bool> CreateAsync(FaqDto model)
+        public async Task<bool> CreateAsync(FaqDto dto)
         {
-            var entity = _mapper.Map<Faq>(model);
-            SetCreationData(entity);
-            return await _repository.CreateAsync(entity);
+            string user = _userInfoService.GetCurrentUserName();
+            dto.CreatedBy = user;
+            return await _repository.CreateAsync(dto);
         }
         #endregion
 
@@ -40,16 +40,22 @@ namespace TemplateFw.Application.Services
         {
             string user = _userInfoService.GetCurrentUserName();
             dto.LastModifiedBy = user;
-            dto.LastModificationDate = DateTime.Now;
             return await _repository.UpdateAsync(dto);
         }
         #endregion
 
-        #region DeleteAsync
-        public async Task<bool> DeleteAsync(int id)
+        #region DeletePermanentlyAsync
+        public async Task<bool> DeletePermanentlyAsync(int id)
+        {
+            return await _repository.DeletePermanentlyAsync(id);
+        }
+        #endregion
+
+        #region DeleteVirtuallyAsync
+        public async Task<bool> DeleteVirtuallyAsync(int id)
         {
             string user = _userInfoService.GetCurrentUserName();
-            return await _repository.DeleteAsync(id, user);
+            return await _repository.DeleteVirtuallyAsync(id, user);
         }
         #endregion
 
@@ -57,14 +63,11 @@ namespace TemplateFw.Application.Services
         public async Task<FaqDto> GetOneByIdAsync(int id)
         {
             var entity = await _repository.GetOneByIdAsync(id);
-
             if (entity is null)
             {
                 throw new BusinessException(ErrorCodes.NotFound);
             }
-            var dto = _mapper.Map<FaqDto>(entity);
-
-            return dto;
+            return entity;
         }
         #endregion
 
@@ -81,32 +84,22 @@ namespace TemplateFw.Application.Services
         #endregion
 
         #region GetAllAsync
-        public async Task<List<FaqInfoDto>> GetAllAsync(EnumLanguage lang = EnumLanguage.Arabic, int? portalId = null, int? serviceId = null)
+        public async Task<List<FaqInfoDto>> GetAllAsync(FaqFilter filter)
         {
-            var list = await _repository.GetAllAsync(lang, portalId, serviceId);
+            var list = await _repository.GetAllAsync(filter);
             return list;
         }
         #endregion
 
-        #region GetAllAsync
-        public async Task<List<FaqInfoDto>> GetAllAsync(FaqGridFilter filter)
+
+
+        #region GetAllInfoPagedAsync
+        public async Task<PagedList<FaqInfoDto>> GetAllInfoPagedAsync(FaqFilter filter)
         {
-            return await _repository.GetAllAsync((EnumLanguage)filter.LanguageId, filter.PortalId, filter.ServiceId);
+            return await _repository.GetAllInfoPagedAsync(filter);
         }
         #endregion
 
-        #region GetPagedListAsync
-        public async Task<PagedList<FaqInfoDto>> GetPagedListAsync(FaqGridFilter filter)
-        {
-            return await _repository.GetPagedListAsync(filter);
-        }
-        #endregion
 
-        #region GetPageByPageAsync
-        public async Task<PagedList<FaqInfoDto>> GetPageByPageAsync(FaqGridFilter filter)
-        {
-            return await _repository.GetPageByPageAsync(filter);
-        }
-        #endregion
     }
 }

@@ -1,7 +1,7 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using TemplateFw.Dtos.Common;
 using TemplateFw.Dtos;
+using TemplateFw.Dtos.Common;
 using TemplateFw.Shared.Domain.Enums;
 using TemplateFw.Shared.Dtos.Collections;
 
@@ -9,13 +9,13 @@ namespace TemplateFw.Application.Services
 {
     public interface IFaqService
     {
-        Task<bool> CreateAsync(FaqDto model);
-        Task<bool> UpdateAsync(FaqDto dto);
-        Task<bool> DeleteAsync(int id);
-        Task<PagedList<FaqInfoDto>> GetPagedListAsync(FaqGridFilter filter);
-        Task<PagedList<FaqInfoDto>> GetPageByPageAsync(FaqGridFilter filter);
-        Task<List<FaqInfoDto>> GetAllAsync(FaqGridFilter filter);
-        Task<FaqDto> GetOneByIdAsync(int id);
+        Task<bool> CreateAsync(FaqDto dto);
+        Task<bool> DeletePermanentlyAsync(int id);
+        Task<bool> DeleteVirtuallyAsync(int id);
+        Task<List<FaqInfoDto>> GetAllAsync(FaqFilter filter);
+        Task<PagedList<FaqInfoDto>> GetAllInfoPagedAsync(FaqFilter filter);
         Task<FaqInfoDto> GetInfoByIdAsync(int id, EnumLanguage lang);
+        Task<FaqDto> GetOneByIdAsync(int id);
+        Task<bool> UpdateAsync(FaqDto dto);
     }
 }

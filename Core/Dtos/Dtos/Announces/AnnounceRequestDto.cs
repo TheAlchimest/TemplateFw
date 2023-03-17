@@ -6,7 +6,7 @@ using TemplateFw.Resources;
 
 namespace TemplateFw.Dtos.Announces
 {
-    public class AnnounceGridFilter : PaginationParameter
+    public class AnnounceGridFilter : PaginationFilter
     {
         public int? PortalId { get; set; }
     }

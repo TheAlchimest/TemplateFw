@@ -42,7 +42,7 @@ namespace TemplateFw.Dashboard.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            FaqGridFilter filter = new FaqGridFilter();
+            FaqFilter filter = new FaqFilter();
             return await ReturnViewResponse<GenericApiResponse<PagedList<FaqInfoDto>>>(_api, Urls.GetPaged, filter, OperationTypes.GetContent);
         }
         #endregion

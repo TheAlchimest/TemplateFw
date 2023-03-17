@@ -35,7 +35,7 @@ namespace TemplateFw.Persistence
 
             services.AddScoped<IDbHelper, DbHelper>();
 
-            services.AddScoped<IAnnounceRepository, AnnounceRepository>();
+            //services.AddScoped<IAnnounceRepository, AnnounceRepository>();
             services.AddScoped<IFaqRepository, FaqRepository>();
             services.AddScoped<ILanguageRepository, LanguageRepository>();
             services.AddScoped<ICountryRepository, CountryRepository>();

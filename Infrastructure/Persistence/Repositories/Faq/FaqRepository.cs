@@ -1,4 +1,4 @@
-using Adoler;
+﻿using Adoler;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
@@ -40,10 +40,11 @@ namespace TemplateFw.Persistence.Repositories
         }
 
         #region InsertAsync
-        public async Task<bool> CreateAsync(Faq entity)
+        public async Task<bool> CreateAsync(FaqDto dto)
         {
-            await dbSetWrite.AddAsync(entity);
-            int affectedRows = await dbHelper.dbWrite.SaveChangesAsync();
+            List<SqlParameter> plist = dto.ConvertToParametersExcept(e => e.FaqId, e => e.CreatedBy, e => e.LastModifiedBy, e => e.LastModificationDate, e => e.IsAvailable);
+            var faqID = plist.AddOutputParameterInteger("FaqId");
+            int affectedRows = dbHelper.SqlHelperWrite.ExecuteNonQuery("[dbo].[Faq_Create]", plist);
             return (affectedRows > 0);
         }
         #endregion
@@ -51,33 +52,31 @@ namespace TemplateFw.Persistence.Repositories
         #region UpdateAsync
         public async Task<bool> UpdateAsync(FaqDto dto)
         {
-            List<SqlParameter> plist = dto.ConvertToParametersExcept(e => e.CreatedBy, e => e.CreationDate, e => e.IsAvailable);
+            List<SqlParameter> plist = dto.ConvertToParametersExcept(e => e.CreatedBy, e => e.CreationDate, e => e.LastModificationDate, e => e.IsAvailable);
             int affectedRows = dbHelper.SqlHelperWrite.ExecuteNonQuery("[dbo].[Faq_Update]", plist);
             return (affectedRows > 0);
         }
 
         #endregion
 
-        #region DeleteAsync
-        public async Task<bool> DeleteAsync(int id, string user)
+        #region DeleteVirtuallyAsync
+        public async Task<bool> DeleteVirtuallyAsync(int id, string user)
         {
             dynamic parameters = new ExpandoObject();
             parameters.FaqId = id;
             parameters.LastModifiedBy = user;
-            int affectedRows = dbHelper.SqlHelperWrite.ExecuteNonQuery("[dbo].[Faq_Delete]", parameters);
+            int affectedRows = dbHelper.SqlHelperWrite.ExecuteNonQuery("[dbo].[Faq_DeleteVirtually]", parameters);
             return (affectedRows > 0);
         }
         #endregion
 
-        #region GetAllAsync
-        public async Task<List<FaqInfoDto>> GetAllAsync(EnumLanguage lang = EnumLanguage.Arabic, int? portalId = null, int? serviceId = null)
+        #region DeletePermanentlyAsync
+        public async Task<bool> DeletePermanentlyAsync(int id)
         {
             dynamic parameters = new ExpandoObject();
-            parameters.LangId = (int)lang;
-            parameters.PortalId = portalId;
-            parameters.ServiceId = serviceId;
-            List<FaqInfoDto> list = dbHelper.SqlHelperRead.GetList<FaqInfoDto>("[dbo].[Faq_SelectAll]", parameters);
-            return list;
+            parameters.FaqId = id;
+            int affectedRows = dbHelper.SqlHelperWrite.ExecuteNonQuery("[dbo].[Faq_DeletePermanently]", parameters);
+            return (affectedRows > 0);
         }
         #endregion
 
@@ -85,81 +84,42 @@ namespace TemplateFw.Persistence.Repositories
         public async Task<FaqInfoDto> GetInfoByIdAsync(int id, EnumLanguage lang = EnumLanguage.Arabic)
         {
             dynamic parameters = new ExpandoObject();
-            parameters.LangId = lang;
+            parameters.LanguageId = lang;
             parameters.FaqId = id;
-            FaqInfoDto item = dbHelper.SqlHelperRead.GetOne<FaqInfoDto>("[dbo].[Faq_SelectOne]", parameters);
+            FaqInfoDto item = dbHelper.SqlHelperRead.GetOne<FaqInfoDto>("[dbo].[Faq_GetOneInfo]", parameters);
             return item;
         }
         #endregion
 
-        #region GetByIdAsync
-        public async Task<Faq> GetOneByIdAsync(int id)
+        #region GetAllAsync
+        public async Task<List<FaqInfoDto>> GetAllAsync(FaqFilter filter)
         {
-            return await dbSetReadOnly
-                .Where(a => a.FaqId == id)
-                .Where(a => a.IsAvailable)
-                .FirstOrDefaultAsync();
+            var parameters = filter.ConvertToParametersExcept(e => e.PageNumber, e => e.PageSize);
+            List<FaqInfoDto> list = dbHelper.SqlHelperRead.GetList<FaqInfoDto>("[dbo].[Faq_GetAllInfo]", parameters);
+            return list;
         }
-
         #endregion
-
 
         #region GetPagedListAsync
-        public async Task<PagedList<FaqInfoDto>> GetPagedListAsync(FaqGridFilter filter)
-        {
-            dynamic parameters = new ExpandoObject();
-            parameters.LangId = 1;
-            List<FaqInfoDto> list = dbHelper.SqlHelperRead.GetList<FaqInfoDto>("[dbo].[Faq_SelectAll]", parameters);
-            var pagedList = new PagedList<FaqInfoDto>(list, 1, 10, 100);
-            return pagedList;
-        }
-
-        #endregion
-
-        #region GetAllAsync
-        public async Task<PagedList<FaqInfoDto>> GetPageByPageAsync(FaqGridFilter filter)
+        public async Task<PagedList<FaqInfoDto>> GetAllInfoPagedAsync(FaqFilter filter)
         {
             var parameters = filter.ConvertToParameters();
-            var countP = parameters.AddOutputParameterInteger("Count");
-            var list = dbHelper.SqlHelperRead.ExecuteReaderForList<FaqInfoDto>("[dbo].[Faq_GetPageByPage]", parameters);
-            int count = (int)countP.Value;
-            var pagedList = new PagedList<FaqInfoDto>(list, filter.PageNo, filter.PageSize, count);
+            var count = parameters.AddOutputTotalCountOutput();
+            List<FaqInfoDto> list = dbHelper.SqlHelperRead.GetList<FaqInfoDto>("[dbo].[Faq_GetAllInfoPaged]", parameters);
+            var pagedList = new PagedList<FaqInfoDto>(list, filter.PageNumber, filter.PageSize, (int)count.Value);
             return pagedList;
         }
         #endregion
-        /*
-        #region GetPagedListAsync
-        public async Task<PagedList<VwFaq>> GetPagedListAsync(FaqGridFilter filter)
-        {
-            int langId = 1;
-            var query = _fullDataView.AsNoTracking();
-            if (filter != null)
-            {
-                if (filter.PortalId.HasValue && filter.PortalId.Value > 0)
-                {
-                    query = query.Where(f => f.PortalId == filter.PortalId.Value);
-                }
-                if (filter.ServiceId.HasValue && filter.ServiceId.Value > 0)
-                {
-                    query = query.Where(f => f.ServiceId == filter.ServiceId);
-                }
-                if (!string.IsNullOrWhiteSpace(filter.Search))
-                {
-                    query = query.Where(f => f.QuestionAr.Contains(filter.Search) || f.QuestionEn.Contains(filter.Search));
-                }
-                langId = filter.LanguageId;
-            }
-            //LanguageId
-            // query = query.Where(f => f.LanguageId == langId);
-            query = query.Where(f => f.IsAvailable);
-            //order by the latest items first
-            query = query.OrderByDescending(e => e.FaqId);
-            //ToPagedListAsync
-            return await query.ToPagedListAsync<VwFaq>(filter);
-        }
 
+        #region GetOneByIdAsync
+        public async Task<FaqDto> GetOneByIdAsync(int id)
+        {
+            dynamic parameters = new ExpandoObject();
+            parameters.FaqId = id;
+            FaqDto item = dbHelper.SqlHelperRead.GetOne<FaqDto>("[dbo].[Faq_GetOneById]", parameters);
+            return item;
+        }
         #endregion
-        */
 
     }
 }

@@ -34,7 +34,7 @@ namespace TemplateFw.Dashboard.Controllers
         {
             try
             {
-                var filter = new PaginationParameter();
+                var filter = new PaginationFilter();
                 var apiResult = await _api.PostAsync<GenericApiResponse<PagedList<AdminDto>>>(Urls.GetAll, filter);
                 return ReturnViewResponse(apiResult, OperationTypes.GetContent);
             }

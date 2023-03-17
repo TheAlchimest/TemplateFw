@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using TemplateFw.Domain.Models;
-using TemplateFw.Dtos.Common;
 using TemplateFw.Dtos;
+using TemplateFw.Dtos.Common;
 using TemplateFw.Shared.Domain.Enums;
 using TemplateFw.Shared.Dtos.Collections;
 
@@ -10,13 +10,13 @@ namespace TemplateFw.Persistence.Repositories
 {
     public interface IFaqRepository
     {
-        Task<bool> DeleteAsync(int id, string user);
-        Task<List<FaqInfoDto>> GetAllAsync(EnumLanguage lang = EnumLanguage.Arabic, int? portalId = null, int? serviceId = null);
-        Task<Faq> GetOneByIdAsync(int id);
+        Task<bool> CreateAsync(FaqDto dto);
+        Task<bool> DeletePermanentlyAsync(int id);
+        Task<bool> DeleteVirtuallyAsync(int id, string user);
+        Task<List<FaqInfoDto>> GetAllAsync(FaqFilter filter);
+        Task<PagedList<FaqInfoDto>> GetAllInfoPagedAsync(FaqFilter filter);
         Task<FaqInfoDto> GetInfoByIdAsync(int id, EnumLanguage lang = EnumLanguage.Arabic);
-        Task<PagedList<FaqInfoDto>> GetPagedListAsync(FaqGridFilter filter);
-        Task<PagedList<FaqInfoDto>> GetPageByPageAsync(FaqGridFilter filter);
-        Task<bool> CreateAsync(Faq entity);
+        Task<FaqDto> GetOneByIdAsync(int id);
         Task<bool> UpdateAsync(FaqDto dto);
     }
 }

@@ -6,6 +6,7 @@ using TemplateFw.Dtos;
 using TemplateFw.Shared.Domain.Enums;
 using TemplateFw.Shared.Domain.GenericResponse;
 using TemplateFw.Shared.Dtos.Collections;
+using TemplateFw.Domain.Models;
 
 namespace TemplateFw.DashboardApi.Controllers
 {
@@ -46,7 +47,7 @@ namespace TemplateFw.DashboardApi.Controllers
         [Route("getone/{id}")]
         public async Task<GenericApiResponse<FaqDto>> GetById(int id)
         {
-            return await GenericApiResponse(() => _faqService.GetOneByIdAsync(200000), OperationTypes.GetOne);
+            return await GenericApiResponse(() => _faqService.GetOneByIdAsync(id), OperationTypes.GetOne);
         }
 
         [HttpGet]
@@ -64,9 +65,9 @@ namespace TemplateFw.DashboardApi.Controllers
         [ProducesResponseType(400)]
         [ProducesResponseType(500)]
         [Route("getall")]
-        public async Task<GenericApiResponse<PagedList<FaqInfoDto>>> GetAll(FaqGridFilter filter)
+        public async Task<GenericApiResponse<List<FaqInfoDto>>> GetAll(FaqFilter filter)
         {
-            return await GenericApiResponse(() => _faqService.GetPagedListAsync(filter), OperationTypes.GetList);
+            return await GenericApiResponse(() => _faqService.GetAllAsync(filter), OperationTypes.GetList);
         }
 
         [HttpPost]
@@ -74,9 +75,9 @@ namespace TemplateFw.DashboardApi.Controllers
         [ProducesResponseType(400)]
         [ProducesResponseType(500)]
         [Route("get-paged")]
-        public async Task<GenericApiResponse<PagedList<FaqInfoDto>>> GetPagedList(FaqGridFilter filter)
+        public async Task<GenericApiResponse<PagedList<FaqInfoDto>>> GetPagedList(FaqFilter filter)
         {
-            return await GenericApiResponse(() => _faqService.GetPageByPageAsync(filter), OperationTypes.GetList);
+            return await GenericApiResponse(() => _faqService.GetAllInfoPagedAsync(filter), OperationTypes.GetList);
         }
 
         [HttpPost]
@@ -86,17 +87,9 @@ namespace TemplateFw.DashboardApi.Controllers
         [Route("delete/{id}")]
         public async Task<ApiResponse> Delete(int id)
         {
-            return await ApiResponse(() => _faqService.DeleteAsync(id), OperationTypes.Delete);
+            return await ApiResponse(() => _faqService.DeleteVirtuallyAsync(id), OperationTypes.Delete);
         }
 
-        [HttpPost]
-        [ProducesResponseType(201)]
-        [ProducesResponseType(400)]
-        [ProducesResponseType(500)]
-        [Route("getallview")]
-        public async Task<GenericApiResponse<List<FaqInfoDto>>> GetAllView(FaqGridFilter filter)
-        {
-            return await GenericApiResponse(() => _faqService.GetAllAsync(filter), OperationTypes.GetList);
-        }
+        
     }
 }

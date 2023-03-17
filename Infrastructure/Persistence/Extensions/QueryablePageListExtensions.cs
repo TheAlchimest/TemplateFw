@@ -23,9 +23,9 @@ namespace TemplateFw.Persistence.Extensions
         /// </param>
         /// <param name="indexFrom">The start index value.</param>
         /// <returns>An instance of the inherited from <see cref="IPagedList{T}"/> interface.</returns>
-        public static async Task<PagedList<T>> ToPagedListAsync<T>(this IQueryable<T> query, PaginationParameter filter)
+        public static async Task<PagedList<T>> ToPagedListAsync<T>(this IQueryable<T> query, PaginationFilter filter)
         {
-            return await query.ToPagedListAsync<T>(filter.PageNo, filter.PageSize);
+            return await query.ToPagedListAsync<T>(filter.PageNumber, filter.PageSize);
         }
 
         public static async Task<PagedList<T>> ToPagedListAsync<T>(this IQueryable<T> query, int pageNo, int pageSize, string orderBy = "", CancellationToken cancellationToken = default)
