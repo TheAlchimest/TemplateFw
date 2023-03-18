@@ -25,7 +25,7 @@ namespace TemplateFw.Shared.Dtos.Collections
             set => this._TotalCount = value;
         }
 
-        public int PageNo {
+        public int PageNumber {
             get => this._PageNo;
             set => this._PageNo = value;
         }

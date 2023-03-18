@@ -47,7 +47,7 @@
                                 data-value="@(Model.ServiceId)"
                                 data-cascade-api-url="@(webSettings.Value.LookupApiUrl)lookup/services"
                                 data-default-val=""
-                                data-default-text=Moduleslocalizer["Faq_ServiceChoose"].Value
+                                data-default-text=@(Moduleslocalizer["Faq_ServiceChoose"].Value)
                                 data-cascade-with="PortalId">
                         </select>
                     </div>

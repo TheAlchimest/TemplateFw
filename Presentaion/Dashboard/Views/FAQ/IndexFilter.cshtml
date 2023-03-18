@@ -1,13 +1,12 @@
 ﻿@inject IOptions<WebSettings> webSettings
-@model TemplateFw.Dtos.Views.GridFilterDto
+@model TemplateFw.Dtos.Common.FaqFilter
 <div class="card master-form">
     <div class="card-body">
         <form id="grid-filter" class="grid-filter"
-              action="@Model.Url"
+              action="/faq/IndexContent"
               data-container-id="containerBox"
               onsubmit="actionsController.search(this,event)">
-            <input type="hidden" id="PageNo" name="PageNo" value="@Model.PageNo" />
-            <input type="hidden" id="PollId" name="PollId" value="@Model.PollId" />
+            <input type="hidden" id="PageNumber" name="PageNumber" value="@Model.PageNumber" />
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group">
@@ -16,10 +15,9 @@
                             id="PortalId"
                             name="PortalId"
                             data-api-url="@(webSettings.Value.LookupApiUrl)lookup/portals"
-                            @if(Model.HasAllPortalsOption){
                             @Html.Raw("data-default-val=\"\"");
                             @Html.Raw("data-default-text=\"الكل\"");
-                            }>
+                            >
                         </select>
                     </div>
                 </div>
@@ -51,7 +49,7 @@
                 <div class="col-md">
                     <div class="form-group">
                         <label class="font-w600 px-4">بحث</label>
-                        <input type="text" name="Search" class="form-control" placeholder="بحث ...">
+                        <input type="text" name="Question" class="form-control" placeholder="بحث ...">
                     </div>
                 </div>
             </div>
@@ -60,7 +58,7 @@
 </div>
 <script>
     $('#grid-filter').find('select,input').change(function () {
-        $('#PageNo').val('1');
+        $('#PageNumber').val('1');
         $('#grid-filter').trigger('submit');
 
     });

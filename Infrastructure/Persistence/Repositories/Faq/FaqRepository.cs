@@ -42,7 +42,7 @@ namespace TemplateFw.Persistence.Repositories
         #region InsertAsync
         public async Task<bool> CreateAsync(FaqDto dto)
         {
-            List<SqlParameter> plist = dto.ConvertToParametersExcept(e => e.FaqId, e => e.CreatedBy, e => e.LastModifiedBy, e => e.LastModificationDate, e => e.IsAvailable);
+            List<SqlParameter> plist = dto.ConvertToParametersExcept(e => e.FaqId, e => e.CreationDate, e => e.LastModifiedBy, e => e.LastModificationDate, e => e.IsAvailable);
             var faqID = plist.AddOutputParameterInteger("FaqId");
             int affectedRows = dbHelper.SqlHelperWrite.ExecuteNonQuery("[dbo].[Faq_Create]", plist);
             return (affectedRows > 0);
@@ -84,7 +84,7 @@ namespace TemplateFw.Persistence.Repositories
         public async Task<FaqInfoDto> GetInfoByIdAsync(int id, EnumLanguage lang = EnumLanguage.Arabic)
         {
             dynamic parameters = new ExpandoObject();
-            parameters.LanguageId = lang;
+            parameters.LanguageId = (int)lang;
             parameters.FaqId = id;
             FaqInfoDto item = dbHelper.SqlHelperRead.GetOne<FaqInfoDto>("[dbo].[Faq_GetOneInfo]", parameters);
             return item;
@@ -114,6 +114,7 @@ namespace TemplateFw.Persistence.Repositories
         #region GetOneByIdAsync
         public async Task<FaqDto> GetOneByIdAsync(int id)
         {
+            var x = await GetInfoByIdAsync(id);
             dynamic parameters = new ExpandoObject();
             parameters.FaqId = id;
             FaqDto item = dbHelper.SqlHelperRead.GetOne<FaqDto>("[dbo].[Faq_GetOneById]", parameters);

@@ -15,7 +15,7 @@
 </div>
 
 @Html.Partial("/Views/Shared/_GridFilter.cshtml",
-        new GridFilterDto { Url = "/identity/IndexContent", PageNo = Model.PageNo, HasPortalsFilter = false ,HasSearchFilter=false})
+        new GridFilterDto { Url = "/identity/IndexContent", PageNo = Model.PageNumber, HasPortalsFilter = false ,HasSearchFilter=false})
 
 <div class="card">
     <div style="visibility:hidden" class="loader-box">جاري التحميل ...</div>

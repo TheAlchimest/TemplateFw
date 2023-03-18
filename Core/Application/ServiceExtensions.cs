@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 using TemplateFw.Application.Services.ActionLogs;
-using TemplateFw.Application.Services.Announces;
+
 using TemplateFw.Application.Services.Countries;
 using TemplateFw.Application.Services;
 using TemplateFw.Application.Services.Languages;
@@ -21,7 +21,7 @@ namespace TemplateFw.Application
             // Auto Mapper Configurations
             var mapperAssembly = Assembly.GetExecutingAssembly();
             services.AddAutoMapper(mapperAssembly);
-            services.AddScoped<IAnnounceService, AnnounceService>();
+            //services.AddScoped<IAnnounceService, AnnounceService>();
             services.AddScoped<IFaqService, FaqService>();
             services.AddScoped<ILanguageService, LanguageService>();
             services.AddScoped<IUserInfoService, UserInfoService>();

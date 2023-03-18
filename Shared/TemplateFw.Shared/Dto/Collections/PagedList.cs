@@ -5,13 +5,13 @@ namespace TemplateFw.Shared.Dtos.Collections
 {
     public class Pager
     {
-        public int PageNo { get; set; }
-        public int PageIndex { get { return PageNo - 1; } }
+        public int PageNumber { get; set; }
+        public int PageIndex { get { return PageNumber - 1; } }
         public int PageSize { get; set; }
         public int TotalCount { get; set; }
         public int TotalPages { get; set; }
-        public bool HasPreviousPage { get { return PageNo > 1; } }
-        public bool HasNextPage { get { return PageNo < TotalPages; } }
+        public bool HasPreviousPage { get { return PageNumber > 1; } }
+        public bool HasNextPage { get { return PageNumber < TotalPages; } }
         public bool IsVisible { get { return TotalPages > 1; } }
         public int PaggingCount { get; set; } = 5;
         public int StartPage { get; set; }
@@ -25,15 +25,15 @@ namespace TemplateFw.Shared.Dtos.Collections
 
         }
 
-        public Pager(int pageNo, int pageSize, int count)
+        public Pager(int pageNumber, int pageSize, int count)
         {
-            InitializePagination(pageNo, pageSize, count);
+            InitializePagination(pageNumber, pageSize, count);
         }
 
-        private void InitializePagination(int pageNo, int pageSize, int totalCount)
+        private void InitializePagination(int pageNumber, int pageSize, int totalCount)
         {
 
-            PageNo = pageNo;
+            PageNumber = pageNumber;
             PageSize = pageSize;
             TotalCount = totalCount;
             TotalPages = (int)Math.Ceiling(TotalCount / (double)PageSize);
@@ -47,9 +47,9 @@ namespace TemplateFw.Shared.Dtos.Collections
                 this.PaggingCount = this.TotalPages;
             }
             int previousPages = (int)Math.Ceiling(PaggingCount / (double)2);
-            if (PageNo > previousPages + 1)
+            if (PageNumber > previousPages + 1)
             {
-                StartPage = PageNo - previousPages;
+                StartPage = PageNumber - previousPages;
             }
             if (StartPage < 1)
             {
@@ -70,15 +70,15 @@ namespace TemplateFw.Shared.Dtos.Collections
 
             if (HasPreviousPage)
             {
-                PreviousPageNo = PageNo - 1;
+                PreviousPageNo = PageNumber - 1;
             }
 
             if (HasNextPage)
             {
-                NextPageNo = PageNo + 1;
+                NextPageNo = PageNumber + 1;
             }
 
-            FirstItemNo = ((pageNo - 1) * pageSize) + 1;
+            FirstItemNo = ((pageNumber - 1) * pageSize) + 1;
         }
     }
     public class PagedList<T> : Pager
@@ -89,7 +89,7 @@ namespace TemplateFw.Shared.Dtos.Collections
         }
 
         public IEnumerable<T> Items { get; set; }
-        public PagedList(IEnumerable<T> source, int pageNo, int pageSize, int count) : base(pageNo, pageSize, count)
+        public PagedList(IEnumerable<T> source, int pageNumber, int pageSize, int count) : base(pageNumber, pageSize, count)
         {
             Items = source;
         }

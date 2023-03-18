@@ -20,7 +20,7 @@
                 }
             @for (int i = Model.StartPage; i <= Model.EndPage; i++)
             {
-                <li class="page-item @((Model.PageNo==i)?"active":"")">
+                <li class="page-item @((Model.PageNumber==i)?"active":"")">
                     <a class="page-link" data-search-url="@searchURL" 
                     onclick="actionsController.paginate(@i)"
                     href="javascript:void(0)">@(i)</a></li>

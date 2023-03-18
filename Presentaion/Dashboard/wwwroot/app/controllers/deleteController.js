@@ -78,7 +78,7 @@
     },
 
     paginate: function (no) {
-        $("#PageNo").val(no);
+        $("#PageNumber").val(no);
         $("#grid-filter").trigger('submit');
     },
 
@@ -88,9 +88,9 @@
             let rowsCount = $(".table-responsive-md").find("tbody>tr").length;
             console.log('rowsCount', rowsCount);
             if (rowsCount === 0) {
-                let pageNo = parseInt($('#PageNo').val());
-                if (pageNo > 1) {
-                    $("#PageNo").val(--pageNo);
+                let pageNumber = parseInt($('#PageNumber').val());
+                if (pageNumber > 1) {
+                    $("#PageNumber").val(--pageNumber);
                 }
             }
             //status
@@ -104,9 +104,9 @@
             let rowsCount = $(".table-responsive-md").find("tbody>tr").length;
             console.log('rowsCount', rowsCount);
             if (rowsCount === 0) {
-                let pageNo = parseInt($('#PageNo').val());
-                if (pageNo > 1) {
-                    $("#PageNo").val(--pageNo);
+                let pageNumber = parseInt($('#PageNumber').val());
+                if (pageNumber > 1) {
+                    $("#PageNumber").val(--pageNumber);
                 }
             }
         });
@@ -126,9 +126,9 @@ var confirmationHelper = {
                 let $tr = action.$element.closest('tr');
                 let $table = action.$element.closest('table');
                 if ($table.find('tbody').find('tr').length == 1) {
-                    let pageNo = parseInt($('#PageNo').val());
-                    if (pageNo > 1) {
-                        actionsController.paginate(--pageNo);
+                    let pageNumber = parseInt($('#PageNumber').val());
+                    if (pageNumber > 1) {
+                        actionsController.paginate(--pageNumber);
                     }
                 }
                 //remove tr

@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <Compile Remove="Extensions\DbSetExtensions.cs" />
+    <Compile Remove="IRepositories\IAnnounceRepository.cs" />
     <Compile Remove="IRepositories\IFaqRepository.cs" />
     <Compile Remove="Repositories\AnnounceRepository.cs" />
   </ItemGroup>

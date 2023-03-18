@@ -1,4 +1,5 @@
 ﻿@using TemplateFw.Dtos
+@using TemplateFw.Dtos.Common
 @inject IOptions<WebSettings> webSettings
 @model PagedList<FaqInfoDto>
 @{
@@ -15,7 +16,7 @@
 </div>
 
 @Html.Partial("/Views/Faq/IndexFilter.cshtml",
-       new GridFilterDto { Url = "/faq/IndexContent", PageNo = Model.PageNo, HasPortalsFilter = true, HasServicesFilter = true })
+       new FaqFilter {PageNumber = Model.PageNumber })
 <div class="card">
     <div style="visibility:hidden" class="loader-box">جاري التحميل ...</div>
     <div class="card-body" id="containerBox">

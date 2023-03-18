@@ -6,8 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Services\Announces\**" />
     <Compile Remove="Services\Integration\**" />
+    <EmbeddedResource Remove="Services\Announces\**" />
     <EmbeddedResource Remove="Services\Integration\**" />
+    <None Remove="Services\Announces\**" />
     <None Remove="Services\Integration\**" />
   </ItemGroup>
 

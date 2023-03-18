@@ -27,7 +27,7 @@ namespace UnifiedPortalIntegerationPoc.Dto
     public class GenericServiceIntegrationRequestsData
     {
         public string RequestNo { get; set; } = null;
-        public int PageNo { get; set; } = 1;
+        public int PageNumber { get; set; } = 1;
         public int PageSize { get; set; } = 10;
         public RequestStatus? Status { get; set; }
         public SortingType? OrderBy { get; set; } = SortingType.Latest;
@@ -84,7 +84,7 @@ namespace UnifiedPortalIntegerationPoc.Dto
     public class IndividualRequestsRequest
     {
         public string RequestNo { get; set; } = null;
-        public int PageNo { get; set; } = 1;
+        public int PageNumber { get; set; } = 1;
         public int PageSize { get; set; } = 10;
         public RequestStatus? Status { get; set; }
         public SortingType? OrderBy { get; set; } = SortingType.Latest;

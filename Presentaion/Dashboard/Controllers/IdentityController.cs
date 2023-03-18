@@ -46,7 +46,7 @@ namespace TemplateFw.Dashboard.Controllers
 
 
         [HttpGet]
-        public async Task<IActionResult> IndexContent([FromQuery] GridFilter filter)
+        public async Task<IActionResult> IndexContent([FromQuery] FaqFilter filter)
         {
             try
             {

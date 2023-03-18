@@ -5,7 +5,7 @@ namespace TemplateFw.Dtos.Portal.Integration
 {
     public class PaginationParameter
     {
-        public int PageNo { get; set; } = 1;
+        public int PageNumber { get; set; } = 1;
         public int PageSize { get; set; } = 10;
         public string Direction { get; set; } = "asc";
         public string Search { get; set; }
@@ -18,7 +18,7 @@ namespace TemplateFw.Dtos.Portal.Integration
         public string RequestNo { get; set; }
         public RequestStatus Status { get; set; }
         public SortingType OrderBy { get; set; }
-        public int PageNo { get; set; } = 1;
+        public int PageNumber { get; set; } = 1;
         public int PageSize { get; set; } = 10;
     }
     public class OperatorRequestGridFilter
@@ -27,7 +27,7 @@ namespace TemplateFw.Dtos.Portal.Integration
         public string RequestNo { get; set; }
         public RequestStatus Status { get; set; }
         public SortingType OrderBy { get; set; }
-        public int PageNo { get; set; } = 1;
+        public int PageNumber { get; set; } = 1;
         public int PageSize { get; set; } = 10;
         public ProcessType? ProcessType { get; set; }
 

@@ -3,16 +3,6 @@ using TemplateFw.Utilities.Helpers;
 
 namespace TemplateFw.Dtos.Views
 {
-    public class GridFilterDto
-    {
-        public string Url { get; set; }
-        public int PageNo { get; set; }
-        public bool HasPortalsFilter { get; set; }
-        public bool HasServicesFilter { get; set; }
-        public bool HasSearchFilter { get; set; } = true;
-        public bool HasAllPortalsOption { get; set; } = true;
-        public string PollId { get; set; }
-    }
 
     public class ItemModificationDto
     {

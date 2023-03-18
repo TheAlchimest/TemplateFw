@@ -7,6 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\Identity\**" />
+    <Content Remove="Views\Identity\**" />
+    <EmbeddedResource Remove="Views\Identity\**" />
+    <None Remove="Views\Identity\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\AnnounceController.cs" />
     <Compile Remove="InternalApiConsumer\AnnounceConsumer.cs" />
   </ItemGroup>
 

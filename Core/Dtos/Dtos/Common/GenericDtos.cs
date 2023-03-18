@@ -1,16 +1,12 @@
 ﻿namespace TemplateFw.Dtos.Common
 {
-    public class GridFilter : PaginationFilter
-    {
-        public int? PortalId { get; set; }
-        public int? ServiceId { get; set; }
-    }
+    
     public class PaginationFilter
     {
         public int PageNumber { get; set; } = 1;
         public int PageSize { get; set; } = 20;
     }
-    public class FaqFilter
+    public class FaqFilter 
     {
         public int? PortalId { get; set; }
         public int? ServiceId { get; set; }
