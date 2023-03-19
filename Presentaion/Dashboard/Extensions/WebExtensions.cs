@@ -19,11 +19,11 @@ namespace TemplateFw.Dashboard.Extensions
 
     public static class WebResponseExtensions
     {
-        private static string ToErrorMessage(this OperationTypes operation, IStringLocalizer<SharedResource> localizer)
+        private static string ToErrorMessage(this OperationTypes operation, IStringLocalizer<OperationsResource> localizer)
         {
             return localizer[$"OperationFailed_{(int)operation}"].Value;
         }
-        private static string ToSuccessMessage(this OperationTypes operation, IStringLocalizer<SharedResource> localizer)
+        private static string ToSuccessMessage(this OperationTypes operation, IStringLocalizer<OperationsResource> localizer)
         {
             return localizer[$"OperationDone_{(int)operation}"].Value;
         }
@@ -32,28 +32,28 @@ namespace TemplateFw.Dashboard.Extensions
             return ((int)operation + 1000).ToString();
         }
 
-        public static List<string> ToErrorMessages(this int[] errors, IStringLocalizer<SharedResource> localizer)
+        public static List<string> ToErrorMessages(this int[] errors, IStringLocalizer<OperationsResource> localizer)
         {
             List<string> messages = new List<string>();
             errors.ToList().ForEach(e => messages.Add(localizer[$"Exception{e}"].Value));
             return messages;
         }
-        public static List<string> ToErrorMessages(this List<int> errors, IStringLocalizer<SharedResource> localizer)
+        public static List<string> ToErrorMessages(this List<int> errors, IStringLocalizer<OperationsResource> localizer)
         {
             List<string> messages = new List<string>();
             errors.ToList().ForEach(e => messages.Add(localizer[$"Exception{e}"].Value));
             return messages;
         }
 
-        public static void PopulateErrorResponse(this WebResponse response, OperationTypes operation, IStringLocalizer<SharedResource> localizer)
+        public static void PopulateErrorResponse(this WebResponse response, OperationTypes operation, IStringLocalizer<OperationsResource> localizer)
         {
             response.ErrorCodes = operation.ToErrorCodes();
             response.Message = operation.ToErrorMessage(localizer);
-            response.Title = localizer[$"Error"].Value;
+            response.Title = localizer[$"OperationErrorTitle"].Value;
             response.Icon = "fa-times-circle";
             response.Status = false;
         }
-        public static void PopulateErrorResponse(this WebResponse response, ApiResponse apiResult, OperationTypes operation, IStringLocalizer<SharedResource> localizer)
+        public static void PopulateErrorResponse(this WebResponse response, ApiResponse apiResult, OperationTypes operation, IStringLocalizer<OperationsResource> localizer)
         {
             response.ErrorCodes = operation.ToErrorCodes();
             if (apiResult != null && apiResult.ErrorCodes != null && apiResult.ErrorCodes.Length > 0)
@@ -63,7 +63,7 @@ namespace TemplateFw.Dashboard.Extensions
             }
             else
             {
-                response.Title = localizer[$"Error"].Value;
+                response.Title = localizer[$"OperationErrorTitle"].Value;
                 response.Message = operation.ToErrorMessage(localizer);
 
             }
@@ -71,20 +71,20 @@ namespace TemplateFw.Dashboard.Extensions
             response.Icon = "fa-times-circle";
             response.Status = false;
         }
-        public static void PopulateSuccededResponse(this WebResponse response, ApiResponse apiResult, OperationTypes operation, IStringLocalizer<SharedResource> localizer)
+        public static void PopulateSuccededResponse(this WebResponse response, ApiResponse apiResult, OperationTypes operation, IStringLocalizer<OperationsResource> localizer)
         {
             response.ErrorCodes = null;
             response.Message = operation.ToSuccessMessage(localizer);
             response.Status = true;
         }
-        public static void PopulateSuccededResponse<T>(this GenericWebResponse<T> response, GenericApiResponse<T> apiResult, OperationTypes operation, IStringLocalizer<SharedResource> localizer)
+        public static void PopulateSuccededResponse<T>(this GenericWebResponse<T> response, GenericApiResponse<T> apiResult, OperationTypes operation, IStringLocalizer<OperationsResource> localizer)
         {
             response.ErrorCodes = null;
             response.Data = apiResult.Data;
             response.Message = operation.ToSuccessMessage(localizer);
             response.Status = true;
         }
-        public static void PopulateResponse(this WebResponse response, ApiResponse apiResult, OperationTypes operation, IStringLocalizer<SharedResource> localizer)
+        public static void PopulateResponse(this WebResponse response, ApiResponse apiResult, OperationTypes operation, IStringLocalizer<OperationsResource> localizer)
         {
             if (apiResult is null)//fail
             {
@@ -99,7 +99,7 @@ namespace TemplateFw.Dashboard.Extensions
                 response.PopulateSuccededResponse(apiResult, operation, localizer);
             }
         }
-        public static void PopulateResponse<T>(this GenericWebResponse<T> response, GenericApiResponse<T> apiResult, OperationTypes operation, IStringLocalizer<SharedResource> localizer)
+        public static void PopulateResponse<T>(this GenericWebResponse<T> response, GenericApiResponse<T> apiResult, OperationTypes operation, IStringLocalizer<OperationsResource> localizer)
         {
             if (apiResult is null)//fail
             {

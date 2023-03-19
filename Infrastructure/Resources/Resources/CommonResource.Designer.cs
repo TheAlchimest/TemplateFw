@@ -22,7 +22,7 @@ namespace TemplateFw.Resources.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class CommonResource {
+    public class CommonResource {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace TemplateFw.Resources.Resources {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("TemplateFw.Resources.Resources.CommonResource", typeof(CommonResource).Assembly);
@@ -51,7 +51,7 @@ namespace TemplateFw.Resources.Resources {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace TemplateFw.Resources.Resources {
         /// <summary>
         ///   Looks up a localized string similar to حذف.
         /// </summary>
-        internal static string Action_Delete {
+        public static string Action_Delete {
             get {
                 return ResourceManager.GetString("Action_Delete", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace TemplateFw.Resources.Resources {
         /// <summary>
         ///   Looks up a localized string similar to تعديل.
         /// </summary>
-        internal static string Action_Edit {
+        public static string Action_Edit {
             get {
                 return ResourceManager.GetString("Action_Edit", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace TemplateFw.Resources.Resources {
         /// <summary>
         ///   Looks up a localized string similar to ارسال.
         /// </summary>
-        internal static string Action_Send {
+        public static string Action_Send {
             get {
                 return ResourceManager.GetString("Action_Send", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace TemplateFw.Resources.Resources {
         /// <summary>
         ///   Looks up a localized string similar to تم الإضافة بواسطة.
         /// </summary>
-        internal static string Common_CreatedBy {
+        public static string Common_CreatedBy {
             get {
                 return ResourceManager.GetString("Common_CreatedBy", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace TemplateFw.Resources.Resources {
         /// <summary>
         ///   Looks up a localized string similar to تاريخ الإضافة.
         /// </summary>
-        internal static string Common_CreationDate {
+        public static string Common_CreationDate {
             get {
                 return ResourceManager.GetString("Common_CreationDate", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace TemplateFw.Resources.Resources {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string Common_IsAvailable {
+        public static string Common_IsAvailable {
             get {
                 return ResourceManager.GetString("Common_IsAvailable", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace TemplateFw.Resources.Resources {
         /// <summary>
         ///   Looks up a localized string similar to تاريخ أخر تعديل.
         /// </summary>
-        internal static string Common_LastModificationDate {
+        public static string Common_LastModificationDate {
             get {
                 return ResourceManager.GetString("Common_LastModificationDate", resourceCulture);
             }
@@ -126,7 +126,7 @@ namespace TemplateFw.Resources.Resources {
         /// <summary>
         ///   Looks up a localized string similar to تم أخر تعديل بواسطة.
         /// </summary>
-        internal static string Common_LastModifiedBy {
+        public static string Common_LastModifiedBy {
             get {
                 return ResourceManager.GetString("Common_LastModifiedBy", resourceCulture);
             }

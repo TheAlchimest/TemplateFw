@@ -15,8 +15,7 @@
     </a>
 </div>
 
-@Html.Partial("/Views/Faq/IndexFilter.cshtml",
-       new FaqFilter {PageNumber = Model.PageNumber })
+@Html.Partial("/Views/Faq/IndexFilter.cshtml",new TemplateFw.Dtos.Common.FaqFilter())
 <div class="card">
     <div style="visibility:hidden" class="loader-box">جاري التحميل ...</div>
     <div class="card-body" id="containerBox">

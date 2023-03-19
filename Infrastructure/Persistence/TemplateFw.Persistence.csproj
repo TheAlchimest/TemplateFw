@@ -18,6 +18,8 @@
     <Compile Remove="IRepositories\IAnnounceRepository.cs" />
     <Compile Remove="IRepositories\IFaqRepository.cs" />
     <Compile Remove="Repositories\AnnounceRepository.cs" />
+    <Compile Remove="Repositories\Faq\FaqReporitoryEntityFramework.cs" />
+    <Compile Remove="Repositories\Faq\FaqRepositoryTemplate2.cs" />
   </ItemGroup>
 
   <ItemGroup>

@@ -54,21 +54,7 @@ namespace Microsoft.Extensions.DependencyInjection
 
 
             app.UseRequestLocalization();
-            //app.UseRequestLocalization(new RequestLocalizationOptions
-            //{
-            //    DefaultRequestCulture = new RequestCulture(cultureInfo),
-            //    SupportedCultures = new List<CultureInfo>
-            //        {
-            //            cultureInfo,
-            //            new("en")
-            //        },
-            //    ApplyCurrentCultureToResponseHeaders = true,
-            //    SupportedUICultures = new List<CultureInfo>
-            //        {
-            //            cultureInfo,
-            //            new("en")
-            //        }
-            //});
+           
         }
     }
 }

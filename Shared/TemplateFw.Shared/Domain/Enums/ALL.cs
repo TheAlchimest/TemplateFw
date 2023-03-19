@@ -23,12 +23,14 @@ namespace TemplateFw.Shared.Domain.Enums
         GetOne = 9,
         Save = 10,
         Reject = 11,
+        Reply = 12,
+        GetContent = 13,
         GetData = 14,
         Upload = 15,
         Download = 16,
-        GetContent = 17,
-        Validate = 19,
-        SendOtp = 21
+        Validate = 17,
+        SendOtp = 18,
+        Registration = 19
     }
     public enum ResponseTypes
     {

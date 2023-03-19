@@ -9,6 +9,9 @@
     <Compile Remove="AutoMapper\DashboardProfile.cs" />
     <Compile Remove="Dto\ServiceCadsDto.cs" />
     <Compile Remove="Helpers\SqlDataHelpers\GenericListPopulator.cs" />
+    <Compile Remove="Helpers\SqlDataHelpers\SqlDataHelper.cs" />
+    <Compile Remove="Helpers\SqlDataHelpers\SqlHelper.cs" />
+    <Compile Remove="Helpers\SqlDataHelpers\SqlParameterHelper.cs" />
     <Compile Remove="Helpers\Web\ControllerExtensions.cs" />
   </ItemGroup>
 

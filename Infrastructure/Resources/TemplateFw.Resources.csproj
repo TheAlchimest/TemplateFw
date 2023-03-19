@@ -26,6 +26,11 @@
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>ModulesResource.resx</DependentUpon>
 	  </Compile>
+	  <Compile Update="Resources\OperationsResources.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>OperationsResources.resx</DependentUpon>
+	  </Compile>
 	  <Compile Update="Resources\SharedResource.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
@@ -40,13 +45,26 @@
 
 	<ItemGroup>
 	  <EmbeddedResource Update="Resources\CommonResource.resx">
-	    <Generator>ResXFileCodeGenerator</Generator>
+	    <Generator>PublicResXFileCodeGenerator</Generator>
 	    <LastGenOutput>CommonResource.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
+		<EmbeddedResource Update="Resources\CommonResource.en.resx">
+			<Generator>PublicResXFileCodeGenerator</Generator>
+		</EmbeddedResource>
 	  <EmbeddedResource Update="Resources\ModulesResource.resx">
-	    <Generator>ResXFileCodeGenerator</Generator>
+	    <Generator>PublicResXFileCodeGenerator</Generator>
 	    <LastGenOutput>ModulesResource.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
+		<EmbeddedResource Update="Resources\ModulesResource.en.resx">
+			<Generator>PublicResXFileCodeGenerator</Generator>
+		</EmbeddedResource>
+	  <EmbeddedResource Update="Resources\OperationsResources.resx">
+	    <Generator>PublicResXFileCodeGenerator</Generator>
+	    <LastGenOutput>OperationsResources.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+		<EmbeddedResource Update="Resources\OperationsResources.en.resx">
+			<Generator>PublicResXFileCodeGenerator</Generator>
+		</EmbeddedResource>
 	  <EmbeddedResource Update="Resources\SharedResource.en.resx">
 	    <Generator>PublicResXFileCodeGenerator</Generator>
 	  </EmbeddedResource>

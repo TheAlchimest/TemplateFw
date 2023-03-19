@@ -22,7 +22,7 @@ namespace TemplateFw.Resources.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class ModulesResource {
+    public class ModulesResource {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace TemplateFw.Resources.Resources {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("TemplateFw.Resources.Resources.ModulesResource", typeof(ModulesResource).Assembly);
@@ -51,7 +51,7 @@ namespace TemplateFw.Resources.Resources {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace TemplateFw.Resources.Resources {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        internal static string Faq {
+        public static string Faq {
             get {
                 return ResourceManager.GetString("Faq", resourceCulture);
             }
@@ -72,7 +72,7 @@ namespace TemplateFw.Resources.Resources {
         /// <summary>
         ///   Looks up a localized string similar to الإجابة.
         /// </summary>
-        internal static string Faq_Answer {
+        public static string Faq_Answer {
             get {
                 return ResourceManager.GetString("Faq_Answer", resourceCulture);
             }
@@ -81,7 +81,7 @@ namespace TemplateFw.Resources.Resources {
         /// <summary>
         ///   Looks up a localized string similar to الإجابة باللغة العربية.
         /// </summary>
-        internal static string Faq_AnswerAr {
+        public static string Faq_AnswerAr {
             get {
                 return ResourceManager.GetString("Faq_AnswerAr", resourceCulture);
             }
@@ -90,7 +90,7 @@ namespace TemplateFw.Resources.Resources {
         /// <summary>
         ///   Looks up a localized string similar to الإجابة باللغة الانجليزية.
         /// </summary>
-        internal static string Faq_AnswerEn {
+        public static string Faq_AnswerEn {
             get {
                 return ResourceManager.GetString("Faq_AnswerEn", resourceCulture);
             }
@@ -99,7 +99,7 @@ namespace TemplateFw.Resources.Resources {
         /// <summary>
         ///   Looks up a localized string similar to معلومات السؤال.
         /// </summary>
-        internal static string Faq_Info {
+        public static string Faq_Info {
             get {
                 return ResourceManager.GetString("Faq_Info", resourceCulture);
             }
@@ -108,7 +108,7 @@ namespace TemplateFw.Resources.Resources {
         /// <summary>
         ///   Looks up a localized string similar to ادارة الأسئلة الشائعة.
         /// </summary>
-        internal static string Faq_Management {
+        public static string Faq_Management {
             get {
                 return ResourceManager.GetString("Faq_Management", resourceCulture);
             }
@@ -117,7 +117,7 @@ namespace TemplateFw.Resources.Resources {
         /// <summary>
         ///   Looks up a localized string similar to البوابة.
         /// </summary>
-        internal static string Faq_Portal {
+        public static string Faq_Portal {
             get {
                 return ResourceManager.GetString("Faq_Portal", resourceCulture);
             }
@@ -126,7 +126,7 @@ namespace TemplateFw.Resources.Resources {
         /// <summary>
         ///   Looks up a localized string similar to اختر البوابة.
         /// </summary>
-        internal static string Faq_PortalChoose {
+        public static string Faq_PortalChoose {
             get {
                 return ResourceManager.GetString("Faq_PortalChoose", resourceCulture);
             }
@@ -135,7 +135,7 @@ namespace TemplateFw.Resources.Resources {
         /// <summary>
         ///   Looks up a localized string similar to السؤال.
         /// </summary>
-        internal static string Faq_Question {
+        public static string Faq_Question {
             get {
                 return ResourceManager.GetString("Faq_Question", resourceCulture);
             }
@@ -144,7 +144,7 @@ namespace TemplateFw.Resources.Resources {
         /// <summary>
         ///   Looks up a localized string similar to السؤال باللغة العربية.
         /// </summary>
-        internal static string Faq_QuestionAr {
+        public static string Faq_QuestionAr {
             get {
                 return ResourceManager.GetString("Faq_QuestionAr", resourceCulture);
             }
@@ -153,7 +153,7 @@ namespace TemplateFw.Resources.Resources {
         /// <summary>
         ///   Looks up a localized string similar to السؤال باللغة الانجليزية.
         /// </summary>
-        internal static string Faq_QuestionEn {
+        public static string Faq_QuestionEn {
             get {
                 return ResourceManager.GetString("Faq_QuestionEn", resourceCulture);
             }
@@ -162,7 +162,7 @@ namespace TemplateFw.Resources.Resources {
         /// <summary>
         ///   Looks up a localized string similar to الخدمة.
         /// </summary>
-        internal static string Faq_Service {
+        public static string Faq_Service {
             get {
                 return ResourceManager.GetString("Faq_Service", resourceCulture);
             }
@@ -171,7 +171,7 @@ namespace TemplateFw.Resources.Resources {
         /// <summary>
         ///   Looks up a localized string similar to اختر الخدمة.
         /// </summary>
-        internal static string Faq_ServiceChoose {
+        public static string Faq_ServiceChoose {
             get {
                 return ResourceManager.GetString("Faq_ServiceChoose", resourceCulture);
             }
@@ -180,7 +180,7 @@ namespace TemplateFw.Resources.Resources {
         /// <summary>
         ///   Looks up a localized string similar to الأسئلة الشائعة.
         /// </summary>
-        internal static string Faqs {
+        public static string Faqs {
             get {
                 return ResourceManager.GetString("Faqs", resourceCulture);
             }

@@ -838,92 +838,6 @@
   <data name="Exception9" xml:space="preserve">
     <value>لقد قمت بالإجابة علي التصويت من قبل</value>
   </data>
-  <data name="OperationDone_1" xml:space="preserve">
-    <value>تمت عملية الاضافة بنجاح</value>
-    <comment>MSG18</comment>
-  </data>
-  <data name="OperationDone_10" xml:space="preserve">
-    <value>تمت عملية الحفظ بنجاح</value>
-  </data>
-  <data name="OperationDone_101" xml:space="preserve">
-    <value>تمت عملية انشاء حساب مزود خدمة بنجاح</value>
-  </data>
-  <data name="OperationDone_2" xml:space="preserve">
-    <value>تمت عملية استدعاء البيانات بنجاح </value>
-  </data>
-  <data name="OperationDone_3" xml:space="preserve">
-    <value>تمت عملية التعديل بنجاح</value>
-    <comment>MSG21</comment>
-  </data>
-  <data name="OperationDone_4" xml:space="preserve">
-    <value>تمت عملية الحذف بنجاح</value>
-    <comment>MSG20</comment>
-  </data>
-  <data name="OperationDone_5" xml:space="preserve">
-    <value>تمت عملية التفعيل بنجاح</value>
-    <comment>MSG23</comment>
-  </data>
-  <data name="OperationDone_6" xml:space="preserve">
-    <value>تمت عملية الإيقاف بنجاح</value>
-    <comment>MSG25</comment>
-  </data>
-  <data name="OperationDone_7" xml:space="preserve">
-    <value>تمت عملية النشر بنجاح</value>
-    <comment>MSG23</comment>
-  </data>
-  <data name="OperationDone_8" xml:space="preserve">
-    <value>تمت عملية الإيقاف بنجاح</value>
-    <comment>MSG25</comment>
-  </data>
-  <data name="OperationDone_9" xml:space="preserve">
-    <value>تمت عملية استدعاء البيانات بنجاح</value>
-  </data>
-  <data name="OperationFailed_0" xml:space="preserve">
-    <value>نأسف حدث خطأ غير متوقع</value>
-  </data>
-  <data name="OperationFailed_1" xml:space="preserve">
-    <value>فشلت عملية الاضافة</value>
-    <comment>MSG18</comment>
-  </data>
-  <data name="OperationFailed_10" xml:space="preserve">
-    <value>فشلت عملية الحفظ</value>
-  </data>
-  <data name="OperationFailed_101" xml:space="preserve">
-    <value>فشلت عملية انشاء حساب مزود خدمة</value>
-  </data>
-  <data name="OperationFailed_11" xml:space="preserve">
-    <value>فشلت عملية الرفض</value>
-  </data>
-  <data name="OperationFailed_2" xml:space="preserve">
-    <value>فشلت عملية استدعاء البيانات</value>
-  </data>
-  <data name="OperationFailed_3" xml:space="preserve">
-    <value>فشلت عملية التعديل</value>
-    <comment>MSG21</comment>
-  </data>
-  <data name="OperationFailed_4" xml:space="preserve">
-    <value>فشلت عملية الحذف</value>
-    <comment>MSG20</comment>
-  </data>
-  <data name="OperationFailed_5" xml:space="preserve">
-    <value>فشلت عملية التفعيل</value>
-    <comment>MSG23</comment>
-  </data>
-  <data name="OperationFailed_6" xml:space="preserve">
-    <value>فشلت عملية الإيقاف</value>
-    <comment>MSG25</comment>
-  </data>
-  <data name="OperationFailed_7" xml:space="preserve">
-    <value>فشلت عملية النشر</value>
-    <comment>MSG23</comment>
-  </data>
-  <data name="OperationFailed_8" xml:space="preserve">
-    <value>فشلت عملية الإيقاف</value>
-    <comment>MSG25</comment>
-  </data>
-  <data name="OperationFailed_9" xml:space="preserve">
-    <value>فشلت عملية استدعاء البيانات</value>
-  </data>
   <data name="PublishedSuccessfully" xml:space="preserve">
     <value>تمت عملية النشر بنجاح</value>
   </data>
@@ -981,15 +895,6 @@
   <data name="Exception1012" xml:space="preserve">
     <value>فشلت عملية الرد</value>
   </data>
-  <data name="OperationDone_11" xml:space="preserve">
-    <value>تمت عملية الرفض بنجاح</value>
-  </data>
-  <data name="OperationDone_12" xml:space="preserve">
-    <value>تمت عملية الرد بنجاح</value>
-  </data>
-  <data name="OperationFailed_12" xml:space="preserve">
-    <value>فشلت عملية الرد</value>
-  </data>
   <data name="Exception1013" xml:space="preserve">
     <value>فشلت عملية استدعاء البيانات</value>
   </data>
@@ -1008,49 +913,7 @@
   <data name="Exception1018" xml:space="preserve">
     <value>فشلت عملية ازالة الخدمة من قائمة الخدمات المفضلة</value>
   </data>
-  <data name="OperationDone_13" xml:space="preserve">
-    <value>تمت عملية استدعاء البيانات بنجاح </value>
-  </data>
-  <data name="OperationDone_14" xml:space="preserve">
-    <value>تمت عملية استدعاء البيانات بنجاح </value>
-  </data>
-  <data name="OperationDone_15" xml:space="preserve">
-    <value>تمت عملية الرفع بنجاح </value>
-  </data>
-  <data name="OperationDone_16" xml:space="preserve">
-    <value>تمت عملية التحميل بنجاح </value>
-  </data>
-  <data name="OperationDone_17" xml:space="preserve">
-    <value>تمت اضافة الخدمة للخدمات المفضلة</value>
-  </data>
-  <data name="OperationDone_18" xml:space="preserve">
-    <value>تمت ازالة الخدمة من قائمة الخدمات المفضلة</value>
-  </data>
-  <data name="OperationFailed_13" xml:space="preserve">
-    <value>فشلت عملية استدعاء البيانات</value>
-  </data>
-  <data name="OperationFailed_14" xml:space="preserve">
-    <value>فشلت عملية استدعاء البيانات</value>
-  </data>
-  <data name="OperationFailed_15" xml:space="preserve">
-    <value>فشلت عملية الرفع</value>
-  </data>
-  <data name="OperationFailed_16" xml:space="preserve">
-    <value>فشلت عملية التحميل</value>
-  </data>
-  <data name="OperationFailed_17" xml:space="preserve">
-    <value>فشلت عملية اضافة الخدمة للخدمات المفضلة</value>
-  </data>
-  <data name="OperationFailed_18" xml:space="preserve">
-    <value>فشلت عملية ازالة الخدمة من قائمة الخدمات المفضلة</value>
-  </data>
   <data name="Exception1019" xml:space="preserve">
-    <value>فشلت عملية التحقق</value>
-  </data>
-  <data name="OperationDone_19" xml:space="preserve">
-    <value>تمت عملية التحقق بنجاح</value>
-  </data>
-  <data name="OperationFailed_19" xml:space="preserve">
     <value>فشلت عملية التحقق</value>
   </data>
   <data name="Exception107" xml:space="preserve">

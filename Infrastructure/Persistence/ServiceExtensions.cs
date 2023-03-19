@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Adoler.AdoExtension.Helpers;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using TemplateFw.Persistence.IRepositories;
@@ -18,9 +19,9 @@ namespace TemplateFw.Persistence
             services.AddDbContext<TemplateFwDbContext>(options => options.UseSqlServer(dshboardConnection));
             services.AddDbContext<DgReadOnlyDbContext>(options => options.UseSqlServer(dashboardReadOnlyConnection));
 
-            services.AddScoped<Adoler.SqlDataHelper, Adoler.SqlDataHelper>(sp =>
+            services.AddScoped<Adoler.AdoExtension.Helpers.SqlDataHelper, Adoler.AdoExtension.Helpers.SqlDataHelper>(sp =>
             {
-                return new Adoler.SqlDataHelper(dshboardConnection);
+                return new SqlDataHelper(dshboardConnection);
             });
 
             services.AddScoped<SqlHelperWrite, SqlHelperWrite>(sp =>

@@ -1,4 +1,6 @@
-﻿namespace TemplateFw.Dtos.Common
+﻿using System;
+
+namespace TemplateFw.Dtos.Common
 {
     
     public class PaginationFilter
@@ -15,6 +17,10 @@
         public int PageNumber { get; set; } = 1;
         public int PageSize { get; set; } = 20;
 
+        public object ConvertToParametersExcept(Func<object, object> value1, Func<object, object> value2)
+        {
+            throw new NotImplementedException();
+        }
     }
     public class FaqSimleFilter : PaginationFilter
     {

@@ -1,5 +1,4 @@
-﻿using Adoler;
-using Microsoft.Data.SqlClient;
+﻿using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Dynamic;
@@ -10,33 +9,16 @@ using TemplateFw.Dtos.Common;
 using TemplateFw.Dtos;
 using TemplateFw.Shared.Domain.Enums;
 using TemplateFw.Shared.Dtos.Collections;
+using Adoler.AdoExtension.Extensions;
 
 namespace TemplateFw.Persistence.Repositories
 {
     public class FaqRepository : IFaqRepository
     {
         readonly IDbHelper dbHelper;
-        readonly DbSet<Faq> dbSetReadOnly;
-        readonly DbSet<Faq> dbSetWrite;
-        readonly DbSet<VwFaq> _fullDataView;
-        readonly string _writeConnectionString = "";
-        readonly string _readConnectionString = "";
-
-        /// <summary>
-        /// Initializes a new instance of the  class.
-        /// </summary>
-        /// <param name="dbContext">The database context.</param>
         public FaqRepository(IDbHelper dbHelper)
         {
-            //get the writting connection string for stords
             this.dbHelper = dbHelper;
-            //dbSet Write for Create Update Delete operation
-            dbSetWrite = dbHelper.dbWrite.Faqs;
-            //dbSet ReadOnly for select operation
-            dbSetReadOnly = dbHelper.dbReadOnly.Faqs;
-            //db detail view
-            _fullDataView = dbHelper.dbReadOnly.VwFaq;
-
         }
 
         #region InsertAsync
@@ -44,7 +26,7 @@ namespace TemplateFw.Persistence.Repositories
         {
             List<SqlParameter> plist = dto.ConvertToParametersExcept(e => e.FaqId, e => e.CreationDate, e => e.LastModifiedBy, e => e.LastModificationDate, e => e.IsAvailable);
             var faqID = plist.AddOutputParameterInteger("FaqId");
-            int affectedRows = dbHelper.SqlHelperWrite.ExecuteNonQuery("[dbo].[Faq_Create]", plist);
+            int affectedRows = await dbHelper.SqlHelperWrite.ExecuteNonQueryAsync("[dbo].[Faq_Create]", plist);
             return (affectedRows > 0);
         }
         #endregion
@@ -53,7 +35,7 @@ namespace TemplateFw.Persistence.Repositories
         public async Task<bool> UpdateAsync(FaqDto dto)
         {
             List<SqlParameter> plist = dto.ConvertToParametersExcept(e => e.CreatedBy, e => e.CreationDate, e => e.LastModificationDate, e => e.IsAvailable);
-            int affectedRows = dbHelper.SqlHelperWrite.ExecuteNonQuery("[dbo].[Faq_Update]", plist);
+            int affectedRows = await dbHelper.SqlHelperWrite.ExecuteNonQueryAsync("[dbo].[Faq_Update]", plist);
             return (affectedRows > 0);
         }
 
@@ -65,7 +47,7 @@ namespace TemplateFw.Persistence.Repositories
             dynamic parameters = new ExpandoObject();
             parameters.FaqId = id;
             parameters.LastModifiedBy = user;
-            int affectedRows = dbHelper.SqlHelperWrite.ExecuteNonQuery("[dbo].[Faq_DeleteVirtually]", parameters);
+            int affectedRows = await dbHelper.SqlHelperWrite.ExecuteNonQueryAsync("[dbo].[Faq_DeleteVirtually]", parameters);
             return (affectedRows > 0);
         }
         #endregion
@@ -75,7 +57,7 @@ namespace TemplateFw.Persistence.Repositories
         {
             dynamic parameters = new ExpandoObject();
             parameters.FaqId = id;
-            int affectedRows = dbHelper.SqlHelperWrite.ExecuteNonQuery("[dbo].[Faq_DeletePermanently]", parameters);
+            int affectedRows = await dbHelper.SqlHelperWrite.ExecuteNonQueryAsync("[dbo].[Faq_DeletePermanently]", parameters);
             return (affectedRows > 0);
         }
         #endregion
@@ -86,7 +68,7 @@ namespace TemplateFw.Persistence.Repositories
             dynamic parameters = new ExpandoObject();
             parameters.LanguageId = (int)lang;
             parameters.FaqId = id;
-            FaqInfoDto item = dbHelper.SqlHelperRead.GetOne<FaqInfoDto>("[dbo].[Faq_GetOneInfo]", parameters);
+            FaqInfoDto item =await dbHelper.SqlHelperRead.GetSingleRecordAsync<FaqInfoDto>("[dbo].[Faq_GetOneInfo]", parameters);
             return item;
         }
         #endregion
@@ -95,7 +77,7 @@ namespace TemplateFw.Persistence.Repositories
         public async Task<List<FaqInfoDto>> GetAllAsync(FaqFilter filter)
         {
             var parameters = filter.ConvertToParametersExcept(e => e.PageNumber, e => e.PageSize);
-            List<FaqInfoDto> list = dbHelper.SqlHelperRead.GetList<FaqInfoDto>("[dbo].[Faq_GetAllInfo]", parameters);
+            List<FaqInfoDto> list = await dbHelper.SqlHelperRead.GetRecordListAsync<FaqInfoDto>("[dbo].[Faq_GetAllInfo]", parameters);
             return list;
         }
         #endregion
@@ -105,7 +87,7 @@ namespace TemplateFw.Persistence.Repositories
         {
             var parameters = filter.ConvertToParameters();
             var count = parameters.AddOutputTotalCountOutput();
-            List<FaqInfoDto> list = dbHelper.SqlHelperRead.GetList<FaqInfoDto>("[dbo].[Faq_GetAllInfoPaged]", parameters);
+            List<FaqInfoDto> list = await dbHelper.SqlHelperRead.GetRecordListAsync<FaqInfoDto>("[dbo].[Faq_GetAllInfoPaged]", parameters);
             var pagedList = new PagedList<FaqInfoDto>(list, filter.PageNumber, filter.PageSize, (int)count.Value);
             return pagedList;
         }
@@ -114,10 +96,9 @@ namespace TemplateFw.Persistence.Repositories
         #region GetOneByIdAsync
         public async Task<FaqDto> GetOneByIdAsync(int id)
         {
-            var x = await GetInfoByIdAsync(id);
             dynamic parameters = new ExpandoObject();
             parameters.FaqId = id;
-            FaqDto item = dbHelper.SqlHelperRead.GetOne<FaqDto>("[dbo].[Faq_GetOneById]", parameters);
+            FaqDto item = await dbHelper.SqlHelperRead.GetSingleRecordAsync<FaqDto>("[dbo].[Faq_GetOneById]", parameters);
             return item;
         }
         #endregion
