@@ -50,7 +50,7 @@ namespace TemplateFw.Dashboard.Controllers
         #region IndexContent
 
         [HttpGet]
-        public async Task<IActionResult> IndexContent([FromQuery] FaqFilter filter)
+        public async Task<IActionResult> IndexContent([FromQuery] GridFilter filter)
         {
             return await ReturnViewResponse<GenericApiResponse<PagedList<FaqInfoDto>>>(_api, Urls.GetPaged, filter, OperationTypes.GetContent);
         }

@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using TemplateFw.Application.Services;
 using TemplateFw.DashboardApi.Controllers.Base;
 using TemplateFw.Dtos.Common;
@@ -16,12 +16,12 @@ namespace TemplateFw.DashboardApi.Controllers
     [Route("api/v1/[controller]")]
     public class FaqController : ApiControllerBase<FaqController>
     {
-        private readonly IFaqService _faqService;
+        private readonly IFaqService faqService;
 
-        public FaqController(ILogger<FaqController> logger, IFaqService faqService)
+        public FaqController(ILogger<FaqController> logger, IFaqService FaqService)
             : base(logger)
         {
-            _faqService = faqService;
+            faqService = FaqService;
         }
 
         [HttpPost]
@@ -33,11 +33,11 @@ namespace TemplateFw.DashboardApi.Controllers
         {
             if (dto.FaqId == 0)
             {
-                return await ApiResponse(() => _faqService.CreateAsync(dto), OperationTypes.Add);
+                return await ApiResponse(() => faqService.CreateAsync(dto), OperationTypes.Add);
             }
             else
             {
-                return await ApiResponse(() => _faqService.UpdateAsync(dto), OperationTypes.Update);
+                return await ApiResponse(() => faqService.UpdateAsync(dto), OperationTypes.Update);
             }
         }
         [HttpGet]
@@ -47,7 +47,7 @@ namespace TemplateFw.DashboardApi.Controllers
         [Route("getone/{id}")]
         public async Task<GenericApiResponse<FaqDto>> GetById(int id)
         {
-            return await GenericApiResponse(() => _faqService.GetOneByIdAsync(id), OperationTypes.GetOne);
+            return await GenericApiResponse(() => faqService.GetOneByIdAsync(id), OperationTypes.GetOne);
         }
 
         [HttpGet]
@@ -57,7 +57,7 @@ namespace TemplateFw.DashboardApi.Controllers
         [Route("info/{id}")]
         public async Task<GenericApiResponse<FaqInfoDto>> GetInfoById(int id)
         {
-            return await GenericApiResponse(() => _faqService.GetInfoByIdAsync(id, CurrentLanguage), OperationTypes.GetOne);
+            return await GenericApiResponse(() => faqService.GetInfoByIdAsync(id, CurrentLanguage), OperationTypes.GetOne);
         }
 
         [HttpPost]
@@ -67,7 +67,7 @@ namespace TemplateFw.DashboardApi.Controllers
         [Route("getall")]
         public async Task<GenericApiResponse<List<FaqInfoDto>>> GetAll(FaqFilter filter)
         {
-            return await GenericApiResponse(() => _faqService.GetAllAsync(filter), OperationTypes.GetList);
+            return await GenericApiResponse(() => faqService.GetAllAsync(filter), OperationTypes.GetList);
         }
 
         [HttpPost]
@@ -77,7 +77,7 @@ namespace TemplateFw.DashboardApi.Controllers
         [Route("get-paged")]
         public async Task<GenericApiResponse<PagedList<FaqInfoDto>>> GetPagedList(FaqFilter filter)
         {
-            return await GenericApiResponse(() => _faqService.GetAllInfoPagedAsync(filter), OperationTypes.GetList);
+            return await GenericApiResponse(() => faqService.GetAllInfoPagedAsync(filter), OperationTypes.GetList);
         }
 
         [HttpPost]
@@ -87,7 +87,7 @@ namespace TemplateFw.DashboardApi.Controllers
         [Route("delete/{id}")]
         public async Task<ApiResponse> Delete(int id)
         {
-            return await ApiResponse(() => _faqService.DeleteVirtuallyAsync(id), OperationTypes.Delete);
+            return await ApiResponse(() => faqService.DeleteVirtuallyAsync(id), OperationTypes.Delete);
         }
 
         

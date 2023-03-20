@@ -25,7 +25,7 @@ namespace TemplateFw.Persistence.Repositories
         public async Task<bool> CreateAsync(FaqDto dto)
         {
             List<SqlParameter> plist = dto.ConvertToParametersExcept(e => e.FaqId, e => e.CreationDate, e => e.LastModifiedBy, e => e.LastModificationDate, e => e.IsAvailable);
-            var faqID = plist.AddOutputParameterInteger("FaqId");
+            var FaqId = plist.AddOutputParameterInteger("FaqId");
             int affectedRows = await dbHelper.SqlHelperWrite.ExecuteNonQueryAsync("[dbo].[Faq_Create]", plist);
             return (affectedRows > 0);
         }
