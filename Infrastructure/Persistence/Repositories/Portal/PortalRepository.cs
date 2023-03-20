@@ -13,29 +13,29 @@ using Adoler.AdoExtension.Extensions;
 
 namespace TemplateFw.Persistence.Repositories
 {
-    public class FaqRepository : IFaqRepository
+    public class PortalRepository : IPortalRepository
     {
         readonly IDbHelper dbHelper;
-        public FaqRepository(IDbHelper dbHelper)
+        public PortalRepository(IDbHelper dbHelper)
         {
             this.dbHelper = dbHelper;
         }
 
         #region InsertAsync
-        public async Task<bool> CreateAsync(FaqDto dto)
+        public async Task<bool> CreateAsync(PortalDto dto)
         {
-            List<SqlParameter> plist = dto.ConvertToParametersExcept(e => e.FaqId, e => e.CreationDate, e => e.LastModifiedBy, e => e.LastModificationDate, e => e.IsAvailable);
-            var faqId = plist.AddOutputParameterInteger("FaqId");
-            int affectedRows = await dbHelper.SqlHelperWrite.ExecuteNonQueryAsync("[dbo].[Faq_Create]", plist);
+            List<SqlParameter> plist = dto.ConvertToParametersExcept(e => e.PortalId, e => e.CreationDate, e => e.LastModifiedBy, e => e.LastModificationDate, e => e.IsAvailable);
+            var portalId = plist.AddOutputParameterInteger("PortalId");
+            int affectedRows = await dbHelper.SqlHelperWrite.ExecuteNonQueryAsync("[dbo].[Portal_Create]", plist);
             return (affectedRows > 0);
         }
         #endregion
 
         #region UpdateAsync
-        public async Task<bool> UpdateAsync(FaqDto dto)
+        public async Task<bool> UpdateAsync(PortalDto dto)
         {
             List<SqlParameter> plist = dto.ConvertToParametersExcept(e => e.CreatedBy, e => e.CreationDate, e => e.LastModificationDate, e => e.IsAvailable);
-            int affectedRows = await dbHelper.SqlHelperWrite.ExecuteNonQueryAsync("[dbo].[Faq_Update]", plist);
+            int affectedRows = await dbHelper.SqlHelperWrite.ExecuteNonQueryAsync("[dbo].[Portal_Update]", plist);
             return (affectedRows > 0);
         }
 
@@ -45,9 +45,9 @@ namespace TemplateFw.Persistence.Repositories
         public async Task<bool> DeleteVirtuallyAsync(int id, string user)
         {
             dynamic parameters = new ExpandoObject();
-            parameters.FaqId = id;
+            parameters.PortalId = id;
             parameters.LastModifiedBy = user;
-            int affectedRows = await dbHelper.SqlHelperWrite.ExecuteNonQueryAsync("[dbo].[Faq_DeleteVirtually]", parameters);
+            int affectedRows = await dbHelper.SqlHelperWrite.ExecuteNonQueryAsync("[dbo].[Portal_DeleteVirtually]", parameters);
             return (affectedRows > 0);
         }
         #endregion
@@ -56,49 +56,49 @@ namespace TemplateFw.Persistence.Repositories
         public async Task<bool> DeletePermanentlyAsync(int id)
         {
             dynamic parameters = new ExpandoObject();
-            parameters.FaqId = id;
-            int affectedRows = await dbHelper.SqlHelperWrite.ExecuteNonQueryAsync("[dbo].[Faq_DeletePermanently]", parameters);
+            parameters.PortalId = id;
+            int affectedRows = await dbHelper.SqlHelperWrite.ExecuteNonQueryAsync("[dbo].[Portal_DeletePermanently]", parameters);
             return (affectedRows > 0);
         }
         #endregion
 
         #region GetInfoByIdAsync
-        public async Task<FaqInfoDto> GetInfoByIdAsync(int id, EnumLanguage lang = EnumLanguage.Arabic)
+        public async Task<PortalInfoDto> GetInfoByIdAsync(int id, EnumLanguage lang = EnumLanguage.Arabic)
         {
             dynamic parameters = new ExpandoObject();
             parameters.LanguageId = (int)lang;
-            parameters.FaqId = id;
-            FaqInfoDto item =await dbHelper.SqlHelperRead.GetSingleRecordAsync<FaqInfoDto>("[dbo].[Faq_GetOneInfo]", parameters);
+            parameters.PortalId = id;
+            PortalInfoDto item =await dbHelper.SqlHelperRead.GetSingleRecordAsync<PortalInfoDto>("[dbo].[Portal_GetOneInfo]", parameters);
             return item;
         }
         #endregion
 
         #region GetAllAsync
-        public async Task<List<FaqInfoDto>> GetAllAsync(FaqFilter filter)
+        public async Task<List<PortalInfoDto>> GetAllAsync(PortalFilter filter)
         {
             var parameters = filter.ConvertToParametersExcept(e => e.PageNumber, e => e.PageSize);
-            List<FaqInfoDto> list = await dbHelper.SqlHelperRead.GetRecordListAsync<FaqInfoDto>("[dbo].[Faq_GetAllInfo]", parameters);
+            List<PortalInfoDto> list = await dbHelper.SqlHelperRead.GetRecordListAsync<PortalInfoDto>("[dbo].[Portal_GetAllInfo]", parameters);
             return list;
         }
         #endregion
 
         #region GetPagedListAsync
-        public async Task<PagedList<FaqInfoDto>> GetAllInfoPagedAsync(FaqFilter filter)
+        public async Task<PagedList<PortalInfoDto>> GetAllInfoPagedAsync(PortalFilter filter)
         {
             var parameters = filter.ConvertToParameters();
             var count = parameters.AddOutputTotalCountOutput();
-            List<FaqInfoDto> list = await dbHelper.SqlHelperRead.GetRecordListAsync<FaqInfoDto>("[dbo].[Faq_GetAllInfoPaged]", parameters);
-            var pagedList = new PagedList<FaqInfoDto>(list, filter.PageNumber, filter.PageSize, (int)count.Value);
+            List<PortalInfoDto> list = await dbHelper.SqlHelperRead.GetRecordListAsync<PortalInfoDto>("[dbo].[Portal_GetAllInfoPaged]", parameters);
+            var pagedList = new PagedList<PortalInfoDto>(list, filter.PageNumber, filter.PageSize, (int)count.Value);
             return pagedList;
         }
         #endregion
 
         #region GetOneByIdAsync
-        public async Task<FaqDto> GetOneByIdAsync(int id)
+        public async Task<PortalDto> GetOneByIdAsync(int id)
         {
             dynamic parameters = new ExpandoObject();
-            parameters.FaqId = id;
-            FaqDto item = await dbHelper.SqlHelperRead.GetSingleRecordAsync<FaqDto>("[dbo].[Faq_GetOneById]", parameters);
+            parameters.PortalId = id;
+            PortalDto item = await dbHelper.SqlHelperRead.GetSingleRecordAsync<PortalDto>("[dbo].[Portal_GetOneById]", parameters);
             return item;
         }
         #endregion
