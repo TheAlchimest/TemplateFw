@@ -22,14 +22,14 @@ namespace TemplateFw.Resources.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class CommonResource {
+    public class CommonResources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal CommonResource() {
+        internal CommonResources() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace TemplateFw.Resources.Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("TemplateFw.Resources.Resources.CommonResource", typeof(CommonResource).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("TemplateFw.Resources.Resources.CommonResources", typeof(CommonResources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -63,72 +63,72 @@ namespace TemplateFw.Resources.Resources {
         /// <summary>
         ///   Looks up a localized string similar to حذف.
         /// </summary>
-        public static string Action_Delete {
+        public static string ActionDelete {
             get {
-                return ResourceManager.GetString("Action_Delete", resourceCulture);
+                return ResourceManager.GetString("ActionDelete", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to تعديل.
         /// </summary>
-        public static string Action_Edit {
+        public static string ActionEdit {
             get {
-                return ResourceManager.GetString("Action_Edit", resourceCulture);
+                return ResourceManager.GetString("ActionEdit", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to ارسال.
         /// </summary>
-        public static string Action_Send {
+        public static string ActionSend {
             get {
-                return ResourceManager.GetString("Action_Send", resourceCulture);
+                return ResourceManager.GetString("ActionSend", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to تم الإضافة بواسطة.
         /// </summary>
-        public static string Common_CreatedBy {
+        public static string CreatedBy {
             get {
-                return ResourceManager.GetString("Common_CreatedBy", resourceCulture);
+                return ResourceManager.GetString("CreatedBy", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to تاريخ الإضافة.
         /// </summary>
-        public static string Common_CreationDate {
+        public static string CreationDate {
             get {
-                return ResourceManager.GetString("Common_CreationDate", resourceCulture);
+                return ResourceManager.GetString("CreationDate", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to الحالة.
         /// </summary>
-        public static string Common_IsAvailable {
+        public static string IsAvailable {
             get {
-                return ResourceManager.GetString("Common_IsAvailable", resourceCulture);
+                return ResourceManager.GetString("IsAvailable", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to تاريخ أخر تعديل.
         /// </summary>
-        public static string Common_LastModificationDate {
+        public static string LastModificationDate {
             get {
-                return ResourceManager.GetString("Common_LastModificationDate", resourceCulture);
+                return ResourceManager.GetString("LastModificationDate", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to تم أخر تعديل بواسطة.
         /// </summary>
-        public static string Common_LastModifiedBy {
+        public static string LastModifiedBy {
             get {
-                return ResourceManager.GetString("Common_LastModifiedBy", resourceCulture);
+                return ResourceManager.GetString("LastModifiedBy", resourceCulture);
             }
         }
     }

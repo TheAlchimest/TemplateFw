@@ -6,114 +6,81 @@
     bool isUpdateMode = (Model.FaqId != 0);
     string isUpdateModeString = isUpdateMode.ToString().ToLower();
 }
-<form method="post" id="frmForm" name="frmForm" action="/Faq/Save" data-is-update-mode="@(isUpdateModeString)">
+<form method="post" id="frmForm" name="frmForm" action="/faq/Save" data-is-update-mode="@(isUpdateModeString)">
     <div class="form-head mb-sm-5 mb-3 d-flex flex-wrap align-items-center ">
         <div class=" mr-auto">
-            <h3 class="font-w600 mb-2">@Moduleslocalizer["Faqs"]</h3>
-            <p class="mb-0">@Moduleslocalizer["Faq_Management"]</p>
+            <h3 class="font-w600 mb-2">@localizer["Faq"]</h3>
+            <p class="mb-0">@localizer["FaqManagement"]</p>
         </div>
     </div>
     <div class="card master-form">
         <div class="card-body">
-            <input type="hidden" name="FaqId" value="@(Model.FaqId)">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label class="font-w600 px-4">
-                            @Moduleslocalizer["Faq_Portal"]
-                            <small class="text-danger small mx-1">
-                                <i class="fas fa-asterisk fs-10"></i>
-                            </small>
-                        </label>
-                            @await Html.PartialAsync("/Views/RunTimeControls/Select.cshtml", 
-                            new TemplateFw.Shared.Dto.RunTimeSelectControl(){ 
-                                Id="PortalId",
-                                AdditionalAttributes = "",
-                                ApiUrl = webSettings.Value.LookupApiUrl+ "lookup/portals", 
-                                Value = Model.PortalId.ToString(),
-                                DefaultValue="",
-                            DefaultText=Moduleslocalizer["Faq_PortalChoose"].Value,
-                                AddDefaultOption=(!isUpdateMode)
-                            });
-                    </div>
-                </div>
-                
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label class="font-w600 px-4">@Moduleslocalizer["Faq_Service"]</label>
-                        <select class="select2 select-dynamic"
-                                id="ServiceId"
-                                name="ServiceId"
-                                data-value="@(Model.ServiceId)"
-                                data-cascade-api-url="@(webSettings.Value.LookupApiUrl)lookup/services"
-                                data-default-val=""
-                                data-default-text=@(Moduleslocalizer["Faq_ServiceChoose"].Value)
-                                data-cascade-with="PortalId">
-                        </select>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label class="font-w600 px-4">@Moduleslocalizer["Faq_QuestionAr"]</label>
-                        <input type="arabictext"
-                               value="@Model.QuestionAr"
-                               class="form-control input-default"
-                               id="QuestionAr"
-                               name="QuestionAr"
-                               required maxlength="500">
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label class="font-w600 px-4">@Moduleslocalizer["Faq_QuestionEn"]</label>
-                        <input type="englishtext"
-                               value="@Model.QuestionEn"
-                               class="form-control input-default"
-                               id="QuestionEn"
-                               name="QuestionEn"
-                               required maxlength="500">
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label class="font-w600 px-4">@Moduleslocalizer["Faq_AnswerAr"]</label>
-                        <textarea type="arabictext"
-                                  class="form-control input-default py-2"
-                                  data-label="@Moduleslocalizer["Faq_AnswerAr"]"
-                                  rows="6"
-                                  id="AnswerAr"
-                                  name="AnswerAr"
-                                  placeholder="@Moduleslocalizer["Faq_AnswerAr"]"
-                                  required maxlength="2000">@Model.AnswerAr</textarea>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="form-group">
-                        <label class="font-w600 px-4">@Moduleslocalizer["Faq_AnswerEn"]</label>
-                        <textarea type="arabictext"
-                                  class="form-control input-default py-2"
-                                  data-label="@Moduleslocalizer["Faq_AnswerEn"]"
-                                  rows="6"
-                                  id="AnswerEn"
-                                  name="AnswerEn"
-                                  placeholder="@Moduleslocalizer["Faq_AnswerEn"]"
-                                  required maxlength="2000">@Model.AnswerEn</textarea>
-                    </div>
-                </div>
-            </div>
+            <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="FaqId" name="FaqId" placeholder="Enter " required maxlength="4" max="0"  smk-error-msg-required="Please Enter " data-smk-max="0"><div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="QuestionAr">Question ar :</label>
+    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="QuestionAr" name="QuestionAr" placeholder="Enter " maxlength="150" max="0"  data-smk-max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="QuestionEn">Question en :</label>
+    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="QuestionEn" name="QuestionEn" placeholder="Enter " maxlength="150" max="0"  data-smk-max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="AnswerAr">Answer ar <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <textarea rows="4"
+              class="form-control"
+                data-type="" data-smk-type=""  data-type="" data-smk-type="" id="AnswerAr" name="AnswerAr" placeholder="Enter " required maxlength="2000" max="0"  smk-error-msg-required="Please Enter " data-smk-max="0"></textarea>
+              
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="AnswerEn">Answer en <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <textarea rows="4"
+              class="form-control"
+                data-type="" data-smk-type=""  data-type="" data-smk-type="" id="AnswerEn" name="AnswerEn" placeholder="Enter " required maxlength="2000" max="0"  smk-error-msg-required="Please Enter " data-smk-max="0"></textarea>
+              
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group select2-lg">
+    <label class="form-label-small px-3" for="PortalId">Portal id <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <select class="form-control form-select select2 select2-control static-select"    data-type="" data-smk-type=""  data-type="" data-smk-type="" id="PortalId" name="PortalId" placeholder="Choose " required maxlength="4" max="0"  smk-error-msg-required="Choose " data-smk-max="0">
+    </select>
+    
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group select2-lg">
+    <label class="form-label-small px-3" for="ServiceId">Service id :</label>
+    <select class="form-control form-select select2 select2-control static-select"    data-type="" data-smk-type=""  data-type="" data-smk-type="" id="ServiceId" name="ServiceId" placeholder="Choose " maxlength="4" max="0"  data-smk-max="0">
+    </select>
+    
+</div>
+</div>
+
         </div>
     </div>
     
     <div class="text-center">
         <button type="button" id="Send" class="btn btn-primary font-size-13 font-weight-bold"
                 onclick="saveForm(this,event)"
-                on-sccess-redirect-url="/#!/Faq/"
+                on-sccess-redirect-url="/#!/faq/"
                 data-is-update-mode="@(isUpdateModeString)">
             <i class="far fa-lg fa-check"></i> ارسال
         </button>
 
 
-        <a id="backActionBtn" href="/#!/Faq" class="btn btn-danger mr-3">
+        <a id="backActionBtn" href="/#!/faq" class="btn btn-danger mr-3">
             <i class="fas fa-times fa-lg fa-arrow-left"></i> العودة
         </a>
 
@@ -129,7 +96,7 @@
 
     function saveForm(obj, event) {
 
-        if ($("#frmForm").data("changed") || $("#frmForm").attr("data-is-update-mode") === 'false') {
+        if ($("frmForm").attr("data-is-update-mode") === 'false') {
             app.form.submit(obj, event)
         }
         else {

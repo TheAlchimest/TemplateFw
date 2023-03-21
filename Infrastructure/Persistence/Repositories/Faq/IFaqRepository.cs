@@ -6,7 +6,7 @@ using TemplateFw.Dtos.Common;
 using TemplateFw.Shared.Domain.Enums;
 using TemplateFw.Shared.Dtos.Collections;
 
-namespace TemplateFw.Persistence.Repositories
+namespace TemplateFw.Persistence.IRepositories
 {
     public interface IFaqRepository
     {

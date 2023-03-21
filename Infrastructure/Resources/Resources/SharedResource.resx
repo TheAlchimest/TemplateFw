@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AbsherAccountNotValid" xml:space="preserve">
+    <value>الحساب ابشر غير موجود لرقم الهويه {0}</value>
+  </data>
   <data name="Account_Attachments" xml:space="preserve">
     <value>الملفات المرفقة</value>
   </data>
@@ -183,14 +186,42 @@
   <data name="Action" xml:space="preserve">
     <value>الإجراء</value>
   </data>
+  <data name="ActionDelete" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="ActionEdit" xml:space="preserve">
+    <value>تعديل</value>
+  </data>
   <data name="Actions" xml:space="preserve">
     <value>الإجراءات</value>
+  </data>
+  <data name="ActionSend" xml:space="preserve">
+    <value>ارسال</value>
+  </data>
+  <data name="ActivatedSuccessfully" xml:space="preserve">
+    <value>تمت عملية التفعيل بنجاح</value>
+  </data>
+  <data name="ActivateFoundationAccountNotificationTitle" xml:space="preserve">
+    <value>تفعيل حساب المؤسسه</value>
+  </data>
+  <data name="ActivateUserAccountNotificationTitle" xml:space="preserve">
+    <value>تفعيل حساب المستخدم</value>
   </data>
   <data name="Add" xml:space="preserve">
     <value>إضافة</value>
   </data>
   <data name="Add New Vote" xml:space="preserve">
     <value>إضافة تصويت جديد</value>
+  </data>
+  <data name="AddedSuccessfully" xml:space="preserve">
+    <value>تمت عملية الاضافة بنجاح</value>
+    <comment>#MSG17</comment>
+  </data>
+  <data name="AddingSpAccountForBusinessSuccessfully" xml:space="preserve">
+    <value>تمت عملية اضافة حساب كمزود خدمة بنجاح</value>
+  </data>
+  <data name="AddNewAdminNotificationTitle" xml:space="preserve">
+    <value>إضافه متحكم جديد</value>
   </data>
   <data name="Admin" xml:space="preserve">
     <value>مدير النظام</value>
@@ -222,6 +253,19 @@
   <data name="AnswerArabic" xml:space="preserve">
     <value>الإجابة العربي</value>
   </data>
+  <data name="Application Under miantenance" xml:space="preserve">
+    <value>جاري صيانة التطبيق </value>
+  </data>
+  <data name="Are you sure you want to delete?" xml:space="preserve">
+    <value>هل أنت متأكد من عملية الحذف؟</value>
+    <comment>MSG19</comment>
+  </data>
+  <data name="Are you sure you want to open this vote?" xml:space="preserve">
+    <value>هل أنت متأكد من تفعيل</value>
+  </data>
+  <data name="Are you sure you want to stop this vote?" xml:space="preserve">
+    <value>هل أنت متأكد من إيقاف تفعيل</value>
+  </data>
   <data name="Area" xml:space="preserve">
     <value>المنطقة</value>
   </data>
@@ -238,6 +282,9 @@
   <data name="AuditLog" xml:space="preserve">
     <value>سجل التدقيق</value>
   </data>
+  <data name="BackDirection" xml:space="preserve">
+    <value>right</value>
+  </data>
   <data name="Cancel" xml:space="preserve">
     <value>إلغاء</value>
   </data>
@@ -253,6 +300,12 @@
   <data name="Choose" xml:space="preserve">
     <value>الإختيار</value>
   </data>
+  <data name="CITCProtalAccountActivated" xml:space="preserve">
+    <value>CITC Protal: Your Foundation Account is Activated</value>
+  </data>
+  <data name="CITCProtalAccountDeactivated" xml:space="preserve">
+    <value>CITC Protal: Your Foundation Account is Deactivated</value>
+  </data>
   <data name="Cities" xml:space="preserve">
     <value>المدن</value>
   </data>
@@ -262,17 +315,74 @@
   <data name="CityName" xml:space="preserve">
     <value>إسم المدينة</value>
   </data>
+  <data name="Complaint" xml:space="preserve">
+    <value>الشكاوي والمقترحات</value>
+  </data>
+  <data name="ComplaintGotResponse" xml:space="preserve">
+    <value>تم الرد على الإستفسار المقدم من طرفكم</value>
+  </data>
+  <data name="ComplaintResponseNotificationTitle" xml:space="preserve">
+    <value>تم الرد علي الشكوى الخاصه بكم</value>
+  </data>
   <data name="ComplaintsAndSuggestions" xml:space="preserve">
     <value>الشكاوى و الإقتراحات</value>
   </data>
-  <data name="Complaint" xml:space="preserve">
-    <value>الشكاوي والمقترحات</value>
+  <data name="ComplaintSavedSuccessfully" xml:space="preserve">
+    <value>تم استلام إستفساركم شكرا لتواصلكم</value>
   </data>
   <data name="ComplanManagement" xml:space="preserve">
     <value>ادارة الشكاوي والمقترحات</value>
   </data>
+  <data name="ComplanSavedSuccessfully" xml:space="preserve">
+    <value>تم استلام إستفساركم شكرا لتواصلكم</value>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>تأكيد كلمة المرور</value>
+  </data>
   <data name="Contact type" xml:space="preserve">
     <value>وسيلة التواصل</value>
+  </data>
+  <data name="ContactIsValid" xml:space="preserve">
+    <value>البيانات المدخله صحيحه</value>
+  </data>
+  <data name="Countries" xml:space="preserve">
+    <value>البلدان</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>البلد</value>
+  </data>
+  <data name="Country_Code" xml:space="preserve">
+    <value>الرمز</value>
+  </data>
+  <data name="Country_CreatedBy" xml:space="preserve">
+    <value>تم إنشاؤه بواسطة</value>
+  </data>
+  <data name="Country_CreationDate" xml:space="preserve">
+    <value>تاريخ الإنشاء</value>
+  </data>
+  <data name="Country_Information" xml:space="preserve">
+    <value>معلومات الدولة</value>
+  </data>
+  <data name="Country_IsAvailable" xml:space="preserve">
+    <value>متاح؟</value>
+  </data>
+  <data name="Country_LastModificationDate" xml:space="preserve">
+    <value>تاريخ آخر تعديل</value>
+  </data>
+  <data name="Country_LastModifiedBy" xml:space="preserve">
+    <value>آخر تعديل بواسطة</value>
+  </data>
+  <data name="Country_Management" xml:space="preserve">
+    <value>إدارة الدول</value>
+  </data>
+  <data name="Country_Name" xml:space="preserve">
+    <value>الاسم</value>
+  </data>
+  <data name="Country_NameAr" xml:space="preserve">
+    <value>الإسم باللغة العربية</value>
+  </data>
+  <data name="Country_NameEn" xml:space="preserve">
+    <value>الإسم باللغة الانجليزية</value>
   </data>
   <data name="Create" xml:space="preserve">
     <value>جديد</value>
@@ -289,6 +399,9 @@
   <data name="CreateCity" xml:space="preserve">
     <value>إنشاء مدينة</value>
   </data>
+  <data name="CreatedBy" xml:space="preserve">
+    <value>تم الإضافة بواسطة</value>
+  </data>
   <data name="CreatePaymentWay" xml:space="preserve">
     <value>إنشاء طريقة دفع</value>
   </data>
@@ -298,11 +411,26 @@
   <data name="CreateSpeciality" xml:space="preserve">
     <value>إنشاء تخصص</value>
   </data>
+  <data name="CreationDate" xml:space="preserve">
+    <value>تاريخ الإضافة</value>
+  </data>
   <data name="DarkMode" xml:space="preserve">
     <value>الوضع المظلم</value>
   </data>
   <data name="Dashboard" xml:space="preserve">
     <value>لوحة التحكم</value>
+  </data>
+  <data name="DataChangedSuccessfully" xml:space="preserve">
+    <value>تم تغيير البيانات بنجاح</value>
+  </data>
+  <data name="DeactivatedSuccessfully" xml:space="preserve">
+    <value>تمت عملية الإيقاف بنجاح</value>
+  </data>
+  <data name="DeactivateFoundationAccountNotificationTitle" xml:space="preserve">
+    <value>تعطيل حساب المؤسسه</value>
+  </data>
+  <data name="DeactivateUserAccountNotificationTitle" xml:space="preserve">
+    <value>تعطيل حساب المستخدم</value>
   </data>
   <data name="Default Credentials" xml:space="preserve">
     <value>افتراضي ثائق التفويض</value>
@@ -313,6 +441,12 @@
   <data name="Delete" xml:space="preserve">
     <value>حذف</value>
   </data>
+  <data name="Deleted Successfully" xml:space="preserve">
+    <value>تمت عملية الحذف بنجاح</value>
+  </data>
+  <data name="deletedSuccessfuly" xml:space="preserve">
+    <value>تمت عملية الحذف بنجاح</value>
+  </data>
   <data name="Description" xml:space="preserve">
     <value>الوصف</value>
   </data>
@@ -321,6 +455,9 @@
   </data>
   <data name="Document" xml:space="preserve">
     <value>الوثائق</value>
+  </data>
+  <data name="DownloadingError" xml:space="preserve">
+    <value>حدث خطأ في تحميل الملف</value>
   </data>
   <data name="Edit" xml:space="preserve">
     <value>تعديل</value>
@@ -344,6 +481,9 @@
     <value>EditUnit</value>
     <comment>EditUnit</comment>
   </data>
+  <data name="Email" xml:space="preserve">
+    <value>البريد الإلكتروني</value>
+  </data>
   <data name="Email Address" xml:space="preserve">
     <value>عنوان البريد الإلكتروني</value>
   </data>
@@ -356,17 +496,319 @@
   <data name="EvaluationRate" xml:space="preserve">
     <value>التقييم</value>
   </data>
+  <data name="Exception1" xml:space="preserve">
+    <value>بيانات المستخدم خاطئة</value>
+  </data>
+  <data name="Exception10" xml:space="preserve">
+    <value>تم إرسال رمز التأكيد إلي الهاتف الجوال</value>
+  </data>
+  <data name="Exception1000" xml:space="preserve">
+    <value>نأسف حدث خطأ غير متوقع</value>
+  </data>
+  <data name="Exception1001" xml:space="preserve">
+    <value>فشلت عملية الاضافة</value>
+    <comment>MSG18</comment>
+  </data>
+  <data name="Exception1002" xml:space="preserve">
+    <value>فشلت عملية استدعاء البيانات</value>
+  </data>
+  <data name="Exception1003" xml:space="preserve">
+    <value>فشلت عملية التعديل</value>
+    <comment>MSG21</comment>
+  </data>
+  <data name="Exception1004" xml:space="preserve">
+    <value>فشلت عملية الحذف</value>
+    <comment>MSG20</comment>
+  </data>
+  <data name="Exception1005" xml:space="preserve">
+    <value>فشلت عملية التفعيل</value>
+    <comment>MSG23</comment>
+  </data>
+  <data name="Exception1006" xml:space="preserve">
+    <value>فشلت عملية الإيقاف</value>
+    <comment>MSG25</comment>
+  </data>
+  <data name="Exception1007" xml:space="preserve">
+    <value>فشلت عملية النشر</value>
+    <comment>MSG23</comment>
+  </data>
+  <data name="Exception1008" xml:space="preserve">
+    <value>فشلت عملية الإيقاف</value>
+    <comment>MSG25</comment>
+  </data>
+  <data name="Exception1009" xml:space="preserve">
+    <value>فشلت عملية استدعاء البيانات</value>
+  </data>
+  <data name="Exception101" xml:space="preserve">
+    <value>رقم المنشأة مكرر</value>
+    <comment>DuplicatFoundationNumber</comment>
+  </data>
+  <data name="Exception1010" xml:space="preserve">
+    <value>فشلت عملية الحفظ</value>
+  </data>
+  <data name="Exception1011" xml:space="preserve">
+    <value>فشلت عملية الرفض</value>
+  </data>
+  <data name="Exception1012" xml:space="preserve">
+    <value>فشلت عملية الرد</value>
+  </data>
+  <data name="Exception1013" xml:space="preserve">
+    <value>فشلت عملية استدعاء البيانات</value>
+  </data>
+  <data name="Exception1014" xml:space="preserve">
+    <value>فشلت عملية استدعاء البيانات</value>
+  </data>
+  <data name="Exception1015" xml:space="preserve">
+    <value>فشلت عملية الرفع</value>
+  </data>
+  <data name="Exception1016" xml:space="preserve">
+    <value>فشلت عملية التحميل</value>
+  </data>
+  <data name="Exception1017" xml:space="preserve">
+    <value>فشلت عملية اضافة الخدمة للخدمات المفضلة</value>
+  </data>
+  <data name="Exception1018" xml:space="preserve">
+    <value>فشلت عملية ازالة الخدمة من قائمة الخدمات المفضلة</value>
+  </data>
+  <data name="Exception1019" xml:space="preserve">
+    <value>فشلت عملية التحقق</value>
+  </data>
+  <data name="Exception102" xml:space="preserve">
+    <value>الاسم باللغة العربية مكرر</value>
+    <comment>DuplicatArabicName</comment>
+  </data>
+  <data name="Exception103" xml:space="preserve">
+    <value>الاسم باللغة الانجليزية مكرر</value>
+    <comment>DuplicatEnglishName</comment>
+  </data>
+  <data name="Exception104" xml:space="preserve">
+    <value>يجب اضافة المرفقات</value>
+    <comment>MustHasAttachements</comment>
+  </data>
+  <data name="Exception105" xml:space="preserve">
+    <value>يجب اضافة جهات الاتصال</value>
+    <comment>MustHasContacts</comment>
+  </data>
+  <data name="Exception106" xml:space="preserve">
+    <value>يجب تحديد أحد جهات الاتصال مدير للحساب</value>
+    <comment>MustAccountManager</comment>
+  </data>
+  <data name="Exception107" xml:space="preserve">
+    <value>المستخدم غير موجود</value>
+  </data>
+  <data name="Exception108" xml:space="preserve">
+    <value>كلمه المرور القديمه غير صحيحه</value>
+  </data>
+  <data name="Exception109" xml:space="preserve">
+    <value>رمز التأكيد غير صحيح</value>
+  </data>
+  <data name="Exception11" xml:space="preserve">
+    <value>إنتهت صلاحية رمز التأكيد</value>
+  </data>
+  <data name="Exception110" xml:space="preserve">
+    <value>إسم المستخدم موجود من قبل</value>
+  </data>
+  <data name="Exception1101" xml:space="preserve">
+    <value>فشلت عملية انشاء حساب مزود خدمة</value>
+  </data>
+  <data name="Exception111" xml:space="preserve">
+    <value>إسم المستخدم او كلمة المرور غير صحيحه</value>
+  </data>
+  <data name="Exception112" xml:space="preserve">
+    <value>كلمة المرور غير سليمه, لاتقل عن اربع حروف</value>
+  </data>
+  <data name="Exception113" xml:space="preserve">
+    <value>البريد الإلكتروني غير صحيح</value>
+  </data>
+  <data name="Exception114" xml:space="preserve">
+    <value>تجاوزت الحد الأقصى لعدد رموز التأكيد</value>
+  </data>
+  <data name="Exception115" xml:space="preserve">
+    <value>رقم الهويه و تاريخ الميلاد غير موجود في ابشر</value>
+  </data>
+  <data name="Exception116" xml:space="preserve">
+    <value>البريد الإلكتروني لجهه الإتصال غير مرتبط بإسم النطاق</value>
+  </data>
+  <data name="Exception117" xml:space="preserve">
+    <value>حساب المؤسسة غير موجود</value>
+  </data>
+  <data name="Exception118" xml:space="preserve">
+    <value>لا يوجد بيانات تم تحديثها</value>
+  </data>
+  <data name="Exception12" xml:space="preserve">
+    <value>فشلت عملية تعديل البيانات</value>
+  </data>
+  <data name="Exception13" xml:space="preserve">
+    <value>رمز التأكد غير صحيح</value>
+  </data>
+  <data name="Exception14" xml:space="preserve">
+    <value>الخدمة منشورة</value>
+  </data>
+  <data name="Exception1505" xml:space="preserve">
+    <value>المستند موجود بالفعل</value>
+  </data>
+  <data name="Exception2" xml:space="preserve">
+    <value>هذا العنصر موجود من قبل</value>
+  </data>
+  <data name="Exception3" xml:space="preserve">
+    <value>غير موجود بالنظام</value>
+  </data>
+  <data name="Exception4" xml:space="preserve">
+    <value>لا يمكن إتمام العملية على تصويت تم تفعيله من قبل</value>
+  </data>
+  <data name="Exception400" xml:space="preserve">
+    <value>Bad Request</value>
+  </data>
+  <data name="Exception401" xml:space="preserve">
+    <value>عفواُ ليس لديك الصلاحية للوصول للمحتوى المطلوب</value>
+    <comment>Unauthorized</comment>
+  </data>
+  <data name="Exception403" xml:space="preserve">
+    <value>عفواُ ليس لديك الصلاحية للوصول للمحتوى المطلوب</value>
+  </data>
+  <data name="Exception404" xml:space="preserve">
+    <value>عفواً المحتوى المطلوب غير موجود</value>
+  </data>
+  <data name="Exception5" xml:space="preserve">
+    <value>لا يمكن  حذف خدمة تم نشرها</value>
+  </data>
+  <data name="Exception500" xml:space="preserve">
+    <value>نأسف حدث خطأ غير متوقع</value>
+  </data>
+  <data name="Exception501" xml:space="preserve">
+    <value>طلب غير موجود</value>
+  </data>
+  <data name="Exception502" xml:space="preserve">
+    <value>الطلب ليس في المسودة لا يمكن حذفه</value>
+  </data>
+  <data name="Exception503" xml:space="preserve">
+    <value>المستند غير موجود</value>
+  </data>
+  <data name="Exception504" xml:space="preserve">
+    <value>طلب موجود بالفعل</value>
+  </data>
+  <data name="Exception506" xml:space="preserve">
+    <value>الخدمة غير موجودة</value>
+  </data>
+  <data name="Exception507" xml:space="preserve">
+    <value>User ID Number Or Foundation Number Should Be Provided</value>
+  </data>
+  <data name="Exception510" xml:space="preserve">
+    <value>الرقم الشخصي موجود من قبل</value>
+  </data>
+  <data name="Exception511" xml:space="preserve">
+    <value>المستخدم محظور</value>
+  </data>
+  <data name="Exception512" xml:space="preserve">
+    <value>إسم المستخدم موجود من قبل</value>
+  </data>
+  <data name="Exception513" xml:space="preserve">
+    <value>الرقم الشخصى غير مسجل من قبل</value>
+  </data>
+  <data name="Exception522" xml:space="preserve">
+    <value>الرقم الشخصى مسجل من قبل</value>
+  </data>
+  <data name="Exception523" xml:space="preserve">
+    <value>البريد الإلكتروني مسجل من قبل</value>
+  </data>
+  <data name="Exception524" xml:space="preserve">
+    <value>الموبايل مسجل من قبل</value>
+  </data>
+  <data name="Exception525" xml:space="preserve">
+    <value>المنصب موجود من قبل</value>
+  </data>
+  <data name="Exception526" xml:space="preserve">
+    <value>فشل إنشاء مدير الحساب</value>
+  </data>
+  <data name="Exception527" xml:space="preserve">
+    <value>فشل التحويل إلي مدير حساب</value>
+  </data>
+  <data name="Exception528" xml:space="preserve">
+    <value>فشل إزالة مدير الحساب</value>
+  </data>
+  <data name="Exception529" xml:space="preserve">
+    <value>لا يمكن حذف آخر مدير حساب</value>
+  </data>
+  <data name="Exception6" xml:space="preserve">
+    <value>لا يمكنك حذف حسابك</value>
+  </data>
+  <data name="Exception7" xml:space="preserve">
+    <value>لقد قمت بالإجابة علي الإستطلاع من قبل</value>
+  </data>
+  <data name="Exception8" xml:space="preserve">
+    <value>التصنيف لدية خدمات مرتبطة</value>
+  </data>
+  <data name="Exception9" xml:space="preserve">
+    <value>لقد قمت بالإجابة علي التصويت من قبل</value>
+  </data>
+  <data name="FailedToCheckAbsher" xml:space="preserve">
+    <value>لا يمكن التحقق من البيانات {0} في وزارة الداخلية</value>
+  </data>
+  <data name="FailedToSave" xml:space="preserve">
+    <value>فشلت عملية الحفظ</value>
+  </data>
   <data name="FAQ" xml:space="preserve">
+    <value>الأسئلة الشائعة</value>
+  </data>
+  <data name="Faq1" xml:space="preserve">
     <value>الأسئلة الشائعة</value>
   </data>
   <data name="FaqManagement" xml:space="preserve">
     <value>ادارة بيانات الأسئلة الشائعة</value>
   </data>
+  <data name="Faqs" xml:space="preserve">
+    <value>الأسئلة الشائعة</value>
+  </data>
+  <data name="Faq_Answer" xml:space="preserve">
+    <value>الاجابة</value>
+  </data>
+  <data name="Faq_AnswerAr" xml:space="preserve">
+    <value>الجواب باللغة العربية</value>
+  </data>
+  <data name="Faq_AnswerEn" xml:space="preserve">
+    <value>الجواب باللغة الإنجليزية</value>
+  </data>
+  <data name="Faq_Portal" xml:space="preserve">
+    <value>البوابة</value>
+  </data>
+  <data name="Faq_PortalChoose" xml:space="preserve">
+    <value>اختر البوابة</value>
+  </data>
+  <data name="Faq_Question" xml:space="preserve">
+    <value>السؤال</value>
+  </data>
+  <data name="Faq_QuestionAr" xml:space="preserve">
+    <value>السؤال باللغة العربية</value>
+  </data>
+  <data name="Faq_QuestionEn" xml:space="preserve">
+    <value>السؤال باللغة الإنجليزية</value>
+  </data>
+  <data name="Faq_Service" xml:space="preserve">
+    <value>الخدمة</value>
+  </data>
+  <data name="Faq_ServiceChoose" xml:space="preserve">
+    <value>اختر الخدمة</value>
+  </data>
   <data name="First Name" xml:space="preserve">
     <value>الاسم الاول</value>
   </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>الإسم الأل</value>
+  </data>
   <data name="Forgot Password?" xml:space="preserve">
     <value>هل نسيت كلمة المرور؟</value>
+  </data>
+  <data name="FoundationArabicRepeated" xml:space="preserve">
+    <value>إسم المؤسسة باللغة العربية موجود من قبل</value>
+  </data>
+  <data name="FoundationCreatedNotificationTitle" xml:space="preserve">
+    <value>تم إنشاء حساب مؤسسه جديد</value>
+  </data>
+  <data name="FoundationEnglishRepeated" xml:space="preserve">
+    <value>إسم المؤسسة باللغة الإنجليزية موجود من قبل</value>
+  </data>
+  <data name="FoundationNoRepeated" xml:space="preserve">
+    <value>رقم المؤسسة موجود من قبل</value>
   </data>
   <data name="General_Email" xml:space="preserve">
     <value>البريد الالكتروني</value>
@@ -392,11 +834,35 @@
   <data name="InvalidAttachmentType" xml:space="preserve">
     <value>صيغة غير مدعومة او غير صحيحة</value>
   </data>
+  <data name="IsAvailable" xml:space="preserve">
+    <value>الحالة</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>اللغة</value>
+  </data>
+  <data name="Languages" xml:space="preserve">
+    <value>اللغات</value>
+  </data>
+  <data name="Language_IsDefault" xml:space="preserve">
+    <value>هو الافتراضي؟</value>
+  </data>
   <data name="Last Name" xml:space="preserve">
+    <value>الكنية</value>
+  </data>
+  <data name="LastModificationDate" xml:space="preserve">
+    <value>تاريخ أخر تعديل</value>
+  </data>
+  <data name="LastModifiedBy" xml:space="preserve">
+    <value>تم أخر تعديل بواسطة</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
     <value>الكنية</value>
   </data>
   <data name="Login" xml:space="preserve">
     <value>تسجيل الدخول</value>
+  </data>
+  <data name="LoginedSuccessfully" xml:space="preserve">
+    <value>تم الدخول بنجاح</value>
   </data>
   <data name="Logout" xml:space="preserve">
     <value>تسجيل خروج</value>
@@ -474,11 +940,154 @@
   <data name="Ok" xml:space="preserve">
     <value>تأكيد</value>
   </data>
+  <data name="OperationDone_1" xml:space="preserve">
+    <value>تمت عملية الاضافة بنجاح</value>
+    <comment>MSG18</comment>
+  </data>
+  <data name="OperationDone_10" xml:space="preserve">
+    <value>تمت عملية الحفظ بنجاح</value>
+  </data>
+  <data name="OperationDone_11" xml:space="preserve">
+    <value>تمت عملية الرفض بنجاح</value>
+  </data>
+  <data name="OperationDone_12" xml:space="preserve">
+    <value>تمت عملية الرد بنجاح</value>
+  </data>
+  <data name="OperationDone_13" xml:space="preserve">
+    <value>تمت عملية استدعاء البيانات بنجاح </value>
+  </data>
+  <data name="OperationDone_14" xml:space="preserve">
+    <value>تمت عملية استدعاء البيانات بنجاح </value>
+  </data>
+  <data name="OperationDone_15" xml:space="preserve">
+    <value>تمت عملية الرفع بنجاح </value>
+  </data>
+  <data name="OperationDone_16" xml:space="preserve">
+    <value>تمت عملية التحميل بنجاح </value>
+  </data>
+  <data name="OperationDone_17" xml:space="preserve">
+    <value>تمت عملية التحقق بنجاح</value>
+  </data>
+  <data name="OperationDone_18" xml:space="preserve">
+    <value>تمت عملية إرسال كود التحقق بنجاح</value>
+  </data>
+  <data name="OperationDone_19" xml:space="preserve">
+    <value>تمت عملية إرسال التسجيل بنجاح</value>
+  </data>
+  <data name="OperationDone_2" xml:space="preserve">
+    <value>تمت عملية استدعاء البيانات بنجاح </value>
+  </data>
+  <data name="OperationDone_3" xml:space="preserve">
+    <value>تمت عملية التعديل بنجاح</value>
+    <comment>MSG21</comment>
+  </data>
+  <data name="OperationDone_4" xml:space="preserve">
+    <value>تمت عملية الحذف بنجاح</value>
+    <comment>MSG20</comment>
+  </data>
+  <data name="OperationDone_5" xml:space="preserve">
+    <value>تمت عملية التفعيل بنجاح</value>
+    <comment>MSG23</comment>
+  </data>
+  <data name="OperationDone_6" xml:space="preserve">
+    <value>تمت عملية الإيقاف بنجاح</value>
+    <comment>MSG25</comment>
+  </data>
+  <data name="OperationDone_7" xml:space="preserve">
+    <value>تمت عملية النشر بنجاح</value>
+    <comment>MSG23</comment>
+  </data>
+  <data name="OperationDone_8" xml:space="preserve">
+    <value>تمت عملية الإيقاف بنجاح</value>
+    <comment>MSG25</comment>
+  </data>
+  <data name="OperationDone_9" xml:space="preserve">
+    <value>تمت عملية استدعاء البيانات بنجاح</value>
+  </data>
+  <data name="OperationErrorTitle" xml:space="preserve">
+    <value>خطأ</value>
+  </data>
+  <data name="OperationFailed_0" xml:space="preserve">
+    <value>نأسف حدث خطأ غير متوقع</value>
+  </data>
+  <data name="OperationFailed_1" xml:space="preserve">
+    <value>فشلت عملية الاضافة</value>
+    <comment>MSG18</comment>
+  </data>
+  <data name="OperationFailed_10" xml:space="preserve">
+    <value>فشلت عملية الحفظ</value>
+  </data>
+  <data name="OperationFailed_11" xml:space="preserve">
+    <value>فشلت عملية الرفض</value>
+  </data>
+  <data name="OperationFailed_12" xml:space="preserve">
+    <value>فشلت عملية الرد</value>
+  </data>
+  <data name="OperationFailed_13" xml:space="preserve">
+    <value>فشلت عملية استدعاء البيانات</value>
+  </data>
+  <data name="OperationFailed_14" xml:space="preserve">
+    <value>فشلت عملية استدعاء البيانات</value>
+  </data>
+  <data name="OperationFailed_15" xml:space="preserve">
+    <value>فشلت عملية الرفع</value>
+  </data>
+  <data name="OperationFailed_16" xml:space="preserve">
+    <value>فشلت عملية التحميل</value>
+  </data>
+  <data name="OperationFailed_17" xml:space="preserve">
+    <value>فشلت عملية التحقق</value>
+  </data>
+  <data name="OperationFailed_18" xml:space="preserve">
+    <value>فشلت عملية إرسال كود التحقق</value>
+  </data>
+  <data name="OperationFailed_19" xml:space="preserve">
+    <value>فشلت عملية التسجيل</value>
+  </data>
+  <data name="OperationFailed_2" xml:space="preserve">
+    <value>فشلت عملية استدعاء البيانات</value>
+  </data>
+  <data name="OperationFailed_3" xml:space="preserve">
+    <value>فشلت عملية التعديل</value>
+    <comment>MSG21</comment>
+  </data>
+  <data name="OperationFailed_4" xml:space="preserve">
+    <value>فشلت عملية الحذف</value>
+    <comment>MSG20</comment>
+  </data>
+  <data name="OperationFailed_5" xml:space="preserve">
+    <value>فشلت عملية التفعيل</value>
+    <comment>MSG23</comment>
+  </data>
+  <data name="OperationFailed_6" xml:space="preserve">
+    <value>فشلت عملية الإيقاف</value>
+    <comment>MSG25</comment>
+  </data>
+  <data name="OperationFailed_7" xml:space="preserve">
+    <value>فشلت عملية النشر</value>
+    <comment>MSG23</comment>
+  </data>
+  <data name="OperationFailed_8" xml:space="preserve">
+    <value>فشلت عملية الإيقاف</value>
+    <comment>MSG25</comment>
+  </data>
+  <data name="OperationFailed_9" xml:space="preserve">
+    <value>فشلت عملية استدعاء البيانات</value>
+  </data>
+  <data name="OTPNotificationTitle" xml:space="preserve">
+    <value>رمز التأكيد</value>
+  </data>
   <data name="OtpSent" xml:space="preserve">
     <value>تم إرسال رمز التأكيد</value>
   </data>
+  <data name="OTPSentSuccessfully" xml:space="preserve">
+    <value>تم إرسال كود التحقق بنجاح</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>كلمه السر</value>
+  </data>
+  <data name="PasswordRestoredSuccessfully" xml:space="preserve">
+    <value>تم إرسال كلمه المرور الجديدة إلي الهاتف</value>
   </data>
   <data name="PaymentWays" xml:space="preserve">
     <value>طرق الدفع</value>
@@ -513,14 +1122,41 @@
   <data name="PollResultManagement" xml:space="preserve">
     <value>إدارة نتائج استطلاعات الرأي</value>
   </data>
+  <data name="PollSavedSuccessfully" xml:space="preserve">
+    <value>تم ارسال الاستطلاع شاكرين مشاركتكم المثمرة في تطوير خدمات الهيئة</value>
+  </data>
+  <data name="Poll_CannotDeleteActiveItem" xml:space="preserve">
+    <value>لا يمكن حذف استطلاع رأي مفعل أو سبق تفعيله</value>
+  </data>
+  <data name="Poll_CannotUpdateActiveItem" xml:space="preserve">
+    <value>لا يمكن تعديل بيانات استطلاع رأي مفعل أو سبق تفعيله</value>
+  </data>
   <data name="Portal" xml:space="preserve">
     <value>البوابة</value>
+  </data>
+  <data name="Portals" xml:space="preserve">
+    <value>البوابات</value>
+  </data>
+  <data name="Portal_Description" xml:space="preserve">
+    <value>الوصف</value>
+  </data>
+  <data name="Portal_DescriptionAr" xml:space="preserve">
+    <value>الوصف باللغة العربية</value>
+  </data>
+  <data name="Portal_DescriptionEn" xml:space="preserve">
+    <value>الوصف باللغة الإنجليزية</value>
+  </data>
+  <data name="Portal_Link" xml:space="preserve">
+    <value>الرابط</value>
   </data>
   <data name="PoweredBy" xml:space="preserve">
     <value>تم بواسطة</value>
   </data>
   <data name="Profile" xml:space="preserve">
     <value>الملف الشخصي</value>
+  </data>
+  <data name="ProfiledSavedSuccessfully" xml:space="preserve">
+    <value>تم تعديل بيانات التواصل بنجاح</value>
   </data>
   <data name="Project" xml:space="preserve">
     <value>Project</value>
@@ -533,11 +1169,17 @@
   <data name="Projects" xml:space="preserve">
     <value>المشاريع</value>
   </data>
+  <data name="PublishedSuccessfully" xml:space="preserve">
+    <value>تمت عملية النشر بنجاح</value>
+  </data>
   <data name="Question" xml:space="preserve">
     <value>السؤال</value>
   </data>
   <data name="QuestionArabic" xml:space="preserve">
     <value>السؤال العربي</value>
+  </data>
+  <data name="RateSuccessfully" xml:space="preserve">
+    <value>تم ارسال التقييم شاكرين مشاركتكم المثمرة في تطوير خدمات الهيئة</value>
   </data>
   <data name="Ready to Leave?" xml:space="preserve">
     <value>على استعداد لترك؟</value>
@@ -551,6 +1193,15 @@
   <data name="Register Account" xml:space="preserve">
     <value>تسجيل حساب</value>
   </data>
+  <data name="RejectedSuccessfully" xml:space="preserve">
+    <value>تمت عملية الرفض بنجاح</value>
+  </data>
+  <data name="RejectedSuccessfully1" xml:space="preserve">
+    <value>تمت عملية الرفض بنجاح</value>
+  </data>
+  <data name="RejectUserAccountNotificationTitle" xml:space="preserve">
+    <value>تم رفض حساب المستخدم</value>
+  </data>
   <data name="Remember Me" xml:space="preserve">
     <value>تذكرنى</value>
   </data>
@@ -563,11 +1214,32 @@
   <data name="Reply" xml:space="preserve">
     <value>الرد</value>
   </data>
+  <data name="Request_Details" xml:space="preserve">
+    <value>تفاصيل الطلب</value>
+  </data>
+  <data name="Request_Details1" xml:space="preserve">
+    <value>تفاصيل الطلب</value>
+  </data>
+  <data name="Request_Log" xml:space="preserve">
+    <value>سير الاجراء</value>
+  </data>
+  <data name="Request_Log1" xml:space="preserve">
+    <value>سير الاجراء</value>
+  </data>
   <data name="Roles" xml:space="preserve">
     <value>الأدوار</value>
   </data>
   <data name="Save" xml:space="preserve">
     <value>حفظ</value>
+  </data>
+  <data name="Saved Successfully" xml:space="preserve">
+    <value>تمت عملية الحفظ بنجاح</value>
+  </data>
+  <data name="SavedSuccessfully" xml:space="preserve">
+    <value>تمت عملية الحفظ بنجاح</value>
+  </data>
+  <data name="SaveProfileImageSuccessfully" xml:space="preserve">
+    <value>تم حفظ الصورة بنجاح</value>
   </data>
   <data name="Search" xml:space="preserve">
     <value>بحث</value>
@@ -581,20 +1253,191 @@
   <data name="ServiceBase" xml:space="preserve">
     <value>أنواع الخدمات الالكترونية</value>
   </data>
+  <data name="ServiceBaseDelete_SqlExecution_ExecutionDone" xml:space="preserve">
+    <value>تمت عملية الحذف بنجاح</value>
+  </data>
+  <data name="ServiceBaseDelete_SqlExecution_HasRelatedItems" xml:space="preserve">
+    <value>لا يمكن اتمام عملية الحذف لوجود خدمات مرتبطة</value>
+  </data>
+  <data name="ServiceBaseDelete_SqlExecution_NoChanges" xml:space="preserve">
+    <value>فشلت عملية الحذف</value>
+  </data>
   <data name="ServiceBaseManagement" xml:space="preserve">
     <value>إدارة أنواع الخدمات الالكترونية</value>
+  </data>
+  <data name="ServiceBaseSave_AlreadyExists" xml:space="preserve">
+    <value>نوع الخدمة موجود بالفعل</value>
   </data>
   <data name="ServiceCategory" xml:space="preserve">
     <value>التصنيفات</value>
   </data>
+  <data name="ServiceCategoryDelete_SqlExecution_ExecutionDone" xml:space="preserve">
+    <value>تمت عملية الحذف بنجاح</value>
+  </data>
+  <data name="ServiceCategoryDelete_SqlExecution_HasRelatedItems" xml:space="preserve">
+    <value>لا يمكن اتمام عملية الحذف لوجود خدمات مرتبطة</value>
+  </data>
+  <data name="ServiceCategoryDelete_SqlExecution_NoChanges" xml:space="preserve">
+    <value>فشلت عملية الحذف</value>
+  </data>
   <data name="ServiceCategoryManagement" xml:space="preserve">
     <value>إدارة التصنيفات</value>
+  </data>
+  <data name="ServiceCategorySave_AlreadyExists" xml:space="preserve">
+    <value>التصنيف موجود بالفعل</value>
   </data>
   <data name="ServiceManagement" xml:space="preserve">
     <value>إدارة الخدمات</value>
   </data>
   <data name="Services" xml:space="preserve">
     <value>الخدمات</value>
+  </data>
+  <data name="Services1" xml:space="preserve">
+    <value>الخدمات</value>
+  </data>
+  <data name="ServiceSave_AlreadyExists" xml:space="preserve">
+    <value>الخدمة موجودة بالفعل</value>
+  </data>
+  <data name="ServiceSave_ServiceCodeExists" xml:space="preserve">
+    <value>رقم الخدمة مسجل من قبل</value>
+  </data>
+  <data name="ServiceSector" xml:space="preserve">
+    <value>القطاعات</value>
+  </data>
+  <data name="ServiceSectorDelete_SqlExecution_ExecutionDone" xml:space="preserve">
+    <value>تمت عملية الحذف بنجاح</value>
+  </data>
+  <data name="ServiceSectorDelete_SqlExecution_HasRelatedItems" xml:space="preserve">
+    <value>لا يمكن اتمام عملية الحذف لوجود خدمات مرتبطة</value>
+  </data>
+  <data name="ServiceSectorDelete_SqlExecution_NoChanges" xml:space="preserve">
+    <value>فشلت عملية الحذف</value>
+  </data>
+  <data name="ServiceSectorManagement" xml:space="preserve">
+    <value>إدارة القطاعات</value>
+  </data>
+  <data name="ServiceSectorSave_AlreadyExists" xml:space="preserve">
+    <value>القطاع موجود بالفعل</value>
+  </data>
+  <data name="ServiceTypes" xml:space="preserve">
+    <value>أنواع الخدمة</value>
+  </data>
+  <data name="Service_Conditions" xml:space="preserve">
+    <value>الشروط</value>
+  </data>
+  <data name="Service_ConditionsAr" xml:space="preserve">
+    <value>الشروط باللغة العربية</value>
+  </data>
+  <data name="Service_ConditionsEn" xml:space="preserve">
+    <value>الشروط باللغة الإنجليزية</value>
+  </data>
+  <data name="Service_DocumentRequired" xml:space="preserve">
+    <value>الوثيقة المطلوبة</value>
+  </data>
+  <data name="Service_DocumentRequiredAr" xml:space="preserve">
+    <value>الوثيقة المطلوبة باللغة العربية</value>
+  </data>
+  <data name="Service_DocumentRequiredEn" xml:space="preserve">
+    <value>الوثيقة المطلوبة باللغة الإنجليزية</value>
+  </data>
+  <data name="Service_Fees" xml:space="preserve">
+    <value>الرسوم</value>
+  </data>
+  <data name="Service_FeesAr" xml:space="preserve">
+    <value>الرسوم باللغة العربية</value>
+  </data>
+  <data name="Service_FeesEn" xml:space="preserve">
+    <value>الرسوم باللغة الانجليزية</value>
+  </data>
+  <data name="Service_Icon" xml:space="preserve">
+    <value>الأيقونة</value>
+  </data>
+  <data name="Service_IsPublished" xml:space="preserve">
+    <value>يتم نشر؟</value>
+  </data>
+  <data name="Service_LogInRequired" xml:space="preserve">
+    <value>تسجيل الدخول مطلوب</value>
+  </data>
+  <data name="Service_MobileUrl" xml:space="preserve">
+    <value>عنوان url للجوال</value>
+  </data>
+  <data name="Service_Notes" xml:space="preserve">
+    <value>الملاحظات</value>
+  </data>
+  <data name="Service_NotesAr" xml:space="preserve">
+    <value>الملاحظات باللغة العربية</value>
+  </data>
+  <data name="Service_NotesEn" xml:space="preserve">
+    <value>الملاحظات باللغة الإنجليزية</value>
+  </data>
+  <data name="Service_PdfMediaId" xml:space="preserve">
+    <value>معرف وسائط pdf</value>
+  </data>
+  <data name="Service_PublishedAt" xml:space="preserve">
+    <value>تم النشر في</value>
+  </data>
+  <data name="Service_PublishedBy" xml:space="preserve">
+    <value>تم نشره بواسطة</value>
+  </data>
+  <data name="Service_ServiceCode" xml:space="preserve">
+    <value>كود الخدمة</value>
+  </data>
+  <data name="Service_ServiceType" xml:space="preserve">
+    <value>نوع الخدمة</value>
+  </data>
+  <data name="Service_ServiceTypeChoose" xml:space="preserve">
+    <value>اختر نوع الخدمة</value>
+  </data>
+  <data name="Service_ShortDescription" xml:space="preserve">
+    <value>الوصف المختصر</value>
+  </data>
+  <data name="Service_ShortDescriptionAr" xml:space="preserve">
+    <value>الوصف المختصر باللغة العربية</value>
+  </data>
+  <data name="Service_ShortDescriptionEn" xml:space="preserve">
+    <value>الوصف المختصر باللغة الإنجليزية</value>
+  </data>
+  <data name="Service_ShowInAssets" xml:space="preserve">
+    <value>العرض في الأصول</value>
+  </data>
+  <data name="Service_ShowInCatalog" xml:space="preserve">
+    <value>العرض في الكتالوج</value>
+  </data>
+  <data name="Service_ShowInFollowUp" xml:space="preserve">
+    <value>العرض في متابعة</value>
+  </data>
+  <data name="Service_Steps" xml:space="preserve">
+    <value>الخطوات</value>
+  </data>
+  <data name="Service_StepsAr" xml:space="preserve">
+    <value>الخطوات باللغة العربية</value>
+  </data>
+  <data name="Service_StepsEn" xml:space="preserve">
+    <value>الخطوات باللغة الانجليزية</value>
+  </data>
+  <data name="Service_StoppedAt" xml:space="preserve">
+    <value>توقف عند</value>
+  </data>
+  <data name="Service_StoppedBy" xml:space="preserve">
+    <value>توقف من قبل</value>
+  </data>
+  <data name="Service_TimeRequired" xml:space="preserve">
+    <value>الوقت المطلوب</value>
+  </data>
+  <data name="Service_TimeRequiredAr" xml:space="preserve">
+    <value>الوقت المطلوب باللغة العربية</value>
+  </data>
+  <data name="Service_TimeRequiredEn" xml:space="preserve">
+    <value>الوقت المطلوب باللغة الإنجليزية</value>
+  </data>
+  <data name="Service_Url" xml:space="preserve">
+    <value>الرابط</value>
+  </data>
+  <data name="Service_Video" xml:space="preserve">
+    <value>الفيديو</value>
+  </data>
+  <data name="Service_ViewOrder" xml:space="preserve">
+    <value>ترتيب العرض</value>
   </data>
   <data name="Settings" xml:space="preserve">
     <value>الإعدادات</value>
@@ -611,6 +1454,18 @@
   <data name="Status" xml:space="preserve">
     <value>Status</value>
     <comment>Status</comment>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SuggestionGotResponse" xml:space="preserve">
+    <value>تم الرد على الاقتراح المقدم من طرفكم</value>
+  </data>
+  <data name="SuggestionSavedSuccessfully" xml:space="preserve">
+    <value>تم استلام مقترحكم شكرا لتواصلكم</value>
+  </data>
+  <data name="ThereIsNoData" xml:space="preserve">
+    <value>لا يوجد نتائج للبحث</value>
   </data>
   <data name="Type" xml:space="preserve">
     <value>Type</value>
@@ -631,6 +1486,15 @@
     <value>UnitType</value>
     <comment>UnitType</comment>
   </data>
+  <data name="UnPublishedSuccessfully" xml:space="preserve">
+    <value>تمت عملية الإيقاف بنجاح</value>
+  </data>
+  <data name="UpdatedSuccessfully" xml:space="preserve">
+    <value>تمت عملية التعديل بنجاح</value>
+  </data>
+  <data name="UploadingError" xml:space="preserve">
+    <value>حدث خطأ في رفع الملف</value>
+  </data>
   <data name="User" xml:space="preserve">
     <value>المستخدم</value>
   </data>
@@ -640,11 +1504,29 @@
   <data name="Utlities" xml:space="preserve">
     <value>الخدمات</value>
   </data>
+  <data name="ValidationError" xml:space="preserve">
+    <value>خطأ في البيانات المدخله</value>
+  </data>
+  <data name="ValidationLength" xml:space="preserve">
+    <value>{PropertyName} لابد ان لا يتجاوز {Length} أحرف.</value>
+  </data>
+  <data name="ValidationRequired" xml:space="preserve">
+    <value>{PropertyName} مطلوب</value>
+  </data>
+  <data name="Version Blocked" xml:space="preserve">
+    <value>لابد من تحديث النسخة الحالية</value>
+  </data>
   <data name="View" xml:space="preserve">
     <value>عرض</value>
   </data>
+  <data name="ViewError" xml:space="preserve">
+    <value>فشلت عملية استدعاء البيانات</value>
+  </data>
   <data name="Vote" xml:space="preserve">
     <value>التصويت</value>
+  </data>
+  <data name="VoteAnswerSavedSuccessfully" xml:space="preserve">
+    <value>تم ارسال الاستطلاع شاكرين مشاركتكم المثمرة في تطوير خدمات الهيئة</value>
   </data>
   <data name="VoteManagement" xml:space="preserve">
     <value>إدارة التصويت</value>
@@ -661,6 +1543,12 @@
   <data name="VoteSend" xml:space="preserve">
     <value>أرسل التصويت</value>
   </data>
+  <data name="Vote_CannotDeleteActiveItem" xml:space="preserve">
+    <value>لا يمكن حذف تصويت مفعل أو سبق تفعيله</value>
+  </data>
+  <data name="Vote_CannotUpdateActiveItem" xml:space="preserve">
+    <value>لا يمكن تعديل بيانات تصويت مفعل أو سبق تفعيله</value>
+  </data>
   <data name="Voting" xml:space="preserve">
     <value>التصويت</value>
   </data>
@@ -673,521 +1561,13 @@
   <data name="You don't have permission to do this action" xml:space="preserve">
     <value>لا يوجد لديك صلاحية</value>
   </data>
-  <data name="ConfirmPassword" xml:space="preserve">
-    <value>تأكيد كلمة المرور</value>
-  </data>
-  <data name="Email" xml:space="preserve">
-    <value>البريد الإلكتروني</value>
-  </data>
-  <data name="FirstName" xml:space="preserve">
-    <value>الإسم الأل</value>
-  </data>
-  <data name="LastName" xml:space="preserve">
-    <value>الكنية</value>
-  </data>
-  <data name="DownloadingError" xml:space="preserve">
-    <value>حدث خطأ في تحميل الملف</value>
-  </data>
-  <data name="UploadingError" xml:space="preserve">
-    <value>حدث خطأ في رفع الملف</value>
-  </data>
-  <data name="String1" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ActivatedSuccessfully" xml:space="preserve">
-    <value>تمت عملية التفعيل بنجاح</value>
-  </data>
-  <data name="AddedSuccessfully" xml:space="preserve">
-    <value>تمت عملية الاضافة بنجاح</value>
-    <comment>#MSG17</comment>
-  </data>
-  <data name="AddingSpAccountForBusinessSuccessfully" xml:space="preserve">
-    <value>تمت عملية اضافة حساب كمزود خدمة بنجاح</value>
-  </data>
-  <data name="Are you sure you want to delete?" xml:space="preserve">
-    <value>هل أنت متأكد من عملية الحذف؟</value>
-    <comment>MSG19</comment>
-  </data>
-  <data name="Are you sure you want to open this vote?" xml:space="preserve">
-    <value>هل أنت متأكد من تفعيل</value>
-  </data>
-  <data name="Are you sure you want to stop this vote?" xml:space="preserve">
-    <value>هل أنت متأكد من إيقاف تفعيل</value>
-  </data>
-  <data name="DeactivatedSuccessfully" xml:space="preserve">
-    <value>تمت عملية الإيقاف بنجاح</value>
-  </data>
-  <data name="Deleted Successfully" xml:space="preserve">
-    <value>تمت عملية الحذف بنجاح</value>
-  </data>
-  <data name="deletedSuccessfuly" xml:space="preserve">
-    <value>تمت عملية الحذف بنجاح</value>
-  </data>
-  <data name="Exception1" xml:space="preserve">
-    <value>بيانات المستخدم خاطئة</value>
-  </data>
-  <data name="Exception10" xml:space="preserve">
-    <value>تم إرسال رمز التأكيد إلي الهاتف الجوال</value>
-  </data>
-  <data name="Exception1000" xml:space="preserve">
-    <value>نأسف حدث خطأ غير متوقع</value>
-  </data>
-  <data name="Exception1001" xml:space="preserve">
-    <value>فشلت عملية الاضافة</value>
-    <comment>MSG18</comment>
-  </data>
-  <data name="Exception1002" xml:space="preserve">
-    <value>فشلت عملية استدعاء البيانات</value>
-  </data>
-  <data name="Exception1003" xml:space="preserve">
-    <value>فشلت عملية التعديل</value>
-    <comment>MSG21</comment>
-  </data>
-  <data name="Exception1004" xml:space="preserve">
-    <value>فشلت عملية الحذف</value>
-    <comment>MSG20</comment>
-  </data>
-  <data name="Exception1005" xml:space="preserve">
-    <value>فشلت عملية التفعيل</value>
-    <comment>MSG23</comment>
-  </data>
-  <data name="Exception1006" xml:space="preserve">
-    <value>فشلت عملية الإيقاف</value>
-    <comment>MSG25</comment>
-  </data>
-  <data name="Exception1007" xml:space="preserve">
-    <value>فشلت عملية النشر</value>
-    <comment>MSG23</comment>
-  </data>
-  <data name="Exception1008" xml:space="preserve">
-    <value>فشلت عملية الإيقاف</value>
-    <comment>MSG25</comment>
-  </data>
-  <data name="Exception1009" xml:space="preserve">
-    <value>فشلت عملية استدعاء البيانات</value>
-  </data>
-  <data name="Exception101" xml:space="preserve">
-    <value>رقم المنشأة مكرر</value>
-    <comment>DuplicatFoundationNumber</comment>
-  </data>
-  <data name="Exception1010" xml:space="preserve">
-    <value>فشلت عملية الحفظ</value>
-  </data>
-  <data name="Exception1011" xml:space="preserve">
-    <value>فشلت عملية الرفض</value>
-  </data>
-  <data name="Exception102" xml:space="preserve">
-    <value>الاسم باللغة العربية مكرر</value>
-    <comment>DuplicatArabicName</comment>
-  </data>
-  <data name="Exception103" xml:space="preserve">
-    <value>الاسم باللغة الانجليزية مكرر</value>
-    <comment>DuplicatEnglishName</comment>
-  </data>
-  <data name="Exception104" xml:space="preserve">
-    <value>يجب اضافة المرفقات</value>
-    <comment>MustHasAttachements</comment>
-  </data>
-  <data name="Exception105" xml:space="preserve">
-    <value>يجب اضافة جهات الاتصال</value>
-    <comment>MustHasContacts</comment>
-  </data>
-  <data name="Exception106" xml:space="preserve">
-    <value>يجب تحديد أحد جهات الاتصال مدير للحساب</value>
-    <comment>MustAccountManager</comment>
-  </data>
-  <data name="Exception11" xml:space="preserve">
-    <value>إنتهت صلاحية رمز التأكيد</value>
-  </data>
-  <data name="Exception1101" xml:space="preserve">
-    <value>فشلت عملية انشاء حساب مزود خدمة</value>
-  </data>
-  <data name="Exception12" xml:space="preserve">
-    <value>فشلت عملية تعديل البيانات</value>
-  </data>
-  <data name="Exception13" xml:space="preserve">
-    <value>رمز التأكد غير صحيح</value>
-  </data>
-  <data name="Exception14" xml:space="preserve">
-    <value>الخدمة منشورة</value>
-  </data>
-  <data name="Exception2" xml:space="preserve">
-    <value>هذا العنصر موجود من قبل</value>
-  </data>
-  <data name="Exception3" xml:space="preserve">
-    <value>غير موجود بالنظام</value>
-  </data>
-  <data name="Exception4" xml:space="preserve">
-    <value>لا يمكن إتمام العملية على تصويت تم تفعيله من قبل</value>
-  </data>
-  <data name="Exception5" xml:space="preserve">
-    <value>لا يمكن  حذف خدمة تم نشرها</value>
-  </data>
-  <data name="Exception500" xml:space="preserve">
-    <value>نأسف حدث خطأ غير متوقع</value>
-  </data>
-  <data name="Exception6" xml:space="preserve">
-    <value>لا يمكنك حذف حسابك</value>
-  </data>
-  <data name="Exception7" xml:space="preserve">
-    <value>لقد قمت بالإجابة علي الإستطلاع من قبل</value>
-  </data>
-  <data name="Exception8" xml:space="preserve">
-    <value>التصنيف لدية خدمات مرتبطة</value>
-  </data>
-  <data name="Exception9" xml:space="preserve">
-    <value>لقد قمت بالإجابة علي التصويت من قبل</value>
-  </data>
-  <data name="PublishedSuccessfully" xml:space="preserve">
-    <value>تمت عملية النشر بنجاح</value>
-  </data>
-  <data name="RateSuccessfully" xml:space="preserve">
-    <value>تم ارسال التقييم شاكرين مشاركتكم المثمرة في تطوير خدمات الهيئة</value>
-  </data>
-  <data name="RejectedSuccessfully" xml:space="preserve">
-    <value>تمت عملية الرفض بنجاح</value>
-  </data>
-  <data name="RejectedSuccessfully1" xml:space="preserve">
-    <value>تمت عملية الرفض بنجاح</value>
-  </data>
-  <data name="Saved Successfully" xml:space="preserve">
-    <value>تمت عملية الحفظ بنجاح</value>
-  </data>
-  <data name="SavedSuccessfully" xml:space="preserve">
-    <value>تمت عملية الحفظ بنجاح</value>
-  </data>
-  <data name="UnPublishedSuccessfully" xml:space="preserve">
-    <value>تمت عملية الإيقاف بنجاح</value>
-  </data>
-  <data name="UpdatedSuccessfully" xml:space="preserve">
-    <value>تمت عملية التعديل بنجاح</value>
-  </data>
-  <data name="ValidationError" xml:space="preserve">
-    <value>خطأ في البيانات المدخله</value>
-  </data>
-  <data name="ValidationLength" xml:space="preserve">
-    <value>{PropertyName} لابد ان لا يتجاوز {Length} أحرف.</value>
-  </data>
-  <data name="ValidationRequired" xml:space="preserve">
-    <value>{PropertyName} مطلوب</value>
-  </data>
-  <data name="ViewError" xml:space="preserve">
-    <value>فشلت عملية استدعاء البيانات</value>
-  </data>
-  <data name="ActivateFoundationAccountNotificationTitle" xml:space="preserve">
-    <value>تفعيل حساب المؤسسه</value>
-  </data>
-  <data name="ActivateUserAccountNotificationTitle" xml:space="preserve">
-    <value>تفعيل حساب المستخدم</value>
-  </data>
-  <data name="AddNewAdminNotificationTitle" xml:space="preserve">
-    <value>إضافه متحكم جديد</value>
-  </data>
-  <data name="ComplaintResponseNotificationTitle" xml:space="preserve">
-    <value>تم الرد علي الشكوى الخاصه بكم</value>
-  </data>
-  <data name="DeactivateFoundationAccountNotificationTitle" xml:space="preserve">
-    <value>تعطيل حساب المؤسسه</value>
-  </data>
-  <data name="DeactivateUserAccountNotificationTitle" xml:space="preserve">
-    <value>تعطيل حساب المستخدم</value>
-  </data>
-  <data name="Exception1012" xml:space="preserve">
-    <value>فشلت عملية الرد</value>
-  </data>
-  <data name="Exception1013" xml:space="preserve">
-    <value>فشلت عملية استدعاء البيانات</value>
-  </data>
-  <data name="Exception1014" xml:space="preserve">
-    <value>فشلت عملية استدعاء البيانات</value>
-  </data>
-  <data name="Exception1015" xml:space="preserve">
-    <value>فشلت عملية الرفع</value>
-  </data>
-  <data name="Exception1016" xml:space="preserve">
-    <value>فشلت عملية التحميل</value>
-  </data>
-  <data name="Exception1017" xml:space="preserve">
-    <value>فشلت عملية اضافة الخدمة للخدمات المفضلة</value>
-  </data>
-  <data name="Exception1018" xml:space="preserve">
-    <value>فشلت عملية ازالة الخدمة من قائمة الخدمات المفضلة</value>
-  </data>
-  <data name="Exception1019" xml:space="preserve">
-    <value>فشلت عملية التحقق</value>
-  </data>
-  <data name="Exception107" xml:space="preserve">
-    <value>المستخدم غير موجود</value>
-  </data>
-  <data name="Exception108" xml:space="preserve">
-    <value>كلمه المرور القديمه غير صحيحه</value>
-  </data>
-  <data name="Exception109" xml:space="preserve">
-    <value>رمز التأكيد غير صحيح</value>
-  </data>
-  <data name="OTPSentSuccessfully" xml:space="preserve">
-    <value>تم إرسال كود التحقق بنجاح</value>
-  </data>
-  <data name="PasswordRestoredSuccessfully" xml:space="preserve">
-    <value>تم إرسال كلمه المرور الجديدة إلي الهاتف</value>
-  </data>
-  <data name="Exception110" xml:space="preserve">
-    <value>إسم المستخدم موجود من قبل</value>
-  </data>
-  <data name="Exception111" xml:space="preserve">
-    <value>إسم المستخدم او كلمة المرور غير صحيحه</value>
-  </data>
-  <data name="LoginedSuccessfully" xml:space="preserve">
-    <value>تم الدخول بنجاح</value>
-  </data>
-  <data name="Exception112" xml:space="preserve">
-    <value>كلمة المرور غير سليمه, لاتقل عن اربع حروف</value>
-  </data>
-  <data name="Exception113" xml:space="preserve">
-    <value>البريد الإلكتروني غير صحيح</value>
-  </data>
-  <data name="DataChangedSuccessfully" xml:space="preserve">
-    <value>تم تغيير البيانات بنجاح</value>
-  </data>
-  <data name="Application Under miantenance" xml:space="preserve">
-    <value>جاري صيانة التطبيق </value>
-  </data>
-  <data name="Version Blocked" xml:space="preserve">
-    <value>لابد من تحديث النسخة الحالية</value>
-  </data>
-  <data name="Exception114" xml:space="preserve">
-    <value>تجاوزت الحد الأقصى لعدد رموز التأكيد</value>
-  </data>
-  <data name="ComplanSavedSuccessfully" xml:space="preserve">
-    <value>تم استلام إستفساركم شكرا لتواصلكم</value>
-  </data>
-  <data name="SuggestionSavedSuccessfully" xml:space="preserve">
-    <value>تم استلام مقترحكم شكرا لتواصلكم</value>
-  </data>
-  <data name="PollSavedSuccessfully" xml:space="preserve">
-    <value>تم ارسال الاستطلاع شاكرين مشاركتكم المثمرة في تطوير خدمات الهيئة</value>
-  </data>
-  <data name="ContactIsValid" xml:space="preserve">
-    <value>البيانات المدخله صحيحه</value>
-  </data>
-  <data name="AbsherAccountNotValid" xml:space="preserve">
-    <value>الحساب ابشر غير موجود لرقم الهويه {0}</value>
-  </data>
-  <data name="Exception115" xml:space="preserve">
-    <value>رقم الهويه و تاريخ الميلاد غير موجود في ابشر</value>
-  </data>
-  <data name="FoundationCreatedNotificationTitle" xml:space="preserve">
-    <value>تم إنشاء حساب مؤسسه جديد</value>
-  </data>
-  <data name="Exception116" xml:space="preserve">
-    <value>البريد الإلكتروني لجهه الإتصال غير مرتبط بإسم النطاق</value>
-  </data>
-  <data name="Exception117" xml:space="preserve">
-    <value>حساب المؤسسة غير موجود</value>
-  </data>
-  <data name="CITCProtalAccountActivated" xml:space="preserve">
-    <value>CITC Protal: Your Foundation Account is Activated</value>
-  </data>
-  <data name="CITCProtalAccountDeactivated" xml:space="preserve">
-    <value>CITC Protal: Your Foundation Account is Deactivated</value>
-  </data>
   <data name="YourAccountIsActiated" xml:space="preserve">
     <value>CITC Protal: Your Account is Actiated</value>
   </data>
   <data name="YourAccountIsDeactiated" xml:space="preserve">
     <value>CITC Protal: Your Account is Deactivated</value>
   </data>
-  <data name="VoteAnswerSavedSuccessfully" xml:space="preserve">
-    <value>تم ارسال الاستطلاع شاكرين مشاركتكم المثمرة في تطوير خدمات الهيئة</value>
-  </data>
-  <data name="Request_Details" xml:space="preserve">
-    <value>تفاصيل الطلب</value>
-  </data>
-  <data name="Request_Log" xml:space="preserve">
-    <value>سير الاجراء</value>
-  </data>
   <data name="YourAccountIsRejected" xml:space="preserve">
     <value>CITC Protal: Your Account is Rejected</value>
-  </data>
-  <data name="RejectUserAccountNotificationTitle" xml:space="preserve">
-    <value>تم رفض حساب المستخدم</value>
-  </data>
-  <data name="Request_Details1" xml:space="preserve">
-    <value>تفاصيل الطلب</value>
-  </data>
-  <data name="Request_Log1" xml:space="preserve">
-    <value>سير الاجراء</value>
-  </data>
-  <data name="ProfiledSavedSuccessfully" xml:space="preserve">
-    <value>تم تعديل بيانات التواصل بنجاح</value>
-  </data>
-  <data name="BackDirection" xml:space="preserve">
-    <value>right</value>
-  </data>
-  <data name="ServiceBaseDelete_SqlExecution_ExecutionDone" xml:space="preserve">
-    <value>تمت عملية الحذف بنجاح</value>
-  </data>
-  <data name="ServiceBaseDelete_SqlExecution_HasRelatedItems" xml:space="preserve">
-    <value>لا يمكن اتمام عملية الحذف لوجود خدمات مرتبطة</value>
-  </data>
-  <data name="ServiceBaseDelete_SqlExecution_NoChanges" xml:space="preserve">
-    <value>فشلت عملية الحذف</value>
-  </data>
-  <data name="ServiceCategoryDelete_SqlExecution_ExecutionDone" xml:space="preserve">
-    <value>تمت عملية الحذف بنجاح</value>
-  </data>
-  <data name="ServiceCategoryDelete_SqlExecution_HasRelatedItems" xml:space="preserve">
-    <value>لا يمكن اتمام عملية الحذف لوجود خدمات مرتبطة</value>
-  </data>
-  <data name="ServiceCategoryDelete_SqlExecution_NoChanges" xml:space="preserve">
-    <value>فشلت عملية الحذف</value>
-  </data>
-  <data name="ServiceBaseSave_AlreadyExists" xml:space="preserve">
-    <value>نوع الخدمة موجود بالفعل</value>
-  </data>
-  <data name="ServiceCategorySave_AlreadyExists" xml:space="preserve">
-    <value>التصنيف موجود بالفعل</value>
-  </data>
-  <data name="ServiceSave_AlreadyExists" xml:space="preserve">
-    <value>الخدمة موجودة بالفعل</value>
-  </data>
-  <data name="Poll_CannotUpdateActiveItem" xml:space="preserve">
-    <value>لا يمكن تعديل بيانات استطلاع رأي مفعل أو سبق تفعيله</value>
-  </data>
-  <data name="Poll_CannotDeleteActiveItem" xml:space="preserve">
-    <value>لا يمكن حذف استطلاع رأي مفعل أو سبق تفعيله</value>
-  </data>
-  <data name="Vote_CannotDeleteActiveItem" xml:space="preserve">
-    <value>لا يمكن حذف تصويت مفعل أو سبق تفعيله</value>
-  </data>
-  <data name="Vote_CannotUpdateActiveItem" xml:space="preserve">
-    <value>لا يمكن تعديل بيانات تصويت مفعل أو سبق تفعيله</value>
-  </data>
-  <data name="ThereIsNoData" xml:space="preserve">
-    <value>لا يوجد نتائج للبحث</value>
-  </data>
-  <data name="ComplaintGotResponse" xml:space="preserve">
-    <value>تم الرد على الإستفسار المقدم من طرفكم</value>
-  </data>
-  <data name="SuggestionGotResponse" xml:space="preserve">
-    <value>تم الرد على الاقتراح المقدم من طرفكم</value>
-  </data>
-  <data name="Exception118" xml:space="preserve">
-    <value>لا يوجد بيانات تم تحديثها</value>
-  </data>
-  <data name="OTPNotificationTitle" xml:space="preserve">
-    <value>رمز التأكيد</value>
-  </data>
-  <data name="ServiceSave_ServiceCodeExists" xml:space="preserve">
-    <value>رقم الخدمة مسجل من قبل</value>
-  </data>
-  <data name="Exception501" xml:space="preserve">
-    <value>طلب غير موجود</value>
-  </data>
-  <data name="Exception502" xml:space="preserve">
-    <value>الطلب ليس في المسودة لا يمكن حذفه</value>
-  </data>
-  <data name="Exception503" xml:space="preserve">
-    <value>المستند غير موجود</value>
-  </data>
-  <data name="Exception504" xml:space="preserve">
-    <value>طلب موجود بالفعل</value>
-  </data>
-  <data name="Exception1505" xml:space="preserve">
-    <value>المستند موجود بالفعل</value>
-  </data>
-  <data name="Exception506" xml:space="preserve">
-    <value>الخدمة غير موجودة</value>
-  </data>
-  <data name="ServiceSector" xml:space="preserve">
-    <value>القطاعات</value>
-  </data>
-  <data name="ServiceSectorManagement" xml:space="preserve">
-    <value>إدارة القطاعات</value>
-  </data>
-  <data name="ServiceSectorDelete_SqlExecution_ExecutionDone" xml:space="preserve">
-    <value>تمت عملية الحذف بنجاح</value>
-  </data>
-  <data name="ServiceSectorDelete_SqlExecution_HasRelatedItems" xml:space="preserve">
-    <value>لا يمكن اتمام عملية الحذف لوجود خدمات مرتبطة</value>
-  </data>
-  <data name="ServiceSectorDelete_SqlExecution_NoChanges" xml:space="preserve">
-    <value>فشلت عملية الحذف</value>
-  </data>
-  <data name="ServiceSectorSave_AlreadyExists" xml:space="preserve">
-    <value>القطاع موجود بالفعل</value>
-  </data>
-  <data name="Exception507" xml:space="preserve">
-    <value>User ID Number Or Foundation Number Should Be Provided</value>
-  </data>
-  <data name="SaveProfileImageSuccessfully" xml:space="preserve">
-    <value>تم حفظ الصورة بنجاح</value>
-  </data>
-  <data name="ComplaintSavedSuccessfully" xml:space="preserve">
-    <value>تم استلام إستفساركم شكرا لتواصلكم</value>
-  </data>
-  <data name="Exception510" xml:space="preserve">
-    <value>الرقم الشخصي موجود من قبل</value>
-  </data>
-  <data name="Exception511" xml:space="preserve">
-    <value>المستخدم محظور</value>
-  </data>
-  <data name="Exception512" xml:space="preserve">
-    <value>إسم المستخدم موجود من قبل</value>
-  </data>
-  <data name="Exception513" xml:space="preserve">
-    <value>الرقم الشخصى غير مسجل من قبل</value>
-  </data>
-  <data name="FailedToCheckAbsher" xml:space="preserve">
-    <value>لا يمكن التحقق من البيانات {0} في وزارة الداخلية</value>
-  </data>
-  <data name="FoundationArabicRepeated" xml:space="preserve">
-    <value>إسم المؤسسة باللغة العربية موجود من قبل</value>
-  </data>
-  <data name="FoundationEnglishRepeated" xml:space="preserve">
-    <value>إسم المؤسسة باللغة الإنجليزية موجود من قبل</value>
-  </data>
-  <data name="FoundationNoRepeated" xml:space="preserve">
-    <value>رقم المؤسسة موجود من قبل</value>
-  </data>
-  <data name="Exception522" xml:space="preserve">
-    <value>الرقم الشخصى مسجل من قبل</value>
-  </data>
-  <data name="Exception523" xml:space="preserve">
-    <value>البريد الإلكتروني مسجل من قبل</value>
-  </data>
-  <data name="Exception524" xml:space="preserve">
-    <value>الموبايل مسجل من قبل</value>
-  </data>
-  <data name="Exception525" xml:space="preserve">
-    <value>المنصب موجود من قبل</value>
-  </data>
-  <data name="Exception526" xml:space="preserve">
-    <value>فشل إنشاء مدير الحساب</value>
-  </data>
-  <data name="Exception527" xml:space="preserve">
-    <value>فشل التحويل إلي مدير حساب</value>
-  </data>
-  <data name="Exception528" xml:space="preserve">
-    <value>فشل إزالة مدير الحساب</value>
-  </data>
-  <data name="Exception529" xml:space="preserve">
-    <value>لا يمكن حذف آخر مدير حساب</value>
-  </data>
-  <data name="FailedToSave" xml:space="preserve">
-    <value>فشلت عملية الحفظ</value>
-  </data>
-  <data name="Exception400" xml:space="preserve">
-    <value>Bad Request</value>
-  </data>
-  <data name="Exception401" xml:space="preserve">
-    <value>عفواُ ليس لديك الصلاحية للوصول للمحتوى المطلوب</value>
-    <comment>Unauthorized</comment>
-  </data>
-  <data name="Exception403" xml:space="preserve">
-    <value>عفواُ ليس لديك الصلاحية للوصول للمحتوى المطلوب</value>
-  </data>
-  <data name="Exception404" xml:space="preserve">
-    <value>عفواً المحتوى المطلوب غير موجود</value>
   </data>
 </root>

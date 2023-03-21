@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using TemplateFw.Application.Services.Languages;
+using TemplateFw.Application.Services;
 using TemplateFw.Application.Services.Lookup;
 using TemplateFw.DashboardApi.Controllers.Base;
 using TemplateFw.Dtos.Dtos.Common;
@@ -25,14 +25,14 @@ namespace TemplateFw.DashboardApi.Controllers
         }
 
 
-        [HttpGet("languages")]
-        [ProducesResponseType(200)]
-        [ProducesResponseType(204)]
-        [ProducesResponseType(500)]
-        public async Task<List<LookupDto>> Languages()
-        {
-            return await _languageService.GetAllLanguagesAsync();
-        }
+        //[HttpGet("languages")]
+        //[ProducesResponseType(200)]
+        //[ProducesResponseType(204)]
+        //[ProducesResponseType(500)]
+        //public async Task<List<LookupDto>> Languages()
+        //{
+        //    return await _languageService.GetAllAsync();
+        //}
         [HttpGet("communicationtype")]
         [ProducesResponseType(200)]
         [ProducesResponseType(204)]

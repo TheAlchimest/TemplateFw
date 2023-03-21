@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Countries" xml:space="preserve"><value>Countries</value></data>
+<data name="Country" xml:space="preserve"><value>Country</value></data>
+<data name="Country_Management" xml:space="preserve"><value>Countries management</value></data>
+<data name="Country_Information" xml:space="preserve"><value>Country information</value></data>
+<data name="Country_NameAr" xml:space="preserve"><value>Name in Arabic</value></data>
+<data name="Country_Name" xml:space="preserve"><value>Name</value></data>
+<data name="Country_NameEn" xml:space="preserve"><value>Name in English</value></data>
+<data name="Country_Code" xml:space="preserve"><value>Code</value></data>
+<data name="Country_IsAvailable" xml:space="preserve"><value>Is available?</value></data>
+<data name="Country_CreatedBy" xml:space="preserve"><value>Created by</value></data>
+<data name="Country_CreationDate" xml:space="preserve"><value>Creation date</value></data>
+<data name="Country_LastModifiedBy" xml:space="preserve"><value>Last modified by</value></data>
+<data name="Country_LastModificationDate" xml:space="preserve"><value>Last modification date</value></data>
+<data name="Faqs" xml:space="preserve"><value>Faqs</value></data>
+<data name="Faq" xml:space="preserve"><value>Faq</value></data>
+<data name="Faq_QuestionAr" xml:space="preserve"><value>Question in Arabic</value></data>
+<data name="Faq_Question" xml:space="preserve"><value>Question</value></data>
+<data name="Faq_QuestionEn" xml:space="preserve"><value>Question in English</value></data>
+<data name="Faq_AnswerAr" xml:space="preserve"><value>Answer in Arabic</value></data>
+<data name="Faq_Answer" xml:space="preserve"><value>Answer</value></data>
+<data name="Faq_AnswerEn" xml:space="preserve"><value>Answer in English</value></data>
+<data name="Faq_Portal" xml:space="preserve"><value>Portal</value></data>
+<data name="Faq_PortalChoose" xml:space="preserve"><value>Choose portal</value></data>
+<data name="Faq_Service" xml:space="preserve"><value>Service</value></data>
+<data name="Faq_ServiceChoose" xml:space="preserve"><value>Choose service</value></data>
+<data name="Languages" xml:space="preserve"><value>Languages</value></data>
+<data name="Language" xml:space="preserve"><value>Language</value></data>
+<data name="Language_IsDefault" xml:space="preserve"><value>Is default?</value></data>
+<data name="Portals" xml:space="preserve"><value>Portals</value></data>
+<data name="Portal_DescriptionAr" xml:space="preserve"><value>Description in Arabic</value></data>
+<data name="Portal_Description" xml:space="preserve"><value>Description</value></data>
+<data name="Portal_DescriptionEn" xml:space="preserve"><value>Description in English</value></data>
+<data name="Portal_Link" xml:space="preserve"><value>Link</value></data>
+<data name="Services" xml:space="preserve"><value>Services</value></data>
+<data name="Service_Icon" xml:space="preserve"><value>Icon</value></data>
+<data name="Service_LogInRequired" xml:space="preserve"><value>Log in required</value></data>
+<data name="Service_Url" xml:space="preserve"><value>URL</value></data>
+<data name="Service_MobileUrl" xml:space="preserve"><value>Mobile url</value></data>
+<data name="Service_ServiceType" xml:space="preserve"><value>Service type</value></data>
+<data name="Service_ServiceTypeChoose" xml:space="preserve"><value>Choose service type</value></data>
+<data name="Service_PdfMediaId" xml:space="preserve"><value>Pdf media id</value></data>
+<data name="Service_Video" xml:space="preserve"><value>Video</value></data>
+<data name="Service_ServiceCode" xml:space="preserve"><value>Service code</value></data>
+<data name="Service_ShowInCatalog" xml:space="preserve"><value>Show in catalog</value></data>
+<data name="Service_ShowInFollowUp" xml:space="preserve"><value>Show in follow up</value></data>
+<data name="Service_ShowInAssets" xml:space="preserve"><value>Show in assets</value></data>
+<data name="Service_IsPublished" xml:space="preserve"><value>Is published?</value></data>
+<data name="Service_PublishedBy" xml:space="preserve"><value>Published by</value></data>
+<data name="Service_PublishedAt" xml:space="preserve"><value>Published at</value></data>
+<data name="Service_StoppedBy" xml:space="preserve"><value>Stopped by</value></data>
+<data name="Service_StoppedAt" xml:space="preserve"><value>Stopped at</value></data>
+<data name="Service_ViewOrder" xml:space="preserve"><value>View order</value></data>
+<data name="Service_ShortDescriptionAr" xml:space="preserve"><value>Short description in Arabic</value></data>
+<data name="Service_ShortDescription" xml:space="preserve"><value>Short description</value></data>
+<data name="Service_ShortDescriptionEn" xml:space="preserve"><value>Short description in English</value></data>
+<data name="Service_ConditionsAr" xml:space="preserve"><value>Conditions in Arabic</value></data>
+<data name="Service_Conditions" xml:space="preserve"><value>Conditions</value></data>
+<data name="Service_ConditionsEn" xml:space="preserve"><value>Conditions in English</value></data>
+<data name="Service_DocumentRequiredAr" xml:space="preserve"><value>Document required in Arabic</value></data>
+<data name="Service_DocumentRequired" xml:space="preserve"><value>Document required</value></data>
+<data name="Service_DocumentRequiredEn" xml:space="preserve"><value>Document required in English</value></data>
+<data name="Service_FeesAr" xml:space="preserve"><value>Fees in Arabic</value></data>
+<data name="Service_Fees" xml:space="preserve"><value>Fees</value></data>
+<data name="Service_FeesEn" xml:space="preserve"><value>Fees in English</value></data>
+<data name="Service_NotesAr" xml:space="preserve"><value>Notes in Arabic</value></data>
+<data name="Service_Notes" xml:space="preserve"><value>Notes</value></data>
+<data name="Service_NotesEn" xml:space="preserve"><value>Notes in English</value></data>
+<data name="Service_StepsAr" xml:space="preserve"><value>Steps in Arabic</value></data>
+<data name="Service_Steps" xml:space="preserve"><value>Steps</value></data>
+<data name="Service_StepsEn" xml:space="preserve"><value>Steps in English</value></data>
+<data name="Service_TimeRequiredAr" xml:space="preserve"><value>Time required in Arabic</value></data>
+<data name="Service_TimeRequired" xml:space="preserve"><value>Time required</value></data>
+<data name="Service_TimeRequiredEn" xml:space="preserve"><value>Time required in English</value></data>
+<data name="ServiceTypes" xml:space="preserve"><value>Service types</value></data>
+
+</root>

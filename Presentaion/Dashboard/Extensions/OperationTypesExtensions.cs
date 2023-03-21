@@ -6,12 +6,12 @@ namespace TemplateFw.Dashboard.Extensions
 {
     public static class OperationTypesExtensions
     {
-        internal static string ToErrorMessage(this OperationTypes operation, IStringLocalizer<OperationsResource> localizer)
+        internal static string ToErrorMessage(this OperationTypes operation, IStringLocalizer<OperationsResource2> localizer)
         {
             return localizer[$"OperationFailed_{(int)operation}"].Value;
         }
 
-        internal static string ToSuccessMessage(this OperationTypes operation, IStringLocalizer<OperationsResource> localizer)
+        internal static string ToSuccessMessage(this OperationTypes operation, IStringLocalizer<OperationsResource2> localizer)
         {
             return localizer[$"OperationDone_{(int)operation}"].Value;
         }

@@ -117,40 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Faq" xml:space="preserve">
-    <value />
+  <data name="ActionDelete" xml:space="preserve">
+    <value>حذف</value>
   </data>
-  <data name="Faqs" xml:space="preserve">
-    <value>Frequently asked questions.</value>
+  <data name="ActionEdit" xml:space="preserve">
+    <value>تعديل</value>
   </data>
-  <data name="Faq_Answer" xml:space="preserve">
-    <value>Answer</value>
+  <data name="ActionSend" xml:space="preserve">
+    <value>ارسال</value>
   </data>
-  <data name="Faq_AnswerAr" xml:space="preserve">
-    <value>Answer in Arabic</value>
+  <data name="CreatedBy" xml:space="preserve">
+    <value>تم الإضافة بواسطة</value>
   </data>
-  <data name="Faq_AnswerEn" xml:space="preserve">
-    <value>Answer in English</value>
+  <data name="CreationDate" xml:space="preserve">
+    <value>تاريخ الإضافة</value>
   </data>
-  <data name="Faq_Info" xml:space="preserve">
-    <value>Question information</value>
+  <data name="IsAvailable" xml:space="preserve">
+    <value>الحالة</value>
   </data>
-  <data name="Faq_Management" xml:space="preserve">
-    <value>Faq management</value>
+  <data name="LastModificationDate" xml:space="preserve">
+    <value>تاريخ أخر تعديل</value>
   </data>
-  <data name="Faq_Portal" xml:space="preserve">
-    <value>Portal</value>
-  </data>
-  <data name="Faq_Question" xml:space="preserve">
-    <value>Question</value>
-  </data>
-  <data name="Faq_QuestionAr" xml:space="preserve">
-    <value>Question in Arabic</value>
-  </data>
-  <data name="Faq_QuestionEn" xml:space="preserve">
-    <value>Question in English</value>
-  </data>
-  <data name="Faq_Service" xml:space="preserve">
-    <value>Service</value>
+  <data name="LastModifiedBy" xml:space="preserve">
+    <value>تم أخر تعديل بواسطة</value>
   </data>
 </root>

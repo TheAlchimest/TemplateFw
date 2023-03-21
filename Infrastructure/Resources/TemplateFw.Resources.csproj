@@ -16,46 +16,41 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Resources\CommonResource.Designer.cs">
+	  <Compile Update="Resources\CommonResources.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
-	    <DependentUpon>CommonResource.resx</DependentUpon>
+	    <DependentUpon>CommonResources.resx</DependentUpon>
 	  </Compile>
-	  <Compile Update="Resources\ModulesResource.Designer.cs">
+	  <Compile Update="Resources\ModulesResources.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
-	    <DependentUpon>ModulesResource.resx</DependentUpon>
+	    <DependentUpon>ModulesResources.resx</DependentUpon>
 	  </Compile>
 	  <Compile Update="Resources\OperationsResources.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>OperationsResources.resx</DependentUpon>
 	  </Compile>
-	  <Compile Update="Resources\SharedResource.Designer.cs">
+	  <Compile Update="Resources\UIResources.Designer.cs">
 	    <DesignTime>True</DesignTime>
 	    <AutoGen>True</AutoGen>
-	    <DependentUpon>SharedResource.resx</DependentUpon>
-	  </Compile>
-	  <Compile Update="Resources\UIResource.Designer.cs">
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	    <DependentUpon>UIResource.resx</DependentUpon>
+	    <DependentUpon>UIResources.resx</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <EmbeddedResource Update="Resources\CommonResource.resx">
+	  <EmbeddedResource Update="Resources\CommonResources.resx">
 	    <Generator>PublicResXFileCodeGenerator</Generator>
-	    <LastGenOutput>CommonResource.Designer.cs</LastGenOutput>
+	    <LastGenOutput>CommonResources.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
-		<EmbeddedResource Update="Resources\CommonResource.en.resx">
+		<EmbeddedResource Update="Resources\CommonResources.en.resx">
 			<Generator>PublicResXFileCodeGenerator</Generator>
 		</EmbeddedResource>
-	  <EmbeddedResource Update="Resources\ModulesResource.resx">
+	  <EmbeddedResource Update="Resources\ModulesResources.resx">
 	    <Generator>PublicResXFileCodeGenerator</Generator>
-	    <LastGenOutput>ModulesResource.Designer.cs</LastGenOutput>
+	    <LastGenOutput>ModulesResources.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
-		<EmbeddedResource Update="Resources\ModulesResource.en.resx">
+		<EmbeddedResource Update="Resources\ModulesResources.en.resx">
 			<Generator>PublicResXFileCodeGenerator</Generator>
 		</EmbeddedResource>
 	  <EmbeddedResource Update="Resources\OperationsResources.resx">
@@ -65,20 +60,9 @@
 		<EmbeddedResource Update="Resources\OperationsResources.en.resx">
 			<Generator>PublicResXFileCodeGenerator</Generator>
 		</EmbeddedResource>
-	  <EmbeddedResource Update="Resources\SharedResource.en.resx">
+	  <EmbeddedResource Update="Resources\UIResources.resx">
 	    <Generator>PublicResXFileCodeGenerator</Generator>
-	  </EmbeddedResource>
-	  <EmbeddedResource Update="Resources\SharedResource.resx">
-	    <Generator>PublicResXFileCodeGenerator</Generator>
-	    <LastGenOutput>SharedResource.Designer.cs</LastGenOutput>
-	  </EmbeddedResource>
-	  <EmbeddedResource Update="Resources\UIResource.en.resx">
-	    <LastGenOutput>UIResource.en.Designer.cs</LastGenOutput>
-	    <Generator>PublicResXFileCodeGenerator</Generator>
-	  </EmbeddedResource>
-	  <EmbeddedResource Update="Resources\UIResource.resx">
-	    <Generator>PublicResXFileCodeGenerator</Generator>
-	    <LastGenOutput>UIResource.Designer.cs</LastGenOutput>
+	    <LastGenOutput>UIResources.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
 	</ItemGroup>
 

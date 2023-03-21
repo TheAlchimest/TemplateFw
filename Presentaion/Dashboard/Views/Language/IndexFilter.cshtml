@@ -1,0 +1,30 @@
+﻿@inject IOptions<WebSettings> webSettings
+@model TemplateFw.Dtos.LanguageFilter
+<div class="card master-form">
+    <div class="card-body">
+        <form id="grid-filter" class="grid-filter"
+              action="/language/IndexContentl"
+              data-container-id="containerBox"
+              onsubmit="actionsController.search(this,event)">
+            <input type="hidden" id="PageNumber" name="PageNumber" value="@Model.PageNumber" />
+            <div class="row">
+                <div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="Name">Name <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="Name" name="Name" placeholder="Enter " required maxlength="50" max="0"  smk-error-msg-required="Please Enter " data-smk-max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
+
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    $('#grid-filter').find('select,input').change(function () {
+        $('#PageNumber').val('1');
+        $('#grid-filter').trigger('submit');
+
+    });
+</script>

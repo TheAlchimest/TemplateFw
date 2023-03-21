@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Country_Code" xml:space="preserve"><value>الرمز</value></data>
+<data name="Countries" xml:space="preserve"><value>البلدان</value></data>
+<data name="Country" xml:space="preserve"><value>البلد</value></data>
+<data name="Country_CreatedBy" xml:space="preserve"><value>تم إنشاؤه بواسطة</value></data>
+<data name="Country_CreationDate" xml:space="preserve"><value>تاريخ الإنشاء</value></data>
+<data name="Country_Information" xml:space="preserve"><value>معلومات الدولة</value></data>
+<data name="Country_IsAvailable" xml:space="preserve"><value>متاح؟</value></data>
+<data name="Country_LastModificationDate" xml:space="preserve"><value>تاريخ آخر تعديل</value></data>
+<data name="Country_LastModifiedBy" xml:space="preserve"><value>آخر تعديل بواسطة</value></data>
+<data name="Country_Management" xml:space="preserve"><value>إدارة الدول</value></data>
+<data name="Country_Name" xml:space="preserve"><value>الاسم</value></data>
+<data name="Country_NameAr" xml:space="preserve"><value>الإسم باللغة العربية</value></data>
+<data name="Country_NameEn" xml:space="preserve"><value>الإسم باللغة الانجليزية</value></data>
+<data name="Faq_Answer" xml:space="preserve"><value>الاجابة</value></data>
+<data name="Faq_AnswerAr" xml:space="preserve"><value>الجواب باللغة العربية</value></data>
+<data name="Faq_AnswerEn" xml:space="preserve"><value>الجواب باللغة الإنجليزية</value></data>
+<data name="Faq" xml:space="preserve"><value>الأسئلة الشائعة</value></data>
+<data name="Faqs" xml:space="preserve"><value>الأسئلة الشائعة</value></data>
+<data name="Faq_Portal" xml:space="preserve"><value>البوابة</value></data>
+<data name="Faq_PortalChoose" xml:space="preserve"><value>اختر البوابة</value></data>
+<data name="Faq_Question" xml:space="preserve"><value>السؤال</value></data>
+<data name="Faq_QuestionAr" xml:space="preserve"><value>السؤال باللغة العربية</value></data>
+<data name="Faq_QuestionEn" xml:space="preserve"><value>السؤال باللغة الإنجليزية</value></data>
+<data name="Faq_Service" xml:space="preserve"><value>الخدمة</value></data>
+<data name="Faq_ServiceChoose" xml:space="preserve"><value>اختر الخدمة</value></data>
+<data name="Language_IsDefault" xml:space="preserve"><value>هو الافتراضي؟</value></data>
+<data name="Language" xml:space="preserve"><value>اللغة</value></data>
+<data name="Languages" xml:space="preserve"><value>اللغات</value></data>
+<data name="Portal_Description" xml:space="preserve"><value>الوصف</value></data>
+<data name="Portal_DescriptionAr" xml:space="preserve"><value>الوصف باللغة العربية</value></data>
+<data name="Portal_DescriptionEn" xml:space="preserve"><value>الوصف باللغة الإنجليزية</value></data>
+<data name="Portal_Link" xml:space="preserve"><value>الرابط</value></data>
+<data name="Portals" xml:space="preserve"><value>البوابات</value></data>
+<data name="Service_Conditions" xml:space="preserve"><value>الشروط</value></data>
+<data name="Service_ConditionsAr" xml:space="preserve"><value>الشروط باللغة العربية</value></data>
+<data name="Service_ConditionsEn" xml:space="preserve"><value>الشروط باللغة الإنجليزية</value></data>
+<data name="Service_DocumentRequired" xml:space="preserve"><value>الوثيقة المطلوبة</value></data>
+<data name="Service_DocumentRequiredAr" xml:space="preserve"><value>الوثيقة المطلوبة باللغة العربية</value></data>
+<data name="Service_DocumentRequiredEn" xml:space="preserve"><value>الوثيقة المطلوبة باللغة الإنجليزية</value></data>
+<data name="Service_Fees" xml:space="preserve"><value>الرسوم</value></data>
+<data name="Service_FeesAr" xml:space="preserve"><value>الرسوم باللغة العربية</value></data>
+<data name="Service_FeesEn" xml:space="preserve"><value>الرسوم باللغة الانجليزية</value></data>
+<data name="Service_Icon" xml:space="preserve"><value>الأيقونة</value></data>
+<data name="Service_IsPublished" xml:space="preserve"><value>يتم نشر؟</value></data>
+<data name="Service_LogInRequired" xml:space="preserve"><value>تسجيل الدخول مطلوب</value></data>
+<data name="Service_MobileUrl" xml:space="preserve"><value>عنوان url للجوال</value></data>
+<data name="Service_Notes" xml:space="preserve"><value>الملاحظات</value></data>
+<data name="Service_NotesAr" xml:space="preserve"><value>الملاحظات باللغة العربية</value></data>
+<data name="Service_NotesEn" xml:space="preserve"><value>الملاحظات باللغة الإنجليزية</value></data>
+<data name="Service_PdfMediaId" xml:space="preserve"><value>معرف وسائط pdf</value></data>
+<data name="Service_PublishedAt" xml:space="preserve"><value>تم النشر في</value></data>
+<data name="Service_PublishedBy" xml:space="preserve"><value>تم نشره بواسطة</value></data>
+<data name="Service_ServiceCode" xml:space="preserve"><value>كود الخدمة</value></data>
+<data name="Services" xml:space="preserve"><value>الخدمات</value></data>
+<data name="Service_ServiceType" xml:space="preserve"><value>نوع الخدمة</value></data>
+<data name="Service_ServiceTypeChoose" xml:space="preserve"><value>اختر نوع الخدمة</value></data>
+<data name="Service_ShortDescription" xml:space="preserve"><value>الوصف المختصر</value></data>
+<data name="Service_ShortDescriptionAr" xml:space="preserve"><value>الوصف المختصر باللغة العربية</value></data>
+<data name="Service_ShortDescriptionEn" xml:space="preserve"><value>الوصف المختصر باللغة الإنجليزية</value></data>
+<data name="Service_ShowInAssets" xml:space="preserve"><value>العرض في الأصول</value></data>
+<data name="Service_ShowInCatalog" xml:space="preserve"><value>العرض في الكتالوج</value></data>
+<data name="Service_ShowInFollowUp" xml:space="preserve"><value>العرض في متابعة</value></data>
+<data name="Service_Steps" xml:space="preserve"><value>الخطوات</value></data>
+<data name="Service_StepsAr" xml:space="preserve"><value>الخطوات باللغة العربية</value></data>
+<data name="Service_StepsEn" xml:space="preserve"><value>الخطوات باللغة الانجليزية</value></data>
+<data name="Service_StoppedAt" xml:space="preserve"><value>توقف عند</value></data>
+<data name="Service_StoppedBy" xml:space="preserve"><value>توقف من قبل</value></data>
+<data name="Service_TimeRequired" xml:space="preserve"><value>الوقت المطلوب</value></data>
+<data name="Service_TimeRequiredAr" xml:space="preserve"><value>الوقت المطلوب باللغة العربية</value></data>
+<data name="Service_TimeRequiredEn" xml:space="preserve"><value>الوقت المطلوب باللغة الإنجليزية</value></data>
+<data name="Service_Url" xml:space="preserve"><value>الرابط</value></data>
+<data name="Service_Video" xml:space="preserve"><value>الفيديو</value></data>
+<data name="Service_ViewOrder" xml:space="preserve"><value>ترتيب العرض</value></data>
+<data name="ServiceTypes" xml:space="preserve"><value>أنواع الخدمة</value></data>
+
+</root>

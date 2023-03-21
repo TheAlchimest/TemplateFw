@@ -1,5 +1,6 @@
 ﻿@using TemplateFw.Dashboard.Models;
 @using TemplateFw.Dtos.Dtos.Common;
+@using TemplateFw.Resources.Resources;
 @using TemplateFw.Shared.Configuration;
 @using TemplateFw.Resources
 @using Microsoft.AspNetCore.Mvc.Localization
@@ -7,15 +8,17 @@
 @using TemplateFw.Shared.Dtos.Collections;
 @using Microsoft.Extensions.Options;
 @using TemplateFw.Dtos.Views;
-@using TemplateFw.Shared.Helpers
-@using TemplateFw.Utilities.Helpers
+@using TemplateFw.Shared.Helpers;
+@using TemplateFw.Utilities.Helpers;
+
+
 
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 
-@inject IHtmlLocalizer<SharedResource> localizer
-@inject IHtmlLocalizer<UIResource> UIlocalizer
-@inject IHtmlLocalizer<ModulesResource> Moduleslocalizer
-@inject IHtmlLocalizer<OperationsResource> OperationsLocalizer
+@inject IHtmlLocalizer<TemplateFw.Resources.SharedResource> localizer
+@inject IHtmlLocalizer<TemplateFw.Resources.UIResource> UIlocalizer
+@inject IHtmlLocalizer<TemplateFw.Resources.ModulesResource> Moduleslocalizer
+@inject IHtmlLocalizer<OperationsResource2> OperationsLocalizer
 
 	

@@ -13,6 +13,10 @@ namespace TemplateFw.Dtos
 		public string Code { get; set; }
 		public bool IsDefault { get; set; }
 		public bool IsAvailable { get; set; }
+		public string CreatedBy { get; set; }
+		public DateTime? CreationDate { get; set; }
+		public string LastModifiedBy { get; set; }
+		public DateTime? LastModificationDate { get; set; }
 
     }
 
@@ -23,6 +27,10 @@ namespace TemplateFw.Dtos
 		public string Code { get; set; }
 		public bool IsDefault { get; set; }
 		public bool IsAvailable { get; set; }
+		public string CreatedBy { get; set; }
+		public DateTime? CreationDate { get; set; }
+		public string LastModifiedBy { get; set; }
+		public DateTime? LastModificationDate { get; set; }
     }
 
     public class LanguageFilter

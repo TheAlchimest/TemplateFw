@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using TemplateFw.Domain.Models;
 using TemplateFw.Dtos.Common;
 using TemplateFw.Dtos;
-using TemplateFw.Persistence.Repositories;
+using TemplateFw.Persistence.IRepositories;
 using TemplateFw.Shared.Application.Exceptions;
 using TemplateFw.Shared.Application.Services;
 using TemplateFw.Shared.Domain.Enums;

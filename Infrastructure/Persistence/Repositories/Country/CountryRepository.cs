@@ -10,6 +10,7 @@ using TemplateFw.Dtos;
 using TemplateFw.Shared.Domain.Enums;
 using TemplateFw.Shared.Dtos.Collections;
 using Adoler.AdoExtension.Extensions;
+using TemplateFw.Persistence.IRepositories;
 
 namespace TemplateFw.Persistence.Repositories
 {
@@ -24,7 +25,7 @@ namespace TemplateFw.Persistence.Repositories
         #region InsertAsync
         public async Task<bool> CreateAsync(CountryDto dto)
         {
-            List<SqlParameter> plist = dto.ConvertToParametersExcept(e => e.CountryId, e => e.IsAvailable);
+            List<SqlParameter> plist = dto.ConvertToParametersExcept(e => e.CountryId, e => e.CreationDate, e => e.LastModifiedBy, e => e.LastModificationDate, e => e.IsAvailable);
             var countryId = plist.AddOutputParameterInteger("CountryId");
             int affectedRows = await dbHelper.SqlHelperWrite.ExecuteNonQueryAsync("[dbo].[Country_Create]", plist);
             return (affectedRows > 0);
@@ -34,7 +35,7 @@ namespace TemplateFw.Persistence.Repositories
         #region UpdateAsync
         public async Task<bool> UpdateAsync(CountryDto dto)
         {
-            List<SqlParameter> plist = dto.ConvertToParametersExcept(e => e.IsAvailable);
+            List<SqlParameter> plist = dto.ConvertToParametersExcept(e => e.CreatedBy, e => e.CreationDate, e => e.LastModificationDate, e => e.IsAvailable);
             int affectedRows = await dbHelper.SqlHelperWrite.ExecuteNonQueryAsync("[dbo].[Country_Update]", plist);
             return (affectedRows > 0);
         }

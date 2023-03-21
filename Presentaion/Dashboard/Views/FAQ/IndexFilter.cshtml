@@ -1,60 +1,38 @@
 ﻿@inject IOptions<WebSettings> webSettings
-@model TemplateFw.Dtos.Common.FaqFilter
-@{
-
-}
+@model TemplateFw.Dtos.FaqFilter
 <div class="card master-form">
     <div class="card-body">
         <form id="grid-filter" class="grid-filter"
-              action="/faq/IndexContent"
+              action="/faq/IndexContentl"
               data-container-id="containerBox"
               onsubmit="actionsController.search(this,event)">
             <input type="hidden" id="PageNumber" name="PageNumber" value="@Model.PageNumber" />
             <div class="row">
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label class="font-w600 px-4">البوابة</label>
-                        <select class="select2 select-dynamic"
-                            id="PortalId"
-                            name="PortalId"
-                            data-api-url="@(webSettings.Value.LookupApiUrl)lookup/portals"
-                            @Html.Raw("data-default-val=\"\"");
-                            @Html.Raw("data-default-text=\"الكل\"");
-                            >
-                        </select>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label class="font-w600 px-4">الخدمة</label>
-                         <select class="select2 select-dynamic"
-                            id="ServiceId"
-                            name="ServiceId"
-                            data-api-url="@(webSettings.Value.LookupApiUrl)lookup/services"
-                            data-cascade-api-url="@(webSettings.Value.LookupApiUrl)lookup/services"
-                            data-default-val=""
-                            data-default-text="الكل"
-                            data-cascade-with="PortalId"> </select>
+                <div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="Question">Question ar :</label>
+    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="Question" name="Question" placeholder="Enter " maxlength="150" max="0"  data-smk-max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group select2-lg">
+    <label class="form-label-small px-3" for="PortalId">Portal id <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <select class="form-control form-select select2 select2-control static-select"    data-type="" data-smk-type=""  data-type="" data-smk-type="" id="PortalId" name="PortalId" placeholder="Choose " required maxlength="4" max="0"  smk-error-msg-required="Choose " data-smk-max="0">
+    </select>
+    
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group select2-lg">
+    <label class="form-label-small px-3" for="ServiceId">Service id :</label>
+    <select class="form-control form-select select2 select2-control static-select"    data-type="" data-smk-type=""  data-type="" data-smk-type="" id="ServiceId" name="ServiceId" placeholder="Choose " maxlength="4" max="0"  data-smk-max="0">
+    </select>
+    
+</div>
+</div>
 
-                        
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label class="font-w600 px-4">عدد العناصر</label>
-                        <select id="ddlPageSize" name="PageSize" class="select2">
-                            <option value="20">عرض 20 عنصر بالجدول</option>
-                            <option value="50">عرض 50 عنصر بالجدول</option>
-                            <option value="100">عرض 100 عنصر بالجدول</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="col-md">
-                    <div class="form-group">
-                        <label class="font-w600 px-4">بحث</label>
-                        <input type="text" name="Question" class="form-control" placeholder="بحث ...">
-                    </div>
-                </div>
             </div>
         </form>
     </div>
@@ -66,5 +44,3 @@
 
     });
 </script>
-
-

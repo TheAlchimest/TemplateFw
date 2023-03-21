@@ -1,0 +1,79 @@
+﻿@using TemplateFw.Shared.Domain.Enums
+@inject IOptions<WebSettings> webSettings
+@model TemplateFw.Dtos.CountryDto
+
+@{
+    bool isUpdateMode = (Model.CountryId != 0);
+    string isUpdateModeString = isUpdateMode.ToString().ToLower();
+}
+<form method="post" id="frmForm" name="frmForm" action="/country/Save" data-is-update-mode="@(isUpdateModeString)">
+    <div class="form-head mb-sm-5 mb-3 d-flex flex-wrap align-items-center ">
+        <div class=" mr-auto">
+            <h3 class="font-w600 mb-2">@localizer["Country"]</h3>
+            <p class="mb-0">@localizer["CountryManagement"]</p>
+        </div>
+    </div>
+    <div class="card master-form">
+        <div class="card-body">
+            <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="CountryId" name="CountryId" placeholder="Enter " required maxlength="4" max="0"  smk-error-msg-required="Please Enter " data-smk-max="0"><div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="NameAr">Name ar <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="NameAr" name="NameAr" placeholder="Enter " required maxlength="120" max="0"  smk-error-msg-required="Please Enter " data-smk-max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="NameEn">Name en <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="NameEn" name="NameEn" placeholder="Enter " required maxlength="120" max="0"  smk-error-msg-required="Please Enter " data-smk-max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="Code">Code <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="Code" name="Code" placeholder="Enter " required maxlength="2" max="0"  smk-error-msg-required="Please Enter " data-smk-max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
+
+        </div>
+    </div>
+    
+    <div class="text-center">
+        <button type="button" id="Send" class="btn btn-primary font-size-13 font-weight-bold"
+                onclick="saveForm(this,event)"
+                on-sccess-redirect-url="/#!/country/"
+                data-is-update-mode="@(isUpdateModeString)">
+            <i class="far fa-lg fa-check"></i> ارسال
+        </button>
+
+
+        <a id="backActionBtn" href="/#!/country" class="btn btn-danger mr-3">
+            <i class="fas fa-times fa-lg fa-arrow-left"></i> العودة
+        </a>
+
+    </div>
+</form>
+
+
+<script>
+
+    $("#frmForm :input").change(function () {
+        $("#frmForm").data("changed", true);
+    });
+
+    function saveForm(obj, event) {
+
+        if ($("frmForm").attr("data-is-update-mode") === 'false') {
+            app.form.submit(obj, event)
+        }
+        else {
+            swal.fire("لا يوجد تعديل", "لا يوجد بيانات تم تعديلها", "info");
+            window.location = $("#backActionBtn").attr("href");
+        }
+    }
+</script>

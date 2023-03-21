@@ -10,6 +10,7 @@ using TemplateFw.Dtos;
 using TemplateFw.Shared.Domain.Enums;
 using TemplateFw.Shared.Dtos.Collections;
 using Adoler.AdoExtension.Extensions;
+using TemplateFw.Persistence.IRepositories;
 
 namespace TemplateFw.Persistence.Repositories
 {

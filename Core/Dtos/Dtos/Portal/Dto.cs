@@ -15,6 +15,10 @@ namespace TemplateFw.Dtos
 		public string DescriptionEn { get; set; }
 		public string Link { get; set; }
 		public bool IsAvailable { get; set; }
+		public string CreatedBy { get; set; }
+		public DateTime? CreationDate { get; set; }
+		public string LastModifiedBy { get; set; }
+		public DateTime? LastModificationDate { get; set; }
 
     }
 
@@ -24,6 +28,10 @@ namespace TemplateFw.Dtos
 		public string Description { get; set; }
 		public string Link { get; set; }
 		public bool IsAvailable { get; set; }
+		public string CreatedBy { get; set; }
+		public DateTime? CreationDate { get; set; }
+		public string LastModifiedBy { get; set; }
+		public DateTime? LastModificationDate { get; set; }
     }
 
     public class PortalFilter

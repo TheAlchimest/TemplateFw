@@ -117,28 +117,28 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Action_Delete" xml:space="preserve">
-    <value>حذف</value>
+  <data name="ActionDelete" xml:space="preserve">
+    <value>Delete</value>
   </data>
-  <data name="Action_Edit" xml:space="preserve">
-    <value>تعديل</value>
+  <data name="ActionEdit" xml:space="preserve">
+    <value>Edit</value>
   </data>
-  <data name="Action_Send" xml:space="preserve">
-    <value>ارسال</value>
+  <data name="ActionSend" xml:space="preserve">
+    <value>Send</value>
   </data>
-  <data name="Common_CreatedBy" xml:space="preserve">
-    <value>تم الإضافة بواسطة</value>
+  <data name="CreatedBy" xml:space="preserve">
+    <value>Created by</value>
   </data>
-  <data name="Common_CreationDate" xml:space="preserve">
-    <value>تاريخ الإضافة</value>
+  <data name="CreationDate" xml:space="preserve">
+    <value>Creation date</value>
   </data>
-  <data name="Common_IsAvailable" xml:space="preserve">
-    <value />
+  <data name="IsAvailable" xml:space="preserve">
+    <value>Is available</value>
   </data>
-  <data name="Common_LastModificationDate" xml:space="preserve">
-    <value>تاريخ أخر تعديل</value>
+  <data name="LastModificationDate" xml:space="preserve">
+    <value>Last modification date</value>
   </data>
-  <data name="Common_LastModifiedBy" xml:space="preserve">
-    <value>تم أخر تعديل بواسطة</value>
+  <data name="LastModifiedBy" xml:space="preserve">
+    <value>Last modification by</value>
   </data>
 </root>

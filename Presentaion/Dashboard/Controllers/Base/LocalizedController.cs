@@ -15,9 +15,9 @@ namespace TemplateFw.Dashboard.Controllers
 {
     public class LocalizedController : Controller
     {
-        private IStringLocalizer<OperationsResource> _localizer;
-        public IStringLocalizer<OperationsResource> Localizer
-            => _localizer ??= HttpContext.RequestServices.GetService<IStringLocalizer<OperationsResource>>();
+        private IStringLocalizer<OperationsResource2> _localizer;
+        public IStringLocalizer<OperationsResource2> Localizer
+            => _localizer ??= HttpContext.RequestServices.GetService<IStringLocalizer<OperationsResource2>>();
         public string CurrentCulture
            => HttpContext.Features.Get<IRequestCultureFeature>().RequestCulture.UICulture.Name;
 

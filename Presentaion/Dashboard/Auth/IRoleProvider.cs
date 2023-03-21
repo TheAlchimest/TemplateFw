@@ -14,6 +14,12 @@ namespace TemplateFw.Dashboard.Auth
     {
         public const string SERVICES_ADMIN = "Services";
         public const string Faq = "Faqs";
+        public const string Country = "Country";
+        public const string Language = "Language";
+        public const string Portal = "Portal";
+        public const string ServiceType = "ServiceType";
+        public const string Service = "Service";
+        
         public const string POLLS_ADMIN = "Polls";
         public const string VOTINGS_ADMIN = "Votings";
         public const string COMPLAINTS_ADMIN = "Complaints";

@@ -1,0 +1,365 @@
+﻿@using TemplateFw.Shared.Domain.Enums
+@inject IOptions<WebSettings> webSettings
+@model TemplateFw.Dtos.ServiceDto
+
+@{
+    bool isUpdateMode = (Model.ServiceId != 0);
+    string isUpdateModeString = isUpdateMode.ToString().ToLower();
+}
+<form method="post" id="frmForm" name="frmForm" action="/service/Save" data-is-update-mode="@(isUpdateModeString)">
+    <div class="form-head mb-sm-5 mb-3 d-flex flex-wrap align-items-center ">
+        <div class=" mr-auto">
+            <h3 class="font-w600 mb-2">@localizer["Service"]</h3>
+            <p class="mb-0">@localizer["ServiceManagement"]</p>
+        </div>
+    </div>
+    <div class="card master-form">
+        <div class="card-body">
+            <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="ServiceId" name="ServiceId" placeholder="Enter " required maxlength="4" max="0"  smk-error-msg-required="Please Enter " data-smk-max="0"><div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="NameAr">Name ar <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="NameAr" name="NameAr" placeholder="Enter " required maxlength="120" max="0"  smk-error-msg-required="Please Enter " data-smk-max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="NameEn">Name en <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="NameEn" name="NameEn" placeholder="Enter " required maxlength="120" max="0"  smk-error-msg-required="Please Enter " data-smk-max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="Icon">Icon :</label>
+    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="Icon" name="Icon" placeholder="Enter " maxlength="30" max="0"  data-smk-max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="LogInRequired">Log in required <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   data-type="" data-smk-type=""  data-type="" data-smk-type="" id="LogInRequired" name="LogInRequired" placeholder="Enter " required maxlength="1" max="0"  smk-error-msg-required="Please Enter " data-smk-max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="Url">Url <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="Url" name="Url" placeholder="Enter " required maxlength="500" max="0"  smk-error-msg-required="Please Enter " data-smk-max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="MobileUrl">Mobile url :</label>
+    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="MobileUrl" name="MobileUrl" placeholder="Enter " maxlength="500" max="0"  data-smk-max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group select2-lg">
+    <label class="form-label-small px-3" for="ServiceTypeId">Service type id <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <select class="form-control form-select select2 select2-control static-select"    data-type="" data-smk-type=""  data-type="" data-smk-type="" id="ServiceTypeId" name="ServiceTypeId" placeholder="Choose " required maxlength="4" max="0"  smk-error-msg-required="Choose " data-smk-max="0">
+    </select>
+    
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="PdfMediaId">Pdf media id :</label>
+    <textarea rows="4"
+              class="form-control"
+                data-type="" data-smk-type=""  data-type="" data-smk-type="" id="PdfMediaId" name="PdfMediaId" placeholder="Enter " maxlength="250" max="0"  data-smk-max="0"></textarea>
+              
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="Video">Video :</label>
+    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="Video" name="Video" placeholder="Enter " maxlength="20" max="0"  data-smk-max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group select2-lg">
+    <label class="form-label-small px-3" for="PortalId">Portal id :</label>
+    <select class="form-control form-select select2 select2-control static-select"    data-type="" data-smk-type=""  data-type="" data-smk-type="" id="PortalId" name="PortalId" placeholder="Choose " maxlength="4" max="0"  data-smk-max="0">
+    </select>
+    
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="ServiceCode">Service code <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="ServiceCode" name="ServiceCode" placeholder="Enter " required maxlength="40" max="0"  smk-error-msg-required="Please Enter " data-smk-max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="ShowInCatalog">Show in catalog <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   data-type="" data-smk-type=""  data-type="" data-smk-type="" id="ShowInCatalog" name="ShowInCatalog" placeholder="Enter " required maxlength="1" max="0"  smk-error-msg-required="Please Enter " data-smk-max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="ShowInFollowUp">Show in follow up <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   data-type="" data-smk-type=""  data-type="" data-smk-type="" id="ShowInFollowUp" name="ShowInFollowUp" placeholder="Enter " required maxlength="1" max="0"  smk-error-msg-required="Please Enter " data-smk-max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="ShowInAssets">Show in assets <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   data-type="" data-smk-type=""  data-type="" data-smk-type="" id="ShowInAssets" name="ShowInAssets" placeholder="Enter " required maxlength="1" max="0"  smk-error-msg-required="Please Enter " data-smk-max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="IsPublished">Is published <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   data-type="" data-smk-type=""  data-type="" data-smk-type="" id="IsPublished" name="IsPublished" placeholder="Enter " required maxlength="1" max="0"  smk-error-msg-required="Please Enter " data-smk-max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="PublishedBy">Published by :</label>
+    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="PublishedBy" name="PublishedBy" placeholder="Enter " maxlength="30" max="0"  data-smk-max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="PublishedAt">Published at :</label>
+    <input class="form-control"   type="text" data-type="" data-smk-type="" readonly  data-type="" data-smk-type="" id="PublishedAt" name="PublishedAt" placeholder="Enter " maxlength="8" max="0"  data-smk-max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="StoppedBy">Stopped by :</label>
+    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="StoppedBy" name="StoppedBy" placeholder="Enter " maxlength="30" max="0"  data-smk-max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="StoppedAt">Stopped at :</label>
+    <input class="form-control"   type="text" data-type="" data-smk-type="" readonly  data-type="" data-smk-type="" id="StoppedAt" name="StoppedAt" placeholder="Enter " maxlength="8" max="0"  data-smk-max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="ViewOrder">View order <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   type="number" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="ViewOrder" name="ViewOrder" placeholder="Enter " required maxlength="4" max="0"  smk-error-msg-required="Please Enter " data-smk-max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="ShortDescriptionAr">Short description ar :</label>
+    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="ShortDescriptionAr" name="ShortDescriptionAr" placeholder="Enter " maxlength="120" max="0"  data-smk-max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="ShortDescriptionEn">Short description en :</label>
+    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="ShortDescriptionEn" name="ShortDescriptionEn" placeholder="Enter " maxlength="120" max="0"  data-smk-max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="DescriptionAr">Description ar <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <textarea rows="4"
+              class="form-control"
+                data-type="" data-smk-type=""  data-type="" data-smk-type="" id="DescriptionAr" name="DescriptionAr" placeholder="Enter " required maxlength="500" max="0"  smk-error-msg-required="Please Enter " data-smk-max="0"></textarea>
+              
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="DescriptionEn">Description en <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <textarea rows="4"
+              class="form-control"
+                data-type="" data-smk-type=""  data-type="" data-smk-type="" id="DescriptionEn" name="DescriptionEn" placeholder="Enter " required maxlength="500" max="0"  smk-error-msg-required="Please Enter " data-smk-max="0"></textarea>
+              
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="ConditionsAr">Conditions ar :</label>
+    <textarea rows="4"
+              class="form-control"
+                data-type="" data-smk-type=""  data-type="" data-smk-type="" id="ConditionsAr" name="ConditionsAr" placeholder="Enter " maxlength="1000" max="0"  data-smk-max="0"></textarea>
+              
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="ConditionsEn">Conditions en :</label>
+    <textarea rows="4"
+              class="form-control"
+                data-type="" data-smk-type=""  data-type="" data-smk-type="" id="ConditionsEn" name="ConditionsEn" placeholder="Enter " maxlength="1000" max="0"  data-smk-max="0"></textarea>
+              
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="DocumentRequiredAr">Document required ar :</label>
+    <textarea rows="4"
+              class="form-control"
+                data-type="" data-smk-type=""  data-type="" data-smk-type="" id="DocumentRequiredAr" name="DocumentRequiredAr" placeholder="Enter " maxlength="1000" max="0"  data-smk-max="0"></textarea>
+              
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="DocumentRequiredEn">Document required en :</label>
+    <textarea rows="4"
+              class="form-control"
+                data-type="" data-smk-type=""  data-type="" data-smk-type="" id="DocumentRequiredEn" name="DocumentRequiredEn" placeholder="Enter " maxlength="1000" max="0"  data-smk-max="0"></textarea>
+              
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="FeesAr">Fees ar :</label>
+    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="FeesAr" name="FeesAr" placeholder="Enter " maxlength="120" max="0"  data-smk-max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="FeesEn">Fees en :</label>
+    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="FeesEn" name="FeesEn" placeholder="Enter " maxlength="120" max="0"  data-smk-max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="NotesAr">Notes ar :</label>
+    <textarea rows="4"
+              class="form-control"
+                data-type="" data-smk-type=""  data-type="" data-smk-type="" id="NotesAr" name="NotesAr" placeholder="Enter " maxlength="1000" max="0"  data-smk-max="0"></textarea>
+              
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="NotesEn">Notes en :</label>
+    <textarea rows="4"
+              class="form-control"
+                data-type="" data-smk-type=""  data-type="" data-smk-type="" id="NotesEn" name="NotesEn" placeholder="Enter " maxlength="1000" max="0"  data-smk-max="0"></textarea>
+              
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="StepsAr">Steps ar :</label>
+    <textarea rows="4"
+              class="form-control"
+                data-type="" data-smk-type=""  data-type="" data-smk-type="" id="StepsAr" name="StepsAr" placeholder="Enter " maxlength="1000" max="0"  data-smk-max="0"></textarea>
+              
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="StepsEn">Steps en :</label>
+    <textarea rows="4"
+              class="form-control"
+                data-type="" data-smk-type=""  data-type="" data-smk-type="" id="StepsEn" name="StepsEn" placeholder="Enter " maxlength="1000" max="0"  data-smk-max="0"></textarea>
+              
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="TimeRequiredAr">Time required ar :</label>
+    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="TimeRequiredAr" name="TimeRequiredAr" placeholder="Enter " maxlength="120" max="0"  data-smk-max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="TimeRequiredEn">Time required en :</label>
+    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="TimeRequiredEn" name="TimeRequiredEn" placeholder="Enter " maxlength="120" max="0"  data-smk-max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
+
+        </div>
+    </div>
+    
+    <div class="text-center">
+        <button type="button" id="Send" class="btn btn-primary font-size-13 font-weight-bold"
+                onclick="saveForm(this,event)"
+                on-sccess-redirect-url="/#!/service/"
+                data-is-update-mode="@(isUpdateModeString)">
+            <i class="far fa-lg fa-check"></i> ارسال
+        </button>
+
+
+        <a id="backActionBtn" href="/#!/service" class="btn btn-danger mr-3">
+            <i class="fas fa-times fa-lg fa-arrow-left"></i> العودة
+        </a>
+
+    </div>
+</form>
+
+
+<script>
+
+    $("#frmForm :input").change(function () {
+        $("#frmForm").data("changed", true);
+    });
+
+    function saveForm(obj, event) {
+
+        if ($("frmForm").attr("data-is-update-mode") === 'false') {
+            app.form.submit(obj, event)
+        }
+        else {
+            swal.fire("لا يوجد تعديل", "لا يوجد بيانات تم تعديلها", "info");
+            window.location = $("#backActionBtn").attr("href");
+        }
+    }
+</script>
