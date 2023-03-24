@@ -12,8 +12,7 @@ namespace TemplateFw.Application.Services
         Task<bool> CreateAsync(ServiceDto dto);
         Task<bool> DeletePermanentlyAsync(int id);
         Task<bool> DeleteVirtuallyAsync(int id);
-        Task<List<LookupDto>> GetAllAsLookupAsync();
-        Task<List<LookupDto>> GetAllAsLookupAsync(int? portalId = null, int? serviceTypeId = null);
+        Task<List<LookupDto>> GetLookupAsync(int? portalId = null, int? serviceTypeId = null);
         Task<List<LookupDto>> GetAllAsLookupAsync(ServiceFilter filter);
         Task<List<ServiceInfoDto>> GetAllAsync(ServiceFilter filter);
         Task<PagedList<ServiceInfoDto>> GetAllInfoPagedAsync(ServiceFilter filter);

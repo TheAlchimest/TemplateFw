@@ -96,9 +96,9 @@ namespace TemplateFw.DashboardApi.Controllers
         [ProducesResponseType(400)]
         [ProducesResponseType(500)]
         [Route("lookup")]
-        public async Task<GenericApiResponse<List<LookupDto>>> GetAllAsLookup(int? portalId = null, int? serviceTypeId = null)
+        public async Task<GenericApiResponse<List<LookupDto>>> GetLookup(int? portalId = null, int? serviceTypeId = null)
         {
-            return await GenericApiResponse(() => serviceService.GetAllAsLookupAsync(portalId, serviceTypeId), OperationTypes.GetList);
+            return await GenericApiResponse(() => serviceService.GetLookupAsync(portalId, serviceTypeId), OperationTypes.GetList);
         }
     }
 }

@@ -29,8 +29,6 @@ namespace TemplateFw.Dashboard.Controllers
             return ReturnJsonResponse(apiResult, OperationTypes.GetList);
         }
         [HttpGet]
-        //[Route("lookup")]
-        [AllowAnonymous]
         public async Task<JsonResult> Services(int? portalId = null, int? serviceTypeId = null)
         {
             string url = string.Format(ServiceUrls.GetLookup, portalId, serviceTypeId);

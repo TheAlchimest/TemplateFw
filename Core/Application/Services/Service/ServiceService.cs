@@ -103,13 +103,8 @@ namespace TemplateFw.Application.Services
         #endregion
 
 
-        #region GetAllAsLookup
-        public async Task<List<LookupDto>> GetAllAsLookupAsync()
-        {
-            var filter = new ServiceFilter();
-            return await GetAllAsLookupAsync(filter);
-        }
-        public async Task<List<LookupDto>> GetAllAsLookupAsync(int? portalId = null, int? serviceTypeId = null)
+        #region GetLookupAsync
+        public async Task<List<LookupDto>> GetLookupAsync(int? portalId = null, int? serviceTypeId = null)
         {
             var filter = new ServiceFilter
             {
