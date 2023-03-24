@@ -16,7 +16,7 @@
                 
 <th><strong>#</strong></th>
                 <th><strong>@ModulesResources.Faq_Question</strong></th>
-                <th><strong>@Moduleslocalizer["Faq_Question"]</strong></th>
+                <th><strong>@localizer["Faq_Question"]</strong></th>
                 <th><strong>@localizer["Faq_Service"]</strong></th>
                 <th><strong>@localizer["CreationDate"]</strong></th>
 <th><strong>@localizer["LastModificationDate"]</strong></th>
@@ -29,7 +29,7 @@
             {
                 <tr>
                     
-<td><strong>@itemNo</strong></td>
+<td><strong>@(itemNo++)</strong></td>
 <td><b>@item.Question</b></td>
 <td><b>@item.PortalName</b></td>
 <td><b>@item.ServiceName</b></td>

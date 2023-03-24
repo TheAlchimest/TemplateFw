@@ -1,4 +1,13 @@
-﻿/******************************
+﻿String.prototype.format = function (o) {
+    return this.replace(/{([^{}]*)}/g,
+        function (a, b) {
+            var r = o[b];
+            return typeof r === 'string' ? r : a;
+        }
+    );
+};
+
+/******************************
  * handle cascade values
  ******************************/
 var cascadeValuesHelper = {
@@ -70,7 +79,7 @@ var cascadeValuesHelper = {
     loadCascadeChildrenDataFromApi: function($element, $parentCascadeElement, parentId, parentVal) {
         apiUrl = $($element).attr('data-cascade-api-url');
         if (typeof parentVal !== 'undefined' && parentVal!=null) {
-            apiUrl = apiUrl + '/' + parentVal;
+            apiUrl = String.format(apiUrl, parentVal) ;
         }
         app.lookup.loadSelectDataFromApi($element, apiUrl, $parentCascadeElement)
     }

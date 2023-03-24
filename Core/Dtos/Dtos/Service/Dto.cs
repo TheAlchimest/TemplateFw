@@ -56,8 +56,9 @@ namespace TemplateFw.Dtos
     public class ServiceInfoDto
     {
         public int ServiceId { get; set; }
+		public string Name { get; set; }
 		public string Icon { get; set; }
-		public bool LogInRequired { get; set; }
+        public bool LogInRequired { get; set; }
 		public string Url { get; set; }
 		public string MobileUrl { get; set; }
 		public int ServiceTypeId { get; set; }

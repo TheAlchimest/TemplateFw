@@ -35,6 +35,7 @@ namespace Dashboard.Common.WebClientHelpers
             public const string GetViewAll = "Faq/getallview";
             public const string GetOne = "Faq/getone/{0}";
             public const string Info = "Faq/info/{0}";
+            public const string GetLookup = "Faq/lookup?portalId={0}&serviceId{1}";
         }
         public static class CountryUrls
         {
@@ -47,6 +48,7 @@ namespace Dashboard.Common.WebClientHelpers
             public const string GetViewAll = "Country/getallview";
             public const string GetOne = "Country/getone/{0}";
             public const string Info = "Country/info/{0}";
+            public const string GetLookup = "Country/lookup";
         }
         public static class PortalUrls
         {
@@ -59,6 +61,7 @@ namespace Dashboard.Common.WebClientHelpers
             public const string GetViewAll = "Portal/getallview";
             public const string GetOne = "Portal/getone/{0}";
             public const string Info = "Portal/info/{0}";
+            public const string GetLookup = "Portal/lookup";
         }
         public static class LanguageUrls
         {
@@ -71,6 +74,7 @@ namespace Dashboard.Common.WebClientHelpers
             public const string GetViewAll = "Language/getallview";
             public const string GetOne = "Language/getone/{0}";
             public const string Info = "Language/info/{0}";
+            public const string GetLookup = "Language/lookup";
         }
         public static class ServiceUrls
         {
@@ -83,6 +87,7 @@ namespace Dashboard.Common.WebClientHelpers
             public const string GetViewAll = "Service/getallview";
             public const string GetOne = "Service/getone/{0}";
             public const string Info = "Service/info/{0}";
+            public const string GetLookup = "Service/lookup?portalId={0}&serviceTypeId{1}";
         }
         public static class ServiceTypeUrls
         {
@@ -95,6 +100,7 @@ namespace Dashboard.Common.WebClientHelpers
             public const string GetViewAll = "ServiceType/getallview";
             public const string GetOne = "ServiceType/getone/{0}";
             public const string Info = "ServiceType/info/{0}";
+            public const string GetLookup = "ServiceType/lookup";
         }
         public static class SourceUIApplicationUrls
         {

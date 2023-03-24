@@ -10,6 +10,8 @@ using TemplateFw.Shared.Application.Exceptions;
 using TemplateFw.Shared.Application.Services;
 using TemplateFw.Shared.Domain.Enums;
 using TemplateFw.Shared.Dtos.Collections;
+using TemplateFw.Dtos.Dtos.Common;
+using System.Linq;
 
 namespace TemplateFw.Application.Services
 {
@@ -91,14 +93,31 @@ namespace TemplateFw.Application.Services
         }
         #endregion
 
-
-
         #region GetAllInfoPagedAsync
         public async Task<PagedList<LanguageInfoDto>> GetAllInfoPagedAsync(LanguageFilter filter)
         {
             return await _repository.GetAllInfoPagedAsync(filter);
         }
         #endregion
+
+        #region GetAllAsLookup
+        public async Task<List<LookupDto>> GetAllAsLookupAsync()
+        {
+            var filter = new LanguageFilter();
+            return await GetAllAsLookupAsync(filter);
+        }
+        public async Task<List<LookupDto>> GetAllAsLookupAsync(LanguageFilter filter)
+        {
+            var list = await GetAllAsync(filter);
+            return list.Select(e => new LookupDto
+            {
+                Id = e.LanguageId,
+                Text = e.Name
+            }).ToList();
+        }
+        #endregion
+
+
 
 
     }

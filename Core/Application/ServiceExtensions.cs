@@ -20,11 +20,14 @@ namespace TemplateFw.Application
             var mapperAssembly = Assembly.GetExecutingAssembly();
             services.AddAutoMapper(mapperAssembly);
             //services.AddScoped<IAnnounceService, AnnounceService>();
+            services.AddScoped<ICountryService, CountryService>();
             services.AddScoped<IFaqService, FaqService>();
             services.AddScoped<ILanguageService, LanguageService>();
+            services.AddScoped<IPortalService, PortalService>();
+            services.AddScoped<IServiceService, ServiceService>();
+            services.AddScoped<IServiceTypeService, ServiceTypeService>();
             services.AddScoped<IUserInfoService, UserInfoService>();
             //services.AddScoped<IAttachmentService, AttachmentService>();
-            services.AddScoped<ICountryService, CountryService>();
             services.AddScoped<ILookupService, LookupService>();
             services.AddScoped<IActionLogService, ActionLogService>();
             services.AddScoped<IActionLogService, ActionLogService>();

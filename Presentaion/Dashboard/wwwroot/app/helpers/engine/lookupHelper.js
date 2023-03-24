@@ -81,7 +81,7 @@ var lookupHelper = {
         });
         get.done(function (data, status, xhr) {
             if (xhr.responseJSON != null) {
-                var jsonOptions = xhr.responseJSON;
+                var jsonOptions = xhr.responseJSON.Data;
                 console.log(xhr.responseJSON);
                 $element.find('option').remove();
                 let selectedValue = null;
@@ -102,30 +102,30 @@ var lookupHelper = {
                 //loop throw json and add options 
                 let valAttr = '';
                 $.each(jsonOptions, function (index, element) {
-                    if (element.id !== 'undefined' && element.id !== null) {
+                    if (element.Id !== 'undefined' && element.Id !== null) {
                         var isValueExists = false;
                         if ($element.attr('data-multi-select') == 'true' && selectedValue !== null) {
                             var ids = selectedValue.split(",");                           
                             ids.forEach(function (currentValue, index, arr) {
-                                if (currentValue == element.id)
+                                if (currentValue == element.Id)
                                     isValueExists = true;
                             });
                         }
                         else {                           
-                            if (selectedValue !== null && element.id == selectedValue) {
+                            if (selectedValue !== null && element.Id == selectedValue) {
                                 isValueExists = true;
                             }
                         }
 
                         if (isValueExists) {
-                            $element.append(`<option value="${element.id}" selected>${element.text}</option>`);
+                            $element.append(`<option value="${element.Id}" selected>${element.Text}</option>`);
                         }
                         else {
-                            $element.append(`<option value="${element.id}">${element.text}</option>`);
+                            $element.append(`<option value="${element.Id}">${element.Text}</option>`);
                         }
                     }
                     else {
-                        $element.append(`<option>${element.text}</option>`);
+                        $element.append(`<option>${element.Text}</option>`);
 
                     }
                 });
@@ -160,7 +160,7 @@ var lookupHelper = {
         get.done(function (data, status, xhr) {
 
             if (xhr.responseJSON != null) {
-                var jsonOptions = xhr.responseJSON;
+                var jsonOptions = xhr.responseJSON.Data;
                 console.log(xhr.responseJSON);
                 $element.find('radio').remove();
                 let selectedValue = null;
@@ -173,7 +173,7 @@ var lookupHelper = {
                 let id = null;
                 let checked = null;
                 $.each(jsonOptions, function (index, element) {
-                    if (selectedValue !== null && element.id == selectedValue) {
+                    if (selectedValue !== null && element.Id == selectedValue) {
                         checked = 'checked';
                     }
                     else {
@@ -181,7 +181,7 @@ var lookupHelper = {
                     }
                     ++index;
                     id = name + index;
-                    $element.append(app.template.returnRadio(name, id, element.id, element.text, checked));
+                    $element.append(app.template.returnRadio(name, id, element.Id, element.Text, checked));
                 });
             }
             else {
@@ -202,7 +202,7 @@ var lookupHelper = {
         get.done(function (data, status, xhr) {
 
             if (xhr.responseJSON != null) {
-                var jsonOptions = xhr.responseJSON;
+                var jsonOptions = xhr.responseJSON.Data;
                 console.log(xhr.responseJSON);
                 $element.find('radio').remove();
                 let selectedValue = null;
@@ -215,7 +215,7 @@ var lookupHelper = {
                 let id = null;
                 let checked = null;
                 $.each(jsonOptions, function (index, element) {
-                    if (selectedValue !== null && element.id == selectedValue) {
+                    if (selectedValue !== null && element.Id == selectedValue) {
                         checked = 'checked';
                     }
                     else {
@@ -223,7 +223,7 @@ var lookupHelper = {
                     }
                     ++index;
                     id = name + index;
-                    $element.append(app.template.returnCheckbox(name, id, element.id, element.text, checked));
+                    $element.append(app.template.returnCheckbox(name, id, element.Id, element.Text, checked));
                 });
             }
             else {

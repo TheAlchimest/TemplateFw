@@ -1,4 +1,6 @@
-﻿var cascadeVisibilityHelper = {
+﻿
+
+var cascadeVisibilityHelper = {
     run: function () {
         let helper = cascadeVisibilityHelper;
         //first collect cascade values parents 

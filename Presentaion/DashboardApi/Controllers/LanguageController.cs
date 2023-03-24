@@ -7,6 +7,7 @@ using TemplateFw.Shared.Domain.Enums;
 using TemplateFw.Shared.Domain.GenericResponse;
 using TemplateFw.Shared.Dtos.Collections;
 using TemplateFw.Domain.Models;
+using TemplateFw.Dtos.Dtos.Common;
 
 namespace TemplateFw.DashboardApi.Controllers
 {
@@ -89,7 +90,15 @@ namespace TemplateFw.DashboardApi.Controllers
         {
             return await ApiResponse(() => languageService.DeleteVirtuallyAsync(id), OperationTypes.Delete);
         }
+        [HttpGet]
+        [ProducesResponseType(201)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(500)]
+        [Route("lookup")]
+        public async Task<GenericApiResponse<List<LookupDto>>> GetAllAsLookup()
+        {
+            return await GenericApiResponse(() => languageService.GetAllAsLookupAsync(), OperationTypes.GetList);
+        }
 
-        
     }
 }
