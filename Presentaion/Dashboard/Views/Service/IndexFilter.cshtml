@@ -3,33 +3,44 @@
 <div class="card master-form">
     <div class="card-body">
         <form id="grid-filter" class="grid-filter"
-              action="/service/IndexContentl"
+              action="/service/IndexContent"
               data-container-id="containerBox"
               onsubmit="actionsController.search(this,event)">
             <input type="hidden" id="PageNumber" name="PageNumber" value="@Model.PageNumber" />
             <div class="row">
-                <div class="col-md-6 eng-form-element">
+                <div class="col-md-4 eng-form-element">
+<div class="form-group select2-lg">
+    <label class="form-label-small px-3" for="ServiceTypeId">@localizer["ServiceType"] :</label>
+    <select class="form-control form-select select2 select2-control select-dynamic"   id="ServiceTypeId" name="ServiceTypeId" data-api-url="lookup/servicetypes" data-default-val="" data-default-text="@localizer["All"]" value="@(Model.ServiceTypeId)"  data-smk-max="0">
+    </select>
+    
+</div>
+</div>
+<div class="col-md-4 eng-form-element">
+<div class="form-group select2-lg">
+    <label class="form-label-small px-3" for="PortalId">@localizer["Portal"] :</label>
+    <select class="form-control form-select select2 select2-control select-dynamic"   id="PortalId" name="PortalId" data-api-url="lookup/portals" data-default-val="" data-default-text="@localizer["All"]" value="@(Model.PortalId)"  data-smk-max="0">
+    </select>
+    
+</div>
+</div>
+<div class="col-md-4 eng-form-element">
+<div class="form-group select2-lg">
+    <label class="form-label-small px-3" for="PageSize">@localizer[""] :</label>
+    <select class="form-control form-select select2 select2-control static-select"   id="PageSize" name="PageSize" value="@(Model.PageSize)">
+        <option value="20">20</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+    </select>
+    
+</div>
+</div>
+<div class="col-md-12 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="Name">Name ar <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="Name" name="Name" placeholder="Enter " required maxlength="120" max="0"  smk-error-msg-required="Please Enter " data-smk-max="0">
+    <label class="form-label-small px-3" for="Name">@localizer["Service_NameAr"] :</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="Name" name="Name" placeholder="" maxlength="120" value="@(Model.Name)"  data-smk-max="0">
     
     <i class="accent"></i>
-</div>
-</div>
-<div class="col-md-6 eng-form-element">
-<div class="form-group select2-lg">
-    <label class="form-label-small px-3" for="ServiceTypeId">Service type id <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <select class="form-control form-select select2 select2-control static-select"    data-type="" data-smk-type=""  data-type="" data-smk-type="" id="ServiceTypeId" name="ServiceTypeId" placeholder="Choose " required maxlength="4" max="0"  smk-error-msg-required="Choose " data-smk-max="0">
-    </select>
-    
-</div>
-</div>
-<div class="col-md-6 eng-form-element">
-<div class="form-group select2-lg">
-    <label class="form-label-small px-3" for="PortalId">Portal id :</label>
-    <select class="form-control form-select select2 select2-control static-select"    data-type="" data-smk-type=""  data-type="" data-smk-type="" id="PortalId" name="PortalId" placeholder="Choose " maxlength="4" max="0"  data-smk-max="0">
-    </select>
-    
 </div>
 </div>
 
@@ -43,4 +54,4 @@
         $('#grid-filter').trigger('submit');
 
     });
-</script>
+</script>   

@@ -14,52 +14,58 @@
         </div>
     </div>
     <div class="card master-form">
+        <div class="card-header">
+            <h4 class="card-title fs-16 text-primary">
+            </h4>
+        </div>
         <div class="card-body">
-            <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="PortalId" name="PortalId" placeholder="Enter " required maxlength="4" max="0"  smk-error-msg-required="Please Enter " data-smk-max="0"><div class="col-md-6 eng-form-element">
+            <div class="row">
+                <input class="form-control"   type="hidden" data-type="hidden" data-smk-type="hidden" id="PortalId" name="PortalId" placeholder="" required maxlength="4" value="@(Model.PortalId)"  smk-error-msg-required="" data-smk-max="0"><div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="NameAr">Name ar <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="NameAr" name="NameAr" placeholder="Enter " required maxlength="50" max="0"  smk-error-msg-required="Please Enter " data-smk-max="0">
+    <label class="form-label-small px-3" for="NameAr">@localizer["Portal_NameAr"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="NameAr" name="NameAr" placeholder="" required maxlength="50" value="@(Model.NameAr)"  smk-error-msg-required="" data-smk-max="0">
     
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="NameEn">Name en <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="NameEn" name="NameEn" placeholder="Enter " required maxlength="50" max="0"  smk-error-msg-required="Please Enter " data-smk-max="0">
+    <label class="form-label-small px-3" for="NameEn">@localizer["Portal_NameEn"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="NameEn" name="NameEn" placeholder="" required maxlength="50" value="@(Model.NameEn)"  smk-error-msg-required="" data-smk-max="0">
     
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="DescriptionAr">Description ar :</label>
+    <label class="form-label-small px-3" for="DescriptionAr">@localizer["Portal_DescriptionAr"] :</label>
     <textarea rows="4"
               class="form-control"
-                data-type="" data-smk-type=""  data-type="" data-smk-type="" id="DescriptionAr" name="DescriptionAr" placeholder="Enter " maxlength="500" max="0"  data-smk-max="0"></textarea>
+               id="DescriptionAr" name="DescriptionAr" placeholder="" maxlength="500" value="@(Model.DescriptionAr)"  data-smk-max="0">@(Model.DescriptionAr)</textarea>
               
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="DescriptionEn">Description en :</label>
+    <label class="form-label-small px-3" for="DescriptionEn">@localizer["Portal_DescriptionEn"] :</label>
     <textarea rows="4"
               class="form-control"
-                data-type="" data-smk-type=""  data-type="" data-smk-type="" id="DescriptionEn" name="DescriptionEn" placeholder="Enter " maxlength="500" max="0"  data-smk-max="0"></textarea>
+               id="DescriptionEn" name="DescriptionEn" placeholder="" maxlength="500" value="@(Model.DescriptionEn)"  data-smk-max="0">@(Model.DescriptionEn)</textarea>
               
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="Link">Link <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="Link" name="Link" placeholder="Enter " required maxlength="250" max="0"  smk-error-msg-required="Please Enter " data-smk-max="0">
+    <label class="form-label-small px-3" for="Link">@localizer["Portal_Link"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   type="url" data-type="url" data-smk-type="url" id="Link" name="Link" placeholder="" required maxlength="250" value="@(Model.Link)"  smk-error-msg-required="" data-smk-max="0">
     
     <i class="accent"></i>
 </div>
 </div>
 
+            </div>
         </div>
     </div>
     
@@ -78,7 +84,6 @@
 
     </div>
 </form>
-
 
 <script>
 

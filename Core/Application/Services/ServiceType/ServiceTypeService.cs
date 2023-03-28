@@ -10,7 +10,6 @@ using TemplateFw.Shared.Application.Exceptions;
 using TemplateFw.Shared.Application.Services;
 using TemplateFw.Shared.Domain.Enums;
 using TemplateFw.Shared.Dtos.Collections;
-using TemplateFw.Dtos.Dtos.Common;
 using System.Linq;
 
 namespace TemplateFw.Application.Services
@@ -102,23 +101,20 @@ namespace TemplateFw.Application.Services
         }
         #endregion
 
-        #region GetAllAsLookup
-        public async Task<List<LookupDto>> GetAllAsLookupAsync()
+        #region GetLookupAsync
+        public async Task<List<LookupDto>> GetLookupAsync()
         {
-            var filter = new ServiceTypeFilter();
+            var filter = new ServiceTypeFilter
+            {
+                
+            };
             return await GetAllAsLookupAsync(filter);
         }
         public async Task<List<LookupDto>> GetAllAsLookupAsync(ServiceTypeFilter filter)
         {
             var list = await GetAllAsync(filter);
-            return list.Select(e => new LookupDto
-            {
-                Id = e.ServiceTypeId,
-                Text = e.Name
-            }).ToList();
+            return list.Select(e => new LookupDto(e.ServiceTypeId,e.Name)).ToList();
         }
         #endregion
-
-
     }
 }

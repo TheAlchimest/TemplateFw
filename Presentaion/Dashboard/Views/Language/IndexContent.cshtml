@@ -27,7 +27,7 @@
             {
                 <tr>
                     
-<td><strong>@itemNo</strong></td>
+<td><strong>@(itemNo++)</strong></td>
 <td><b>@item.Name</b></td>
 <td>@Html.Raw(item.CreationDate.ConvertToGridDateTime())</td>
 <td>@Html.Raw(item.LastModificationDate.ConvertToGridDateTime())</td>

@@ -1,4 +1,4 @@
-﻿namespace TemplateFw.Dtos.Dtos
+﻿namespace TemplateFw.Dtos
 {
 
 }

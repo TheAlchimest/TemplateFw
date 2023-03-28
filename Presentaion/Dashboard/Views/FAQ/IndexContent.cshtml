@@ -2,50 +2,50 @@
 @inject IOptions<WebSettings> webSettings
 @model PagedList<FaqInfoDto>
 @{
-	int itemNo = Model.FirstItemNo;
+    int itemNo = Model.FirstItemNo;
 }
 <h6 class="card-title-small align-items-center paging-items-info">
-	<i class="fad fa-stream text-muted"></i>&nbsp;
-	عرض البيانات <span id="spItemsCount" class="text-primary">( @(Model.Items.Count()) )</span> عنصر من اجمالي <span id="spTotalCount" class="text-primary">( @(Model.TotalCount) )</span>
+    <i class="fad fa-stream text-muted"></i>&nbsp;
+    عرض البيانات <span id="spItemsCount" class="text-primary">( @(Model.Items.Count()) )</span> عنصر من اجمالي <span id="spTotalCount" class="text-primary">( @(Model.TotalCount ) )</span>
 </h6>
 
 <div class="table-responsive">
-	<table class="table table-responsive-md table-hover">
-		<thead>
-			<tr>
+    <table class="table table-responsive-md table-hover">
+        <thead>
+            <tr>
+                
+<th><strong>#</strong></th>
+<th><strong>@localizer["Question"]</strong></th>
+<th><strong>@localizer["PortalName"]</strong></th>
+<th><strong>@localizer["ServiceName"]</strong></th>
+<th><strong>@localizer["CreationDate"]</strong></th>
+<th><strong>@localizer["LastModificationDate"]</strong></th>
+<th class="text-center"><strong>@localizer["ActionEdit"]</strong></th>
+<th class="text-center"><strong>@localizer["ActionDelete"]</strong></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Items)
+            {
+                <tr>
+                    
+<td><strong>@(itemNo++)</strong></td>
+<td><b>@item.Question</b></td>
+<td><b>@item.PortalName</b></td>
+<td><b>@item.ServiceName</b></td>
+<td>@Html.Raw(item.CreationDate.ConvertToGridDateTime())</td>
+<td>@Html.Raw(item.LastModificationDate.ConvertToGridDateTime())</td>
+<td class="text-center"><a href="#!/faq/edit/@(StringCipher.Encrypt(item.FaqId.ToString()))" class="btn btn-outline-primary btn-sm py-1 mx-1">@localizer["ActionEdit"]</a></td>
+<td class="text-center"><button onclick="actionsController.delete(this);" data-title="@item.Question" data-action-url="/faq/Delete/@item.FaqId" data-to-post='{"id":@(item.FaqId)}' class="btn btn-outline-danger btn-md py-1">@localizer["ActionDelete"]</button></td>
+                </tr>
+                    }
+            @if (Model.Items.Count() <= 0 || Model == null)
+            {
+            <tr><td colspan="8" class="text-center">@localizer["ThereIsNoData"]</td></tr>
+            }
 
-				<th><strong>#</strong></th>
-				<th><strong>@ModulesResources.Faq_Question</strong></th>
-				<th><strong>@localizer["Faq_Question"]</strong></th>
-				<th><strong>@localizer["Faq_Service"]</strong></th>
-				<th><strong>@localizer["CreationDate"]</strong></th>
-				<th><strong>@localizer["LastModificationDate"]</strong></th>
-				<th class="text-center"><strong>@localizer["ActionEdit"]</strong></th>
-				<th class="text-center"><strong>@localizer["ActionDelete"]</strong></th>
-			</tr>
-		</thead>
-		<tbody>
-			@foreach (var item in Model.Items)
-			{
-				<tr>
-
-					<td><strong>@(itemNo++)</strong></td>
-					<td><b>@item.Question</b></td>
-					<td><b>@item.PortalName</b></td>
-					<td><b>@item.ServiceName</b></td>
-					<td>@Html.Raw(item.CreationDate.ConvertToGridDateTime())</td>
-					<td>@Html.Raw(item.LastModificationDate.ConvertToGridDateTime())</td>
-					<td class="text-center"><a href="#!/faq/edit/@(StringCipher.Encrypt(item.FaqId.ToString()))" class="btn btn-outline-primary btn-sm py-1 mx-1">@localizer["ActionEdit"]</a></td>
-					<td class="text-center"><button onclick="actionsController.delete(this);" data-title="@item.Question" data-action-url="/faq/Delete/@item.FaqId" data-to-post='{"id":@(item.FaqId)}' class="btn btn-outline-danger btn-md py-1">@localizer["ActionDelete"]</button></td>
-				</tr>
-			}
-			@if (Model.Items.Count() <= 0 || Model == null)
-			{
-				<tr><td colspan="8" class="text-center">@localizer["ThereIsNoData"]</td></tr>
-			}
-
-		</tbody>
-	</table>
+                </tbody>
+    </table>
 </div>
 @Html.Partial("/Views/Shared/paging.cshtml", Model)
 

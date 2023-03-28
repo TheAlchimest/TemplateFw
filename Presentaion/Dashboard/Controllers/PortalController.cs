@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TemplateFw.Dashboard.Auth;
 using TemplateFw.Dtos.Common;
-using TemplateFw.Dtos.Dtos.Common;
 using TemplateFw.Dtos;
 using TemplateFw.Shared.Domain.Enums;
 using TemplateFw.Shared.Domain.GenericResponse;
@@ -128,6 +127,5 @@ namespace TemplateFw.Dashboard.Controllers
         }
         #endregion
 
-        
     }
 }

@@ -87,7 +87,7 @@ namespace Dashboard.Common.WebClientHelpers
             public const string GetViewAll = "Service/getallview";
             public const string GetOne = "Service/getone/{0}";
             public const string Info = "Service/info/{0}";
-            public const string GetLookup = "Service/lookup?portalId={0}&serviceTypeId{1}";
+            public const string GetLookup = "Service/lookup?serviceTypeId={0}&portalId={1}";
         }
         public static class ServiceTypeUrls
         {

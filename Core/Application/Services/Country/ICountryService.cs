@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using TemplateFw.Dtos;
-using TemplateFw.Dtos.Dtos.Common;
+using TemplateFw.Dtos.Common;
 using TemplateFw.Shared.Domain.Enums;
 using TemplateFw.Shared.Dtos.Collections;
 
@@ -12,12 +12,12 @@ namespace TemplateFw.Application.Services
         Task<bool> CreateAsync(CountryDto dto);
         Task<bool> DeletePermanentlyAsync(int id);
         Task<bool> DeleteVirtuallyAsync(int id);
-        Task<List<LookupDto>> GetAllAsLookupAsync();
-        Task<List<LookupDto>> GetAllAsLookupAsync(CountryFilter filter);
         Task<List<CountryInfoDto>> GetAllAsync(CountryFilter filter);
         Task<PagedList<CountryInfoDto>> GetAllInfoPagedAsync(CountryFilter filter);
         Task<CountryInfoDto> GetInfoByIdAsync(int id, EnumLanguage lang);
         Task<CountryDto> GetOneByIdAsync(int id);
         Task<bool> UpdateAsync(CountryDto dto);
+        Task<List<LookupDto>> GetLookupAsync();
+        Task<List<LookupDto>> GetAllAsLookupAsync(CountryFilter filter);
     }
 }

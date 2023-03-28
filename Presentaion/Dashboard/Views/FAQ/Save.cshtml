@@ -14,60 +14,80 @@
         </div>
     </div>
     <div class="card master-form">
+        <div class="card-header">
+            <h4 class="card-title fs-16 text-primary">
+            </h4>
+        </div>
         <div class="card-body">
-            <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="FaqId" name="FaqId" placeholder="Enter " required maxlength="4" max="0"  smk-error-msg-required="Please Enter " data-smk-max="0"><div class="col-md-6 eng-form-element">
+            <div class="row">
+                <input class="form-control"   type="hidden" data-type="hidden" data-smk-type="hidden" id="FaqId" name="FaqId" placeholder="" required maxlength="4" value="@(Model.FaqId)"  smk-error-msg-required="" data-smk-max="0"><div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="QuestionAr">Question ar :</label>
-    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="QuestionAr" name="QuestionAr" placeholder="Enter " maxlength="150" max="0"  data-smk-max="0">
+    <label class="form-label-small px-3" for="QuestionAr">@localizer["Faq_QuestionAr"] :</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="QuestionAr" name="QuestionAr" placeholder="" maxlength="150" value="@(Model.QuestionAr)"  data-smk-max="0">
     
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="QuestionEn">Question en :</label>
-    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="QuestionEn" name="QuestionEn" placeholder="Enter " maxlength="150" max="0"  data-smk-max="0">
+    <label class="form-label-small px-3" for="QuestionEn">@localizer["Faq_QuestionEn"] :</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="QuestionEn" name="QuestionEn" placeholder="" maxlength="150" value="@(Model.QuestionEn)"  data-smk-max="0">
     
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="AnswerAr">Answer ar <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <label class="form-label-small px-3" for="AnswerAr">@localizer["Faq_AnswerAr"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
     <textarea rows="4"
               class="form-control"
-                data-type="" data-smk-type=""  data-type="" data-smk-type="" id="AnswerAr" name="AnswerAr" placeholder="Enter " required maxlength="2000" max="0"  smk-error-msg-required="Please Enter " data-smk-max="0"></textarea>
+               id="AnswerAr" name="AnswerAr" placeholder="" required maxlength="2000" value="@(Model.AnswerAr)"  smk-error-msg-required="" data-smk-max="0">@(Model.AnswerAr)</textarea>
               
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="AnswerEn">Answer en <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <label class="form-label-small px-3" for="AnswerEn">@localizer["Faq_AnswerEn"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
     <textarea rows="4"
               class="form-control"
-                data-type="" data-smk-type=""  data-type="" data-smk-type="" id="AnswerEn" name="AnswerEn" placeholder="Enter " required maxlength="2000" max="0"  smk-error-msg-required="Please Enter " data-smk-max="0"></textarea>
+               id="AnswerEn" name="AnswerEn" placeholder="" required maxlength="2000" value="@(Model.AnswerEn)"  smk-error-msg-required="" data-smk-max="0">@(Model.AnswerEn)</textarea>
               
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group select2-lg">
-    <label class="form-label-small px-3" for="PortalId">Portal id <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <select class="form-control form-select select2 select2-control static-select"    data-type="" data-smk-type=""  data-type="" data-smk-type="" id="PortalId" name="PortalId" placeholder="Choose " required maxlength="4" max="0"  smk-error-msg-required="Choose " data-smk-max="0">
-    </select>
+    <label class="form-label-small px-3" for="PortalId">@localizer["Portal"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+@await Html.PartialAsync("/Views/RunTimeControls/Select.cshtml",
+               new TemplateFw.Shared.Dto.RunTimeSelectControl(){
+                  Id="PortalId",
+                   AdditionalAttributes = "",
+                   ApiUrl = webSettings.Value.LookupApiUrl+ "lookup/portals", 
+                   Value = Model.PortalId.ToString(),
+                   AddDefaultOption=(!isUpdateMode)
+               });
     
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group select2-lg">
-    <label class="form-label-small px-3" for="ServiceId">Service id :</label>
-    <select class="form-control form-select select2 select2-control static-select"    data-type="" data-smk-type=""  data-type="" data-smk-type="" id="ServiceId" name="ServiceId" placeholder="Choose " maxlength="4" max="0"  data-smk-max="0">
-    </select>
+    <label class="form-label-small px-3" for="ServiceId">@localizer["Service"] :</label>
+@await Html.PartialAsync("/Views/RunTimeControls/Select.cshtml",
+               new TemplateFw.Shared.Dto.RunTimeSelectControl(){
+                  Id="ServiceId",
+                   AdditionalAttributes = "",
+                   ApiUrl = webSettings.Value.LookupApiUrl+ "lookup/services", 
+                   CascadeWith = "PortalId", 
+                   CascadeApiUrl = webSettings.Value.LookupApiUrl+ "lookup/services?portalId=", 
+                   Value = Model.ServiceId.ToString(),
+                   AddDefaultOption=(!isUpdateMode)
+               });
     
 </div>
 </div>
 
+            </div>
         </div>
     </div>
     
@@ -87,7 +107,6 @@
     </div>
 </form>
 
-
 <script>
 
     $("#frmForm :input").change(function () {
@@ -96,7 +115,7 @@
 
     function saveForm(obj, event) {
 
-        if ($("frmForm").attr("data-is-update-mode") === 'false') {
+        if ($("#frmForm").data("changed") || $("#frmForm").attr("data-is-update-mode") === 'false') {
             app.form.submit(obj, event)
         }
         else {

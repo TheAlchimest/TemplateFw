@@ -1045,6 +1045,9 @@
   <data name="OTPSentSuccessfully" xml:space="preserve">
     <value>Verification code sent successfully</value>
   </data>
+  <data name="PageSize" xml:space="preserve">
+    <value>Items count</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>The password</value>
   </data>

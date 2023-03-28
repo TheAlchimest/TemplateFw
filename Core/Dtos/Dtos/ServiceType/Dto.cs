@@ -21,9 +21,9 @@ namespace TemplateFw.Dtos
 
     public class ServiceTypeInfoDto
     {
-		public string Name { get; set; }
         public int ServiceTypeId { get; set; }
-        public bool IsAvailable { get; set; }
+		public string Name { get; set; }
+		public bool IsAvailable { get; set; }
 		public string CreatedBy { get; set; }
 		public DateTime CreationDate { get; set; }
 		public string LastModifiedBy { get; set; }

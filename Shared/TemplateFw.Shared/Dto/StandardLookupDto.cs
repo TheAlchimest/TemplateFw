@@ -20,6 +20,8 @@
         public bool Required { get; set; } = true;
         public string Id { get; set; }
         public string ApiUrl { get; set; }
+        public string CascadeApiUrl { get; set; }
+        public string CascadeWith { get; set; }
         public string AdditionalAttributes { get; set; } = "";
         public string Value { get; set; }
         public string DefaultText { get; set; } = "";

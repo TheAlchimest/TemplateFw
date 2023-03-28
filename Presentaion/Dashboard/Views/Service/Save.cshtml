@@ -14,318 +14,336 @@
         </div>
     </div>
     <div class="card master-form">
+        <div class="card-header">
+            <h4 class="card-title fs-16 text-primary">
+            </h4>
+        </div>
         <div class="card-body">
-            <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="ServiceId" name="ServiceId" placeholder="Enter " required maxlength="4" max="0"  smk-error-msg-required="Please Enter " data-smk-max="0"><div class="col-md-6 eng-form-element">
+            <div class="row">
+                <input class="form-control"   type="hidden" data-type="hidden" data-smk-type="hidden" id="ServiceId" name="ServiceId" placeholder="" required maxlength="4" value="@(Model.ServiceId)"  smk-error-msg-required="" data-smk-max="0"><div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="NameAr">Name ar <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="NameAr" name="NameAr" placeholder="Enter " required maxlength="120" max="0"  smk-error-msg-required="Please Enter " data-smk-max="0">
+    <label class="form-label-small px-3" for="NameAr">@localizer["Service_NameAr"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="NameAr" name="NameAr" placeholder="" required maxlength="120" value="@(Model.NameAr)"  smk-error-msg-required="" data-smk-max="0">
     
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="NameEn">Name en <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="NameEn" name="NameEn" placeholder="Enter " required maxlength="120" max="0"  smk-error-msg-required="Please Enter " data-smk-max="0">
+    <label class="form-label-small px-3" for="NameEn">@localizer["Service_NameEn"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="NameEn" name="NameEn" placeholder="" required maxlength="120" value="@(Model.NameEn)"  smk-error-msg-required="" data-smk-max="0">
     
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="Icon">Icon :</label>
-    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="Icon" name="Icon" placeholder="Enter " maxlength="30" max="0"  data-smk-max="0">
+    <label class="form-label-small px-3" for="Icon">@localizer["Service_Icon"] :</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="Icon" name="Icon" placeholder="" maxlength="30" value="@(Model.Icon)"  data-smk-max="0">
     
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="LogInRequired">Log in required <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <input class="form-control"   data-type="" data-smk-type=""  data-type="" data-smk-type="" id="LogInRequired" name="LogInRequired" placeholder="Enter " required maxlength="1" max="0"  smk-error-msg-required="Please Enter " data-smk-max="0">
+    <label class="form-label-small px-3" for="LogInRequired">@localizer["Service_LogInRequired"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   data-type="yesno" data-smk-type="yesno" id="LogInRequired" name="LogInRequired" placeholder="" required maxlength="1" value="@(Model.LogInRequired)"  smk-error-msg-required="" data-smk-max="0">
     
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="Url">Url <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="Url" name="Url" placeholder="Enter " required maxlength="500" max="0"  smk-error-msg-required="Please Enter " data-smk-max="0">
+    <label class="form-label-small px-3" for="Url">@localizer["Service_Url"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   type="url" data-type="url" data-smk-type="url" id="Url" name="Url" placeholder="" required maxlength="500" value="@(Model.Url)"  smk-error-msg-required="" data-smk-max="0">
     
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="MobileUrl">Mobile url :</label>
-    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="MobileUrl" name="MobileUrl" placeholder="Enter " maxlength="500" max="0"  data-smk-max="0">
-    
-    <i class="accent"></i>
-</div>
-</div>
-<div class="col-md-6 eng-form-element">
-<div class="form-group select2-lg">
-    <label class="form-label-small px-3" for="ServiceTypeId">Service type id <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <select class="form-control form-select select2 select2-control static-select"    data-type="" data-smk-type=""  data-type="" data-smk-type="" id="ServiceTypeId" name="ServiceTypeId" placeholder="Choose " required maxlength="4" max="0"  smk-error-msg-required="Choose " data-smk-max="0">
-    </select>
-    
-</div>
-</div>
-<div class="col-md-6 eng-form-element">
-<div class="form-group">
-    <label class="form-label-small px-3" for="PdfMediaId">Pdf media id :</label>
-    <textarea rows="4"
-              class="form-control"
-                data-type="" data-smk-type=""  data-type="" data-smk-type="" id="PdfMediaId" name="PdfMediaId" placeholder="Enter " maxlength="250" max="0"  data-smk-max="0"></textarea>
-              
-    <i class="accent"></i>
-</div>
-</div>
-<div class="col-md-6 eng-form-element">
-<div class="form-group">
-    <label class="form-label-small px-3" for="Video">Video :</label>
-    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="Video" name="Video" placeholder="Enter " maxlength="20" max="0"  data-smk-max="0">
+    <label class="form-label-small px-3" for="MobileUrl">@localizer["Service_MobileUrl"] :</label>
+    <input class="form-control"   type="url" data-type="url" data-smk-type="url" id="MobileUrl" name="MobileUrl" placeholder="" maxlength="500" value="@(Model.MobileUrl)"  data-smk-max="0">
     
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group select2-lg">
-    <label class="form-label-small px-3" for="PortalId">Portal id :</label>
-    <select class="form-control form-select select2 select2-control static-select"    data-type="" data-smk-type=""  data-type="" data-smk-type="" id="PortalId" name="PortalId" placeholder="Choose " maxlength="4" max="0"  data-smk-max="0">
-    </select>
+    <label class="form-label-small px-3" for="ServiceTypeId">@localizer["ServiceType"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+@await Html.PartialAsync("/Views/RunTimeControls/Select.cshtml",
+               new TemplateFw.Shared.Dto.RunTimeSelectControl(){
+                  Id="ServiceTypeId",
+                   AdditionalAttributes = "",
+                   ApiUrl = webSettings.Value.LookupApiUrl+ "lookup/servicetypes", 
+                   Value = Model.ServiceTypeId.ToString(),
+                   AddDefaultOption=(!isUpdateMode)
+               });
     
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="ServiceCode">Service code <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="ServiceCode" name="ServiceCode" placeholder="Enter " required maxlength="40" max="0"  smk-error-msg-required="Please Enter " data-smk-max="0">
-    
-    <i class="accent"></i>
-</div>
-</div>
-<div class="col-md-6 eng-form-element">
-<div class="form-group">
-    <label class="form-label-small px-3" for="ShowInCatalog">Show in catalog <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <input class="form-control"   data-type="" data-smk-type=""  data-type="" data-smk-type="" id="ShowInCatalog" name="ShowInCatalog" placeholder="Enter " required maxlength="1" max="0"  smk-error-msg-required="Please Enter " data-smk-max="0">
-    
-    <i class="accent"></i>
-</div>
-</div>
-<div class="col-md-6 eng-form-element">
-<div class="form-group">
-    <label class="form-label-small px-3" for="ShowInFollowUp">Show in follow up <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <input class="form-control"   data-type="" data-smk-type=""  data-type="" data-smk-type="" id="ShowInFollowUp" name="ShowInFollowUp" placeholder="Enter " required maxlength="1" max="0"  smk-error-msg-required="Please Enter " data-smk-max="0">
-    
-    <i class="accent"></i>
-</div>
-</div>
-<div class="col-md-6 eng-form-element">
-<div class="form-group">
-    <label class="form-label-small px-3" for="ShowInAssets">Show in assets <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <input class="form-control"   data-type="" data-smk-type=""  data-type="" data-smk-type="" id="ShowInAssets" name="ShowInAssets" placeholder="Enter " required maxlength="1" max="0"  smk-error-msg-required="Please Enter " data-smk-max="0">
-    
-    <i class="accent"></i>
-</div>
-</div>
-<div class="col-md-6 eng-form-element">
-<div class="form-group">
-    <label class="form-label-small px-3" for="IsPublished">Is published <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <input class="form-control"   data-type="" data-smk-type=""  data-type="" data-smk-type="" id="IsPublished" name="IsPublished" placeholder="Enter " required maxlength="1" max="0"  smk-error-msg-required="Please Enter " data-smk-max="0">
-    
-    <i class="accent"></i>
-</div>
-</div>
-<div class="col-md-6 eng-form-element">
-<div class="form-group">
-    <label class="form-label-small px-3" for="PublishedBy">Published by :</label>
-    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="PublishedBy" name="PublishedBy" placeholder="Enter " maxlength="30" max="0"  data-smk-max="0">
-    
-    <i class="accent"></i>
-</div>
-</div>
-<div class="col-md-6 eng-form-element">
-<div class="form-group">
-    <label class="form-label-small px-3" for="PublishedAt">Published at :</label>
-    <input class="form-control"   type="text" data-type="" data-smk-type="" readonly  data-type="" data-smk-type="" id="PublishedAt" name="PublishedAt" placeholder="Enter " maxlength="8" max="0"  data-smk-max="0">
-    
-    <i class="accent"></i>
-</div>
-</div>
-<div class="col-md-6 eng-form-element">
-<div class="form-group">
-    <label class="form-label-small px-3" for="StoppedBy">Stopped by :</label>
-    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="StoppedBy" name="StoppedBy" placeholder="Enter " maxlength="30" max="0"  data-smk-max="0">
-    
-    <i class="accent"></i>
-</div>
-</div>
-<div class="col-md-6 eng-form-element">
-<div class="form-group">
-    <label class="form-label-small px-3" for="StoppedAt">Stopped at :</label>
-    <input class="form-control"   type="text" data-type="" data-smk-type="" readonly  data-type="" data-smk-type="" id="StoppedAt" name="StoppedAt" placeholder="Enter " maxlength="8" max="0"  data-smk-max="0">
-    
-    <i class="accent"></i>
-</div>
-</div>
-<div class="col-md-6 eng-form-element">
-<div class="form-group">
-    <label class="form-label-small px-3" for="ViewOrder">View order <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <input class="form-control"   type="number" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="ViewOrder" name="ViewOrder" placeholder="Enter " required maxlength="4" max="0"  smk-error-msg-required="Please Enter " data-smk-max="0">
-    
-    <i class="accent"></i>
-</div>
-</div>
-<div class="col-md-6 eng-form-element">
-<div class="form-group">
-    <label class="form-label-small px-3" for="ShortDescriptionAr">Short description ar :</label>
-    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="ShortDescriptionAr" name="ShortDescriptionAr" placeholder="Enter " maxlength="120" max="0"  data-smk-max="0">
-    
-    <i class="accent"></i>
-</div>
-</div>
-<div class="col-md-6 eng-form-element">
-<div class="form-group">
-    <label class="form-label-small px-3" for="ShortDescriptionEn">Short description en :</label>
-    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="ShortDescriptionEn" name="ShortDescriptionEn" placeholder="Enter " maxlength="120" max="0"  data-smk-max="0">
-    
-    <i class="accent"></i>
-</div>
-</div>
-<div class="col-md-6 eng-form-element">
-<div class="form-group">
-    <label class="form-label-small px-3" for="DescriptionAr">Description ar <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <label class="form-label-small px-3" for="PdfMediaId">@localizer["Service_PdfMediaId"] :</label>
     <textarea rows="4"
               class="form-control"
-                data-type="" data-smk-type=""  data-type="" data-smk-type="" id="DescriptionAr" name="DescriptionAr" placeholder="Enter " required maxlength="500" max="0"  smk-error-msg-required="Please Enter " data-smk-max="0"></textarea>
+               id="PdfMediaId" name="PdfMediaId" placeholder="" maxlength="250" value="@(Model.PdfMediaId)"  data-smk-max="0">@(Model.PdfMediaId)</textarea>
               
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="DescriptionEn">Description en <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <textarea rows="4"
-              class="form-control"
-                data-type="" data-smk-type=""  data-type="" data-smk-type="" id="DescriptionEn" name="DescriptionEn" placeholder="Enter " required maxlength="500" max="0"  smk-error-msg-required="Please Enter " data-smk-max="0"></textarea>
-              
+    <label class="form-label-small px-3" for="Video">@localizer["Service_Video"] :</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="Video" name="Video" placeholder="" maxlength="20" value="@(Model.Video)"  data-smk-max="0">
+    
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
-<div class="form-group">
-    <label class="form-label-small px-3" for="ConditionsAr">Conditions ar :</label>
-    <textarea rows="4"
-              class="form-control"
-                data-type="" data-smk-type=""  data-type="" data-smk-type="" id="ConditionsAr" name="ConditionsAr" placeholder="Enter " maxlength="1000" max="0"  data-smk-max="0"></textarea>
-              
-    <i class="accent"></i>
+<div class="form-group select2-lg">
+    <label class="form-label-small px-3" for="PortalId">@localizer["Portal"] :</label>
+@await Html.PartialAsync("/Views/RunTimeControls/Select.cshtml",
+               new TemplateFw.Shared.Dto.RunTimeSelectControl(){
+                  Id="PortalId",
+                   AdditionalAttributes = "",
+                   ApiUrl = webSettings.Value.LookupApiUrl+ "lookup/portals", 
+                   Value = Model.PortalId.ToString(),
+                   AddDefaultOption=(!isUpdateMode)
+               });
+    
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="ConditionsEn">Conditions en :</label>
-    <textarea rows="4"
-              class="form-control"
-                data-type="" data-smk-type=""  data-type="" data-smk-type="" id="ConditionsEn" name="ConditionsEn" placeholder="Enter " maxlength="1000" max="0"  data-smk-max="0"></textarea>
-              
-    <i class="accent"></i>
-</div>
-</div>
-<div class="col-md-6 eng-form-element">
-<div class="form-group">
-    <label class="form-label-small px-3" for="DocumentRequiredAr">Document required ar :</label>
-    <textarea rows="4"
-              class="form-control"
-                data-type="" data-smk-type=""  data-type="" data-smk-type="" id="DocumentRequiredAr" name="DocumentRequiredAr" placeholder="Enter " maxlength="1000" max="0"  data-smk-max="0"></textarea>
-              
-    <i class="accent"></i>
-</div>
-</div>
-<div class="col-md-6 eng-form-element">
-<div class="form-group">
-    <label class="form-label-small px-3" for="DocumentRequiredEn">Document required en :</label>
-    <textarea rows="4"
-              class="form-control"
-                data-type="" data-smk-type=""  data-type="" data-smk-type="" id="DocumentRequiredEn" name="DocumentRequiredEn" placeholder="Enter " maxlength="1000" max="0"  data-smk-max="0"></textarea>
-              
-    <i class="accent"></i>
-</div>
-</div>
-<div class="col-md-6 eng-form-element">
-<div class="form-group">
-    <label class="form-label-small px-3" for="FeesAr">Fees ar :</label>
-    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="FeesAr" name="FeesAr" placeholder="Enter " maxlength="120" max="0"  data-smk-max="0">
+    <label class="form-label-small px-3" for="ServiceCode">@localizer["Service_ServiceCode"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="ServiceCode" name="ServiceCode" placeholder="" required maxlength="40" value="@(Model.ServiceCode)"  smk-error-msg-required="" data-smk-max="0">
     
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="FeesEn">Fees en :</label>
-    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="FeesEn" name="FeesEn" placeholder="Enter " maxlength="120" max="0"  data-smk-max="0">
+    <label class="form-label-small px-3" for="ShowInCatalog">@localizer["Service_ShowInCatalog"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   data-type="yesno" data-smk-type="yesno" id="ShowInCatalog" name="ShowInCatalog" placeholder="" required maxlength="1" value="@(Model.ShowInCatalog)"  smk-error-msg-required="" data-smk-max="0">
     
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="NotesAr">Notes ar :</label>
-    <textarea rows="4"
-              class="form-control"
-                data-type="" data-smk-type=""  data-type="" data-smk-type="" id="NotesAr" name="NotesAr" placeholder="Enter " maxlength="1000" max="0"  data-smk-max="0"></textarea>
-              
-    <i class="accent"></i>
-</div>
-</div>
-<div class="col-md-6 eng-form-element">
-<div class="form-group">
-    <label class="form-label-small px-3" for="NotesEn">Notes en :</label>
-    <textarea rows="4"
-              class="form-control"
-                data-type="" data-smk-type=""  data-type="" data-smk-type="" id="NotesEn" name="NotesEn" placeholder="Enter " maxlength="1000" max="0"  data-smk-max="0"></textarea>
-              
-    <i class="accent"></i>
-</div>
-</div>
-<div class="col-md-6 eng-form-element">
-<div class="form-group">
-    <label class="form-label-small px-3" for="StepsAr">Steps ar :</label>
-    <textarea rows="4"
-              class="form-control"
-                data-type="" data-smk-type=""  data-type="" data-smk-type="" id="StepsAr" name="StepsAr" placeholder="Enter " maxlength="1000" max="0"  data-smk-max="0"></textarea>
-              
-    <i class="accent"></i>
-</div>
-</div>
-<div class="col-md-6 eng-form-element">
-<div class="form-group">
-    <label class="form-label-small px-3" for="StepsEn">Steps en :</label>
-    <textarea rows="4"
-              class="form-control"
-                data-type="" data-smk-type=""  data-type="" data-smk-type="" id="StepsEn" name="StepsEn" placeholder="Enter " maxlength="1000" max="0"  data-smk-max="0"></textarea>
-              
-    <i class="accent"></i>
-</div>
-</div>
-<div class="col-md-6 eng-form-element">
-<div class="form-group">
-    <label class="form-label-small px-3" for="TimeRequiredAr">Time required ar :</label>
-    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="TimeRequiredAr" name="TimeRequiredAr" placeholder="Enter " maxlength="120" max="0"  data-smk-max="0">
+    <label class="form-label-small px-3" for="ShowInFollowUp">@localizer["Service_ShowInFollowUp"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   data-type="yesno" data-smk-type="yesno" id="ShowInFollowUp" name="ShowInFollowUp" placeholder="" required maxlength="1" value="@(Model.ShowInFollowUp)"  smk-error-msg-required="" data-smk-max="0">
     
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="TimeRequiredEn">Time required en :</label>
-    <input class="form-control"   type="" data-type="" data-smk-type=""  data-type="" data-smk-type="" id="TimeRequiredEn" name="TimeRequiredEn" placeholder="Enter " maxlength="120" max="0"  data-smk-max="0">
+    <label class="form-label-small px-3" for="ShowInAssets">@localizer["Service_ShowInAssets"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   data-type="yesno" data-smk-type="yesno" id="ShowInAssets" name="ShowInAssets" placeholder="" required maxlength="1" value="@(Model.ShowInAssets)"  smk-error-msg-required="" data-smk-max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="IsPublished">@localizer["Service_IsPublished"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   data-type="yesno" data-smk-type="yesno" id="IsPublished" name="IsPublished" placeholder="" required maxlength="1" value="@(Model.IsPublished)"  smk-error-msg-required="" data-smk-max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="PublishedBy">@localizer["Service_PublishedBy"] :</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="PublishedBy" name="PublishedBy" placeholder="" maxlength="30" value="@(Model.PublishedBy)"  data-smk-max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="PublishedAt">@localizer["Service_PublishedAt"] :</label>
+    <input class="form-control"   type="text" data-type="datetime" data-smk-type="datetime" id="PublishedAt" name="PublishedAt" placeholder="" maxlength="8" readonly value="@(Model.PublishedAt)"  data-smk-max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="StoppedBy">@localizer["Service_StoppedBy"] :</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="StoppedBy" name="StoppedBy" placeholder="" maxlength="30" value="@(Model.StoppedBy)"  data-smk-max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="StoppedAt">@localizer["Service_StoppedAt"] :</label>
+    <input class="form-control"   type="text" data-type="datetime" data-smk-type="datetime" id="StoppedAt" name="StoppedAt" placeholder="" maxlength="8" readonly value="@(Model.StoppedAt)"  data-smk-max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="ViewOrder">@localizer["Service_ViewOrder"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   type="number" data-type="number" data-smk-type="number" id="ViewOrder" name="ViewOrder" placeholder="" required maxlength="4" value="@(Model.ViewOrder)"  smk-error-msg-required="" data-smk-max="0" max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="ShortDescriptionAr">@localizer["Service_ShortDescriptionAr"] :</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="ShortDescriptionAr" name="ShortDescriptionAr" placeholder="" maxlength="120" value="@(Model.ShortDescriptionAr)"  data-smk-max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="ShortDescriptionEn">@localizer["Service_ShortDescriptionEn"] :</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="ShortDescriptionEn" name="ShortDescriptionEn" placeholder="" maxlength="120" value="@(Model.ShortDescriptionEn)"  data-smk-max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="DescriptionAr">@localizer["Service_DescriptionAr"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <textarea rows="4"
+              class="form-control"
+               id="DescriptionAr" name="DescriptionAr" placeholder="" required maxlength="500" value="@(Model.DescriptionAr)"  smk-error-msg-required="" data-smk-max="0">@(Model.DescriptionAr)</textarea>
+              
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="DescriptionEn">@localizer["Service_DescriptionEn"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <textarea rows="4"
+              class="form-control"
+               id="DescriptionEn" name="DescriptionEn" placeholder="" required maxlength="500" value="@(Model.DescriptionEn)"  smk-error-msg-required="" data-smk-max="0">@(Model.DescriptionEn)</textarea>
+              
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="ConditionsAr">@localizer["Service_ConditionsAr"] :</label>
+    <textarea rows="4"
+              class="form-control"
+               id="ConditionsAr" name="ConditionsAr" placeholder="" maxlength="1000" value="@(Model.ConditionsAr)"  data-smk-max="0">@(Model.ConditionsAr)</textarea>
+              
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="ConditionsEn">@localizer["Service_ConditionsEn"] :</label>
+    <textarea rows="4"
+              class="form-control"
+               id="ConditionsEn" name="ConditionsEn" placeholder="" maxlength="1000" value="@(Model.ConditionsEn)"  data-smk-max="0">@(Model.ConditionsEn)</textarea>
+              
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="DocumentRequiredAr">@localizer["Service_DocumentRequiredAr"] :</label>
+    <textarea rows="4"
+              class="form-control"
+               id="DocumentRequiredAr" name="DocumentRequiredAr" placeholder="" maxlength="1000" value="@(Model.DocumentRequiredAr)"  data-smk-max="0">@(Model.DocumentRequiredAr)</textarea>
+              
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="DocumentRequiredEn">@localizer["Service_DocumentRequiredEn"] :</label>
+    <textarea rows="4"
+              class="form-control"
+               id="DocumentRequiredEn" name="DocumentRequiredEn" placeholder="" maxlength="1000" value="@(Model.DocumentRequiredEn)"  data-smk-max="0">@(Model.DocumentRequiredEn)</textarea>
+              
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="FeesAr">@localizer["Service_FeesAr"] :</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="FeesAr" name="FeesAr" placeholder="" maxlength="120" value="@(Model.FeesAr)"  data-smk-max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="FeesEn">@localizer["Service_FeesEn"] :</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="FeesEn" name="FeesEn" placeholder="" maxlength="120" value="@(Model.FeesEn)"  data-smk-max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="NotesAr">@localizer["Service_NotesAr"] :</label>
+    <textarea rows="4"
+              class="form-control"
+               id="NotesAr" name="NotesAr" placeholder="" maxlength="1000" value="@(Model.NotesAr)"  data-smk-max="0">@(Model.NotesAr)</textarea>
+              
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="NotesEn">@localizer["Service_NotesEn"] :</label>
+    <textarea rows="4"
+              class="form-control"
+               id="NotesEn" name="NotesEn" placeholder="" maxlength="1000" value="@(Model.NotesEn)"  data-smk-max="0">@(Model.NotesEn)</textarea>
+              
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="StepsAr">@localizer["Service_StepsAr"] :</label>
+    <textarea rows="4"
+              class="form-control"
+               id="StepsAr" name="StepsAr" placeholder="" maxlength="1000" value="@(Model.StepsAr)"  data-smk-max="0">@(Model.StepsAr)</textarea>
+              
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="StepsEn">@localizer["Service_StepsEn"] :</label>
+    <textarea rows="4"
+              class="form-control"
+               id="StepsEn" name="StepsEn" placeholder="" maxlength="1000" value="@(Model.StepsEn)"  data-smk-max="0">@(Model.StepsEn)</textarea>
+              
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="TimeRequiredAr">@localizer["Service_TimeRequiredAr"] :</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="TimeRequiredAr" name="TimeRequiredAr" placeholder="" maxlength="120" value="@(Model.TimeRequiredAr)"  data-smk-max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="TimeRequiredEn">@localizer["Service_TimeRequiredEn"] :</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="TimeRequiredEn" name="TimeRequiredEn" placeholder="" maxlength="120" value="@(Model.TimeRequiredEn)"  data-smk-max="0">
     
     <i class="accent"></i>
 </div>
 </div>
 
+            </div>
         </div>
     </div>
     
@@ -344,7 +362,6 @@
 
     </div>
 </form>
-
 
 <script>
 

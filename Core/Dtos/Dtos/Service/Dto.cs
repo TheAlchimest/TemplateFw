@@ -58,7 +58,7 @@ namespace TemplateFw.Dtos
         public int ServiceId { get; set; }
 		public string Name { get; set; }
 		public string Icon { get; set; }
-        public bool LogInRequired { get; set; }
+		public bool LogInRequired { get; set; }
 		public string Url { get; set; }
 		public string MobileUrl { get; set; }
 		public int ServiceTypeId { get; set; }
@@ -66,6 +66,7 @@ namespace TemplateFw.Dtos
 		public string PdfMediaId { get; set; }
 		public string Video { get; set; }
 		public int? PortalId { get; set; }
+		public string PortalName { get; set; }
 		public string ServiceCode { get; set; }
 		public bool ShowInCatalog { get; set; }
 		public bool ShowInFollowUp { get; set; }
@@ -77,6 +78,7 @@ namespace TemplateFw.Dtos
 		public DateTime? StoppedAt { get; set; }
 		public int ViewOrder { get; set; }
 		public string ShortDescription { get; set; }
+		public string Description { get; set; }
 		public string Conditions { get; set; }
 		public string DocumentRequired { get; set; }
 		public string Fees { get; set; }

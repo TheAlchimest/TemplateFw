@@ -10,7 +10,6 @@ using TemplateFw.Shared.Application.Exceptions;
 using TemplateFw.Shared.Application.Services;
 using TemplateFw.Shared.Domain.Enums;
 using TemplateFw.Shared.Dtos.Collections;
-using TemplateFw.Dtos.Dtos.Common;
 using System.Linq;
 
 namespace TemplateFw.Application.Services
@@ -95,7 +94,6 @@ namespace TemplateFw.Application.Services
 
 
 
-
         #region GetAllInfoPagedAsync
         public async Task<PagedList<FaqInfoDto>> GetAllInfoPagedAsync(FaqFilter filter)
         {
@@ -103,24 +101,20 @@ namespace TemplateFw.Application.Services
         }
         #endregion
 
-        #region GetAllAsLookup
-        public async Task<List<LookupDto>> GetAllAsLookupAsync(int? portalId = null, int? serviceId = null)
+        #region GetLookupAsync
+        public async Task<List<LookupDto>> GetLookupAsync(int? portalId = null, int? serviceId = null)
         {
             var filter = new FaqFilter
             {
                 PortalId = portalId,
-                ServiceId = serviceId
+				ServiceId = serviceId
             };
             return await GetAllAsLookupAsync(filter);
         }
         public async Task<List<LookupDto>> GetAllAsLookupAsync(FaqFilter filter)
         {
             var list = await GetAllAsync(filter);
-            return list.Select(e => new LookupDto
-            {
-                Id = e.FaqId,
-                Text = e.Question
-            }).ToList();
+            return list.Select(e => new LookupDto(e.FaqId,e.Question)).ToList();
         }
         #endregion
     }

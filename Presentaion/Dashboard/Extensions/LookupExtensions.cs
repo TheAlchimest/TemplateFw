@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc.Rendering;
-using TemplateFw.Dtos.Dtos.Common;
+using TemplateFw.Dtos.Common;
 
 namespace TemplateFw.Dashboard.Extensions
 {

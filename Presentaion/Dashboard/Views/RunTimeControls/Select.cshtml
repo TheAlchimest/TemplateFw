@@ -2,41 +2,56 @@
 @using System.Collections.Generic;
 @using System.Linq;
 @using System.Web;
+@using TemplateFw.Shared.Domain.GenericResponse;
 @using TemplateFw.Shared.Dto;
 @model TemplateFw.Shared.Dto.RunTimeSelectControl;
 @{
     var dto = Model;
-    List<StandardLookupDto> options = null;
+    GenericApiResponse<List<LookupDto>> response = null;
+    List<LookupDto> options = null;
     if (dto == null)
     {
         dto = new RunTimeSelectControl();
     }
     if(!string.IsNullOrEmpty(dto.ApiUrl))
     {
-        options = ApiHelper.GetFromApi<List<StandardLookupDto>>(dto.ApiUrl);
-      
+        response = ApiHelper.GetFromApi<GenericApiResponse<List<LookupDto>>>(dto.ApiUrl);
+
     }
-    if (options == null) {
-      options = new List<StandardLookupDto>();
+    if (response == null || !response.Status)
+    {
+        options = new List<LookupDto>();
+    }
+    else
+    {
+        options = response.Data;
     }
 
     if (dto.AddDefaultOption)
     {
-        options.Insert(0,new StandardLookupDto() { Text = dto.DefaultText, Id = dto.DefaultValue });
+        options.Insert(0,new LookupDto() { Text = dto.DefaultText, Id = dto.DefaultValue });
     }
     var val = dto.Value;
     string required = (dto.Required)?"required":"";
     string selected = "";
     string disabled = "";
+    string cascadeAttributes = "";
+    if (!string.IsNullOrEmpty(dto.CascadeWith))
+    {
+        cascadeAttributes += $"data-cascade-with=\"{dto.CascadeWith}\"";
+        cascadeAttributes += $"data-cascade-api-url=\"{dto.CascadeApiUrl}\"";
+    }
 }
 
 <select class="form-control form-select select2"  id="@dto.Id"  name="@dto.Id" @required
-@Html.Raw(dto.AdditionalAttributes)>
+@Html.Raw(cascadeAttributes)
+@Html.Raw(dto.AdditionalAttributes)
+>
   @if(options!=null && options.Count>0)
   {
     foreach(var op in options){
        selected = (val == op.Id) ? "selected" : "";
-       disabled = (op.Disabled) ? "disabled" : "";
+       //disabled = (op.Disabled) ? "disabled" : "";
        @Html.Raw($"<option value=\"{op.Id}\" {selected} {disabled} >{op.Text}</option>")
     }
   }

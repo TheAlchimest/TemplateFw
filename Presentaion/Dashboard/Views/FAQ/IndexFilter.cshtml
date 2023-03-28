@@ -8,54 +8,42 @@
               onsubmit="actionsController.search(this,event)">
             <input type="hidden" id="PageNumber" name="PageNumber" value="@Model.PageNumber" />
             <div class="row">
-                
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label class="font-w600 px-4">@localizer["Portal"]</label>
-                        <select class="select2 select-dynamic"
-                                id="PortalId"
-                                name="PortalId"
-                                data-api-url="https://localhost:5800/Lookup/Portals"
-                                data-default-val=""
-                                data-default-text="الكل">
-                        </select>
-                    </div>
-                </div>
-                <div class="col-md-4"> 
-                    <div class="form-group">
-                        <label class="font-w600 px-4">@localizer["Service"]</label>
-                        <select class="select2 select-dynamic"
-                                id="ServiceId"
-                                name="ServiceId"
-                                data-api-url="https://localhost:5800/Lookup/Services"
-                                data-cascade-api-url="https://localhost:5800/Lookup/Services?portalid="
-                                data-default-val=""
-                                data-default-text="الكل"
-                                data-cascade-with="PortalId"> </select>
+                <div class="col-md-4 eng-form-element">
+<div class="form-group select2-lg">
+    <label class="form-label-small px-3" for="PortalId">@localizer["Portal"] :</label>
+    <select class="form-control form-select select2 select2-control select-dynamic"   id="PortalId" name="PortalId" data-api-url="lookup/portals" data-default-val="" data-default-text="@localizer["All"]" value="@(Model.PortalId)"  data-smk-max="0">
+    </select>
+    
+</div>
+</div>
+<div class="col-md-4 eng-form-element">
+<div class="form-group select2-lg">
+    <label class="form-label-small px-3" for="ServiceId">@localizer["Service"] :</label>
+    <select class="form-control form-select select2 select2-control select-dynamic"   id="ServiceId" name="ServiceId" data-api-url="lookup/services" data-default-val="" data-default-text="@localizer["All"]" data-cascade-with="PortalId" data-cascade-api-url="lookup/services?portalId=" value="@(Model.ServiceId)"  data-smk-max="0">
+    </select>
+    
+</div>
+</div>
+<div class="col-md-4 eng-form-element">
+<div class="form-group select2-lg">
+    <label class="form-label-small px-3" for="PageSize">@localizer[""] :</label>
+    <select class="form-control form-select select2 select2-control static-select"   id="PageSize" name="PageSize" value="@(Model.PageSize)">
+        <option value="20">20</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+    </select>
+    
+</div>
+</div>
+<div class="col-md-12 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="Question">@localizer["Faq_QuestionAr"] :</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="Question" name="Question" placeholder="" maxlength="150" value="@(Model.Question)"  data-smk-max="0">
+    
+    <i class="accent"></i>
+</div>
+</div>
 
-
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label class="font-w600 px-4">عدد العناصر</label>
-                        <select id="ddlPageSize" name="PageSize" class="select2">
-                            <option value="20">عرض 20 عنصر بالجدول</option>
-                            <option value="50">عرض 50 عنصر بالجدول</option>
-                            <option value="100">عرض 100 عنصر بالجدول</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="form-group">
-                        <label class="form-label-small px-3" for="Question">@localizer["Question"] :</label>
-                        <input class="form-control" type="text" data-type="text" id="Question" name="Question" placeholder="Enter " maxlength="150" max="0" data-smk-max="0">
-
-                        <i class="accent"></i>
-                    </div>
-                </div>
             </div>
         </form>
     </div>
@@ -66,4 +54,4 @@
         $('#grid-filter').trigger('submit');
 
     });
-</script>
+</script>   

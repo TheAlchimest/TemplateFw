@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace TemplateFw.Dtos.Dtos.Common
+namespace TemplateFw.Dtos.Common
 {
     public class PageListDto<T>
     {

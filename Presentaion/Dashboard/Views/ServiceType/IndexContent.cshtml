@@ -15,7 +15,7 @@
             <tr>
                 
 <th><strong>#</strong></th>
-<th><strong>@localizer["CreatedBy"]</strong></th>
+<th><strong>@localizer["Name"]</strong></th>
 <th><strong>@localizer["CreationDate"]</strong></th>
 <th><strong>@localizer["LastModificationDate"]</strong></th>
 <th class="text-center"><strong>@localizer["ActionEdit"]</strong></th>
@@ -27,12 +27,12 @@
             {
                 <tr>
                     
-<td><strong>@itemNo</strong></td>
-<td><b>@item.CreatedBy</b></td>
+<td><strong>@(itemNo++)</strong></td>
+<td><b>@item.Name</b></td>
 <td>@Html.Raw(item.CreationDate.ConvertToGridDateTime())</td>
 <td>@Html.Raw(item.LastModificationDate.ConvertToGridDateTime())</td>
 <td class="text-center"><a href="#!/serviceType/edit/@(StringCipher.Encrypt(item.ServiceTypeId.ToString()))" class="btn btn-outline-primary btn-sm py-1 mx-1">@localizer["ActionEdit"]</a></td>
-<td class="text-center"><button onclick="actionsController.delete(this);" data-title="@item.CreatedBy" data-action-url="/serviceType/Delete/@item.ServiceTypeId" data-to-post='{"id":@(item.ServiceTypeId)}' class="btn btn-outline-danger btn-md py-1">@localizer["ActionDelete"]</button></td>
+<td class="text-center"><button onclick="actionsController.delete(this);" data-title="@item.Name" data-action-url="/serviceType/Delete/@item.ServiceTypeId" data-to-post='{"id":@(item.ServiceTypeId)}' class="btn btn-outline-danger btn-md py-1">@localizer["ActionDelete"]</button></td>
                 </tr>
                     }
             @if (Model.Items.Count() <= 0 || Model == null)

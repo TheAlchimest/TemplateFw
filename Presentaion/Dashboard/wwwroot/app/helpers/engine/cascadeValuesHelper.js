@@ -79,7 +79,7 @@ var cascadeValuesHelper = {
     loadCascadeChildrenDataFromApi: function($element, $parentCascadeElement, parentId, parentVal) {
         apiUrl = $($element).attr('data-cascade-api-url');
         if (typeof parentVal !== 'undefined' && parentVal!=null) {
-            apiUrl = String.format(apiUrl, parentVal) ;
+            apiUrl = apiUrl+parentVal ;
         }
         app.lookup.loadSelectDataFromApi($element, apiUrl, $parentCascadeElement)
     }

@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TemplateFw.Dashboard.Auth;
 using TemplateFw.Dtos.Common;
-using TemplateFw.Dtos.Dtos.Common;
 using TemplateFw.Dtos;
 using TemplateFw.Shared.Domain.Enums;
 using TemplateFw.Shared.Domain.GenericResponse;
@@ -11,10 +10,6 @@ using TemplateFw.Shared.Dtos.Collections;
 using TemplateFw.Shared.Helpers;
 using LookupsUrls = Dashboard.Common.WebClientHelpers.InternalApiDictionary.LookupsUrls;
 using Urls = Dashboard.Common.WebClientHelpers.InternalApiDictionary.FaqUrls;
-using Microsoft.Extensions.Localization;
-using TemplateFw.Resources;
-using TemplateFw.Resources.Resources;
-using Azure;
 
 namespace TemplateFw.Dashboard.Controllers
 {
@@ -22,13 +17,7 @@ namespace TemplateFw.Dashboard.Controllers
     public class FaqController : WebBaseController<FaqController>
     {
         private readonly RequestUrlHelper _api = ApiRequestHelper.InternalAPI;
-        private IStringLocalizer<OperationsResource2> _localizer;
-        public IStringLocalizer<OperationsResource2> Localizer
-            => _localizer ??= HttpContext.RequestServices.GetService<IStringLocalizer<OperationsResource2>>();
-        public FaqController(IStringLocalizer<OperationsResource2> localizer):base()
-        {
-            _localizer = localizer;
-        }
+
         #region Add
 
         [HttpGet]
@@ -52,8 +41,6 @@ namespace TemplateFw.Dashboard.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            string x = OperationsResources.OperationDone_4;//Localizer["OperationDone_4"];
-            string x2 = Localizer["OperationDone_4"];//
             FaqFilter filter = new FaqFilter();
             return await ReturnViewResponse<GenericApiResponse<PagedList<FaqInfoDto>>>(_api, Urls.GetPaged, filter, OperationTypes.GetContent);
         }
@@ -139,8 +126,6 @@ namespace TemplateFw.Dashboard.Controllers
 
         }
         #endregion
-
-        
 
     }
 }

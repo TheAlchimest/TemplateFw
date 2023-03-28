@@ -1083,6 +1083,9 @@
   <data name="OTPSentSuccessfully" xml:space="preserve">
     <value>تم إرسال كود التحقق بنجاح</value>
   </data>
+  <data name="PageSize" xml:space="preserve">
+    <value>عدد العناصر</value>
+  </data>
   <data name="Password" xml:space="preserve">
     <value>كلمه السر</value>
   </data>
