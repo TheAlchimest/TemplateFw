@@ -41,7 +41,7 @@ namespace TemplateFw.Dtos
 
     public class FaqDetailsValidator : AbstractValidator<FaqDto>
     {
-        public FaqDetailsValidator(IStringLocalizer<SharedResource> localizer)
+        public FaqDetailsValidator(IStringLocalizer<GlobalResourceHelper> localizer)
         {
             //
             RuleFor(p => p.QuestionAr)

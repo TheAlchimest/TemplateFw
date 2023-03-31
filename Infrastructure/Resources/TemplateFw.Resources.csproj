@@ -16,51 +16,28 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Resources\CommonResources.Designer.cs">
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	    <DependentUpon>CommonResources.resx</DependentUpon>
-	  </Compile>
-	  <Compile Update="Resources\ModulesResources.Designer.cs">
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	    <DependentUpon>ModulesResources.resx</DependentUpon>
-	  </Compile>
-	  <Compile Update="Resources\OperationsResources.Designer.cs">
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	    <DependentUpon>OperationsResources.resx</DependentUpon>
-	  </Compile>
-	  <Compile Update="Resources\UIResources.Designer.cs">
-	    <DesignTime>True</DesignTime>
-	    <AutoGen>True</AutoGen>
-	    <DependentUpon>UIResources.resx</DependentUpon>
-	  </Compile>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <EmbeddedResource Update="Resources\CommonResources.resx">
+	  <EmbeddedResource Update="Resources\CommonResource.ar.resx">
 	    <Generator>PublicResXFileCodeGenerator</Generator>
 	    <LastGenOutput>CommonResources.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
-		<EmbeddedResource Update="Resources\CommonResources.en.resx">
+		<EmbeddedResource Update="Resources\CommonResource.en.resx">
 			<Generator>PublicResXFileCodeGenerator</Generator>
 		</EmbeddedResource>
-	  <EmbeddedResource Update="Resources\ModulesResources.resx">
+	  <EmbeddedResource Update="Resources\ModulesResource.ar.resx">
 	    <Generator>PublicResXFileCodeGenerator</Generator>
 	    <LastGenOutput>ModulesResources.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
-		<EmbeddedResource Update="Resources\ModulesResources.en.resx">
+		<EmbeddedResource Update="Resources\ModulesResource.en.resx">
 			<Generator>PublicResXFileCodeGenerator</Generator>
 		</EmbeddedResource>
-	  <EmbeddedResource Update="Resources\OperationsResources.resx">
+	  <EmbeddedResource Update="Resources\OperationsResource.ar.resx">
 	    <Generator>PublicResXFileCodeGenerator</Generator>
 	    <LastGenOutput>OperationsResources.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>
-		<EmbeddedResource Update="Resources\OperationsResources.en.resx">
+		<EmbeddedResource Update="Resources\OperationsResource.en.resx">
 			<Generator>PublicResXFileCodeGenerator</Generator>
 		</EmbeddedResource>
-	  <EmbeddedResource Update="Resources\UIResources.resx">
+	  <EmbeddedResource Update="Resources\UIResource.ar.resx">
 	    <Generator>PublicResXFileCodeGenerator</Generator>
 	    <LastGenOutput>UIResources.Designer.cs</LastGenOutput>
 	  </EmbeddedResource>

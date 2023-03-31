@@ -3,6 +3,7 @@ using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Mvc.Razor;
 using TemplateFw.Dashboard.Auth;
+using TemplateFw.Resources;
 using TemplateFw.Shared.Configuration;
 
 namespace TemplateFw.Dashboard
@@ -31,8 +32,9 @@ namespace TemplateFw.Dashboard
             Configuration.Bind(config);
             services.AddSingleton(config);
 
+
             // Add Localizations
-            services.AddMultiLingualSupport();
+            services.AddLocalization();
             services.AddMvc(o =>
             {
                 o.Conventions.Add(new AddAuthorizeFiltersControllerConvention());
@@ -80,6 +82,7 @@ namespace TemplateFw.Dashboard
                     }
                 });
             });
+            app.UseRequestLocalization();//to support multi languages
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();

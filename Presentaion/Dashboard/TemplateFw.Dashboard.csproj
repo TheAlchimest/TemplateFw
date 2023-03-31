@@ -125,6 +125,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\Resources\TemplateFw.Resources.csproj" />
     <ProjectReference Include="..\..\Shared\TemplateFw.Shared\TemplateFw.Shared.csproj" />
     <ProjectReference Include="..\..\Core\Domain\TemplateFw.Domain.csproj" />
     <ProjectReference Include="..\..\Core\Dtos\TemplateFw.Dtos.csproj" />

@@ -15,21 +15,25 @@ namespace Microsoft.Extensions.DependencyInjection
          */
         public static IServiceCollection AddMultiLingualSupport(this IServiceCollection services)
         {
-            services.AddLocalization(options => options.ResourcesPath = "Resources");
+            services.AddLocalization(opts => opts.ResourcesPath = "Resources");
 
 
-            CultureInfo[] supportedCultures = new[]
+            
+
+            services.Configure<RequestLocalizationOptions>(opts =>
             {
-                new CultureInfo("ar"),
-                new CultureInfo("en")
-            };
+                var supportedCultures = new List<CultureInfo>
+                {
+                    new CultureInfo("ar"),
+                    new CultureInfo("en")
+                };
 
-            services.Configure<RequestLocalizationOptions>(options =>
-            {
-                options.DefaultRequestCulture = new RequestCulture("ar");
-                options.SupportedCultures = supportedCultures;
-                options.SupportedUICultures = supportedCultures;
-                options.RequestCultureProviders = new List<IRequestCultureProvider>
+                opts.DefaultRequestCulture = new RequestCulture("ar", "ar");
+                // Formatting numbers, dates, etc.
+                opts.SupportedCultures = supportedCultures;
+                // UI strings that we have localized.
+                opts.SupportedUICultures = supportedCultures;
+                opts.RequestCultureProviders = new List<IRequestCultureProvider>
                 {
                     new QueryStringRequestCultureProvider(),
                     new CookieRequestCultureProvider()

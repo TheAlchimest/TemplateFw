@@ -3,6 +3,7 @@ using Microsoft.Extensions.Localization;
 using System.Collections.Generic;
 using TemplateFw.Dtos.Common;
 using TemplateFw.Resources;
+using TemplateFw.Resources.Resources;
 
 namespace TemplateFw.Dtos.Announces
 {
@@ -27,7 +28,7 @@ namespace TemplateFw.Dtos.Announces
 
     public class AnnounceDetailsValidator : AbstractValidator<AnnounceDetailRequestDto>
     {
-        public AnnounceDetailsValidator(IStringLocalizer<SharedResource> localizer)
+        public AnnounceDetailsValidator(IStringLocalizer<Resources.Resources.SharedResource> localizer)
         {
             RuleFor(p => p.Content)
                 .NotEmpty().WithMessage(localizer["ValidationRequired"]).WithName(localizer["Content"])

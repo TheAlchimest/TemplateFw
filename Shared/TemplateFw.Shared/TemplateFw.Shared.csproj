@@ -38,10 +38,4 @@
     <Folder Include="Helpers\Web\" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\Infrastructure\Resources\TemplateFw.Resources.csproj" />
-  </ItemGroup>
-
-
-
 </Project>

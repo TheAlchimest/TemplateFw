@@ -7,6 +7,7 @@ using System.Globalization;
 using TemplateFw.Dashboard.Extensions;
 using TemplateFw.Dtos;
 using TemplateFw.Resources;
+using TemplateFw.Resources.Resources;
 using TemplateFw.Shared.Domain.Enums;
 using TemplateFw.Shared.Domain.GenericResponse;
 using TemplateFw.Shared.Dtos.Collections;
@@ -15,9 +16,9 @@ namespace TemplateFw.Dashboard.Controllers
 {
     public class LocalizedController : Controller
     {
-        private IStringLocalizer<OperationsResource2> _localizer;
-        public IStringLocalizer<OperationsResource2> Localizer
-            => _localizer ??= HttpContext.RequestServices.GetService<IStringLocalizer<OperationsResource2>>();
+        private IStringLocalizer<OperationsResource> _localizer;
+        public IStringLocalizer<OperationsResource> Localizer
+            => _localizer ??= HttpContext.RequestServices.GetService<IStringLocalizer<OperationsResource>>();
         public string CurrentCulture
            => HttpContext.Features.Get<IRequestCultureFeature>().RequestCulture.UICulture.Name;
 

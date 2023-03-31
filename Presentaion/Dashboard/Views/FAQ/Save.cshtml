@@ -1,16 +1,20 @@
-﻿@using TemplateFw.Shared.Domain.Enums
+﻿@using Microsoft.Extensions.Localization;
+@using Microsoft.Extensions.Options;
+@using TemplateFw.Shared.Configuration;
+@using TemplateFw.Shared.Domain.Enums
 @inject IOptions<WebSettings> webSettings
 @model TemplateFw.Dtos.FaqDto
 
 @{
     bool isUpdateMode = (Model.FaqId != 0);
     string isUpdateModeString = isUpdateMode.ToString().ToLower();
+    //String C = modulesLocalizer["Faq_QuestionAr"];
 }
 <form method="post" id="frmForm" name="frmForm" action="/faq/Save" data-is-update-mode="@(isUpdateModeString)">
     <div class="form-head mb-sm-5 mb-3 d-flex flex-wrap align-items-center ">
         <div class=" mr-auto">
-            <h3 class="font-w600 mb-2">@localizer["Faq"]</h3>
-            <p class="mb-0">@localizer["FaqManagement"]</p>
+            <h3 class="font-w600 mb-2">@modulesLocalizer["Faq"]</h3>
+            <p class="mb-0">@modulesLocalizer["FaqManagement"]</p>
         </div>
     </div>
     <div class="card master-form">
@@ -22,7 +26,7 @@
             <div class="row">
                 <input class="form-control"   type="hidden" data-type="hidden" data-smk-type="hidden" id="FaqId" name="FaqId" placeholder="" required maxlength="4" value="@(Model.FaqId)"  smk-error-msg-required="" data-smk-max="0"><div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="QuestionAr">@localizer["Faq_QuestionAr"] :</label>
+    <label class="form-label-small px-3" for="QuestionAr">@modulesLocalizer["Faq_QuestionAr"] :</label>
     <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="QuestionAr" name="QuestionAr" placeholder="" maxlength="150" value="@(Model.QuestionAr)"  data-smk-max="0">
     
     <i class="accent"></i>
@@ -30,7 +34,7 @@
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="QuestionEn">@localizer["Faq_QuestionEn"] :</label>
+    <label class="form-label-small px-3" for="QuestionEn">@modulesLocalizer["Faq_QuestionEn"] :</label>
     <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="QuestionEn" name="QuestionEn" placeholder="" maxlength="150" value="@(Model.QuestionEn)"  data-smk-max="0">
     
     <i class="accent"></i>
@@ -38,7 +42,7 @@
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="AnswerAr">@localizer["Faq_AnswerAr"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <label class="form-label-small px-3" for="AnswerAr">@modulesLocalizer["Faq_AnswerAr"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
     <textarea rows="4"
               class="form-control"
                id="AnswerAr" name="AnswerAr" placeholder="" required maxlength="2000" value="@(Model.AnswerAr)"  smk-error-msg-required="" data-smk-max="0">@(Model.AnswerAr)</textarea>
@@ -48,7 +52,7 @@
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="AnswerEn">@localizer["Faq_AnswerEn"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <label class="form-label-small px-3" for="AnswerEn">@modulesLocalizer["Faq_AnswerEn"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
     <textarea rows="4"
               class="form-control"
                id="AnswerEn" name="AnswerEn" placeholder="" required maxlength="2000" value="@(Model.AnswerEn)"  smk-error-msg-required="" data-smk-max="0">@(Model.AnswerEn)</textarea>
@@ -58,7 +62,7 @@
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group select2-lg">
-    <label class="form-label-small px-3" for="PortalId">@localizer["Portal"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <label class="form-label-small px-3" for="PortalId">@modulesLocalizer["Portal"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
 @await Html.PartialAsync("/Views/RunTimeControls/Select.cshtml",
                new TemplateFw.Shared.Dto.RunTimeSelectControl(){
                   Id="PortalId",
@@ -72,7 +76,7 @@
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group select2-lg">
-    <label class="form-label-small px-3" for="ServiceId">@localizer["Service"] :</label>
+    <label class="form-label-small px-3" for="ServiceId">@modulesLocalizer["Service"] :</label>
 @await Html.PartialAsync("/Views/RunTimeControls/Select.cshtml",
                new TemplateFw.Shared.Dto.RunTimeSelectControl(){
                   Id="ServiceId",
