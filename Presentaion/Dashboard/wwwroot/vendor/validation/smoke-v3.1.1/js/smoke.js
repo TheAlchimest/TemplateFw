@@ -466,7 +466,7 @@
             }
             // External Phone Number
             else if (type === 'exphone' || smkType === 'exphone') {
-                var mobileRegex = /^[0]\d{12,20}$/;
+                var mobileRegex = /^[00]\d{12,20}$/;
                 // Se valida que el value del input cumpla con la expresión regular
                 if (!mobileRegex.test(value)) {
                     // Se agrega el mensaje de error
