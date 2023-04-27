@@ -1,5 +1,6 @@
 ﻿
 using FluentValidation;
+using System.ComponentModel.DataAnnotations;
 using Microsoft.Extensions.Localization;
 using System;
 using TemplateFw.Resources;
@@ -9,7 +10,9 @@ namespace TemplateFw.Dtos
     public class FaqDto
     {
         public int FaqId { get; set; }
-		public string QuestionAr { get; set; }
+        [Required]
+        [MaxLength(100)]
+        public string QuestionAr { get; set; }
 		public string QuestionEn { get; set; }
 		public string AnswerAr { get; set; }
 		public string AnswerEn { get; set; }

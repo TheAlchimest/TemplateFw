@@ -36,17 +36,13 @@ namespace TemplateFw.Persistence
 
             services.AddScoped<IDbHelper, DbHelper>();
 
-            //services.AddScoped<IAnnounceRepository, AnnounceRepository>();
-            services.AddScoped<IFaqRepository, FaqRepository>();
-            services.AddScoped<ILanguageRepository, LanguageRepository>();
-            services.AddScoped<ICountryRepository, CountryRepository>();
-            services.AddScoped<IPortalRepository, PortalRepository>();
-            services.AddScoped<IServiceRepository, ServiceRepository>();
-            services.AddScoped<IServiceTypeRepository, ServiceTypeRepository>();
-
-
-
-
+            
+			services.AddScoped<ICountryRepository, CountryRepository>();
+			services.AddScoped<IFaqRepository, FaqRepository>();
+			services.AddScoped<ILanguageRepository, LanguageRepository>();
+			services.AddScoped<IPortalRepository, PortalRepository>();
+			services.AddScoped<IServiceRepository, ServiceRepository>();
+			services.AddScoped<IServiceTypeRepository, ServiceTypeRepository>();
 
             services.AddScoped<ILookupRepository, LookupRepository>();
             services.AddScoped<IActionLogRepository, ActionLogRepository>();
