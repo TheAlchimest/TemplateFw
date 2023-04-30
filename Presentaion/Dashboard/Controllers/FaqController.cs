@@ -11,6 +11,8 @@ using TemplateFw.Shared.Helpers;
 using LookupsUrls = Dashboard.Common.WebClientHelpers.InternalApiDictionary.LookupsUrls;
 using Urls = Dashboard.Common.WebClientHelpers.InternalApiDictionary.FaqUrls;
 using FluentValidation;
+using FluentValidation.Results;
+using Azure;
 
 namespace TemplateFw.Dashboard.Controllers
 {
@@ -39,7 +41,7 @@ namespace TemplateFw.Dashboard.Controllers
             }
             catch (System.Exception ex)
             {
-                return ReturnViewResponse(ex, OperationTypes.GetContent);
+                return ReturnViewException(ex, OperationTypes.GetContent);
             }
         }
         #endregion
@@ -49,7 +51,8 @@ namespace TemplateFw.Dashboard.Controllers
         public async Task<IActionResult> Index()
         {
             FaqFilter filter = new FaqFilter();
-            return await ReturnViewResponse<GenericApiResponse<PagedList<FaqInfoDto>>>(_api, Urls.GetPaged, filter, OperationTypes.GetContent);
+            var apiResult = await _api.PostAsync<GenericApiResponse<PagedList<FaqInfoDto>>>(Urls.GetPaged, filter);
+            return ReturnViewResponse(apiResult, OperationTypes.GetContent);
         }
         #endregion
 
@@ -58,7 +61,8 @@ namespace TemplateFw.Dashboard.Controllers
         [HttpGet]
         public async Task<IActionResult> IndexContent([FromQuery] FaqFilter filter)
         {
-            return await ReturnViewResponse<GenericApiResponse<PagedList<FaqInfoDto>>>(_api, Urls.GetPaged, filter, OperationTypes.GetContent);
+            var apiResult = await _api.PostAsync<GenericApiResponse<PagedList<FaqInfoDto>>>(Urls.GetPaged, filter);
+            return ReturnViewResponse(apiResult, OperationTypes.GetContent);
         }
         #endregion
 
@@ -74,11 +78,11 @@ namespace TemplateFw.Dashboard.Controllers
                 ViewBag.Languages = languages;
                 string url = string.Format(Urls.GetOne, id);
                 var apiResult = await _api.GetAsync<GenericApiResponse<FaqDto>>(url);
-                return ReturnViewResponse("Save", apiResult, OperationTypes.GetContent);
+                return ReturnViewResponse(apiResult, OperationTypes.GetContent, "Save");
             }
             catch (System.Exception ex)
             {
-                return ReturnViewResponse(ex, OperationTypes.GetContent);
+                return ReturnViewException(ex, OperationTypes.GetContent);
             }
 
         }
@@ -97,8 +101,8 @@ namespace TemplateFw.Dashboard.Controllers
                 var validationResult = _validator.Validate(dto);
                 if (!validationResult.IsValid)
                 {
-                    var errors = validationResult.Errors.ToDictionary(x => x.PropertyName, x => x.ErrorMessage);
-                    return Json(new { success = false, errors = errors });
+                    return ReturnInvalidModel(validationResult);
+                    
                 }
 
                 OperationTypes operation = (dto.FaqId > 0) ? OperationTypes.Update : OperationTypes.Add;
@@ -108,10 +112,33 @@ namespace TemplateFw.Dashboard.Controllers
             catch (System.Exception ex)
             {
                 OperationTypes operation = (dto.FaqId > 0) ? OperationTypes.Update : OperationTypes.Add;
-                return ReturnJsonResponse(ex, operation);
+                return ReturnJsonException(ex, operation);
             }
         }
         #endregion
+
+        /*
+           [HttpPost]
+        public async Task<IActionResult> Save([FromBody] FaqDto dto)
+        {
+            try
+            {
+                if (!ModelState.IsValid)
+                {
+                    return ReturnInvalidModel(ModelState);
+                }
+                OperationTypes operation = (dto.FaqId > 0) ? OperationTypes.Update : OperationTypes.Add;
+                var apiResult = await _api.PostAsync<ApiResponse>(Urls.Save, dto);
+                return ReturnJsonException(apiResult, operation);
+            }
+            catch (System.Exception ex)
+            {
+                OperationTypes operation = (dto.FaqId > 0) ? OperationTypes.Update : OperationTypes.Add;
+                return ReturnJsonException(ex, operation);
+            }
+
+        }
+         */
 
         #region Delete
 
@@ -131,7 +158,7 @@ namespace TemplateFw.Dashboard.Controllers
             catch (System.Exception ex)
             {
 
-                return ReturnJsonResponse(ex, OperationTypes.Delete);
+                return ReturnJsonException(ex, OperationTypes.Delete);
             }
 
         }

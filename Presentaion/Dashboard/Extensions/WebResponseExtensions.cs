@@ -8,6 +8,21 @@ namespace TemplateFw.Dashboard.Extensions
 {
     public static class WebResponseExtensions
     {
+        internal static string ToErrorMessage(this OperationTypes operation, IStringLocalizer<OperationsResource> localizer)
+        {
+            return localizer[$"OperationFailed_{(int)operation}"].Value;
+        }
+
+        internal static string ToSuccessMessage(this OperationTypes operation, IStringLocalizer<OperationsResource> localizer)
+        {
+            return localizer[$"OperationDone_{(int)operation}"].Value;
+        }
+
+        internal static string ToErrorCodes(this OperationTypes operation)
+        {
+            return ((int)operation + 1000).ToString();
+        }
+
         public static void PopulateErrorResponse(this WebResponse response, OperationTypes operation, IStringLocalizer<OperationsResource> localizer)
         {
             response.ErrorCodes = operation.ToErrorCodes();

@@ -32,7 +32,7 @@ namespace TemplateFw.Dashboard.Controllers
             }
             catch (System.Exception ex)
             {
-                return ReturnViewResponse(ex, OperationTypes.GetContent);
+                return ReturnViewException(ex, OperationTypes.GetContent);
             }
         }
         #endregion
@@ -71,7 +71,7 @@ namespace TemplateFw.Dashboard.Controllers
             }
             catch (System.Exception ex)
             {
-                return ReturnViewResponse(ex, OperationTypes.GetContent);
+                return ReturnViewException(ex, OperationTypes.GetContent);
             }
 
         }
@@ -97,7 +97,7 @@ namespace TemplateFw.Dashboard.Controllers
             catch (System.Exception ex)
             {
                 OperationTypes operation = (dto.LanguageId > 0) ? OperationTypes.Update : OperationTypes.Add;
-                return ReturnJsonResponse(ex, operation);
+                return ReturnJsonException(ex, operation);
             }
 
         }
@@ -121,7 +121,7 @@ namespace TemplateFw.Dashboard.Controllers
             catch (System.Exception ex)
             {
 
-                return ReturnJsonResponse(ex, OperationTypes.Delete);
+                return ReturnJsonException(ex, OperationTypes.Delete);
             }
 
         }

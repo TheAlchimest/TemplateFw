@@ -1,6 +1,6 @@
 ﻿namespace TemplateFw.Dashboard.Controllers
 {
-    public class WebBaseController<C> : LocalizedController where C : WebBaseController<C>
+    public partial class WebBaseController<C> : OperatinResultController where C : WebBaseController<C>
     {
         private ILogger<C> _logger;
 
@@ -50,19 +50,6 @@
         }
         #endregion
 
-
-
-
-
-        /*
-        protected async Task<AttachmentDto> DownloadFile(string filename)
-        {
-        }
-
-        protected async Task<string> UploadFile(AttachmentDto attachment)
-        {
-        }
-        */
     }
 }
 

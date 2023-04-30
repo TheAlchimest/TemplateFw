@@ -28,7 +28,7 @@ namespace TemplateFw.Dashboard.Controllers
             }
             catch (System.Exception ex)
             {
-                return ReturnViewResponse(ex, OperationTypes.GetContent);
+                return ReturnViewException(ex, OperationTypes.GetContent);
             }
         }
         public async Task<IActionResult> Index()
@@ -41,7 +41,7 @@ namespace TemplateFw.Dashboard.Controllers
             }
             catch (System.Exception ex)
             {
-                return ReturnViewResponse(ex, OperationTypes.GetContent);
+                return ReturnViewException(ex, OperationTypes.GetContent);
             }
         }
 
@@ -57,7 +57,7 @@ namespace TemplateFw.Dashboard.Controllers
             }
             catch (System.Exception ex)
             {
-                return ReturnViewResponse(ex, OperationTypes.GetContent);
+                return ReturnViewException(ex, OperationTypes.GetContent);
             }
         }
 
@@ -69,11 +69,11 @@ namespace TemplateFw.Dashboard.Controllers
                 id = StringCipher.Decrypt(id);
                 string url = string.Format(Urls.GetOne, id);
                 var apiResult = await _api.GetAsync<GenericApiResponse<AdminDto>>(url);
-                return ReturnViewResponse("Save", apiResult, OperationTypes.GetContent);
+                return ReturnViewResponse(apiResult, OperationTypes.GetContent, "Save");
             }
             catch (System.Exception ex)
             {
-                return ReturnViewResponse(ex, OperationTypes.GetContent);
+                return ReturnViewException(ex, OperationTypes.GetContent);
             }
         }
 
@@ -93,7 +93,7 @@ namespace TemplateFw.Dashboard.Controllers
             catch (System.Exception ex)
             {
                 OperationTypes operation = (dto.Id > 0) ? OperationTypes.Update : OperationTypes.Add;
-                return ReturnJsonResponse(ex, operation);
+                return ReturnJsonException(ex, operation);
             }
         }
 
@@ -115,7 +115,7 @@ namespace TemplateFw.Dashboard.Controllers
             catch (System.Exception ex)
             {
 
-                return ReturnJsonResponse(ex, OperationTypes.Delete);
+                return ReturnJsonException(ex, OperationTypes.Delete);
             }
         }
 
