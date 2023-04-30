@@ -3,6 +3,7 @@ using FluentValidation;
 using Microsoft.Extensions.Localization;
 using System;
 using TemplateFw.Resources;
+using TemplateFw.Resources.Resources;
 
 namespace TemplateFw.Dtos
 {
@@ -48,4 +49,33 @@ namespace TemplateFw.Dtos
 		public int PageNumber { get; set; } = 1;
 		public int PageSize { get; set; } = 20;
 	}
+    public class FaqDtoValidator : AbstractValidator<FaqDto>
+    {
+        public FaqDtoValidator(IStringLocalizer<ValidationResource> validationResource, IStringLocalizer<ModulesResource> modulesLocalizer)
+        {
+            RuleFor(p => p.QuestionAr)
+                .NotEmpty().WithMessage(validationResource["RequiredEnter"]).WithName(modulesLocalizer["Faq_QuestionAr"])
+                .NotNull()
+                .MaximumLength(150).WithMessage(validationResource["MaxLengthCharacters"].Value.Replace("{Length}", "150")).WithName(modulesLocalizer["Faq_QuestionAr"]);
+
+            RuleFor(p => p.QuestionEn)
+                .NotEmpty().WithMessage(validationResource["RequiredEnter"]).WithName(modulesLocalizer["Faq_QuestionEn"])
+                .NotNull()
+                .MaximumLength(150).WithMessage(validationResource["MaxLengthCharacters"].Value.Replace("{Length}", "150")).WithName(modulesLocalizer["Faq_QuestionEn"]);
+
+            RuleFor(p => p.AnswerAr)
+                .NotEmpty().WithMessage(validationResource["RequiredEnter"]).WithName(modulesLocalizer["Faq_AnswerAr"])
+                .NotNull()
+                .MaximumLength(2000).WithMessage(validationResource["MaxLengthCharacters"].Value.Replace("{Length}", "2000")).WithName(modulesLocalizer["Faq_AnswerAr"]);
+
+            RuleFor(p => p.AnswerEn)
+                .NotEmpty().WithMessage(validationResource["RequiredEnter"]).WithName(modulesLocalizer["Faq_AnswerEn"])
+                .NotNull()
+                .MaximumLength(2000).WithMessage(validationResource["MaxLengthCharacters"].Value.Replace("{Length}", "2000")).WithName(modulesLocalizer["Faq_AnswerEn"]);
+
+
+            RuleFor(x => x.PortalId)
+                .NotEmpty().WithMessage(validationResource["RequiredChoose"]).WithName(modulesLocalizer["Faq_Portal"]);
+        }
+    }
 }

@@ -10,6 +10,7 @@ using TemplateFw.Shared.Dtos.Collections;
 using TemplateFw.Shared.Helpers;
 using LookupsUrls = Dashboard.Common.WebClientHelpers.InternalApiDictionary.LookupsUrls;
 using Urls = Dashboard.Common.WebClientHelpers.InternalApiDictionary.FaqUrls;
+using FluentValidation;
 
 namespace TemplateFw.Dashboard.Controllers
 {
@@ -17,6 +18,12 @@ namespace TemplateFw.Dashboard.Controllers
     public class FaqController : WebBaseController<FaqController>
     {
         private readonly RequestUrlHelper _api = ApiRequestHelper.InternalAPI;
+        private readonly IValidator<FaqDto> _validator;
+
+        public FaqController(IValidator<FaqDto> validator)
+        {
+            _validator = validator;
+        }
 
         #region Add
 
@@ -86,10 +93,14 @@ namespace TemplateFw.Dashboard.Controllers
         {
             try
             {
-                if (!ModelState.IsValid)
+
+                var validationResult = _validator.Validate(dto);
+                if (!validationResult.IsValid)
                 {
-                    return ReturnInvalidModel(ModelState);
+                    var errors = validationResult.Errors.ToDictionary(x => x.PropertyName, x => x.ErrorMessage);
+                    return Json(new { success = false, errors = errors });
                 }
+
                 OperationTypes operation = (dto.FaqId > 0) ? OperationTypes.Update : OperationTypes.Add;
                 var apiResult = await _api.PostAsync<ApiResponse>(Urls.Save, dto);
                 return ReturnJsonResponse(apiResult, operation);
@@ -99,7 +110,6 @@ namespace TemplateFw.Dashboard.Controllers
                 OperationTypes operation = (dto.FaqId > 0) ? OperationTypes.Update : OperationTypes.Add;
                 return ReturnJsonResponse(ex, operation);
             }
-
         }
         #endregion
 

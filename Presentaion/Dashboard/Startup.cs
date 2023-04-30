@@ -3,6 +3,7 @@ using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Mvc.Razor;
 using TemplateFw.Dashboard.Auth;
+using TemplateFw.Dtos;
 using TemplateFw.Resources;
 using TemplateFw.Shared.Configuration;
 
@@ -31,6 +32,7 @@ namespace TemplateFw.Dashboard
             var config = new SystemConfiguration();
             Configuration.Bind(config);
             services.AddSingleton(config);
+            services.AddTransient<IValidator<FaqDto>, FaqDtoValidator>();
 
 
             // Add Localizations

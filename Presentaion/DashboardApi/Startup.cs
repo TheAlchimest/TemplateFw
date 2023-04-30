@@ -1,9 +1,11 @@
+using FluentValidation;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using System.Globalization;
 using TemplateFw.Application;
 using TemplateFw.DashboardApi.Utils;
+using TemplateFw.Dtos;
 using TemplateFw.Persistence;
 using TemplateFw.Shared.Configuration;
 
