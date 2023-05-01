@@ -44,6 +44,7 @@
     <Compile Remove="Controllers\PortalController.cs" />
     <Compile Remove="Controllers\ServiceController.cs" />
     <Compile Remove="Controllers\ServiceTypeController.cs" />
+    <Compile Remove="Extensions\ControllersExtensions.cs" />
     <Compile Remove="InternalApiConsumer\AnnounceConsumer.cs" />
   </ItemGroup>
 

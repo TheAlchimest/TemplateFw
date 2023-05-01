@@ -26,6 +26,7 @@ namespace TemplateFw.Shared.Domain.GenericResponse
 
         public string ErrorCodes { get; set; }
 
+        public List<ValidationError> Errors { get; set; }
         public List<string> Messages { get; set; }
         public string Message {
             set {
@@ -35,11 +36,17 @@ namespace TemplateFw.Shared.Domain.GenericResponse
         public WebResponse()
         {
             Messages = new List<string>();
+            Errors = new List<ValidationError>();
         }
     }
 
     public class GenericWebResponse<T> : WebResponse
     {
         public T Data { get; set; }
+    }
+    public class ValidationError {
+        public string PropertyName { get; set; }
+        public string ErrorMessage { get; set; }
+        public string ErrorCode { get; set; }
     }
 }

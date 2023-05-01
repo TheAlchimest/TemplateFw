@@ -23,9 +23,7 @@
                 <input class="form-control"   type="hidden" data-type="hidden" data-smk-type="hidden" id="FaqId" name="FaqId" placeholder="" required maxlength="4" value="@(Model.FaqId)"  smk-error-msg-required="" data-smk-max="9999999999" data-smk-min="-9999999999"><div class="col-md-6 eng-form-element">
 <div class="form-group">
     <label class="form-label-small px-3" for="QuestionAr">@localizer["Faq_QuestionAr"] :</label>
-    <textarea rows="4"
-              class="form-control"
-               id="QuestionAr" name="QuestionAr" placeholder="" maxlength="150" value="@(Model.QuestionAr)">@(Model.QuestionAr)</textarea>
+                        <input class="form-control" required id="QuestionAr" name="QuestionAr" placeholder="" maxlength="2000" value="@(Model.QuestionAr)" />
               
     <i class="accent"></i>
 </div>
@@ -33,9 +31,8 @@
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
     <label class="form-label-small px-3" for="QuestionEn">@localizer["Faq_QuestionEn"] :</label>
-    <textarea rows="4"
-              class="form-control"
-               id="QuestionEn" name="QuestionEn" placeholder="" maxlength="150" value="@(Model.QuestionEn)">@(Model.QuestionEn)</textarea>
+                        <input class="form-control" required id="QuestionEn" name="QuestionEn" placeholder="" maxlength="2000" value="@(Model.QuestionEn)" />
+    
               
     <i class="accent"></i>
 </div>
@@ -118,8 +115,8 @@
     });
 
     function saveForm(obj, event) {
-
-        if ($("frmForm").attr("data-is-update-mode") === 'false') {
+        debugger;
+        if ($("#frmForm").attr("data-is-update-mode") === 'false') {
             app.form.submit(obj, event)
         }
         else {

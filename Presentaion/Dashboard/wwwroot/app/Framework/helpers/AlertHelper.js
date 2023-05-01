@@ -40,6 +40,13 @@
                 if (webResponse.Messages != null && webResponse.Messages.length > 0) {
                     alertHelper.error(webResponse.Messages.join(), "");
                 }
+                if (webResponse.Errors != null && webResponse.Messages.length > 0) {
+                    for (var i = 0; i < webResponse.Errors.length; i++) {
+                        var error = webResponse.Errors[i];
+                        $.smkAddError($("#" + error.PropertyName), error.ErrorMessage);
+                    }
+
+                }
             }
         }
         ,
