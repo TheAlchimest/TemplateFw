@@ -1,4 +1,4 @@
-﻿using Dashboard.Common.WebClientHelpers;
+﻿ using Dashboard.Common.WebClientHelpers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TemplateFw.Dashboard.Auth;
@@ -125,7 +125,7 @@ namespace TemplateFw.Dashboard.Controllers
             {
                 if (id <= 0)
                 {
-                    return ReturnBadRequest(ModelState);
+                    return ReturnBadRequest(OperationTypes.Delete);
                 }
                 string url = string.Format(Urls.Delete, id);
                 var apiResult = await _api.PostAsync<ApiResponse>(url, id);

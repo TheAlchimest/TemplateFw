@@ -74,13 +74,24 @@ namespace TemplateFw.Dashboard.Controllers
         #endregion
 
         #region handle BadRequest
-
+        public ActionResult ReturnBadRequest(OperationTypes operation = OperationTypes.Unknown)
+        {
+            var response = new CommonWebResponse
+            {
+                Title = Localizer["Error"],
+                Status = false,
+                StatusCode = System.Net.HttpStatusCode.BadRequest
+            };
+            response.Errors.Add(GetOperationError(operation));
+            return BadRequest(response);
+        }
         public ActionResult ReturnBadRequest(ModelStateDictionary modelState)
         {
             var response = new CommonWebResponse
             {
                 Title = Localizer["Error"],
                 Status = false,
+                StatusCode = System.Net.HttpStatusCode.BadRequest,
                 Errors = modelState.Keys
                     .SelectMany(key => modelState[key].Errors.Select(error => new CommonError
                     {
@@ -98,6 +109,7 @@ namespace TemplateFw.Dashboard.Controllers
             {
                 Title = Localizer["Error"],
                 Status = false,
+                StatusCode = System.Net.HttpStatusCode.BadRequest,
                 Errors = validationResult.Errors.Select(e => new CommonError
                 {
                     ErrorMessage = e.ErrorMessage,

@@ -71,7 +71,7 @@
                 //$("#" + options.spTotalCountId).html("( " + $("#" + options.hfTotalCountId).val() + " )");
                 //$("#" + options.spItemsCountId).html("( " + $("#" + options.hfItemsCountId).val() + " )");
             },
-            error: function (xhr, status, errorThrown) {
+            error: function (xhr, status, error) {
                 $loaderBox.css("visibility", "hidden");
             }
         });
@@ -237,8 +237,8 @@ var confirmationHelper = {
 
                     alertHelper.showResponse(result, status, xhr, options.onsuccess);
                 },
-                error: function (xhr, status, errorThrown) {
-                    alertHelper.error(messages.errorDelete, status, xhr);
+                error: function (xhr, status, error) {
+                    alertHelper.showResponse(xhr.responseJSON, status, xhr);
                 }
             });
         });
