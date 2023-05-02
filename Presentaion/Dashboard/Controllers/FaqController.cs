@@ -101,7 +101,7 @@ namespace TemplateFw.Dashboard.Controllers
                 var validationResult = _validator.Validate(dto);
                 if (!validationResult.IsValid)
                 {
-                    return ReturnInvalidModel(validationResult);
+                    return ReturnBadRequest(validationResult);
                     
                 }
 
@@ -117,29 +117,6 @@ namespace TemplateFw.Dashboard.Controllers
         }
         #endregion
 
-        /*
-           [HttpPost]
-        public async Task<IActionResult> Save([FromBody] FaqDto dto)
-        {
-            try
-            {
-                if (!ModelState.IsValid)
-                {
-                    return ReturnInvalidModel(ModelState);
-                }
-                OperationTypes operation = (dto.FaqId > 0) ? OperationTypes.Update : OperationTypes.Add;
-                var apiResult = await _api.PostAsync<ApiResponse>(Urls.Save, dto);
-                return ReturnJsonException(apiResult, operation);
-            }
-            catch (System.Exception ex)
-            {
-                OperationTypes operation = (dto.FaqId > 0) ? OperationTypes.Update : OperationTypes.Add;
-                return ReturnJsonException(ex, operation);
-            }
-
-        }
-         */
-
         #region Delete
 
         [HttpPost]
@@ -149,7 +126,7 @@ namespace TemplateFw.Dashboard.Controllers
             {
                 if (id <= 0)
                 {
-                    return ReturnInvalidModel(ModelState);
+                    return ReturnBadRequest(ModelState);
                 }
                 string url = string.Format(Urls.Delete, id);
                 var apiResult = await _api.PostAsync<ApiResponse>(url, id);

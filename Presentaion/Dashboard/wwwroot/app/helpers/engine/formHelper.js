@@ -224,8 +224,8 @@ var formHelper = {
             }
         });
         post.fail(function (xhr, status, error) {
-
-            alertHelper.showResponse(error, status, xhr);
+            //(webResponse, status, xhr, onsuccess)
+            alertHelper.showResponse(xhr.responseJSON, status, xhr);
         })
         post.always(function () {
             $btn.prop('disabled', false);

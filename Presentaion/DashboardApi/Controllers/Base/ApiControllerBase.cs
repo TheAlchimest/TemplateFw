@@ -32,14 +32,7 @@ namespace TemplateFw.DashboardApi.Controllers.Base
             _logger = logger;
         }
 
-        protected ApiResponse ApiError(ErrorCodes error)
-        {
-            return new ApiResponse
-            {
-                ErrorCodes = new int[] { (int)error },
-                Status = false,
-            };
-        }
+
         protected async Task<ApiResponse> ApiResponse<T>(Func<Task<T>> funcCall, OperationTypes operation = OperationTypes.Unknown)
         {
             try
@@ -112,33 +105,41 @@ namespace TemplateFw.DashboardApi.Controllers.Base
 
         private GenericApiResponse<T> HandleException<T>(Exception ex, OperationTypes operation)
         {
-            GenericApiResponse<T> result = new GenericApiResponse<T>();
             if (ex is BusinessException businessException)
             {
                 return HandleBusinessException<T>(businessException, operation);
             }
             else
             {
-                HandleRunTimeException<T>(ex, operation);
+                return HandleRunTimeException<T>(ex, operation);
             }
-            return result;
         }
         private GenericApiResponse<T> HandleBusinessException<T>(BusinessException businessException, OperationTypes operation)
         {
             GenericApiResponse<T> result = new GenericApiResponse<T>();
-            result.ErrorCodes = businessException?.ErrorCodes?.Select(a => (int)a).ToArray();
-            result.ErrorMessages = businessException.ErrorMessages;
-            result.StatusCode = HttpStatusCode.OK;
             result.Status = false;
+            result.StatusCode = HttpStatusCode.BadRequest;
+            if (businessException.Errors.Count > 0)
+            {
+                result.Errors.AddRange(businessException.Errors.Select(e => new CommonError
+                {
+                    ErrorCode = e.ErrorCode,
+                    ErrorMessage = e.ErrorMessage
+                }));
+            }
             return result;
         }
 
         private GenericApiResponse<T> HandleRunTimeException<T>(Exception ex, OperationTypes operation)
         {
             GenericApiResponse<T> result = new GenericApiResponse<T>();
-            result.ErrorCodes = new int[] { (int)operation + 1000 };
-            result.StatusCode = HttpStatusCode.InternalServerError;
             result.Status = false;
+            result.StatusCode = HttpStatusCode.InternalServerError;
+            result.Errors.Add(new CommonError
+            {
+                ErrorCode = ((int)operation + 1000).ToString()
+                //ErrorMessage = e.ErrorMessage
+            });
             //log exception
             Task.Run(() => _logger.LogError(ex, ex.Message));
             return result;

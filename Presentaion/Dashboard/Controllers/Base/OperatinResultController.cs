@@ -17,20 +17,18 @@ namespace TemplateFw.Dashboard.Controllers
 {
     public class OperatinResultController : Controller
     {
-        private IStringLocalizer<OperationsResource> _localizer;
-        public IStringLocalizer<OperationsResource> Localizer
-            => _localizer ??= HttpContext.RequestServices.GetService<IStringLocalizer<OperationsResource>>();
-        public string CurrentCulture
-           => HttpContext.Features.Get<IRequestCultureFeature>().RequestCulture.UICulture.Name;
-
-        public OperatinResultController()
-        {
-            var ci = new CultureInfo("ar-EG");
-            Thread.CurrentThread.CurrentUICulture = ci;
-            Thread.CurrentThread.CurrentCulture = ci;
+        private IStringLocalizer<OperationsResource> localizer;
+        public IStringLocalizer<OperationsResource> Localizer {
+            get {
+                if (localizer == null)
+                {
+                    localizer = HttpContext.RequestServices.GetService<IStringLocalizer<OperationsResource>>();
+                }
+                return localizer;
+            }
         }
 
-
+        #region ReturnJsonResponse
         public JsonResult ReturnJsonResponse<T>(GenericApiResponse<T> apiResult, OperationTypes operation = OperationTypes.Unknown)
         {
             var response = PopulateResponse(apiResult, operation);
@@ -41,7 +39,6 @@ namespace TemplateFw.Dashboard.Controllers
             var response = PopulateResponse(apiResult, operation);
             return Json(response);
         }
-        #region  UnhandledErrorForJsonResult
         public JsonResult ReturnJsonException(Exception ex, OperationTypes operation = OperationTypes.Unknown)
         {
             var response = PopulateErrorResponse(null, operation);
@@ -49,13 +46,9 @@ namespace TemplateFw.Dashboard.Controllers
         }
         #endregion
 
+        #region  ReturnViewResponse
 
 
-
-
-        #region  ApiErrorForViewResult
-      
-       
         public ViewResult ReturnViewResponse<T>(GenericApiResponse<T> apiResult, OperationTypes operation = OperationTypes.Unknown, string viewName=null )
         {
             if ((apiResult is null) || (!apiResult.Status))
@@ -67,137 +60,144 @@ namespace TemplateFw.Dashboard.Controllers
                 return (viewName!=null)?View(viewName, apiResult.Data): View(apiResult.Data);
             }
         }
-        #region  UnhandledErrorForViewResult
-        public ViewResult ReturnViewException(Exception ex, OperationTypes operation = OperationTypes.Unknown)
-        {
-            return ReturnViewException((ApiResponse?)null, operation);
-        }
-        #endregion
         public ViewResult ReturnViewException(ApiResponse apiResult, OperationTypes operation = OperationTypes.Unknown)
         {
             var response = PopulateErrorResponse(apiResult, operation);
             return View("/Views/Error/Error-Generic.cshtml", response);
 
         }
+        //UnhandledErrorForViewResult
+        public ViewResult ReturnViewException(Exception ex, OperationTypes operation = OperationTypes.Unknown)
+        {
+            return ReturnViewException((ApiResponse?)null, operation);
+        }
         #endregion
 
-        public JsonResult ReturnInvalidModel(ModelStateDictionary modelState)
-        {
-            WebResponse response = new WebResponse();
+        #region handle BadRequest
 
-            foreach (var item in modelState.Values)
+        public ActionResult ReturnBadRequest(ModelStateDictionary modelState)
+        {
+            var response = new CommonWebResponse
             {
-                foreach (ModelError error in item.Errors)
+                Title = Localizer["Error"],
+                Status = false,
+                Errors = modelState.Keys
+                    .SelectMany(key => modelState[key].Errors.Select(error => new CommonError
+                    {
+                        PropertyName = key,
+                        ErrorMessage = error.ErrorMessage
+                    }))
+                    .ToList()
+            };
+
+            return BadRequest(response);
+        }
+        public ActionResult ReturnBadRequest(ValidationResult validationResult)
+        {
+            var response = new CommonWebResponse
+            {
+                Title = Localizer["Error"],
+                Status = false,
+                Errors = validationResult.Errors.Select(e => new CommonError
                 {
-                    response.Messages.Add(error.ErrorMessage);
-                }
-            }
-            response.Title = Localizer["Error"];
-            response.Status = false;
-            return Json(response);
-        }
+                    ErrorMessage = e.ErrorMessage,
+                    PropertyName = e.PropertyName,
+                    ErrorCode = e.ErrorCode
+                }).ToList()
+            };
 
-        public IActionResult ReturnInvalidModel(ValidationResult validationResult)
+            return BadRequest(response);
+        }
+        #endregion
+
+        #region PopulateWebResponse
+
+        protected CommonWebResponse PopulateResponse(ApiResponse apiResult, OperationTypes operation)
         {
-            WebResponse response = new WebResponse();
-            response.Message= Localizer["Error"];
-            foreach (var item in validationResult.Errors)
+
+            if (apiResult is null || !apiResult.Status)
             {
-                response.Errors.Add(new ValidationError
-                {
-                    ErrorMessage = item.ErrorMessage,
-                    PropertyName = item.PropertyName,
-                    ErrorCode = item.ErrorCode
-                });
-            }
-            response.Title = Localizer["Error"];
-            response.Status = false;
-            return Json(response);
-        }
-
-
-        public  WebResponse PopulateErrorResponse(OperationTypes operation)
-        {
-            var response = new WebResponse();
-            response.ErrorCodes = operation.ToErrorCodes();
-            response.Message = operation.ToErrorMessage(Localizer);
-            response.Title = Localizer[$"OperationErrorTitle"].Value;
-            response.Icon = "fa-times-circle";
-            response.Status = false;
-            return response;
-        }
-
-        public  WebResponse PopulateErrorResponse(ApiResponse apiResult, OperationTypes operation)
-        {
-            var response = new WebResponse();
-            response.ErrorCodes = operation.ToErrorCodes();
-            if (apiResult?.ErrorCodes?.Length > 0)
-            {
-                response.Title = operation.ToErrorMessage(Localizer);
-                response.Messages = apiResult.ErrorCodes.ToErrorMessages(Localizer);
+                return PopulateErrorResponse(apiResult, operation);
             }
             else
             {
-                response.Title = Localizer[$"OperationErrorTitle"].Value;
+                return PopulateSuccededResponse(apiResult, operation);
+            }
+        }
+
+        protected GenericWebResponse<T> PopulateResponse<T>(GenericApiResponse<T> apiResult, OperationTypes operation)
+        {
+            if (apiResult is null || !apiResult.Status)
+            {
+                var webResponse = PopulateErrorResponse(apiResult, operation);
+                return new GenericWebResponse<T>(webResponse);
+            }
+            else
+            {
+                return PopulateSuccededResponse(apiResult, operation);
+            }
+        }
+        protected CommonWebResponse PopulateSuccededResponse(ApiResponse apiResult, OperationTypes operation)
+        {
+            var response = new CommonWebResponse
+            {
+                Message = operation.ToSuccessMessage(Localizer),
+                Status = true,
+            };
+            return response;
+        }
+        protected GenericWebResponse<T> PopulateSuccededResponse<T>(GenericApiResponse<T> apiResult, OperationTypes operation)
+        {
+            var response = new GenericWebResponse<T>
+            {
+                Data = apiResult.Data,
+                Message = operation.ToSuccessMessage(Localizer),
+                Status = true
+            };
+            return response;
+        }
+
+        protected CommonWebResponse PopulateErrorResponse(OperationTypes operation)
+        {
+            var response = new CommonWebResponse
+            {
+                Title = Localizer[$"OperationErrorTitle"].Value,
+                Icon = "fa-times-circle",
+                Status = false
+            };
+            response.Errors.Add(new CommonError
+            {
+                ErrorMessage = operation.ToErrorMessage(Localizer),
+                ErrorCode = operation.ToErrorCodes()
+            });
+            return response;
+        }
+
+        protected CommonWebResponse PopulateErrorResponse(ApiResponse apiResult, OperationTypes operation)
+        {
+            var response = new CommonWebResponse
+            {
+                Title = Localizer[$"OperationErrorTitle"].Value,
+                Icon = "fa-times-circle",
+                Status = false
+            };
+            if (apiResult?.Errors?.Count > 0)
+            {
                 response.Message = operation.ToErrorMessage(Localizer);
-            }
-
-            response.Icon = "fa-times-circle";
-            response.Status = false;
-            return response;
-        }
-
-        public  WebResponse PopulateSuccededResponse(ApiResponse apiResult, OperationTypes operation)
-        {
-            var response = new WebResponse();
-            response.ErrorCodes = null;
-            response.Message = operation.ToSuccessMessage(Localizer);
-            response.Status = true;
-            return response;
-        }
-
-        public  WebResponse PopulateSuccededResponse<T>(GenericApiResponse<T> apiResult, OperationTypes operation)
-        {
-            var response = new GenericWebResponse<T>();
-            response.ErrorCodes = null;
-            response.Data = apiResult.Data;
-            response.Message = operation.ToSuccessMessage(Localizer);
-            response.Status = true;
-            return response;
-        }
-
-        public  WebResponse PopulateResponse(ApiResponse apiResult, OperationTypes operation)
-        {
-
-            if (apiResult is null)
-            {
-                return PopulateErrorResponse(operation);
-            }
-            else if (!apiResult.Status)
-            {
-                return PopulateErrorResponse(apiResult, operation);
+                response.Errors = apiResult.Errors.Where(e=>!string.IsNullOrEmpty(e.ErrorMessage)).ToList();
+                response.StatusCode = apiResult.StatusCode;
             }
             else
             {
-                return PopulateSuccededResponse(apiResult, operation);
+                response.Errors.Add(new CommonError
+                {
+                    ErrorMessage = operation.ToErrorMessage(Localizer),
+                    ErrorCode = operation.ToErrorCodes()
+                }); 
             }
+            return response;
         }
-
-        public  WebResponse PopulateResponse<T>(GenericApiResponse<T> apiResult, OperationTypes operation)
-        {
-            if (apiResult is null)
-            {
-                return PopulateErrorResponse(operation);
-            }
-            else if (!apiResult.Status)
-            {
-                return PopulateErrorResponse(apiResult, operation);
-            }
-            else
-            {
-                return PopulateSuccededResponse(apiResult, operation);
-            }
-        }
+        #endregion
 
     }
 }

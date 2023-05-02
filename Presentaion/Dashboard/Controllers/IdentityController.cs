@@ -84,7 +84,7 @@ namespace TemplateFw.Dashboard.Controllers
             {
                 if (!ModelState.IsValid)
                 {
-                    return ReturnInvalidModel(ModelState);
+                    return ReturnBadRequest(ModelState);
                 }
                 OperationTypes operation = (dto.Id > 0) ? OperationTypes.Update : OperationTypes.Add;
                 var apiResult = await _api.PostAsync<ApiResponse>(Urls.Save, dto);
@@ -106,7 +106,7 @@ namespace TemplateFw.Dashboard.Controllers
             {
                 if (id <= 0)
                 {
-                    return ReturnInvalidModel(ModelState);
+                    return ReturnBadRequest(ModelState);
                 }
                 string url = string.Format(Urls.Delete, id);
                 var apiResult = await _api.PostAsync<ApiResponse>(url, id);

@@ -37,18 +37,7 @@
         #endregion
 
 
-        #region  GetErrorMessage
-
-        public string PopulateErrorMessagesFromErrorCodes(int[] errors)
-        {
-            string message = string.Empty;
-            if (errors != null && errors.Length > 0)
-            {
-                errors.ToList().ForEach(e => message += Localizer[$"Exception{e}"] + "\n");
-            }
-            return message;
-        }
-        #endregion
+        
 
     }
 }

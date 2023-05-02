@@ -1,31 +1,31 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using TemplateFw.Shared.Domain.Enums;
 
 namespace TemplateFw.Shared.Application.Exceptions
 {
+    public class BusinessError
+    {
+        public string ErrorMessage { get; set; }
+        public string ErrorCode { get; set; }
+    }
     public class BusinessException : Exception
     {
-        public ErrorCodes[] ErrorCodes { get; set; }
-        public string ErrorMessages { get; set; }
+        public List<BusinessError> Errors { get; set; } = new List<BusinessError>();
 
         #region Constructor
-
-        public BusinessException(Exception ex = null, params ErrorCodes[] errorCodes)
-            : base("", ex)
-        {
-            this.ErrorCodes = errorCodes;
-        }
 
         public BusinessException(params ErrorCodes[] errorCodes)
             : base()
         {
-            this.ErrorCodes = errorCodes;
+            Errors.AddRange(errorCodes.Select(e=>new BusinessError { ErrorCode = ((int)e).ToString(), ErrorMessage=e.ToString() }));
         }
 
         public BusinessException(string message)
             : base()
         {
-            this.ErrorMessages = message;
+            Errors.Add(new BusinessError { ErrorCode = ((int)ErrorCodes.BadRequest).ToString(), ErrorMessage = message });
         }
 
         #endregion
