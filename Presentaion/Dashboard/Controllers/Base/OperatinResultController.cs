@@ -141,7 +141,7 @@ namespace TemplateFw.Dashboard.Controllers
         {
             var response = new CommonWebResponse
             {
-                Message = operation.ToSuccessMessage(Localizer),
+                Message = GetOperationSuccessMessage(operation),
                 Status = true,
             };
             return response;
@@ -151,7 +151,7 @@ namespace TemplateFw.Dashboard.Controllers
             var response = new GenericWebResponse<T>
             {
                 Data = apiResult.Data,
-                Message = operation.ToSuccessMessage(Localizer),
+                Message = GetOperationSuccessMessage(operation),
                 Status = true
             };
             return response;
@@ -165,11 +165,7 @@ namespace TemplateFw.Dashboard.Controllers
                 Icon = "fa-times-circle",
                 Status = false
             };
-            response.Errors.Add(new CommonError
-            {
-                ErrorMessage = operation.ToErrorMessage(Localizer),
-                ErrorCode = operation.ToErrorCodes()
-            });
+            response.Errors.Add(GetOperationError(operation));
             return response;
         }
 
@@ -181,24 +177,32 @@ namespace TemplateFw.Dashboard.Controllers
                 Icon = "fa-times-circle",
                 Status = false
             };
-            if (apiResult?.Errors?.Count > 0)
+            if (apiResult?.Errors.Where(e=>!string.IsNullOrEmpty(e.ErrorMessage)).Count()>0)
             {
-                response.Message = operation.ToErrorMessage(Localizer);
                 response.Errors = apiResult.Errors.Where(e=>!string.IsNullOrEmpty(e.ErrorMessage)).ToList();
                 response.StatusCode = apiResult.StatusCode;
             }
             else
             {
-                response.Errors.Add(new CommonError
-                {
-                    ErrorMessage = operation.ToErrorMessage(Localizer),
-                    ErrorCode = operation.ToErrorCodes()
-                }); 
+                response.Errors.Add(GetOperationError(operation)); 
             }
             return response;
         }
         #endregion
 
+        internal  string GetOperationSuccessMessage(OperationTypes operation)
+        {
+            return Localizer[$"OperationDone_{(int)operation}"].Value;
+        }
+        
+        internal CommonError GetOperationError(OperationTypes operation)
+        {
+            return new CommonError
+            {
+                ErrorMessage = Localizer[$"OperationFailed_{(int)operation}"].Value,
+                ErrorCode = ((int)operation + 4000).ToString()
+            };
+        }
     }
 }
 
