@@ -97,7 +97,6 @@ namespace TemplateFw.Dashboard.Controllers
         {
             try
             {
-
                 var validationResult = _validator.Validate(dto);
                 if (!validationResult.IsValid)
                 {
