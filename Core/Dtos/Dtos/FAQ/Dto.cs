@@ -51,31 +51,28 @@ namespace TemplateFw.Dtos
 	}
     public class FaqDtoValidator : AbstractValidator<FaqDto>
     {
-        public FaqDtoValidator(IStringLocalizer<ValidationResource> validationResource, IStringLocalizer<ModulesResource> modulesLocalizer)
+        public FaqDtoValidator(IStringLocalizer<ValidationResource> validationLocalizer, IStringLocalizer<ModulesResource> modulesLocalizer)
         {
             RuleFor(p => p.QuestionAr)
-                .NotEmpty().WithMessage(validationResource["RequiredEnter"]).WithName(modulesLocalizer["Faq_QuestionAr"])
-                .NotNull()
-                .MaximumLength(150).WithMessage(validationResource["MaxLengthCharacters"].Value.Replace("{Length}", "150")).WithName(modulesLocalizer["Faq_QuestionAr"]);
+                .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
+                .MaximumLength(150).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "150")).WithName(modulesLocalizer["Faq_QuestionAr"]);
 
             RuleFor(p => p.QuestionEn)
-                .NotEmpty().WithMessage(validationResource["RequiredEnter"]).WithName(modulesLocalizer["Faq_QuestionEn"])
-                .NotNull()
-                .MaximumLength(150).WithMessage(validationResource["MaxLengthCharacters"].Value.Replace("{Length}", "150")).WithName(modulesLocalizer["Faq_QuestionEn"]);
+                .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
+                .MaximumLength(150).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "150")).WithName(modulesLocalizer["Faq_QuestionEn"]);
 
             RuleFor(p => p.AnswerAr)
-                .NotEmpty().WithMessage(validationResource["RequiredEnter"]).WithName(modulesLocalizer["Faq_AnswerAr"])
-                .NotNull()
-                .MaximumLength(2000).WithMessage(validationResource["MaxLengthCharacters"].Value.Replace("{Length}", "2000")).WithName(modulesLocalizer["Faq_AnswerAr"]);
+                .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"]).WithName(modulesLocalizer["Faq_AnswerAr"])
+                .MaximumLength(2000).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "2000")).WithName(modulesLocalizer["Faq_AnswerAr"]);
 
             RuleFor(p => p.AnswerEn)
-                .NotEmpty().WithMessage(validationResource["RequiredEnter"]).WithName(modulesLocalizer["Faq_AnswerEn"])
-                .NotNull()
-                .MaximumLength(2000).WithMessage(validationResource["MaxLengthCharacters"].Value.Replace("{Length}", "2000")).WithName(modulesLocalizer["Faq_AnswerEn"]);
+                .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"]).WithName(modulesLocalizer["Faq_AnswerEn"])
+                .MaximumLength(2000).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "2000")).WithName(modulesLocalizer["Faq_AnswerEn"]);
 
 
             RuleFor(x => x.PortalId)
-                .NotEmpty().WithMessage(validationResource["RequiredChoose"]).WithName(modulesLocalizer["Faq_Portal"]);
+                .NotEmpty().WithMessage(validationLocalizer["RequiredChoose"]).WithName(modulesLocalizer["Faq_Portal"]);
         }
     }
+
 }

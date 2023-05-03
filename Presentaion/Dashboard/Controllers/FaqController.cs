@@ -34,9 +34,7 @@ namespace TemplateFw.Dashboard.Controllers
         {
             try
             {
-                var languages = await _api.GetAsync<List<LookupDto>>(LookupsUrls.Languages);
-                ViewBag.Languages = languages;
-                FaqDto dto = new FaqDto();
+                var dto = new FaqDto();
                 return View("Save", dto);
             }
             catch (System.Exception ex)
