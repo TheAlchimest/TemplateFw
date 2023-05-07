@@ -32,8 +32,17 @@ namespace TemplateFw.Dashboard
             var config = new SystemConfiguration();
             Configuration.Bind(config);
             services.AddSingleton(config);
-            services.AddTransient<IValidator<FaqDto>, FaqDtoValidator>();
+            services.AddTransient<FaqDtoInsertValidator, FaqDtoInsertValidator>();
+            services.AddTransient<FaqDtoUpdateValidator, FaqDtoUpdateValidator>();
 
+            services.AddTransient<IValidator<CountryDto>, CountryDtoInsertValidator>();
+            services.AddTransient<IValidator<CountryDto>, CountryDtoUpdateValidator>();
+            
+            services.AddTransient<IValidator<ServiceDto>, ServiceDtoInsertValidator>();
+            services.AddTransient<IValidator<ServiceDto>, ServiceDtoUpdateValidator>();
+            
+            services.AddTransient<IValidator<ServiceTypeDto>, ServiceTypeDtoInsertValidator>();
+            services.AddTransient<IValidator<ServiceTypeDto>, ServiceTypeDtoUpdateValidator>();
 
             // Add Localizations
             services.AddLocalization();

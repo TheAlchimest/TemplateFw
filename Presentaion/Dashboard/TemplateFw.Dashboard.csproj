@@ -7,43 +7,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Views\Country\**" />
     <Compile Remove="Views\FAQ\**" />
     <Compile Remove="Views\Identity\**" />
-    <Compile Remove="Views\Language\**" />
-    <Compile Remove="Views\Portal\**" />
-    <Compile Remove="Views\ServiceType\**" />
-    <Compile Remove="Views\Service\**" />
-    <Content Remove="Views\Country\**" />
     <Content Remove="Views\FAQ\**" />
     <Content Remove="Views\Identity\**" />
-    <Content Remove="Views\Language\**" />
-    <Content Remove="Views\Portal\**" />
-    <Content Remove="Views\ServiceType\**" />
-    <Content Remove="Views\Service\**" />
-    <EmbeddedResource Remove="Views\Country\**" />
     <EmbeddedResource Remove="Views\FAQ\**" />
     <EmbeddedResource Remove="Views\Identity\**" />
-    <EmbeddedResource Remove="Views\Language\**" />
-    <EmbeddedResource Remove="Views\Portal\**" />
-    <EmbeddedResource Remove="Views\ServiceType\**" />
-    <EmbeddedResource Remove="Views\Service\**" />
-    <None Remove="Views\Country\**" />
     <None Remove="Views\FAQ\**" />
     <None Remove="Views\Identity\**" />
-    <None Remove="Views\Language\**" />
-    <None Remove="Views\Portal\**" />
-    <None Remove="Views\ServiceType\**" />
-    <None Remove="Views\Service\**" />
   </ItemGroup>
 
   <ItemGroup>
     <Compile Remove="Controllers\AnnounceController.cs" />
-    <Compile Remove="Controllers\CountryController.cs" />
     <Compile Remove="Controllers\LanguageController.cs" />
-    <Compile Remove="Controllers\PortalController.cs" />
-    <Compile Remove="Controllers\ServiceController.cs" />
-    <Compile Remove="Controllers\ServiceTypeController.cs" />
     <Compile Remove="Extensions\ControllersExtensions.cs" />
     <Compile Remove="InternalApiConsumer\AnnounceConsumer.cs" />
   </ItemGroup>
@@ -61,6 +37,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Views\Country\index.cshtml" />
+    <None Include="Views\Country\IndexContent.cshtml" />
+    <None Include="Views\Country\IndexFilter.cshtml" />
+    <None Include="Views\Country\Save.cshtml" />
     <None Include="Views\Error\Error-401.cshtml" />
     <None Include="Views\Error\Error-Generic.cshtml" />
     <None Include="Views\Error\Error-400.cshtml" />
@@ -72,6 +52,22 @@
     <None Include="Views\FAQ\IndexContent.cshtml" />
     <None Include="Views\FAQ\IndexFilter.cshtml" />
     <None Include="Views\FAQ\Save.cshtml" />
+    <None Include="Views\Language\index.cshtml" />
+    <None Include="Views\Language\IndexContent.cshtml" />
+    <None Include="Views\Language\IndexFilter.cshtml" />
+    <None Include="Views\Language\Save.cshtml" />
+    <None Include="Views\Portal\index.cshtml" />
+    <None Include="Views\Portal\IndexContent.cshtml" />
+    <None Include="Views\Portal\IndexFilter.cshtml" />
+    <None Include="Views\Portal\Save.cshtml" />
+    <None Include="Views\ServiceType\index.cshtml" />
+    <None Include="Views\ServiceType\IndexContent.cshtml" />
+    <None Include="Views\ServiceType\IndexFilter.cshtml" />
+    <None Include="Views\ServiceType\Save.cshtml" />
+    <None Include="Views\Service\index.cshtml" />
+    <None Include="Views\Service\IndexContent.cshtml" />
+    <None Include="Views\Service\IndexFilter.cshtml" />
+    <None Include="Views\Service\Save.cshtml" />
     <None Include="wwwroot\js\site.js" />
     <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
     <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" />

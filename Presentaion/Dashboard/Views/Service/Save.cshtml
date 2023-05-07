@@ -355,7 +355,7 @@
 
     function saveForm(obj, event) {
 
-        if ($("frmForm").attr("data-is-update-mode") === 'false') {
+        if ($("#frmForm").attr("data-is-update-mode") === 'false') {
             app.form.submit(obj, event)
         }
         else {

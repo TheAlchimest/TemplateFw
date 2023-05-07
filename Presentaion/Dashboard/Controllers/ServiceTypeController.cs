@@ -1,6 +1,8 @@
 ﻿using Dashboard.Common.WebClientHelpers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using FluentValidation;
+using FluentValidation.Results;
 using TemplateFw.Dashboard.Auth;
 using TemplateFw.Dtos.Common;
 using TemplateFw.Dtos;
@@ -17,17 +19,21 @@ namespace TemplateFw.Dashboard.Controllers
     public class ServiceTypeController : WebBaseController<ServiceTypeController>
     {
         private readonly RequestUrlHelper _api = ApiRequestHelper.InternalAPI;
+        private readonly IValidator<ServiceTypeDto> _validator;
 
-        #region Add
+        public ServiceTypeController(IValidator<ServiceTypeDto> validator)
+        {
+            _validator = validator;
+        }
 
-        [HttpGet]
+    #region Add
+
+    [HttpGet]
         public async Task<IActionResult> Add()
         {
             try
             {
-                var languages = await _api.GetAsync<List<LookupDto>>(LookupsUrls.Languages);
-                ViewBag.Languages = languages;
-                ServiceTypeDto dto = new ServiceTypeDto();
+                var dto = new ServiceTypeDto();
                 return View("Save", dto);
             }
             catch (System.Exception ex)
@@ -42,7 +48,8 @@ namespace TemplateFw.Dashboard.Controllers
         public async Task<IActionResult> Index()
         {
             ServiceTypeFilter filter = new ServiceTypeFilter();
-            return await ReturnViewResponse<GenericApiResponse<PagedList<ServiceTypeInfoDto>>>(_api, Urls.GetPaged, filter, OperationTypes.GetContent);
+            var apiResult = await _api.PostAsync<GenericApiResponse<PagedList<ServiceTypeInfoDto>>>(Urls.GetPaged, filter);
+            return ReturnViewResponse(apiResult, OperationTypes.GetContent);
         }
         #endregion
 
@@ -51,7 +58,8 @@ namespace TemplateFw.Dashboard.Controllers
         [HttpGet]
         public async Task<IActionResult> IndexContent([FromQuery] ServiceTypeFilter filter)
         {
-            return await ReturnViewResponse<GenericApiResponse<PagedList<ServiceTypeInfoDto>>>(_api, Urls.GetPaged, filter, OperationTypes.GetContent);
+            var apiResult = await _api.PostAsync<GenericApiResponse<PagedList<ServiceTypeInfoDto>>>(Urls.GetPaged, filter);
+            return ReturnViewResponse(apiResult, OperationTypes.GetContent);
         }
         #endregion
 
@@ -67,7 +75,7 @@ namespace TemplateFw.Dashboard.Controllers
                 ViewBag.Languages = languages;
                 string url = string.Format(Urls.GetOne, id);
                 var apiResult = await _api.GetAsync<GenericApiResponse<ServiceTypeDto>>(url);
-                return ReturnViewResponse("Save", apiResult, OperationTypes.GetContent);
+                return ReturnViewResponse(apiResult, OperationTypes.GetContent, "Save");
             }
             catch (System.Exception ex)
             {
@@ -86,10 +94,13 @@ namespace TemplateFw.Dashboard.Controllers
         {
             try
             {
-                if (!ModelState.IsValid)
+                var validationResult = _validator.Validate(dto);
+                if (!validationResult.IsValid)
                 {
-                    return ReturnInvalidModel(ModelState);
+                    return ReturnBadRequest(validationResult);
+                    
                 }
+
                 OperationTypes operation = (dto.ServiceTypeId > 0) ? OperationTypes.Update : OperationTypes.Add;
                 var apiResult = await _api.PostAsync<ApiResponse>(Urls.Save, dto);
                 return ReturnJsonResponse(apiResult, operation);
@@ -112,8 +123,8 @@ namespace TemplateFw.Dashboard.Controllers
             {
                 if (id <= 0)
                 {
-                    return ReturnInvalidModel(ModelState);
-                }
+                    return ReturnBadRequest(OperationTypes.Delete);
+            }
                 string url = string.Format(Urls.Delete, id);
                 var apiResult = await _api.PostAsync<ApiResponse>(url, id);
                 return ReturnJsonResponse(apiResult, OperationTypes.Delete);

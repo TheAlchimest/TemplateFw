@@ -1,5 +1,4 @@
-﻿
-using FluentValidation;
+﻿using FluentValidation;
 using Microsoft.Extensions.Localization;
 using System;
 using TemplateFw.Resources;
@@ -49,31 +48,59 @@ namespace TemplateFw.Dtos
 		public int PageNumber { get; set; } = 1;
 		public int PageSize { get; set; } = 20;
 	}
-    public class FaqDtoValidator : AbstractValidator<FaqDto>
-    {
-        public FaqDtoValidator(IStringLocalizer<ValidationResource> validationLocalizer, IStringLocalizer<ModulesResource> modulesLocalizer)
-        {
-            RuleFor(p => p.QuestionAr)
-                .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
-                .MaximumLength(150).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "150"))
-                .WithName(modulesLocalizer["Faq_QuestionAr"]);
 
-            RuleFor(p => p.QuestionEn)
-                .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
-                .MaximumLength(150).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "150")).WithName(modulesLocalizer["Faq_QuestionEn"]);
+	
+	public class FaqDtoInsertValidator : AbstractValidator<FaqDto>
+	{
+		public FaqDtoInsertValidator(IStringLocalizer<ValidationResource> validationLocalizer, IStringLocalizer<ModulesResource> modulesLocalizer)
+		{
+			RuleFor(x => x.QuestionAr)
+				.NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
+				.MaximumLength(150).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "150"))
+				.WithName("Faq_QuestionAr");
 
-            RuleFor(p => p.AnswerAr)
-                .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"]).WithName(modulesLocalizer["Faq_AnswerAr"])
-                .MaximumLength(2000).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "2000")).WithName(modulesLocalizer["Faq_AnswerAr"]);
+			RuleFor(x => x.QuestionEn)
+				.NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
+				.MaximumLength(150).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "150"))
+				.WithName("Faq_QuestionEn");
 
-            RuleFor(p => p.AnswerEn)
-                .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"]).WithName(modulesLocalizer["Faq_AnswerEn"])
-                .MaximumLength(2000).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "2000")).WithName(modulesLocalizer["Faq_AnswerEn"]);
+			RuleFor(x => x.AnswerAr)
+				.NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
+				.MaximumLength(256).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "256"))
+				.WithName("Faq_AnswerAr");
+
+			RuleFor(x => x.AnswerEn)
+				.NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
+				.MaximumLength(256).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "256"))
+				.WithName("Faq_AnswerEn");
+
+			RuleFor(x => x.PortalId)
+				.NotNull().WithMessage(validationLocalizer["RequiredChoose"])
+				.WithName("Faq_Portal");
 
 
-            RuleFor(x => x.PortalId)
-                .NotEmpty().WithMessage(validationLocalizer["RequiredChoose"]).WithName(modulesLocalizer["Faq_Portal"]);
-        }
-    }
+		}
+	}
+	
+	public class FaqDtoUpdateValidator : FaqDtoInsertValidator
+	{
+		public FaqDtoUpdateValidator(IStringLocalizer<ValidationResource> validationLocalizer, IStringLocalizer<ModulesResource> modulesLocalizer):base(validationLocalizer, modulesLocalizer)
+		{
+			RuleFor(x => x.FaqId)
+				.GreaterThan(0).WithMessage(validationLocalizer["RequiredEnter"])
+				.WithName("Faq_FaqId");
+		}
+	}
+	
+	public class FaqFilterValidator : AbstractValidator<FaqFilter>
+	{
+		public FaqFilterValidator(IStringLocalizer<ValidationResource> validationLocalizer, IStringLocalizer<ModulesResource> modulesLocalizer)
+		{
+			RuleFor(x => x.Question)
+				.MaximumLength(150).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "150"))
+				.WithName("Faq_QuestionAr");
 
+
+		}
+	}
 }

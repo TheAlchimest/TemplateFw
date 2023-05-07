@@ -1,6 +1,8 @@
-﻿ using Dashboard.Common.WebClientHelpers;
+﻿using Dashboard.Common.WebClientHelpers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using FluentValidation;
+using FluentValidation.Results;
 using TemplateFw.Dashboard.Auth;
 using TemplateFw.Dtos.Common;
 using TemplateFw.Dtos;
@@ -10,9 +12,6 @@ using TemplateFw.Shared.Dtos.Collections;
 using TemplateFw.Shared.Helpers;
 using LookupsUrls = Dashboard.Common.WebClientHelpers.InternalApiDictionary.LookupsUrls;
 using Urls = Dashboard.Common.WebClientHelpers.InternalApiDictionary.FaqUrls;
-using FluentValidation;
-using FluentValidation.Results;
-using Azure;
 
 namespace TemplateFw.Dashboard.Controllers
 {
@@ -20,21 +19,22 @@ namespace TemplateFw.Dashboard.Controllers
     public class FaqController : WebBaseController<FaqController>
     {
         private readonly RequestUrlHelper _api = ApiRequestHelper.InternalAPI;
-        private readonly IValidator<FaqDto> _validator;
+        private readonly FaqDtoInsertValidator _validator;
 
-        public FaqController(IValidator<FaqDto> validator)
+        public FaqController(FaqDtoInsertValidator validator)
         {
             _validator = validator;
         }
 
-        #region Add
+    #region Add
 
-        [HttpGet]
+    [HttpGet]
         public async Task<IActionResult> Add()
         {
             try
             {
                 var dto = new FaqDto();
+                ViewBag.ActionUrl = "/faq/create";
                 return View("Save", dto);
             }
             catch (System.Exception ex)
@@ -72,10 +72,9 @@ namespace TemplateFw.Dashboard.Controllers
             try
             {
                 id = StringCipher.Decrypt(id);
-                var languages = await _api.GetAsync<List<LookupDto>>(LookupsUrls.Languages);
-                ViewBag.Languages = languages;
                 string url = string.Format(Urls.GetOne, id);
                 var apiResult = await _api.GetAsync<GenericApiResponse<FaqDto>>(url);
+                ViewBag.ActionUrl = "/faq/update";
                 return ReturnViewResponse(apiResult, OperationTypes.GetContent, "Save");
             }
             catch (System.Exception ex)
@@ -87,11 +86,9 @@ namespace TemplateFw.Dashboard.Controllers
 
         #endregion
 
-        #region Save
-
-
+        #region Create
         [HttpPost]
-        public async Task<IActionResult> Save([FromBody] FaqDto dto)
+        public async Task<IActionResult> Create([FromBody] FaqDto dto)
         {
             try
             {
@@ -99,21 +96,39 @@ namespace TemplateFw.Dashboard.Controllers
                 if (!validationResult.IsValid)
                 {
                     return ReturnBadRequest(validationResult);
-                    
                 }
-
-                OperationTypes operation = (dto.FaqId > 0) ? OperationTypes.Update : OperationTypes.Add;
-                var apiResult = await _api.PostAsync<ApiResponse>(Urls.Save, dto);
-                return ReturnJsonResponse(apiResult, operation);
+                var apiResult = await _api.PostAsync<ApiResponse>(Urls.Create, dto);
+                return ReturnJsonResponse(apiResult, OperationTypes.Add);
             }
             catch (System.Exception ex)
             {
-                OperationTypes operation = (dto.FaqId > 0) ? OperationTypes.Update : OperationTypes.Add;
-                return ReturnJsonException(ex, operation);
+                return ReturnJsonException(ex, OperationTypes.Add);
             }
+
         }
         #endregion
 
+        #region Update
+        [HttpPost]
+        public async Task<IActionResult> Update([FromBody] FaqDto dto)
+        {
+            try
+            {
+                var validationResult = _validator.Validate(dto);
+                if (!validationResult.IsValid)
+                {
+                    return ReturnBadRequest(validationResult);
+                }
+                var apiResult = await _api.PostAsync<ApiResponse>(Urls.Update, dto);
+                return ReturnJsonResponse(apiResult, OperationTypes.Update);
+            }
+            catch (System.Exception ex)
+            {
+                return ReturnJsonException(ex, OperationTypes.Update);
+            }
+
+        }
+        #endregion
         #region Delete
 
         [HttpPost]
@@ -124,7 +139,7 @@ namespace TemplateFw.Dashboard.Controllers
                 if (id <= 0)
                 {
                     return ReturnBadRequest(OperationTypes.Delete);
-                }
+            }
                 string url = string.Format(Urls.Delete, id);
                 var apiResult = await _api.PostAsync<ApiResponse>(url, id);
                 return ReturnJsonResponse(apiResult, OperationTypes.Delete);

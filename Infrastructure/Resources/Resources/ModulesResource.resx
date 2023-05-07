@@ -117,9 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Country_Code" xml:space="preserve"><value>الرمز</value></data>
-<data name="Countries" xml:space="preserve"><value>البلدان</value></data>
-<data name="Country" xml:space="preserve"><value>البلد</value></data>
+  <data name="Countries" xml:space="preserve"><value>الدول</value></data>
+<data name="Country" xml:space="preserve"><value>الدولة</value></data>
+<data name="Country_Code" xml:space="preserve"><value>الرمز</value></data>
 <data name="Country_CreatedBy" xml:space="preserve"><value>تم إنشاؤه بواسطة</value></data>
 <data name="Country_CreationDate" xml:space="preserve"><value>تاريخ الإنشاء</value></data>
 <data name="Country_Information" xml:space="preserve"><value>معلومات الدولة</value></data>
@@ -130,29 +130,62 @@
 <data name="Country_Name" xml:space="preserve"><value>الاسم</value></data>
 <data name="Country_NameAr" xml:space="preserve"><value>الإسم باللغة العربية</value></data>
 <data name="Country_NameEn" xml:space="preserve"><value>الإسم باللغة الانجليزية</value></data>
+<data name="Faq" xml:space="preserve"><value>أسئلة شائعة</value></data>
 <data name="Faq_Answer" xml:space="preserve"><value>الاجابة</value></data>
 <data name="Faq_AnswerAr" xml:space="preserve"><value>الجواب باللغة العربية</value></data>
 <data name="Faq_AnswerEn" xml:space="preserve"><value>الجواب باللغة الإنجليزية</value></data>
-<data name="Faq" xml:space="preserve"><value>الأسئلة الشائعة</value></data>
-<data name="Faqs" xml:space="preserve"><value>الأسئلة الشائعة</value></data>
-<data name="Faq_Portal" xml:space="preserve"><value>البوابة</value></data>
-<data name="Faq_PortalChoose" xml:space="preserve"><value>اختر البوابة</value></data>
+<data name="Faq_CreatedBy" xml:space="preserve"><value>تم إنشاؤه بواسطة</value></data>
+<data name="Faq_CreationDate" xml:space="preserve"><value>تاريخ الإنشاء</value></data>
+<data name="Faq_Information" xml:space="preserve"><value>معلومات الأسئلة الشائعة</value></data>
+<data name="Faq_IsAvailable" xml:space="preserve"><value>متاح؟</value></data>
+<data name="Faq_LastModificationDate" xml:space="preserve"><value>تاريخ آخر تعديل</value></data>
+<data name="Faq_LastModifiedBy" xml:space="preserve"><value>آخر تعديل بواسطة</value></data>
+<data name="Faq_Management" xml:space="preserve"><value>إدارة الأسئلة المتكررة</value></data>
+<data name="Faq_Portal" xml:space="preserve"><value>معرف البوابة</value></data>
+<data name="Faq_PortalChoose" xml:space="preserve"><value>اختر معرف البوابة</value></data>
 <data name="Faq_Question" xml:space="preserve"><value>السؤال</value></data>
 <data name="Faq_QuestionAr" xml:space="preserve"><value>السؤال باللغة العربية</value></data>
 <data name="Faq_QuestionEn" xml:space="preserve"><value>السؤال باللغة الإنجليزية</value></data>
-<data name="Faq_Service" xml:space="preserve"><value>الخدمة</value></data>
-<data name="Faq_ServiceChoose" xml:space="preserve"><value>اختر الخدمة</value></data>
-<data name="Language_IsDefault" xml:space="preserve"><value>هو الافتراضي؟</value></data>
-<data name="Language" xml:space="preserve"><value>اللغة</value></data>
+<data name="Faq_Service" xml:space="preserve"><value>معرف الخدمة</value></data>
+<data name="Faq_ServiceChoose" xml:space="preserve"><value>اختر معرف الخدمة</value></data>
+<data name="Faqs" xml:space="preserve"><value>الأسئلة الشائعة</value></data>
+<data name="Language" xml:space="preserve"><value>لغة</value></data>
+<data name="Language_Code" xml:space="preserve"><value>الرمز</value></data>
+<data name="Language_CreatedBy" xml:space="preserve"><value>تم إنشاؤه بواسطة</value></data>
+<data name="Language_CreationDate" xml:space="preserve"><value>تاريخ الإنشاء</value></data>
+<data name="Language_Information" xml:space="preserve"><value>معلومات اللغة</value></data>
+<data name="Language_IsAvailable" xml:space="preserve"><value>متاح؟</value></data>
+<data name="Language_IsDefault" xml:space="preserve"><value>الافتراضي؟</value></data>
+<data name="Language_LastModificationDate" xml:space="preserve"><value>تاريخ آخر تعديل</value></data>
+<data name="Language_LastModifiedBy" xml:space="preserve"><value>آخر تعديل بواسطة</value></data>
+<data name="Language_Management" xml:space="preserve"><value>إدارة اللغات</value></data>
+<data name="Language_Name" xml:space="preserve"><value>الاسم</value></data>
 <data name="Languages" xml:space="preserve"><value>اللغات</value></data>
+<data name="Portal" xml:space="preserve"><value>منفذ</value></data>
+<data name="Portal_CreatedBy" xml:space="preserve"><value>تم إنشاؤه بواسطة</value></data>
+<data name="Portal_CreationDate" xml:space="preserve"><value>تاريخ الإنشاء</value></data>
 <data name="Portal_Description" xml:space="preserve"><value>الوصف</value></data>
 <data name="Portal_DescriptionAr" xml:space="preserve"><value>الوصف باللغة العربية</value></data>
 <data name="Portal_DescriptionEn" xml:space="preserve"><value>الوصف باللغة الإنجليزية</value></data>
+<data name="Portal_Information" xml:space="preserve"><value>معلومات البوابة</value></data>
+<data name="Portal_IsAvailable" xml:space="preserve"><value>متاح؟</value></data>
+<data name="Portal_LastModificationDate" xml:space="preserve"><value>تاريخ آخر تعديل</value></data>
+<data name="Portal_LastModifiedBy" xml:space="preserve"><value>آخر تعديل بواسطة</value></data>
 <data name="Portal_Link" xml:space="preserve"><value>الرابط</value></data>
+<data name="Portal_Management" xml:space="preserve"><value>إدارة البوابات</value></data>
+<data name="Portal_Name" xml:space="preserve"><value>الاسم</value></data>
+<data name="Portal_NameAr" xml:space="preserve"><value>الإسم باللغة العربية</value></data>
+<data name="Portal_NameEn" xml:space="preserve"><value>الإسم باللغة الانجليزية</value></data>
 <data name="Portals" xml:space="preserve"><value>البوابات</value></data>
+<data name="Service" xml:space="preserve"><value>خدمة</value></data>
 <data name="Service_Conditions" xml:space="preserve"><value>الشروط</value></data>
 <data name="Service_ConditionsAr" xml:space="preserve"><value>الشروط باللغة العربية</value></data>
 <data name="Service_ConditionsEn" xml:space="preserve"><value>الشروط باللغة الإنجليزية</value></data>
+<data name="Service_CreatedBy" xml:space="preserve"><value>تم إنشاؤه بواسطة</value></data>
+<data name="Service_CreationDate" xml:space="preserve"><value>تاريخ الإنشاء</value></data>
+<data name="Service_Description" xml:space="preserve"><value>الوصف</value></data>
+<data name="Service_DescriptionAr" xml:space="preserve"><value>الوصف باللغة العربية</value></data>
+<data name="Service_DescriptionEn" xml:space="preserve"><value>الوصف باللغة الإنجليزية</value></data>
 <data name="Service_DocumentRequired" xml:space="preserve"><value>الوثيقة المطلوبة</value></data>
 <data name="Service_DocumentRequiredAr" xml:space="preserve"><value>الوثيقة المطلوبة باللغة العربية</value></data>
 <data name="Service_DocumentRequiredEn" xml:space="preserve"><value>الوثيقة المطلوبة باللغة الإنجليزية</value></data>
@@ -160,19 +193,28 @@
 <data name="Service_FeesAr" xml:space="preserve"><value>الرسوم باللغة العربية</value></data>
 <data name="Service_FeesEn" xml:space="preserve"><value>الرسوم باللغة الانجليزية</value></data>
 <data name="Service_Icon" xml:space="preserve"><value>الأيقونة</value></data>
+<data name="Service_Information" xml:space="preserve"><value>معلومات الخدمة</value></data>
+<data name="Service_IsAvailable" xml:space="preserve"><value>متاح؟</value></data>
 <data name="Service_IsPublished" xml:space="preserve"><value>يتم نشر؟</value></data>
+<data name="Service_LastModificationDate" xml:space="preserve"><value>تاريخ آخر تعديل</value></data>
+<data name="Service_LastModifiedBy" xml:space="preserve"><value>آخر تعديل بواسطة</value></data>
 <data name="Service_LogInRequired" xml:space="preserve"><value>تسجيل الدخول مطلوب</value></data>
+<data name="Service_Management" xml:space="preserve"><value>إدارة الخدمات</value></data>
 <data name="Service_MobileUrl" xml:space="preserve"><value>عنوان url للجوال</value></data>
+<data name="Service_Name" xml:space="preserve"><value>الاسم</value></data>
+<data name="Service_NameAr" xml:space="preserve"><value>الإسم باللغة العربية</value></data>
+<data name="Service_NameEn" xml:space="preserve"><value>الإسم باللغة الانجليزية</value></data>
 <data name="Service_Notes" xml:space="preserve"><value>الملاحظات</value></data>
 <data name="Service_NotesAr" xml:space="preserve"><value>الملاحظات باللغة العربية</value></data>
 <data name="Service_NotesEn" xml:space="preserve"><value>الملاحظات باللغة الإنجليزية</value></data>
 <data name="Service_PdfMediaId" xml:space="preserve"><value>معرف وسائط pdf</value></data>
+<data name="Service_Portal" xml:space="preserve"><value>معرف البوابة</value></data>
+<data name="Service_PortalChoose" xml:space="preserve"><value>اختر معرف البوابة</value></data>
 <data name="Service_PublishedAt" xml:space="preserve"><value>تم النشر في</value></data>
 <data name="Service_PublishedBy" xml:space="preserve"><value>تم نشره بواسطة</value></data>
 <data name="Service_ServiceCode" xml:space="preserve"><value>كود الخدمة</value></data>
-<data name="Services" xml:space="preserve"><value>الخدمات</value></data>
-<data name="Service_ServiceType" xml:space="preserve"><value>نوع الخدمة</value></data>
-<data name="Service_ServiceTypeChoose" xml:space="preserve"><value>اختر نوع الخدمة</value></data>
+<data name="Service_ServiceType" xml:space="preserve"><value>معرف نوع الخدمة</value></data>
+<data name="Service_ServiceTypeChoose" xml:space="preserve"><value>اختر معرف نوع الخدمة</value></data>
 <data name="Service_ShortDescription" xml:space="preserve"><value>الوصف المختصر</value></data>
 <data name="Service_ShortDescriptionAr" xml:space="preserve"><value>الوصف المختصر باللغة العربية</value></data>
 <data name="Service_ShortDescriptionEn" xml:space="preserve"><value>الوصف المختصر باللغة الإنجليزية</value></data>
@@ -190,6 +232,18 @@
 <data name="Service_Url" xml:space="preserve"><value>الرابط</value></data>
 <data name="Service_Video" xml:space="preserve"><value>الفيديو</value></data>
 <data name="Service_ViewOrder" xml:space="preserve"><value>ترتيب العرض</value></data>
+<data name="Services" xml:space="preserve"><value>خدمات</value></data>
+<data name="ServiceType" xml:space="preserve"><value>نوع الخدمة</value></data>
+<data name="ServiceType_CreatedBy" xml:space="preserve"><value>تم إنشاؤه بواسطة</value></data>
+<data name="ServiceType_CreationDate" xml:space="preserve"><value>تاريخ الإنشاء</value></data>
+<data name="ServiceType_Information" xml:space="preserve"><value>معلومات نوع الخدمة</value></data>
+<data name="ServiceType_IsAvailable" xml:space="preserve"><value>متاح؟</value></data>
+<data name="ServiceType_LastModificationDate" xml:space="preserve"><value>تاريخ آخر تعديل</value></data>
+<data name="ServiceType_LastModifiedBy" xml:space="preserve"><value>آخر تعديل بواسطة</value></data>
+<data name="ServiceType_Management" xml:space="preserve"><value>إدارة أنواع الخدمات</value></data>
+<data name="ServiceType_Name" xml:space="preserve"><value>الاسم</value></data>
+<data name="ServiceType_NameAr" xml:space="preserve"><value>الإسم باللغة العربية</value></data>
+<data name="ServiceType_NameEn" xml:space="preserve"><value>الإسم باللغة الانجليزية</value></data>
 <data name="ServiceTypes" xml:space="preserve"><value>أنواع الخدمة</value></data>
 
 </root>

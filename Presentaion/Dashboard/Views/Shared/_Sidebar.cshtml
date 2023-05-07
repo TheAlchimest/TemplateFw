@@ -20,8 +20,42 @@
                     </a>
                 </li>
             }
-
-
+            @*@if (User.IsInRole(RoleProvider.Service))
+            {*@
+                <li>
+                    <a href="#!/Service/" class="ai-icon" aria-expanded="false">
+                        <img src="~/images/icons/file-question-alt.svg" width="48" class="icon-img" />
+                        <span class="nav-text">الخدمات </span>
+                    </a>
+                </li>
+            @*}
+            @if (User.IsInRole(RoleProvider.Country))
+            {*@
+                <li>
+                    <a href="#!/Country/" class="ai-icon" aria-expanded="false">
+                        <img src="~/images/icons/file-question-alt.svg" width="48" class="icon-img" />
+                        <span class="nav-text">الدول </span>
+                    </a>
+                </li>
+            @*}
+            @if (User.IsInRole(RoleProvider.ServiceType))
+            {*@
+                <li>
+                    <a href="#!/ServiceType/" class="ai-icon" aria-expanded="false">
+                        <img src="~/images/icons/file-question-alt.svg" width="48" class="icon-img" />
+                        <span class="nav-text">أنواع الخدمات </span>
+                    </a>
+                </li>
+            @*}
+            @if (User.IsInRole(RoleProvider.Portal))
+            {*@
+                <li>
+                    <a href="#!/Portal/" class="ai-icon" aria-expanded="false">
+                        <img src="~/images/icons/file-question-alt.svg" width="48" class="icon-img" />
+                        <span class="nav-text">البوابات </span>
+                    </a>
+                </li>
+            @*}*@
             @if (User.IsInRole(RoleProvider.ANNOUNCING_ADMIN))
             {
                 <li>

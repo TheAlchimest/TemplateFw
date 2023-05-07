@@ -27,7 +27,7 @@ namespace Dashboard.Common.WebClientHelpers
         public static class FaqUrls
         {
             public const string Create = "Faq/Create";
-            public const string Save = "Faq/Save";
+            public const string Update = "Faq/Update";
             public const string Delete = "Faq/Delete/{0}";
             public const string GetAll = "Faq/getall";
             public const string GetPaged = "Faq/get-paged";

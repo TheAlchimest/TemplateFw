@@ -131,34 +131,69 @@
 <data name="Country_LastModifiedBy" xml:space="preserve"><value>Last modified by</value></data>
 <data name="Country_LastModificationDate" xml:space="preserve"><value>Last modification date</value></data>
 <data name="Faqs" xml:space="preserve"><value>Faqs</value></data>
-<data name="Faq" xml:space="preserve"><value>Faq</value></data>
+<data name="Faq" xml:space="preserve"><value>FAQ</value></data>
+<data name="Faq_Management" xml:space="preserve"><value>Faqs management</value></data>
+<data name="Faq_Information" xml:space="preserve"><value>Faq information</value></data>
 <data name="Faq_QuestionAr" xml:space="preserve"><value>Question in Arabic</value></data>
 <data name="Faq_Question" xml:space="preserve"><value>Question</value></data>
 <data name="Faq_QuestionEn" xml:space="preserve"><value>Question in English</value></data>
 <data name="Faq_AnswerAr" xml:space="preserve"><value>Answer in Arabic</value></data>
 <data name="Faq_Answer" xml:space="preserve"><value>Answer</value></data>
 <data name="Faq_AnswerEn" xml:space="preserve"><value>Answer in English</value></data>
-<data name="Faq_Portal" xml:space="preserve"><value>Portal</value></data>
-<data name="Faq_PortalChoose" xml:space="preserve"><value>Choose portal</value></data>
-<data name="Faq_Service" xml:space="preserve"><value>Service</value></data>
-<data name="Faq_ServiceChoose" xml:space="preserve"><value>Choose service</value></data>
+<data name="Faq_Portal" xml:space="preserve"><value>Portal id</value></data>
+<data name="Faq_PortalChoose" xml:space="preserve"><value>Choose portal id</value></data>
+<data name="Faq_Service" xml:space="preserve"><value>Service id</value></data>
+<data name="Faq_ServiceChoose" xml:space="preserve"><value>Choose service id</value></data>
+<data name="Faq_IsAvailable" xml:space="preserve"><value>Is available?</value></data>
+<data name="Faq_CreatedBy" xml:space="preserve"><value>Created by</value></data>
+<data name="Faq_CreationDate" xml:space="preserve"><value>Creation date</value></data>
+<data name="Faq_LastModifiedBy" xml:space="preserve"><value>Last modified by</value></data>
+<data name="Faq_LastModificationDate" xml:space="preserve"><value>Last modification date</value></data>
 <data name="Languages" xml:space="preserve"><value>Languages</value></data>
 <data name="Language" xml:space="preserve"><value>Language</value></data>
-<data name="Language_IsDefault" xml:space="preserve"><value>Is default?</value></data>
+<data name="Language_Management" xml:space="preserve"><value>Languages management</value></data>
+<data name="Language_Information" xml:space="preserve"><value>Language information</value></data>
+<data name="Language_Name" xml:space="preserve"><value>Name</value></data>
+<data name="Language_Code" xml:space="preserve"><value>Code</value></data>
+<data name="Language_IsDefault" xml:space="preserve"><value>Is Default?</value></data>
+<data name="Language_IsAvailable" xml:space="preserve"><value>Is available?</value></data>
+<data name="Language_CreatedBy" xml:space="preserve"><value>Created by</value></data>
+<data name="Language_CreationDate" xml:space="preserve"><value>Creation date</value></data>
+<data name="Language_LastModifiedBy" xml:space="preserve"><value>Last modified by</value></data>
+<data name="Language_LastModificationDate" xml:space="preserve"><value>Last modification date</value></data>
 <data name="Portals" xml:space="preserve"><value>Portals</value></data>
+<data name="Portal" xml:space="preserve"><value>Portal</value></data>
+<data name="Portal_Management" xml:space="preserve"><value>Portals management</value></data>
+<data name="Portal_Information" xml:space="preserve"><value>Portal information</value></data>
+<data name="Portal_NameAr" xml:space="preserve"><value>Name in Arabic</value></data>
+<data name="Portal_Name" xml:space="preserve"><value>Name</value></data>
+<data name="Portal_NameEn" xml:space="preserve"><value>Name in English</value></data>
 <data name="Portal_DescriptionAr" xml:space="preserve"><value>Description in Arabic</value></data>
 <data name="Portal_Description" xml:space="preserve"><value>Description</value></data>
 <data name="Portal_DescriptionEn" xml:space="preserve"><value>Description in English</value></data>
 <data name="Portal_Link" xml:space="preserve"><value>Link</value></data>
+<data name="Portal_IsAvailable" xml:space="preserve"><value>Is available?</value></data>
+<data name="Portal_CreatedBy" xml:space="preserve"><value>Created by</value></data>
+<data name="Portal_CreationDate" xml:space="preserve"><value>Creation date</value></data>
+<data name="Portal_LastModifiedBy" xml:space="preserve"><value>Last modified by</value></data>
+<data name="Portal_LastModificationDate" xml:space="preserve"><value>Last modification date</value></data>
 <data name="Services" xml:space="preserve"><value>Services</value></data>
+<data name="Service" xml:space="preserve"><value>Service</value></data>
+<data name="Service_Management" xml:space="preserve"><value>Services management</value></data>
+<data name="Service_Information" xml:space="preserve"><value>Service information</value></data>
+<data name="Service_NameAr" xml:space="preserve"><value>Name in Arabic</value></data>
+<data name="Service_Name" xml:space="preserve"><value>Name</value></data>
+<data name="Service_NameEn" xml:space="preserve"><value>Name in English</value></data>
 <data name="Service_Icon" xml:space="preserve"><value>Icon</value></data>
 <data name="Service_LogInRequired" xml:space="preserve"><value>Log in required</value></data>
 <data name="Service_Url" xml:space="preserve"><value>URL</value></data>
 <data name="Service_MobileUrl" xml:space="preserve"><value>Mobile url</value></data>
-<data name="Service_ServiceType" xml:space="preserve"><value>Service type</value></data>
-<data name="Service_ServiceTypeChoose" xml:space="preserve"><value>Choose service type</value></data>
+<data name="Service_ServiceType" xml:space="preserve"><value>Service type id</value></data>
+<data name="Service_ServiceTypeChoose" xml:space="preserve"><value>Choose service type id</value></data>
 <data name="Service_PdfMediaId" xml:space="preserve"><value>Pdf media id</value></data>
 <data name="Service_Video" xml:space="preserve"><value>Video</value></data>
+<data name="Service_Portal" xml:space="preserve"><value>Portal id</value></data>
+<data name="Service_PortalChoose" xml:space="preserve"><value>Choose portal id</value></data>
 <data name="Service_ServiceCode" xml:space="preserve"><value>Service code</value></data>
 <data name="Service_ShowInCatalog" xml:space="preserve"><value>Show in catalog</value></data>
 <data name="Service_ShowInFollowUp" xml:space="preserve"><value>Show in follow up</value></data>
@@ -172,6 +207,9 @@
 <data name="Service_ShortDescriptionAr" xml:space="preserve"><value>Short description in Arabic</value></data>
 <data name="Service_ShortDescription" xml:space="preserve"><value>Short description</value></data>
 <data name="Service_ShortDescriptionEn" xml:space="preserve"><value>Short description in English</value></data>
+<data name="Service_DescriptionAr" xml:space="preserve"><value>Description in Arabic</value></data>
+<data name="Service_Description" xml:space="preserve"><value>Description</value></data>
+<data name="Service_DescriptionEn" xml:space="preserve"><value>Description in English</value></data>
 <data name="Service_ConditionsAr" xml:space="preserve"><value>Conditions in Arabic</value></data>
 <data name="Service_Conditions" xml:space="preserve"><value>Conditions</value></data>
 <data name="Service_ConditionsEn" xml:space="preserve"><value>Conditions in English</value></data>
@@ -190,6 +228,22 @@
 <data name="Service_TimeRequiredAr" xml:space="preserve"><value>Time required in Arabic</value></data>
 <data name="Service_TimeRequired" xml:space="preserve"><value>Time required</value></data>
 <data name="Service_TimeRequiredEn" xml:space="preserve"><value>Time required in English</value></data>
+<data name="Service_IsAvailable" xml:space="preserve"><value>Is available?</value></data>
+<data name="Service_CreatedBy" xml:space="preserve"><value>Created by</value></data>
+<data name="Service_CreationDate" xml:space="preserve"><value>Creation date</value></data>
+<data name="Service_LastModifiedBy" xml:space="preserve"><value>Last modified by</value></data>
+<data name="Service_LastModificationDate" xml:space="preserve"><value>Last modification date</value></data>
 <data name="ServiceTypes" xml:space="preserve"><value>Service types</value></data>
+<data name="ServiceType" xml:space="preserve"><value>Service type</value></data>
+<data name="ServiceType_Management" xml:space="preserve"><value>Service types management</value></data>
+<data name="ServiceType_Information" xml:space="preserve"><value>Service type information</value></data>
+<data name="ServiceType_NameAr" xml:space="preserve"><value>Name in Arabic</value></data>
+<data name="ServiceType_Name" xml:space="preserve"><value>Name</value></data>
+<data name="ServiceType_NameEn" xml:space="preserve"><value>Name in English</value></data>
+<data name="ServiceType_IsAvailable" xml:space="preserve"><value>Is available?</value></data>
+<data name="ServiceType_CreatedBy" xml:space="preserve"><value>Created by</value></data>
+<data name="ServiceType_CreationDate" xml:space="preserve"><value>Creation date</value></data>
+<data name="ServiceType_LastModifiedBy" xml:space="preserve"><value>Last modified by</value></data>
+<data name="ServiceType_LastModificationDate" xml:space="preserve"><value>Last modification date</value></data>
 
 </root>

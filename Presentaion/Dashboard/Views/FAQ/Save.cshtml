@@ -6,7 +6,7 @@
     bool isUpdateMode = (Model.FaqId != 0);
     string isUpdateModeString = isUpdateMode.ToString().ToLower();
 }
-<form method="post" id="frmForm" name="frmForm" action="/faq/Save" data-is-update-mode="@(isUpdateModeString)">
+<form method="post" id="frmForm" name="frmForm" action="@ViewBag.ActionUrl" data-is-update-mode="@(isUpdateModeString)">
     <div class="form-head mb-sm-5 mb-3 d-flex flex-wrap align-items-center ">
         <div class=" mr-auto">
             <h3 class="font-w600 mb-2">@localizer["Faq"]</h3>
@@ -22,17 +22,20 @@
             <div class="row">
                 <input class="form-control"   type="hidden" data-type="hidden" data-smk-type="hidden" id="FaqId" name="FaqId" placeholder="" required maxlength="4" value="@(Model.FaqId)"  smk-error-msg-required="" data-smk-max="9999999999" data-smk-min="-9999999999"><div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="QuestionAr">@localizer["Faq_QuestionAr"] :</label>
-                        <input class="form-control" required id="QuestionAr" name="QuestionAr" placeholder="" maxlength="2000" value="@(Model.QuestionAr)" />
+    <label class="form-label-small px-3" for="QuestionAr">@localizer["Faq_QuestionAr"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <textarea rows="4"
+              class="form-control"
+               id="QuestionAr" name="QuestionAr" placeholder="" required maxlength="150" value="@(Model.QuestionAr)"  smk-error-msg-required="">@(Model.QuestionAr)</textarea>
               
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="QuestionEn">@localizer["Faq_QuestionEn"] :</label>
-                        <input class="form-control" required id="QuestionEn" name="QuestionEn" placeholder="" maxlength="2000" value="@(Model.QuestionEn)" />
-    
+    <label class="form-label-small px-3" for="QuestionEn">@localizer["Faq_QuestionEn"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <textarea rows="4"
+              class="form-control"
+               id="QuestionEn" name="QuestionEn" placeholder="" required maxlength="150" value="@(Model.QuestionEn)"  smk-error-msg-required="">@(Model.QuestionEn)</textarea>
               
     <i class="accent"></i>
 </div>
@@ -115,7 +118,7 @@
     });
 
     function saveForm(obj, event) {
-        debugger;
+
         if ($("#frmForm").attr("data-is-update-mode") === 'false') {
             app.form.submit(obj, event)
         }
