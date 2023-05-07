@@ -53,13 +53,13 @@ namespace TemplateFw.Dtos
 			RuleFor(x => x.NameAr)
 			    .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
 			    .MaximumLength(120).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "120"))
-			    //.Matches(@"^[a-zA-Z0-9\s\u0080-\uFFFF]{1,150}$").WithMessage(validationLocalizer["Pattern"].Value.Replace("{Value}", @"^[a-zA-Z0-9\s\u0080-\uFFFF]{1,150}$"))
+			    .Matches(@"/^[A-Za-z]{5,120}$/").WithMessage(validationLocalizer["Pattern"])
 			    .WithName("Country_NameAr");
 
 			RuleFor(x => x.NameEn)
 			    .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
 			    .MaximumLength(120).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "120"))
-			    //.Matches(@"^[a-zA-Z0-9\s\u0080-\uFFFF]{1,150}$").WithMessage(validationLocalizer["Pattern"].Value.Replace("{Value}", @"^[a-zA-Z0-9\s\u0080-\uFFFF]{1,150}$"))
+			    .Matches(@"/^[A-Za-z]{5,120}$/").WithMessage(validationLocalizer["Pattern"])
 			    .WithName("Country_NameEn");
 
 			RuleFor(x => x.Code)
@@ -89,7 +89,7 @@ namespace TemplateFw.Dtos
         {
 			RuleFor(x => x.Name)
 			    .MaximumLength(120).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "120"))
-			    .Matches(@"^[a-zA-Z0-9\s\u0080-\uFFFF]{1,150}$").WithMessage(validationLocalizer["Pattern"].Value.Replace("{Value}", @"^[a-zA-Z0-9\s\u0080-\uFFFF]{1,150}$"))
+			    .Matches(@"/^[A-Za-z]{5,120}$/").WithMessage(validationLocalizer["Pattern"])
 			    .WithName("Country_NameAr");
 
 

@@ -3,10 +3,8 @@
 @model TemplateFw.Dtos.FaqDto
 
 @{
-    bool isUpdateMode = (Model.FaqId != 0);
-    string isUpdateModeString = isUpdateMode.ToString().ToLower();
 }
-<form method="post" id="frmForm" name="frmForm" action="@ViewBag.ActionUrl" data-is-update-mode="@(isUpdateModeString)">
+<form method="post" id="frmForm" name="frmForm" action="@(ViewBag.ActionUrl)">
     <div class="form-head mb-sm-5 mb-3 d-flex flex-wrap align-items-center ">
         <div class=" mr-auto">
             <h3 class="font-w600 mb-2">@localizer["Faq"]</h3>
@@ -97,7 +95,7 @@
     
     <div class="text-center">
         <button type="button" id="Send" class="btn btn-primary font-size-13 font-weight-bold"
-                onclick="saveForm(this,event)"
+                onclick="actionsController.submit('frmForm',this,event)"
                 on-sccess-redirect-url="/#!/faq/"
                 data-is-update-mode="@(isUpdateModeString)">
             <i class="far fa-lg fa-check"></i> ارسال
@@ -112,19 +110,5 @@
 </form>
 
 <script>
-
-    $("#frmForm :input").change(function () {
-        $("#frmForm").data("changed", true);
-    });
-
-    function saveForm(obj, event) {
-
-        if ($("#frmForm").attr("data-is-update-mode") === 'false') {
-            app.form.submit(obj, event)
-        }
-        else {
-            swal.fire("لا يوجد تعديل", "لا يوجد بيانات تم تعديلها", "info");
-            window.location = $("#backActionBtn").attr("href");
-        }
-    }
+    actionsController.prepareForm("frmForm");
 </script>

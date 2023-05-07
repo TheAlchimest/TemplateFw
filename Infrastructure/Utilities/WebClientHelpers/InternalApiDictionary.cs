@@ -40,7 +40,7 @@ namespace Dashboard.Common.WebClientHelpers
         public static class CountryUrls
         {
             public const string Create = "Country/Create";
-            public const string Save = "Country/Save";
+            public const string Update = "Country/Update";
             public const string Delete = "Country/Delete/{0}";
             public const string GetAll = "Country/getall";
             public const string GetPaged = "Country/get-paged";
@@ -53,7 +53,7 @@ namespace Dashboard.Common.WebClientHelpers
         public static class PortalUrls
         {
             public const string Create = "Portal/Create";
-            public const string Save = "Portal/Save";
+            public const string Update = "Portal/Update";
             public const string Delete = "Portal/Delete/{0}";
             public const string GetAll = "Portal/getall";
             public const string GetPaged = "Portal/get-paged";
@@ -66,7 +66,7 @@ namespace Dashboard.Common.WebClientHelpers
         public static class LanguageUrls
         {
             public const string Create = "Language/Create";
-            public const string Save = "Language/Save";
+            public const string Update = "Language/Update";
             public const string Delete = "Language/Delete/{0}";
             public const string GetAll = "Language/getall";
             public const string GetPaged = "Language/get-paged";
@@ -79,7 +79,7 @@ namespace Dashboard.Common.WebClientHelpers
         public static class ServiceUrls
         {
             public const string Create = "Service/Create";
-            public const string Save = "Service/Save";
+            public const string Update = "Service/Update";
             public const string Delete = "Service/Delete/{0}";
             public const string GetAll = "Service/getall";
             public const string GetPaged = "Service/get-paged";
@@ -92,7 +92,7 @@ namespace Dashboard.Common.WebClientHelpers
         public static class ServiceTypeUrls
         {
             public const string Create = "ServiceType/Create";
-            public const string Save = "ServiceType/Save";
+            public const string Update = "ServiceType/Update";
             public const string Delete = "ServiceType/Delete/{0}";
             public const string GetAll = "ServiceType/getall";
             public const string GetPaged = "ServiceType/get-paged";

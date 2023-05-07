@@ -111,13 +111,13 @@ namespace TemplateFw.Dtos
 			RuleFor(x => x.NameAr)
 			    .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
 			    .MaximumLength(120).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "120"))
-			    .Matches(@"^[a-zA-Z0-9\s\u0080-\uFFFF]{1,150}$").WithMessage(validationLocalizer["Pattern"].Value.Replace("{Value}", @"^[a-zA-Z0-9\s\u0080-\uFFFF]{1,150}$"))
+			    .Matches(@"/^[A-Za-z]{5,120}$/").WithMessage(validationLocalizer["Pattern"])
 			    .WithName("Service_NameAr");
 
 			RuleFor(x => x.NameEn)
 			    .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
 			    .MaximumLength(120).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "120"))
-			    .Matches(@"^[a-zA-Z0-9\s\u0080-\uFFFF]{1,150}$").WithMessage(validationLocalizer["Pattern"].Value.Replace("{Value}", @"^[a-zA-Z0-9\s\u0080-\uFFFF]{1,150}$"))
+			    .Matches(@"/^[A-Za-z]{5,120}$/").WithMessage(validationLocalizer["Pattern"])
 			    .WithName("Service_NameEn");
 
 			RuleFor(x => x.Icon)
@@ -136,7 +136,7 @@ namespace TemplateFw.Dtos
 			RuleFor(x => x.MobileUrl)
 			    .MaximumLength(12).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "12"))
 			    .MinimumLength(10).WithMessage(validationLocalizer["MinLengthCharacters"].Value.Replace("{Length}", "10"))
-			    .Matches("/^(\\+?966|0)?5\\d{8}$/").WithMessage(validationLocalizer["Pattern"].Value.Replace("{Value}", " /^(\\+?966|0)?5\\d{8}$/"))
+			    .Matches(@"/^(\+?966|0)?5\d{8}$/").WithMessage(validationLocalizer["Pattern"])
 			    .WithName("Service_MobileUrl");
 
 			RuleFor(x => x.ServiceTypeId)
@@ -244,12 +244,12 @@ namespace TemplateFw.Dtos
 
 			RuleFor(x => x.TimeRequiredAr)
 			    .MaximumLength(120).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "120"))
-			    .Matches("/^(0?[1-9]|1[0-2]):[0-5][0-9](\\s?[AP][M])?$/").WithMessage(validationLocalizer["Pattern"].Value.Replace("{Value}", " /^(0?[1-9]|1[0-2]):[0-5][0-9](\\s?[AP][M])?$/"))
+			    .Matches(@"/^(0?[1-9]|1[0-2]):[0-5][0-9](\\s?[AP][M])?$/").WithMessage(validationLocalizer["Pattern"])
 			    .WithName("Service_TimeRequiredAr");
 
 			RuleFor(x => x.TimeRequiredEn)
 			    .MaximumLength(120).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "120"))
-			    .Matches("/^(0?[1-9]|1[0-2]):[0-5][0-9](\\s?[AP][M])?$/").WithMessage(validationLocalizer["Pattern"].Value.Replace("{Value}", " /^(0?[1-9]|1[0-2]):[0-5][0-9](\\s?[AP][M])?$/"))
+			    .Matches(@"/^(0?[1-9]|1[0-2]):[0-5][0-9](\\s?[AP][M])?$/").WithMessage(validationLocalizer["Pattern"])
 			    .WithName("Service_TimeRequiredEn");
 
 
@@ -274,7 +274,7 @@ namespace TemplateFw.Dtos
         {
 			RuleFor(x => x.Name)
 			    .MaximumLength(120).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "120"))
-			    .Matches(@"^[a-zA-Z0-9\s\u0080-\uFFFF]{1,150}$").WithMessage(validationLocalizer["Pattern"].Value.Replace("{Value}", @"^[a-zA-Z0-9\s\u0080-\uFFFF]{1,150}$"))
+			    .Matches(@"/^[A-Za-z]{5,120}$/").WithMessage(validationLocalizer["Pattern"])
 			    .WithName("Service_NameAr");
 
 

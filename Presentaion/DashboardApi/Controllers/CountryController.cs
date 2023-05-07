@@ -28,17 +28,20 @@ namespace TemplateFw.DashboardApi.Controllers
         [ProducesResponseType(201)]
         [ProducesResponseType(400)]
         [ProducesResponseType(500)]
-        [Route("save")]
-        public async Task<ApiResponse> Save(CountryDto dto)
+        [Route("create")]
+        public async Task<ApiResponse> Create(CountryDto dto)
         {
-            if (dto.CountryId == 0)
-            {
-                return await ApiResponse(() => countryService.CreateAsync(dto), OperationTypes.Add);
-            }
-            else
-            {
-                return await ApiResponse(() => countryService.UpdateAsync(dto), OperationTypes.Update);
-            }
+            return await ApiResponse(() => countryService.CreateAsync(dto), OperationTypes.Add);
+        }
+
+        [HttpPost]
+        [ProducesResponseType(201)]
+        [ProducesResponseType(400)]
+        [ProducesResponseType(500)]
+        [Route("update")]
+        public async Task<ApiResponse> Update(CountryDto dto)
+        {
+             return await ApiResponse(() => countryService.UpdateAsync(dto), OperationTypes.Update);
         }
         [HttpGet]
         [ProducesResponseType(201)]

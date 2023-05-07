@@ -1,4 +1,22 @@
 ﻿var actionsController = {
+    prepareForm: function (formId) {
+        let $frm = $("#" + formId);
+        $frm.find("input,select").change(function () {
+            $frm.data("changed", true);
+        });
+    },
+    submit: function (formId, obj, event) {
+        let $frm = $("#" + formId);
+        if ($frm.data("changed")) {
+            app.form.submit(obj, event)
+        }
+        else {
+            swal.fire("الغاء العملية", "لم يتم ادخال أي بيانات", "info");
+            if ($("#backActionBtn").length > 0) {
+                window.location = $("#backActionBtn").attr("href");
+            }
+        }
+    },
     colectActionData: function (element, baseMsg) {
         let action = {};
         action.$element = $(element);

@@ -19,16 +19,17 @@ namespace TemplateFw.Dashboard.Controllers
     public class FaqController : WebBaseController<FaqController>
     {
         private readonly RequestUrlHelper _api = ApiRequestHelper.InternalAPI;
-        private readonly FaqDtoInsertValidator _validator;
+        private readonly FaqDtoInsertValidator _insertValidator;
+        private readonly FaqDtoUpdateValidator _updateValidator;
 
-        public FaqController(FaqDtoInsertValidator validator)
+        public FaqController(FaqDtoInsertValidator validator, FaqDtoUpdateValidator updateValidator)
         {
-            _validator = validator;
+            _insertValidator = validator;
+            _updateValidator = updateValidator;
         }
 
-    #region Add
-
-    [HttpGet]
+        #region Add
+        [HttpGet]
         public async Task<IActionResult> Add()
         {
             try
@@ -36,12 +37,33 @@ namespace TemplateFw.Dashboard.Controllers
                 var dto = new FaqDto();
                 ViewBag.ActionUrl = "/faq/create";
                 return View("Save", dto);
-            }
+    }
             catch (System.Exception ex)
             {
                 return ReturnViewException(ex, OperationTypes.GetContent);
             }
         }
+        #endregion
+
+        #region Edit
+        [HttpGet]
+        public async Task<IActionResult> Edit(string id)
+        {
+            try
+            {
+                id = StringCipher.Decrypt(id);
+                string url = string.Format(Urls.GetOne, id);
+                var apiResult = await _api.GetAsync<GenericApiResponse<FaqDto>>(url);
+                ViewBag.ActionUrl = "/faq/update";
+                return ReturnViewResponse(apiResult, OperationTypes.GetContent, "Save");
+            }
+            catch (System.Exception ex)
+            {
+                return ReturnViewException(ex, OperationTypes.GetContent);
+            }
+
+        }
+
         #endregion
 
         #region Index
@@ -64,35 +86,13 @@ namespace TemplateFw.Dashboard.Controllers
         }
         #endregion
 
-        #region Edit
-
-        [HttpGet]
-        public async Task<IActionResult> Edit(string id)
-        {
-            try
-            {
-                id = StringCipher.Decrypt(id);
-                string url = string.Format(Urls.GetOne, id);
-                var apiResult = await _api.GetAsync<GenericApiResponse<FaqDto>>(url);
-                ViewBag.ActionUrl = "/faq/update";
-                return ReturnViewResponse(apiResult, OperationTypes.GetContent, "Save");
-            }
-            catch (System.Exception ex)
-            {
-                return ReturnViewException(ex, OperationTypes.GetContent);
-            }
-
-        }
-
-        #endregion
-
         #region Create
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] FaqDto dto)
         {
             try
             {
-                var validationResult = _validator.Validate(dto);
+                var validationResult = _insertValidator.Validate(dto);
                 if (!validationResult.IsValid)
                 {
                     return ReturnBadRequest(validationResult);
@@ -114,7 +114,7 @@ namespace TemplateFw.Dashboard.Controllers
         {
             try
             {
-                var validationResult = _validator.Validate(dto);
+                var validationResult = _updateValidator.Validate(dto);
                 if (!validationResult.IsValid)
                 {
                     return ReturnBadRequest(validationResult);
@@ -126,9 +126,9 @@ namespace TemplateFw.Dashboard.Controllers
             {
                 return ReturnJsonException(ex, OperationTypes.Update);
             }
-
         }
         #endregion
+
         #region Delete
 
         [HttpPost]
@@ -139,7 +139,7 @@ namespace TemplateFw.Dashboard.Controllers
                 if (id <= 0)
                 {
                     return ReturnBadRequest(OperationTypes.Delete);
-            }
+                }
                 string url = string.Format(Urls.Delete, id);
                 var apiResult = await _api.PostAsync<ApiResponse>(url, id);
                 return ReturnJsonResponse(apiResult, OperationTypes.Delete);

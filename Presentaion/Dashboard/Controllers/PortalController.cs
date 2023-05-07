@@ -27,20 +27,41 @@ namespace TemplateFw.Dashboard.Controllers
         }
 
     #region Add
-
     [HttpGet]
         public async Task<IActionResult> Add()
         {
             try
             {
                 var dto = new PortalDto();
+                ViewBag.ActionUrl = "/portal/create";
                 return View("Save", dto);
-            }
+    }
             catch (System.Exception ex)
             {
                 return ReturnViewException(ex, OperationTypes.GetContent);
             }
         }
+        #endregion
+
+        #region Edit
+        [HttpGet]
+        public async Task<IActionResult> Edit(string id)
+        {
+            try
+            {
+                id = StringCipher.Decrypt(id);
+                string url = string.Format(Urls.GetOne, id);
+                var apiResult = await _api.GetAsync<GenericApiResponse<PortalDto>>(url);
+                ViewBag.ActionUrl = "/portal/update";
+                return ReturnViewResponse(apiResult, OperationTypes.GetContent, "Save");
+            }
+            catch (System.Exception ex)
+            {
+                return ReturnViewException(ex, OperationTypes.GetContent);
+            }
+
+        }
+
         #endregion
 
         #region Index
@@ -63,34 +84,9 @@ namespace TemplateFw.Dashboard.Controllers
         }
         #endregion
 
-        #region Edit
-
-        [HttpGet]
-        public async Task<IActionResult> Edit(string id)
-        {
-            try
-            {
-                id = StringCipher.Decrypt(id);
-                var languages = await _api.GetAsync<List<LookupDto>>(LookupsUrls.Languages);
-                ViewBag.Languages = languages;
-                string url = string.Format(Urls.GetOne, id);
-                var apiResult = await _api.GetAsync<GenericApiResponse<PortalDto>>(url);
-                return ReturnViewResponse(apiResult, OperationTypes.GetContent, "Save");
-            }
-            catch (System.Exception ex)
-            {
-                return ReturnViewException(ex, OperationTypes.GetContent);
-            }
-
-        }
-
-        #endregion
-
-        #region Save
-
-
+        #region Create
         [HttpPost]
-        public async Task<IActionResult> Save([FromBody] PortalDto dto)
+        public async Task<IActionResult> Create([FromBody] PortalDto dto)
         {
             try
             {
@@ -98,19 +94,36 @@ namespace TemplateFw.Dashboard.Controllers
                 if (!validationResult.IsValid)
                 {
                     return ReturnBadRequest(validationResult);
-                    
                 }
-
-                OperationTypes operation = (dto.PortalId > 0) ? OperationTypes.Update : OperationTypes.Add;
-                var apiResult = await _api.PostAsync<ApiResponse>(Urls.Save, dto);
-                return ReturnJsonResponse(apiResult, operation);
+                var apiResult = await _api.PostAsync<ApiResponse>(Urls.Create, dto);
+                return ReturnJsonResponse(apiResult, OperationTypes.Add);
             }
             catch (System.Exception ex)
             {
-                OperationTypes operation = (dto.PortalId > 0) ? OperationTypes.Update : OperationTypes.Add;
-                return ReturnJsonException(ex, operation);
+                return ReturnJsonException(ex, OperationTypes.Add);
             }
 
+        }
+        #endregion
+
+        #region Update
+        [HttpPost]
+        public async Task<IActionResult> Update([FromBody] PortalDto dto)
+        {
+            try
+            {
+                var validationResult = _validator.Validate(dto);
+                if (!validationResult.IsValid)
+                {
+                    return ReturnBadRequest(validationResult);
+                }
+                var apiResult = await _api.PostAsync<ApiResponse>(Urls.Update, dto);
+                return ReturnJsonResponse(apiResult, OperationTypes.Update);
+            }
+            catch (System.Exception ex)
+            {
+                return ReturnJsonException(ex, OperationTypes.Update);
+            }
         }
         #endregion
 
@@ -124,7 +137,7 @@ namespace TemplateFw.Dashboard.Controllers
                 if (id <= 0)
                 {
                     return ReturnBadRequest(OperationTypes.Delete);
-            }
+                }
                 string url = string.Format(Urls.Delete, id);
                 var apiResult = await _api.PostAsync<ApiResponse>(url, id);
                 return ReturnJsonResponse(apiResult, OperationTypes.Delete);

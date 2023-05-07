@@ -54,7 +54,7 @@ namespace TemplateFw.Dtos
 			RuleFor(x => x.Name)
 			    .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
 			    .MaximumLength(50).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "50"))
-			    .Matches("/^[A-Za-z]{5,50}$/").WithMessage(validationLocalizer["Pattern"].Value.Replace("{Value}", " /^[A-Za-z]{5,50}$/"))
+			    .Matches(@"/^[A-Za-z]{5,50}$/").WithMessage(validationLocalizer["Pattern"])
 			    .WithName("Language_Name");
 
 			RuleFor(x => x.Code)
@@ -88,7 +88,7 @@ namespace TemplateFw.Dtos
         {
 			RuleFor(x => x.Name)
 			    .MaximumLength(50).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "50"))
-			    .Matches("/^[A-Za-z]{5,50}$/").WithMessage(validationLocalizer["Pattern"].Value.Replace("{Value}", " /^[A-Za-z]{5,50}$/"))
+			    .Matches(@"/^[A-Za-z]{5,50}$/").WithMessage(validationLocalizer["Pattern"])
 			    .WithName("Language_Name");
 
 

@@ -30,36 +30,42 @@
         console.log("status", status);
         console.log("xhr", xhr);
         console.log(webResponse);
-        if (webResponse.Status) {
-            if (webResponse.Title || webResponse.Message) {
-                alertHelper.success(webResponse.Title, webResponse.Message);
+        if (webResponse) {
+            if (webResponse.Status) {
+                if (webResponse.Title || webResponse.Message) {
+                    alertHelper.success(webResponse.Title, webResponse.Message);
+                }
+                // additions 
+                if (typeof onsuccess !== "undefined" && onsuccess != null) {
+                    onsuccess();
+                }
             }
-            // additions 
-            if (typeof onsuccess !== "undefined" && onsuccess != null) {
-                onsuccess();
+            else {
+                let errorMessages = [];
+
+                if (webResponse.Message) {
+                    errorMessages.push(webResponse.Message);
+                }
+                if (webResponse.Errors != null && webResponse.Errors.length > 0) {
+                    for (var i = 0; i < webResponse.Errors.length; i++) {
+                        var error = webResponse.Errors[i];
+                        if (error.PropertyName) {
+                            $.smkAddError($("#" + error.PropertyName), error.ErrorMessage);
+                        }
+                        errorMessages.push(error.ErrorMessage);
+                    }
+                }
+                if (errorMessages.length > 1) {
+                    alertHelper.multiLine(webResponse.Title, errorMessages, "error");
+                }
+                else if (errorMessages.length == 1) {
+                    alertHelper.error(webResponse.Title, errorMessages[0]);
+                }
             }
         }
         else {
-            let errorMessages = [];
+            alertHelper.error(status, "");
 
-            if (webResponse.Message) {
-                errorMessages.push(webResponse.Message);
-            }
-            if (webResponse.Errors != null && webResponse.Errors.length > 0) {
-                for (var i = 0; i < webResponse.Errors.length; i++) {
-                    var error = webResponse.Errors[i];
-                    if (error.PropertyName) {
-                        $.smkAddError($("#" + error.PropertyName), error.ErrorMessage);
-                    }
-                    errorMessages.push(error.ErrorMessage);
-                }
-            }
-            if (errorMessages.length > 1) {
-                alertHelper.multiLine(webResponse.Title, errorMessages, "error");
-            }
-            else if (errorMessages.length == 1) {
-                alertHelper.error(webResponse.Title, errorMessages[0]);
-            }
         }
     }
     ,

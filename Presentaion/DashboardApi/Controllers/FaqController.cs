@@ -41,10 +41,8 @@ namespace TemplateFw.DashboardApi.Controllers
         [Route("update")]
         public async Task<ApiResponse> Update(FaqDto dto)
         {
-            return await ApiResponse(() => faqService.UpdateAsync(dto), OperationTypes.Update);
+             return await ApiResponse(() => faqService.UpdateAsync(dto), OperationTypes.Update);
         }
-
-
         [HttpGet]
         [ProducesResponseType(201)]
         [ProducesResponseType(400)]
