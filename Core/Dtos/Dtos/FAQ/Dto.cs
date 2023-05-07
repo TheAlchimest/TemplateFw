@@ -58,12 +58,12 @@ namespace TemplateFw.Dtos
 			RuleFor(x => x.QuestionAr)
 			    .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
 			    .MaximumLength(150).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "150"))
-			    .WithName(modulesLocalizer["Faq_QuestionAr"]);
+			    .WithName("Faq_QuestionAr");
 
 			RuleFor(x => x.QuestionEn)
 			    .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
 			    .MaximumLength(150).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "150"))
-			    .WithName(modulesLocalizer["Faq_QuestionAr"]);
+			    .WithName("Faq_QuestionEn");
 
 			RuleFor(x => x.AnswerAr)
 			    .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])

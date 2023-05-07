@@ -22,14 +22,14 @@ namespace TemplateFw.Dashboard.Controllers
         private readonly FaqDtoInsertValidator _insertValidator;
         private readonly FaqDtoUpdateValidator _updateValidator;
 
-        public FaqController(FaqDtoInsertValidator validator, FaqDtoUpdateValidator updateValidator)
+        public  FaqController(FaqDtoInsertValidator validator, FaqDtoUpdateValidator updateValidator)
         {
             _insertValidator = validator;
             _updateValidator = updateValidator;
         }
 
-        #region Add
-        [HttpGet]
+    #region Add
+    [HttpGet]
         public async Task<IActionResult> Add()
         {
             try
@@ -55,6 +55,7 @@ namespace TemplateFw.Dashboard.Controllers
                 string url = string.Format(Urls.GetOne, id);
                 var apiResult = await _api.GetAsync<GenericApiResponse<FaqDto>>(url);
                 ViewBag.ActionUrl = "/faq/update";
+                ViewBag.IsUpdateMode = true;
                 return ReturnViewResponse(apiResult, OperationTypes.GetContent, "Save");
             }
             catch (System.Exception ex)
@@ -64,26 +65,6 @@ namespace TemplateFw.Dashboard.Controllers
 
         }
 
-        #endregion
-
-        #region Index
-        [HttpGet]
-        public async Task<IActionResult> Index()
-        {
-            FaqFilter filter = new FaqFilter();
-            var apiResult = await _api.PostAsync<GenericApiResponse<PagedList<FaqInfoDto>>>(Urls.GetPaged, filter);
-            return ReturnViewResponse(apiResult, OperationTypes.GetContent);
-        }
-        #endregion
-
-        #region IndexContent
-
-        [HttpGet]
-        public async Task<IActionResult> IndexContent([FromQuery] FaqFilter filter)
-        {
-            var apiResult = await _api.PostAsync<GenericApiResponse<PagedList<FaqInfoDto>>>(Urls.GetPaged, filter);
-            return ReturnViewResponse(apiResult, OperationTypes.GetContent);
-        }
         #endregion
 
         #region Create
@@ -128,6 +109,28 @@ namespace TemplateFw.Dashboard.Controllers
             }
         }
         #endregion
+
+        #region Index
+        [HttpGet]
+        public async Task<IActionResult> Index()
+        {
+            FaqFilter filter = new FaqFilter();
+            var apiResult = await _api.PostAsync<GenericApiResponse<PagedList<FaqInfoDto>>>(Urls.GetPaged, filter);
+            return ReturnViewResponse(apiResult, OperationTypes.GetContent);
+        }
+        #endregion
+
+        #region IndexContent
+
+        [HttpGet]
+        public async Task<IActionResult> IndexContent([FromQuery] FaqFilter filter)
+        {
+            var apiResult = await _api.PostAsync<GenericApiResponse<PagedList<FaqInfoDto>>>(Urls.GetPaged, filter);
+            return ReturnViewResponse(apiResult, OperationTypes.GetContent);
+        }
+        #endregion
+
+
 
         #region Delete
 

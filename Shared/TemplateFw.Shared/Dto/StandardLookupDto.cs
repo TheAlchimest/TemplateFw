@@ -26,6 +26,6 @@
         public string Value { get; set; }
         public string DefaultText { get; set; } = "";
         public string DefaultValue { get; set; } = "";
-        public bool AddDefaultOption { get; set; }
+        public bool AddDefaultOption { get; set; } = true;
     }
 }

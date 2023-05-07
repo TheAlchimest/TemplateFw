@@ -23,10 +23,6 @@
 		<EmbeddedResource Update="Resources\CommonResource.en.resx">
 			<Generator>PublicResXFileCodeGenerator</Generator>
 		</EmbeddedResource>
-	  <EmbeddedResource Update="Resources\ModulesResource.ar.resx">
-	    <Generator>PublicResXFileCodeGenerator</Generator>
-	    <LastGenOutput>ModulesResources.Designer.cs</LastGenOutput>
-	  </EmbeddedResource>
 		<EmbeddedResource Update="Resources\ModulesResource.en.resx">
 			<Generator>PublicResXFileCodeGenerator</Generator>
 		</EmbeddedResource>

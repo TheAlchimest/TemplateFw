@@ -19,11 +19,13 @@ namespace TemplateFw.Dashboard.Controllers
     public class CountryController : WebBaseController<CountryController>
     {
         private readonly RequestUrlHelper _api = ApiRequestHelper.InternalAPI;
-        private readonly IValidator<CountryDto> _validator;
+        private readonly CountryDtoInsertValidator _insertValidator;
+        private readonly CountryDtoUpdateValidator _updateValidator;
 
-        public CountryController(IValidator<CountryDto> validator)
+        public  CountryController(CountryDtoInsertValidator validator, CountryDtoUpdateValidator updateValidator)
         {
-            _validator = validator;
+            _insertValidator = validator;
+            _updateValidator = updateValidator;
         }
 
     #region Add
@@ -53,6 +55,7 @@ namespace TemplateFw.Dashboard.Controllers
                 string url = string.Format(Urls.GetOne, id);
                 var apiResult = await _api.GetAsync<GenericApiResponse<CountryDto>>(url);
                 ViewBag.ActionUrl = "/country/update";
+                ViewBag.IsUpdateMode = true;
                 return ReturnViewResponse(apiResult, OperationTypes.GetContent, "Save");
             }
             catch (System.Exception ex)
@@ -62,6 +65,49 @@ namespace TemplateFw.Dashboard.Controllers
 
         }
 
+        #endregion
+
+        #region Create
+        [HttpPost]
+        public async Task<IActionResult> Create([FromBody] CountryDto dto)
+        {
+            try
+            {
+                var validationResult = _insertValidator.Validate(dto);
+                if (!validationResult.IsValid)
+                {
+                    return ReturnBadRequest(validationResult);
+                }
+                var apiResult = await _api.PostAsync<ApiResponse>(Urls.Create, dto);
+                return ReturnJsonResponse(apiResult, OperationTypes.Add);
+            }
+            catch (System.Exception ex)
+            {
+                return ReturnJsonException(ex, OperationTypes.Add);
+            }
+
+        }
+        #endregion
+
+        #region Update
+        [HttpPost]
+        public async Task<IActionResult> Update([FromBody] CountryDto dto)
+        {
+            try
+            {
+                var validationResult = _updateValidator.Validate(dto);
+                if (!validationResult.IsValid)
+                {
+                    return ReturnBadRequest(validationResult);
+                }
+                var apiResult = await _api.PostAsync<ApiResponse>(Urls.Update, dto);
+                return ReturnJsonResponse(apiResult, OperationTypes.Update);
+            }
+            catch (System.Exception ex)
+            {
+                return ReturnJsonException(ex, OperationTypes.Update);
+            }
+        }
         #endregion
 
         #region Index
@@ -84,48 +130,7 @@ namespace TemplateFw.Dashboard.Controllers
         }
         #endregion
 
-        #region Create
-        [HttpPost]
-        public async Task<IActionResult> Create([FromBody] CountryDto dto)
-        {
-            try
-            {
-                var validationResult = _validator.Validate(dto);
-                if (!validationResult.IsValid)
-                {
-                    return ReturnBadRequest(validationResult);
-                }
-                var apiResult = await _api.PostAsync<ApiResponse>(Urls.Create, dto);
-                return ReturnJsonResponse(apiResult, OperationTypes.Add);
-            }
-            catch (System.Exception ex)
-            {
-                return ReturnJsonException(ex, OperationTypes.Add);
-            }
 
-        }
-        #endregion
-
-        #region Update
-        [HttpPost]
-        public async Task<IActionResult> Update([FromBody] CountryDto dto)
-        {
-            try
-            {
-                var validationResult = _validator.Validate(dto);
-                if (!validationResult.IsValid)
-                {
-                    return ReturnBadRequest(validationResult);
-                }
-                var apiResult = await _api.PostAsync<ApiResponse>(Urls.Update, dto);
-                return ReturnJsonResponse(apiResult, OperationTypes.Update);
-            }
-            catch (System.Exception ex)
-            {
-                return ReturnJsonException(ex, OperationTypes.Update);
-            }
-        }
-        #endregion
 
         #region Delete
 
