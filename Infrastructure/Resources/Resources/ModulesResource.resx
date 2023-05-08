@@ -140,7 +140,7 @@
 <data name="Faq_IsAvailable" xml:space="preserve"><value>متاح؟</value></data>
 <data name="Faq_LastModificationDate" xml:space="preserve"><value>تاريخ آخر تعديل</value></data>
 <data name="Faq_LastModifiedBy" xml:space="preserve"><value>آخر تعديل بواسطة</value></data>
-<data name="Faq_Management" xml:space="preserve"><value>إدارة الأسئلة المتكررة</value></data>
+<data name="Faq_Management" xml:space="preserve"><value>إدارة الأسئلة الشائعة</value></data>
 <data name="Faq_Portal" xml:space="preserve"><value>معرف البوابة</value></data>
 <data name="Faq_PortalChoose" xml:space="preserve"><value>اختر معرف البوابة</value></data>
 <data name="Faq_Question" xml:space="preserve"><value>السؤال</value></data>
@@ -149,7 +149,7 @@
 <data name="Faq_Service" xml:space="preserve"><value>معرف الخدمة</value></data>
 <data name="Faq_ServiceChoose" xml:space="preserve"><value>اختر معرف الخدمة</value></data>
 <data name="Faqs" xml:space="preserve"><value>الأسئلة الشائعة</value></data>
-<data name="Language" xml:space="preserve"><value>لغة</value></data>
+<data name="Language" xml:space="preserve"><value>اللغة</value></data>
 <data name="Language_Code" xml:space="preserve"><value>الرمز</value></data>
 <data name="Language_CreatedBy" xml:space="preserve"><value>تم إنشاؤه بواسطة</value></data>
 <data name="Language_CreationDate" xml:space="preserve"><value>تاريخ الإنشاء</value></data>
@@ -161,7 +161,7 @@
 <data name="Language_Management" xml:space="preserve"><value>إدارة اللغات</value></data>
 <data name="Language_Name" xml:space="preserve"><value>الاسم</value></data>
 <data name="Languages" xml:space="preserve"><value>اللغات</value></data>
-<data name="Portal" xml:space="preserve"><value>منفذ</value></data>
+<data name="Portal" xml:space="preserve"><value>البوابة</value></data>
 <data name="Portal_CreatedBy" xml:space="preserve"><value>تم إنشاؤه بواسطة</value></data>
 <data name="Portal_CreationDate" xml:space="preserve"><value>تاريخ الإنشاء</value></data>
 <data name="Portal_Description" xml:space="preserve"><value>الوصف</value></data>
@@ -177,7 +177,7 @@
 <data name="Portal_NameAr" xml:space="preserve"><value>الإسم باللغة العربية</value></data>
 <data name="Portal_NameEn" xml:space="preserve"><value>الإسم باللغة الانجليزية</value></data>
 <data name="Portals" xml:space="preserve"><value>البوابات</value></data>
-<data name="Service" xml:space="preserve"><value>خدمة</value></data>
+<data name="Service" xml:space="preserve"><value>الخدمة</value></data>
 <data name="Service_Conditions" xml:space="preserve"><value>الشروط</value></data>
 <data name="Service_ConditionsAr" xml:space="preserve"><value>الشروط باللغة العربية</value></data>
 <data name="Service_ConditionsEn" xml:space="preserve"><value>الشروط باللغة الإنجليزية</value></data>
@@ -232,7 +232,7 @@
 <data name="Service_Url" xml:space="preserve"><value>الرابط</value></data>
 <data name="Service_Video" xml:space="preserve"><value>الفيديو</value></data>
 <data name="Service_ViewOrder" xml:space="preserve"><value>ترتيب العرض</value></data>
-<data name="Services" xml:space="preserve"><value>خدمات</value></data>
+<data name="Services" xml:space="preserve"><value>الخدمات</value></data>
 <data name="ServiceType" xml:space="preserve"><value>نوع الخدمة</value></data>
 <data name="ServiceType_CreatedBy" xml:space="preserve"><value>تم إنشاؤه بواسطة</value></data>
 <data name="ServiceType_CreationDate" xml:space="preserve"><value>تاريخ الإنشاء</value></data>
