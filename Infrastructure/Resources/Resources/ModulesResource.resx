@@ -122,25 +122,23 @@
 <data name="Country_Code" xml:space="preserve"><value>الرمز</value></data>
 <data name="Country_CreatedBy" xml:space="preserve"><value>تم إنشاؤه بواسطة</value></data>
 <data name="Country_CreationDate" xml:space="preserve"><value>تاريخ الإنشاء</value></data>
-<data name="Country_Information" xml:space="preserve"><value>معلومات الدولة</value></data>
 <data name="Country_IsAvailable" xml:space="preserve"><value>متاح؟</value></data>
 <data name="Country_LastModificationDate" xml:space="preserve"><value>تاريخ آخر تعديل</value></data>
 <data name="Country_LastModifiedBy" xml:space="preserve"><value>آخر تعديل بواسطة</value></data>
-<data name="Country_Management" xml:space="preserve"><value>إدارة الدول</value></data>
 <data name="Country_Name" xml:space="preserve"><value>الاسم</value></data>
 <data name="Country_NameAr" xml:space="preserve"><value>الإسم باللغة العربية</value></data>
 <data name="Country_NameEn" xml:space="preserve"><value>الإسم باللغة الانجليزية</value></data>
+<data name="Information" xml:space="preserve"><value>معلومات الدولة</value></data>
+<data name="Management" xml:space="preserve"><value>إدارة الدول</value></data>
 <data name="Faq" xml:space="preserve"><value>أسئلة شائعة</value></data>
 <data name="Faq_Answer" xml:space="preserve"><value>الاجابة</value></data>
 <data name="Faq_AnswerAr" xml:space="preserve"><value>الجواب باللغة العربية</value></data>
 <data name="Faq_AnswerEn" xml:space="preserve"><value>الجواب باللغة الإنجليزية</value></data>
 <data name="Faq_CreatedBy" xml:space="preserve"><value>تم إنشاؤه بواسطة</value></data>
 <data name="Faq_CreationDate" xml:space="preserve"><value>تاريخ الإنشاء</value></data>
-<data name="Faq_Information" xml:space="preserve"><value>معلومات الأسئلة الشائعة</value></data>
 <data name="Faq_IsAvailable" xml:space="preserve"><value>متاح؟</value></data>
 <data name="Faq_LastModificationDate" xml:space="preserve"><value>تاريخ آخر تعديل</value></data>
 <data name="Faq_LastModifiedBy" xml:space="preserve"><value>آخر تعديل بواسطة</value></data>
-<data name="Faq_Management" xml:space="preserve"><value>إدارة الأسئلة الشائعة</value></data>
 <data name="Faq_Portal" xml:space="preserve"><value>معرف البوابة</value></data>
 <data name="Faq_PortalChoose" xml:space="preserve"><value>اختر معرف البوابة</value></data>
 <data name="Faq_Question" xml:space="preserve"><value>السؤال</value></data>
@@ -153,12 +151,10 @@
 <data name="Language_Code" xml:space="preserve"><value>الرمز</value></data>
 <data name="Language_CreatedBy" xml:space="preserve"><value>تم إنشاؤه بواسطة</value></data>
 <data name="Language_CreationDate" xml:space="preserve"><value>تاريخ الإنشاء</value></data>
-<data name="Language_Information" xml:space="preserve"><value>معلومات اللغة</value></data>
 <data name="Language_IsAvailable" xml:space="preserve"><value>متاح؟</value></data>
 <data name="Language_IsDefault" xml:space="preserve"><value>الافتراضي؟</value></data>
 <data name="Language_LastModificationDate" xml:space="preserve"><value>تاريخ آخر تعديل</value></data>
 <data name="Language_LastModifiedBy" xml:space="preserve"><value>آخر تعديل بواسطة</value></data>
-<data name="Language_Management" xml:space="preserve"><value>إدارة اللغات</value></data>
 <data name="Language_Name" xml:space="preserve"><value>الاسم</value></data>
 <data name="Languages" xml:space="preserve"><value>اللغات</value></data>
 <data name="Portal" xml:space="preserve"><value>البوابة</value></data>
@@ -167,12 +163,10 @@
 <data name="Portal_Description" xml:space="preserve"><value>الوصف</value></data>
 <data name="Portal_DescriptionAr" xml:space="preserve"><value>الوصف باللغة العربية</value></data>
 <data name="Portal_DescriptionEn" xml:space="preserve"><value>الوصف باللغة الإنجليزية</value></data>
-<data name="Portal_Information" xml:space="preserve"><value>معلومات البوابة</value></data>
 <data name="Portal_IsAvailable" xml:space="preserve"><value>متاح؟</value></data>
 <data name="Portal_LastModificationDate" xml:space="preserve"><value>تاريخ آخر تعديل</value></data>
 <data name="Portal_LastModifiedBy" xml:space="preserve"><value>آخر تعديل بواسطة</value></data>
 <data name="Portal_Link" xml:space="preserve"><value>الرابط</value></data>
-<data name="Portal_Management" xml:space="preserve"><value>إدارة البوابات</value></data>
 <data name="Portal_Name" xml:space="preserve"><value>الاسم</value></data>
 <data name="Portal_NameAr" xml:space="preserve"><value>الإسم باللغة العربية</value></data>
 <data name="Portal_NameEn" xml:space="preserve"><value>الإسم باللغة الانجليزية</value></data>
@@ -193,13 +187,11 @@
 <data name="Service_FeesAr" xml:space="preserve"><value>الرسوم باللغة العربية</value></data>
 <data name="Service_FeesEn" xml:space="preserve"><value>الرسوم باللغة الانجليزية</value></data>
 <data name="Service_Icon" xml:space="preserve"><value>الأيقونة</value></data>
-<data name="Service_Information" xml:space="preserve"><value>معلومات الخدمة</value></data>
 <data name="Service_IsAvailable" xml:space="preserve"><value>متاح؟</value></data>
 <data name="Service_IsPublished" xml:space="preserve"><value>يتم نشر؟</value></data>
 <data name="Service_LastModificationDate" xml:space="preserve"><value>تاريخ آخر تعديل</value></data>
 <data name="Service_LastModifiedBy" xml:space="preserve"><value>آخر تعديل بواسطة</value></data>
 <data name="Service_LogInRequired" xml:space="preserve"><value>تسجيل الدخول مطلوب</value></data>
-<data name="Service_Management" xml:space="preserve"><value>إدارة الخدمات</value></data>
 <data name="Service_MobileUrl" xml:space="preserve"><value>عنوان url للجوال</value></data>
 <data name="Service_Name" xml:space="preserve"><value>الاسم</value></data>
 <data name="Service_NameAr" xml:space="preserve"><value>الإسم باللغة العربية</value></data>
@@ -236,11 +228,9 @@
 <data name="ServiceType" xml:space="preserve"><value>نوع الخدمة</value></data>
 <data name="ServiceType_CreatedBy" xml:space="preserve"><value>تم إنشاؤه بواسطة</value></data>
 <data name="ServiceType_CreationDate" xml:space="preserve"><value>تاريخ الإنشاء</value></data>
-<data name="ServiceType_Information" xml:space="preserve"><value>معلومات نوع الخدمة</value></data>
 <data name="ServiceType_IsAvailable" xml:space="preserve"><value>متاح؟</value></data>
 <data name="ServiceType_LastModificationDate" xml:space="preserve"><value>تاريخ آخر تعديل</value></data>
 <data name="ServiceType_LastModifiedBy" xml:space="preserve"><value>آخر تعديل بواسطة</value></data>
-<data name="ServiceType_Management" xml:space="preserve"><value>إدارة أنواع الخدمات</value></data>
 <data name="ServiceType_Name" xml:space="preserve"><value>الاسم</value></data>
 <data name="ServiceType_NameAr" xml:space="preserve"><value>الإسم باللغة العربية</value></data>
 <data name="ServiceType_NameEn" xml:space="preserve"><value>الإسم باللغة الانجليزية</value></data>

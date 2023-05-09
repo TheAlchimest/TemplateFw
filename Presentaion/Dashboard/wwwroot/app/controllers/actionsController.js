@@ -1,7 +1,7 @@
 ﻿var actionsController = {
     prepareForm: function (formId) {
         let $frm = $("#" + formId);
-        $frm.find("input,select").change(function () {
+        $frm.find("input,select,textarea").change(function () {
             $frm.data("changed", true);
         });
     },

@@ -119,8 +119,8 @@
   </resheader>
   <data name="Countries" xml:space="preserve"><value>Countries</value></data>
 <data name="Country" xml:space="preserve"><value>Country</value></data>
-<data name="Country_Management" xml:space="preserve"><value>Countries management</value></data>
-<data name="Country_Information" xml:space="preserve"><value>Country information</value></data>
+<data name="Management" xml:space="preserve"><value>Countries management</value></data>
+<data name="Information" xml:space="preserve"><value>Country information</value></data>
 <data name="Country_NameAr" xml:space="preserve"><value>Name in Arabic</value></data>
 <data name="Country_Name" xml:space="preserve"><value>Name</value></data>
 <data name="Country_NameEn" xml:space="preserve"><value>Name in English</value></data>
@@ -132,8 +132,6 @@
 <data name="Country_LastModificationDate" xml:space="preserve"><value>Last modification date</value></data>
 <data name="Faqs" xml:space="preserve"><value>Faqs</value></data>
 <data name="Faq" xml:space="preserve"><value>FAQ</value></data>
-<data name="Faq_Management" xml:space="preserve"><value>Faqs management</value></data>
-<data name="Faq_Information" xml:space="preserve"><value>Faq information</value></data>
 <data name="Faq_QuestionAr" xml:space="preserve"><value>Question in Arabic</value></data>
 <data name="Faq_Question" xml:space="preserve"><value>Question</value></data>
 <data name="Faq_QuestionEn" xml:space="preserve"><value>Question in English</value></data>
@@ -151,8 +149,6 @@
 <data name="Faq_LastModificationDate" xml:space="preserve"><value>Last modification date</value></data>
 <data name="Languages" xml:space="preserve"><value>Languages</value></data>
 <data name="Language" xml:space="preserve"><value>Language</value></data>
-<data name="Language_Management" xml:space="preserve"><value>Languages management</value></data>
-<data name="Language_Information" xml:space="preserve"><value>Language information</value></data>
 <data name="Language_Name" xml:space="preserve"><value>Name</value></data>
 <data name="Language_Code" xml:space="preserve"><value>Code</value></data>
 <data name="Language_IsDefault" xml:space="preserve"><value>Is Default?</value></data>
@@ -163,8 +159,6 @@
 <data name="Language_LastModificationDate" xml:space="preserve"><value>Last modification date</value></data>
 <data name="Portals" xml:space="preserve"><value>Portals</value></data>
 <data name="Portal" xml:space="preserve"><value>Portal</value></data>
-<data name="Portal_Management" xml:space="preserve"><value>Portals management</value></data>
-<data name="Portal_Information" xml:space="preserve"><value>Portal information</value></data>
 <data name="Portal_NameAr" xml:space="preserve"><value>Name in Arabic</value></data>
 <data name="Portal_Name" xml:space="preserve"><value>Name</value></data>
 <data name="Portal_NameEn" xml:space="preserve"><value>Name in English</value></data>
@@ -179,8 +173,6 @@
 <data name="Portal_LastModificationDate" xml:space="preserve"><value>Last modification date</value></data>
 <data name="Services" xml:space="preserve"><value>Services</value></data>
 <data name="Service" xml:space="preserve"><value>Service</value></data>
-<data name="Service_Management" xml:space="preserve"><value>Services management</value></data>
-<data name="Service_Information" xml:space="preserve"><value>Service information</value></data>
 <data name="Service_NameAr" xml:space="preserve"><value>Name in Arabic</value></data>
 <data name="Service_Name" xml:space="preserve"><value>Name</value></data>
 <data name="Service_NameEn" xml:space="preserve"><value>Name in English</value></data>
@@ -235,8 +227,6 @@
 <data name="Service_LastModificationDate" xml:space="preserve"><value>Last modification date</value></data>
 <data name="ServiceTypes" xml:space="preserve"><value>Service types</value></data>
 <data name="ServiceType" xml:space="preserve"><value>Service type</value></data>
-<data name="ServiceType_Management" xml:space="preserve"><value>Service types management</value></data>
-<data name="ServiceType_Information" xml:space="preserve"><value>Service type information</value></data>
 <data name="ServiceType_NameAr" xml:space="preserve"><value>Name in Arabic</value></data>
 <data name="ServiceType_Name" xml:space="preserve"><value>Name</value></data>
 <data name="ServiceType_NameEn" xml:space="preserve"><value>Name in English</value></data>
