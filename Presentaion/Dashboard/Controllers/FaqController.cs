@@ -15,7 +15,7 @@ using Urls = Dashboard.Common.WebClientHelpers.InternalApiDictionary.FaqUrls;
 
 namespace TemplateFw.Dashboard.Controllers
 {
-    [Authorize(Roles = RoleProvider.Faq)]
+    //[Authorize(Roles = RoleProvider.Faq)]
     public class FaqController : WebBaseController<FaqController>
     {
         private readonly RequestUrlHelper _api = ApiRequestHelper.InternalAPI;
@@ -34,9 +34,8 @@ namespace TemplateFw.Dashboard.Controllers
         {
             try
             {
-                var dto = new FaqDto();
                 ViewBag.ActionUrl = "/faq/create";
-                return View("Save", dto);
+                return View("Save");
     }
             catch (System.Exception ex)
             {

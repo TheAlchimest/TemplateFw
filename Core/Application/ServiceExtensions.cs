@@ -21,12 +21,23 @@ namespace TemplateFw.Application
             services.AddAutoMapper(mapperAssembly);
 			
             
+			services.AddScoped<IArticleService, ArticleService>();
+			services.AddScoped<IAuthorService, AuthorService>();
+			services.AddScoped<ICategoryService, CategoryService>();
+			services.AddScoped<ICommentService, CommentService>();
+			services.AddScoped<IContactUsService, ContactUsService>();
 			services.AddScoped<ICountryService, CountryService>();
 			services.AddScoped<IFaqService, FaqService>();
 			services.AddScoped<ILanguageService, LanguageService>();
+			services.AddScoped<IPaymentService, PaymentService>();
 			services.AddScoped<IPortalService, PortalService>();
 			services.AddScoped<IServiceService, ServiceService>();
 			services.AddScoped<IServiceTypeService, ServiceTypeService>();
+			services.AddScoped<ISubscriptionService, SubscriptionService>();
+			services.AddScoped<ISubscriptionPlanService, SubscriptionPlanService>();
+			services.AddScoped<ISubscriptionStatusService, SubscriptionStatusService>();
+			services.AddScoped<ITagService, TagService>();
+			services.AddScoped<IUsersService, UsersService>();
 			
             services.AddScoped<IUserInfoService, UserInfoService>();
             //services.AddScoped<IAttachmentService, AttachmentService>();

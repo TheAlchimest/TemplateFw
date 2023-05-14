@@ -16,10 +16,10 @@ namespace TemplateFw.Dtos
 		public string DescriptionEn { get; set; }
 		public string Link { get; set; }
 		public bool IsAvailable { get; set; }
+		public DateTime CreationDate { get; set; }
 		public string CreatedBy { get; set; }
-		public DateTime? CreationDate { get; set; }
-		public string LastModifiedBy { get; set; }
-		public DateTime? LastModificationDate { get; set; }
+		public DateTime? ModifiedDate { get; set; }
+		public string ModifiedBy { get; set; }
 
     }
 
@@ -30,10 +30,10 @@ namespace TemplateFw.Dtos
 		public string Description { get; set; }
 		public string Link { get; set; }
 		public bool IsAvailable { get; set; }
+		public DateTime CreationDate { get; set; }
 		public string CreatedBy { get; set; }
-		public DateTime? CreationDate { get; set; }
-		public string LastModifiedBy { get; set; }
-		public DateTime? LastModificationDate { get; set; }
+		public DateTime? ModifiedDate { get; set; }
+		public string ModifiedBy { get; set; }
     }
 
     public class PortalFilter
@@ -56,13 +56,11 @@ namespace TemplateFw.Dtos
 			RuleFor(x => x.NameAr)
 			    .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
 			    .MaximumLength(50).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "50"))
-			    .Matches(@"/^[A-Za-z]{5,50}$/").WithMessage(validationLocalizer["Pattern"])
 			    .WithName("Portal_NameAr");
 
 			RuleFor(x => x.NameEn)
 			    .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
 			    .MaximumLength(50).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "50"))
-			    .Matches(@"/^[A-Za-z]{5,50}$/").WithMessage(validationLocalizer["Pattern"])
 			    .WithName("Portal_NameEn");
 
 			RuleFor(x => x.DescriptionAr)
@@ -77,7 +75,6 @@ namespace TemplateFw.Dtos
 			    .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
 			    .MaximumLength(200).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "200"))
 			    .MinimumLength(2).WithMessage(validationLocalizer["MinLengthCharacters"].Value.Replace("{Length}", "2"))
-			    .Matches(@"/^(https?:\/\/)?([a-zA-Z0-9-]+\.)?[a-zA-Z0-9-]+\.[a-zA-Z]{2,20}(\/.*)?$/i").WithMessage(validationLocalizer["Pattern"])
 			    .WithName("Portal_Link");
 
 
@@ -102,7 +99,6 @@ namespace TemplateFw.Dtos
         {
 			RuleFor(x => x.Name)
 			    .MaximumLength(50).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "50"))
-			    .Matches(@"/^[A-Za-z]{5,50}$/").WithMessage(validationLocalizer["Pattern"])
 			    .WithName("Portal_NameAr");
 
 

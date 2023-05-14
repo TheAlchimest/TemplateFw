@@ -1,0 +1,85 @@
+﻿@using TemplateFw.Shared.Domain.Enums
+@inject IOptions<WebSettings> webSettings
+@model TemplateFw.Dtos.ContactUsDto
+
+@{
+    bool isUpdateMode = (ViewBag.IsUpdateMode != null) ? ViewBag.IsUpdateMode : false;
+
+}
+<form method="post" id="frmForm" name="frmForm" action="@(ViewBag.ActionUrl)">
+    <div class="form-head mb-sm-5 mb-3 d-flex flex-wrap align-items-center ">
+        <div class=" mr-auto">
+            <h3 class="font-w600 mb-2">@modulesLocalizer["ContactUs"]</h3>
+            <p class="mb-0">@modulesLocalizer["ContactUsManagement"]</p>
+        </div>
+    </div>
+    <div class="card master-form">
+        <div class="card-header">
+            <h4 class="card-title fs-16 text-primary">
+            </h4>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <input class="form-control"   type="hidden" data-type="hidden" data-smk-type="hidden" id="MessageId" name="MessageId" placeholder="" required maxlength="4" value="@(Model?.MessageId)"  smk-error-msg-required="" data-smk-max="9999999999" data-smk-min="-9999999999"><div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="Name">@modulesLocalizer["ContactUs_Name"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="Name" name="Name" placeholder="" required maxlength="50" value="@(Model?.Name)"  smk-error-msg-required="">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="Email">@modulesLocalizer["ContactUs_Email"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="Email" name="Email" placeholder="" required maxlength="100" value="@(Model?.Email)"  smk-error-msg-required="">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="Phone">@modulesLocalizer["ContactUs_Phone"] :</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="Phone" name="Phone" placeholder="" maxlength="20" value="@(Model?.Phone)">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="Message">@modulesLocalizer["ContactUs_Message"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="Message" name="Message" placeholder="" required maxlength="16" value="@(Model?.Message)"  smk-error-msg-required="">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="LanguageId">@modulesLocalizer["ContactUs_LanguageId"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   type="number" data-type="number" data-smk-type="number" id="LanguageId" name="LanguageId" placeholder="" required maxlength="4" value="@(Model?.LanguageId)"  smk-error-msg-required="" data-smk-max="9999999999" data-smk-min="-9999999999" max="9999999999" min="-9999999999">
+    
+    <i class="accent"></i>
+</div>
+</div>
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="text-center">
+        <button type="button" id="Send" class="btn btn-primary font-size-13 font-weight-bold"
+                onclick="actionsController.submit('frmForm',this,event)"
+                on-sccess-redirect-url="/#!/contactUs/">
+            <i class="far fa-lg fa-check"></i> ارسال
+        </button>
+
+
+        <a id="backActionBtn" href="/#!/contactUs" class="btn btn-danger mr-3">
+            <i class="fas fa-times fa-lg fa-arrow-left"></i> العودة
+        </a>
+
+    </div>
+</form>
+
+<script>
+    actionsController.prepareForm("frmForm");
+</script>

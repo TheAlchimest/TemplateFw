@@ -1,0 +1,91 @@
+﻿@using TemplateFw.Shared.Domain.Enums
+@inject IOptions<WebSettings> webSettings
+@model TemplateFw.Dtos.CommentDto
+
+@{
+    bool isUpdateMode = (ViewBag.IsUpdateMode != null) ? ViewBag.IsUpdateMode : false;
+
+}
+<form method="post" id="frmForm" name="frmForm" action="@(ViewBag.ActionUrl)">
+    <div class="form-head mb-sm-5 mb-3 d-flex flex-wrap align-items-center ">
+        <div class=" mr-auto">
+            <h3 class="font-w600 mb-2">@modulesLocalizer["Comment"]</h3>
+            <p class="mb-0">@modulesLocalizer["CommentManagement"]</p>
+        </div>
+    </div>
+    <div class="card master-form">
+        <div class="card-header">
+            <h4 class="card-title fs-16 text-primary">
+            </h4>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <input class="form-control"   type="hidden" data-type="hidden" data-smk-type="hidden" id="CommentId" name="CommentId" placeholder="" required maxlength="4" value="@(Model?.CommentId)"  smk-error-msg-required="" data-smk-max="9999999999" data-smk-min="-9999999999"><div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="Content">@modulesLocalizer["Comment_Content"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <textarea rows="4"
+              class="form-control"
+               id="Content" name="Content" placeholder="" required maxlength="500" value="@(Model?.Content)"  smk-error-msg-required="">@(Model?.Content)</textarea>
+              
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group select2-lg">
+    <label class="form-label-small px-3" for="ArticleId">@modulesLocalizer["Article"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+@await Html.PartialAsync("/Views/RunTimeControls/Select.cshtml",
+               new TemplateFw.Shared.Dto.RunTimeSelectControl(){
+                  Id="ArticleId",
+                   AdditionalAttributes = "",
+                   ApiUrl = webSettings.Value.LookupApiUrl+ "lookup/articles", 
+                   Value = Model?.ArticleId.ToString(),
+                   AddDefaultOption=(!isUpdateMode)
+               });
+    
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group select2-lg">
+    <label class="form-label-small px-3" for="UserId">@modulesLocalizer["Users"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+@await Html.PartialAsync("/Views/RunTimeControls/Select.cshtml",
+               new TemplateFw.Shared.Dto.RunTimeSelectControl(){
+                  Id="UserId",
+                   AdditionalAttributes = "",
+                   ApiUrl = webSettings.Value.LookupApiUrl+ "lookup/users", 
+                   Value = Model?.UserId.ToString(),
+                   AddDefaultOption=(!isUpdateMode)
+               });
+    
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="LanguageId">@modulesLocalizer["Comment_LanguageId"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   type="number" data-type="number" data-smk-type="number" id="LanguageId" name="LanguageId" placeholder="" required maxlength="4" value="@(Model?.LanguageId)"  smk-error-msg-required="" data-smk-max="9999999999" data-smk-min="-9999999999" max="9999999999" min="-9999999999">
+    
+    <i class="accent"></i>
+</div>
+</div>
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="text-center">
+        <button type="button" id="Send" class="btn btn-primary font-size-13 font-weight-bold"
+                onclick="actionsController.submit('frmForm',this,event)"
+                on-sccess-redirect-url="/#!/comment/">
+            <i class="far fa-lg fa-check"></i> ارسال
+        </button>
+
+
+        <a id="backActionBtn" href="/#!/comment" class="btn btn-danger mr-3">
+            <i class="fas fa-times fa-lg fa-arrow-left"></i> العودة
+        </a>
+
+    </div>
+</form>
+
+<script>
+    actionsController.prepareForm("frmForm");
+</script>

@@ -19,8 +19,8 @@ namespace TemplateFw.Dtos
 		public bool IsAvailable { get; set; }
 		public string CreatedBy { get; set; }
 		public DateTime CreationDate { get; set; }
-		public string LastModifiedBy { get; set; }
-		public DateTime? LastModificationDate { get; set; }
+		public string ModifiedBy { get; set; }
+		public DateTime? ModifiedDate { get; set; }
 
     }
 
@@ -36,8 +36,8 @@ namespace TemplateFw.Dtos
 		public bool IsAvailable { get; set; }
 		public string CreatedBy { get; set; }
 		public DateTime CreationDate { get; set; }
-		public string LastModifiedBy { get; set; }
-		public DateTime? LastModificationDate { get; set; }
+		public string ModifiedBy { get; set; }
+		public DateTime? ModifiedDate { get; set; }
     }
 
     public class FaqFilter
@@ -55,17 +55,22 @@ namespace TemplateFw.Dtos
     {
         public FaqDtoInsertValidator(IStringLocalizer<ValidationResource> validationLocalizer, IStringLocalizer<ModulesResource> modulesLocalizer)
         {
-			RuleFor(x => x.QuestionAr)
-			    .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
-			    .MaximumLength(150).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "150"))
-			    .WithName("Faq_QuestionAr");
+            
+            RuleFor(x => x.QuestionAr)
+                .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
+                .Matches(@"^(?:[A-Za-z\u0600-\u06FF][A-Za-z0-9\u0600-\u06FF.,'""\- ]{3,149})$").WithMessage(validationLocalizer["InvalidPattern"])
+                .Length(5, 256).WithMessage(validationLocalizer["RangeLengthCharacters"].Value.Replace("{MinLength}", "5").Replace("{MaxLength}", "256"))
+                .WithName(modulesLocalizer["Faq_QuestionAr"]);
 
-			RuleFor(x => x.QuestionEn)
+            //
+            RuleFor(x => x.QuestionEn)
 			    .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
-			    .MaximumLength(150).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "150"))
+			    .MaximumLength(256).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "256"))
+                /*.Matches("^[A-Za-z '.-]{5,150}$").WithMessage(validationLocalizer["Pattern"])*/
+                .Matches(@"^[\p{P}\dA-Za-z '.-]{5,150}$").WithMessage(validationLocalizer["Pattern"])
 			    .WithName("Faq_QuestionEn");
 
-			RuleFor(x => x.AnswerAr)
+            RuleFor(x => x.AnswerAr)
 			    .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
 			    .MaximumLength(256).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "256"))
 			    .WithName("Faq_AnswerAr");
@@ -100,7 +105,7 @@ namespace TemplateFw.Dtos
         public FaqFilterValidator(IStringLocalizer<ValidationResource> validationLocalizer, IStringLocalizer<ModulesResource> modulesLocalizer)
         {
 			RuleFor(x => x.Question)
-			    .MaximumLength(150).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "150"))
+			    .MaximumLength(256).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "256"))
 			    .WithName("Faq_QuestionAr");
 
 

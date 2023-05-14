@@ -117,19 +117,101 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Countries" xml:space="preserve"><value>الدول</value></data>
+  <data name="Article" xml:space="preserve"><value>المقالة</value></data>
+<data name="Article_Author" xml:space="preserve"><value>هوية المؤلف</value></data>
+<data name="Article_AuthorChoose" xml:space="preserve"><value>اختر هوية المؤلف</value></data>
+<data name="Article_Brief" xml:space="preserve"><value>الموجز</value></data>
+<data name="Article_BriefAr" xml:space="preserve"><value>الملخص باللغة العربية</value></data>
+<data name="Article_BriefEn" xml:space="preserve"><value>الموجز باللغة الإنجليزية</value></data>
+<data name="Article_Category" xml:space="preserve"><value>معرف الفئة</value></data>
+<data name="Article_CategoryChoose" xml:space="preserve"><value>اختر معرف الفئة</value></data>
+<data name="Article_Content" xml:space="preserve"><value>المحتوى</value></data>
+<data name="Article_ContentAr" xml:space="preserve"><value>المحتوى باللغة العربية</value></data>
+<data name="Article_ContentEn" xml:space="preserve"><value>المحتوى باللغة الإنجليزية</value></data>
+<data name="Article_CreatedBy" xml:space="preserve"><value>تم إنشاؤه بواسطة</value></data>
+<data name="Article_CreationDate" xml:space="preserve"><value>تاريخ الإنشاء</value></data>
+<data name="Article_IsAvailable" xml:space="preserve"><value>متاح؟</value></data>
+<data name="Article_IsPublished" xml:space="preserve"><value>يتم نشر؟</value></data>
+<data name="Article_ModifiedBy" xml:space="preserve"><value>تم تعديل بواسطة</value></data>
+<data name="Article_ModifiedDate" xml:space="preserve"><value>التاريخ المعدل</value></data>
+<data name="Article_PublicationDate" xml:space="preserve"><value>تاريخ النشر</value></data>
+<data name="Article_PublishedAt" xml:space="preserve"><value>تم النشر في</value></data>
+<data name="Article_Title" xml:space="preserve"><value>العنوان</value></data>
+<data name="Article_TitleAr" xml:space="preserve"><value>العنوان باللغة العربية</value></data>
+<data name="Article_TitleEn" xml:space="preserve"><value>العنوان باللغة الانجليزية</value></data>
+<data name="Articles" xml:space="preserve"><value>المقالات</value></data>
+<data name="Information" xml:space="preserve"><value>معلومات المقالة</value></data>
+<data name="Management" xml:space="preserve"><value>إدارة المقالات</value></data>
+<data name="Author" xml:space="preserve"><value>المؤلف</value></data>
+<data name="Author_Address" xml:space="preserve"><value>العنوان</value></data>
+<data name="Author_Biography" xml:space="preserve"><value>السيرة الذاتية</value></data>
+<data name="Author_Country" xml:space="preserve"><value>الدولة</value></data>
+<data name="Author_CountryChoose" xml:space="preserve"><value>اختر معرف البلد</value></data>
+<data name="Author_CreatedBy" xml:space="preserve"><value>تم إنشاؤه بواسطة</value></data>
+<data name="Author_CreationDate" xml:space="preserve"><value>تاريخ الإنشاء</value></data>
+<data name="Author_Email" xml:space="preserve"><value>البريد الإلكتروني</value></data>
+<data name="Author_FirstName" xml:space="preserve"><value>الاسم الأول</value></data>
+<data name="Author_IDNumber" xml:space="preserve"><value>رقم الهوية</value></data>
+<data name="Author_IsAvailable" xml:space="preserve"><value>متاح؟</value></data>
+<data name="Author_LastName" xml:space="preserve"><value>الاسم الأخير</value></data>
+<data name="Author_Mobile" xml:space="preserve"><value>الجوال</value></data>
+<data name="Author_ModifiedBy" xml:space="preserve"><value>تم تعديل بواسطة</value></data>
+<data name="Author_ModifiedDate" xml:space="preserve"><value>التاريخ المعدل</value></data>
+<data name="Author_Phone" xml:space="preserve"><value>الهاتف</value></data>
+<data name="Author_PostalCode" xml:space="preserve"><value>الرمز البريدي</value></data>
+<data name="Author_ProfileLink" xml:space="preserve"><value>رابط الملف الشخصي</value></data>
+<data name="Author_ProfileUrl" xml:space="preserve"><value>عنوان url للملف الشخصي</value></data>
+<data name="Author_Website" xml:space="preserve"><value>الموقع</value></data>
+<data name="Authors" xml:space="preserve"><value>المؤلفون</value></data>
+<data name="Categories" xml:space="preserve"><value>الفئات</value></data>
+<data name="Category" xml:space="preserve"><value>الفئة</value></data>
+<data name="Category_CreatedBy" xml:space="preserve"><value>تم إنشاؤه بواسطة</value></data>
+<data name="Category_CreationDate" xml:space="preserve"><value>تاريخ الإنشاء</value></data>
+<data name="Category_Description" xml:space="preserve"><value>الوصف</value></data>
+<data name="Category_DescriptionAr" xml:space="preserve"><value>الوصف باللغة العربية</value></data>
+<data name="Category_DescriptionEn" xml:space="preserve"><value>الوصف باللغة الإنجليزية</value></data>
+<data name="Category_IsAvailable" xml:space="preserve"><value>متاح؟</value></data>
+<data name="Category_ModifiedBy" xml:space="preserve"><value>تم تعديل بواسطة</value></data>
+<data name="Category_ModifiedDate" xml:space="preserve"><value>التاريخ المعدل</value></data>
+<data name="Category_Name" xml:space="preserve"><value>الاسم</value></data>
+<data name="Category_NameAr" xml:space="preserve"><value>الإسم باللغة العربية</value></data>
+<data name="Category_NameEn" xml:space="preserve"><value>الإسم باللغة الانجليزية</value></data>
+<data name="Comment" xml:space="preserve"><value>التعليق</value></data>
+<data name="Comment_Article" xml:space="preserve"><value>معرف المقالة</value></data>
+<data name="Comment_ArticleChoose" xml:space="preserve"><value>اختر معرف المقالة</value></data>
+<data name="Comment_Content" xml:space="preserve"><value>المحتوى</value></data>
+<data name="Comment_CreatedBy" xml:space="preserve"><value>تم إنشاؤه بواسطة</value></data>
+<data name="Comment_CreationDate" xml:space="preserve"><value>تاريخ الإنشاء</value></data>
+<data name="Comment_IsAvailable" xml:space="preserve"><value>متاح؟</value></data>
+<data name="Comment_LanguageId" xml:space="preserve"><value>معرف اللغة</value></data>
+<data name="Comment_ModifiedBy" xml:space="preserve"><value>تم تعديل بواسطة</value></data>
+<data name="Comment_ModifiedDate" xml:space="preserve"><value>التاريخ المعدل</value></data>
+<data name="Comment_User" xml:space="preserve"><value>معرف المستخدم</value></data>
+<data name="Comment_UserChoose" xml:space="preserve"><value>اختر معرف المستخدم</value></data>
+<data name="Comments" xml:space="preserve"><value>التعليقات</value></data>
+<data name="ContactU" xml:space="preserve"><value>الاتصال u</value></data>
+<data name="ContactUs" xml:space="preserve"><value>اتصل بنا</value></data>
+<data name="ContactUs_CreatedBy" xml:space="preserve"><value>تم إنشاؤه بواسطة</value></data>
+<data name="ContactUs_CreationDate" xml:space="preserve"><value>تاريخ الإنشاء</value></data>
+<data name="ContactUs_Email" xml:space="preserve"><value>البريد الإلكتروني</value></data>
+<data name="ContactUs_IsAvailable" xml:space="preserve"><value>متاح؟</value></data>
+<data name="ContactUs_LanguageId" xml:space="preserve"><value>معرف اللغة</value></data>
+<data name="ContactUs_Message" xml:space="preserve"><value>الرسالة</value></data>
+<data name="ContactUs_ModifiedBy" xml:space="preserve"><value>تم تعديل بواسطة</value></data>
+<data name="ContactUs_ModifiedDate" xml:space="preserve"><value>التاريخ المعدل</value></data>
+<data name="ContactUs_Name" xml:space="preserve"><value>الاسم</value></data>
+<data name="ContactUs_Phone" xml:space="preserve"><value>الهاتف</value></data>
+<data name="Countries" xml:space="preserve"><value>الدول</value></data>
 <data name="Country" xml:space="preserve"><value>الدولة</value></data>
 <data name="Country_Code" xml:space="preserve"><value>الرمز</value></data>
 <data name="Country_CreatedBy" xml:space="preserve"><value>تم إنشاؤه بواسطة</value></data>
 <data name="Country_CreationDate" xml:space="preserve"><value>تاريخ الإنشاء</value></data>
 <data name="Country_IsAvailable" xml:space="preserve"><value>متاح؟</value></data>
-<data name="Country_LastModificationDate" xml:space="preserve"><value>تاريخ آخر تعديل</value></data>
-<data name="Country_LastModifiedBy" xml:space="preserve"><value>آخر تعديل بواسطة</value></data>
+<data name="Country_ModifiedBy" xml:space="preserve"><value>تم تعديل بواسطة</value></data>
+<data name="Country_ModifiedDate" xml:space="preserve"><value>التاريخ المعدل</value></data>
 <data name="Country_Name" xml:space="preserve"><value>الاسم</value></data>
 <data name="Country_NameAr" xml:space="preserve"><value>الإسم باللغة العربية</value></data>
 <data name="Country_NameEn" xml:space="preserve"><value>الإسم باللغة الانجليزية</value></data>
-<data name="Information" xml:space="preserve"><value>معلومات الدولة</value></data>
-<data name="Management" xml:space="preserve"><value>إدارة الدول</value></data>
 <data name="Faq" xml:space="preserve"><value>أسئلة شائعة</value></data>
 <data name="Faq_Answer" xml:space="preserve"><value>الاجابة</value></data>
 <data name="Faq_AnswerAr" xml:space="preserve"><value>الجواب باللغة العربية</value></data>
@@ -137,8 +219,8 @@
 <data name="Faq_CreatedBy" xml:space="preserve"><value>تم إنشاؤه بواسطة</value></data>
 <data name="Faq_CreationDate" xml:space="preserve"><value>تاريخ الإنشاء</value></data>
 <data name="Faq_IsAvailable" xml:space="preserve"><value>متاح؟</value></data>
-<data name="Faq_LastModificationDate" xml:space="preserve"><value>تاريخ آخر تعديل</value></data>
-<data name="Faq_LastModifiedBy" xml:space="preserve"><value>آخر تعديل بواسطة</value></data>
+<data name="Faq_ModifiedBy" xml:space="preserve"><value>تم تعديل بواسطة</value></data>
+<data name="Faq_ModifiedDate" xml:space="preserve"><value>التاريخ المعدل</value></data>
 <data name="Faq_Portal" xml:space="preserve"><value>معرف البوابة</value></data>
 <data name="Faq_PortalChoose" xml:space="preserve"><value>اختر معرف البوابة</value></data>
 <data name="Faq_Question" xml:space="preserve"><value>السؤال</value></data>
@@ -153,10 +235,21 @@
 <data name="Language_CreationDate" xml:space="preserve"><value>تاريخ الإنشاء</value></data>
 <data name="Language_IsAvailable" xml:space="preserve"><value>متاح؟</value></data>
 <data name="Language_IsDefault" xml:space="preserve"><value>الافتراضي؟</value></data>
-<data name="Language_LastModificationDate" xml:space="preserve"><value>تاريخ آخر تعديل</value></data>
-<data name="Language_LastModifiedBy" xml:space="preserve"><value>آخر تعديل بواسطة</value></data>
+<data name="Language_ModifiedBy" xml:space="preserve"><value>تم تعديل بواسطة</value></data>
+<data name="Language_ModifiedDate" xml:space="preserve"><value>التاريخ المعدل</value></data>
 <data name="Language_Name" xml:space="preserve"><value>الاسم</value></data>
 <data name="Languages" xml:space="preserve"><value>اللغات</value></data>
+<data name="Payment" xml:space="preserve"><value>الدفع</value></data>
+<data name="Payment_Amount" xml:space="preserve"><value>المبلغ</value></data>
+<data name="Payment_CreatedBy" xml:space="preserve"><value>تم إنشاؤه بواسطة</value></data>
+<data name="Payment_CreationDate" xml:space="preserve"><value>تاريخ الإنشاء</value></data>
+<data name="Payment_IsAvailable" xml:space="preserve"><value>متاح؟</value></data>
+<data name="Payment_ModifiedBy" xml:space="preserve"><value>تم تعديل بواسطة</value></data>
+<data name="Payment_ModifiedDate" xml:space="preserve"><value>التاريخ المعدل</value></data>
+<data name="Payment_PaymentDate" xml:space="preserve"><value>تاريخ الدفع</value></data>
+<data name="Payment_Subscription" xml:space="preserve"><value>معرف الاشتراك</value></data>
+<data name="Payment_SubscriptionChoose" xml:space="preserve"><value>اختر معرّف الاشتراك</value></data>
+<data name="Payments" xml:space="preserve"><value>المدفوعات</value></data>
 <data name="Portal" xml:space="preserve"><value>البوابة</value></data>
 <data name="Portal_CreatedBy" xml:space="preserve"><value>تم إنشاؤه بواسطة</value></data>
 <data name="Portal_CreationDate" xml:space="preserve"><value>تاريخ الإنشاء</value></data>
@@ -164,9 +257,9 @@
 <data name="Portal_DescriptionAr" xml:space="preserve"><value>الوصف باللغة العربية</value></data>
 <data name="Portal_DescriptionEn" xml:space="preserve"><value>الوصف باللغة الإنجليزية</value></data>
 <data name="Portal_IsAvailable" xml:space="preserve"><value>متاح؟</value></data>
-<data name="Portal_LastModificationDate" xml:space="preserve"><value>تاريخ آخر تعديل</value></data>
-<data name="Portal_LastModifiedBy" xml:space="preserve"><value>آخر تعديل بواسطة</value></data>
 <data name="Portal_Link" xml:space="preserve"><value>الرابط</value></data>
+<data name="Portal_ModifiedBy" xml:space="preserve"><value>تم تعديل بواسطة</value></data>
+<data name="Portal_ModifiedDate" xml:space="preserve"><value>التاريخ المعدل</value></data>
 <data name="Portal_Name" xml:space="preserve"><value>الاسم</value></data>
 <data name="Portal_NameAr" xml:space="preserve"><value>الإسم باللغة العربية</value></data>
 <data name="Portal_NameEn" xml:space="preserve"><value>الإسم باللغة الانجليزية</value></data>
@@ -189,10 +282,10 @@
 <data name="Service_Icon" xml:space="preserve"><value>الأيقونة</value></data>
 <data name="Service_IsAvailable" xml:space="preserve"><value>متاح؟</value></data>
 <data name="Service_IsPublished" xml:space="preserve"><value>يتم نشر؟</value></data>
-<data name="Service_LastModificationDate" xml:space="preserve"><value>تاريخ آخر تعديل</value></data>
-<data name="Service_LastModifiedBy" xml:space="preserve"><value>آخر تعديل بواسطة</value></data>
 <data name="Service_LogInRequired" xml:space="preserve"><value>تسجيل الدخول مطلوب</value></data>
 <data name="Service_MobileUrl" xml:space="preserve"><value>عنوان url للجوال</value></data>
+<data name="Service_ModifiedBy" xml:space="preserve"><value>تم تعديل بواسطة</value></data>
+<data name="Service_ModifiedDate" xml:space="preserve"><value>التاريخ المعدل</value></data>
 <data name="Service_Name" xml:space="preserve"><value>الاسم</value></data>
 <data name="Service_NameAr" xml:space="preserve"><value>الإسم باللغة العربية</value></data>
 <data name="Service_NameEn" xml:space="preserve"><value>الإسم باللغة الانجليزية</value></data>
@@ -229,11 +322,79 @@
 <data name="ServiceType_CreatedBy" xml:space="preserve"><value>تم إنشاؤه بواسطة</value></data>
 <data name="ServiceType_CreationDate" xml:space="preserve"><value>تاريخ الإنشاء</value></data>
 <data name="ServiceType_IsAvailable" xml:space="preserve"><value>متاح؟</value></data>
-<data name="ServiceType_LastModificationDate" xml:space="preserve"><value>تاريخ آخر تعديل</value></data>
-<data name="ServiceType_LastModifiedBy" xml:space="preserve"><value>آخر تعديل بواسطة</value></data>
+<data name="ServiceType_ModifiedBy" xml:space="preserve"><value>تم تعديل بواسطة</value></data>
+<data name="ServiceType_ModifiedDate" xml:space="preserve"><value>التاريخ المعدل</value></data>
 <data name="ServiceType_Name" xml:space="preserve"><value>الاسم</value></data>
 <data name="ServiceType_NameAr" xml:space="preserve"><value>الإسم باللغة العربية</value></data>
 <data name="ServiceType_NameEn" xml:space="preserve"><value>الإسم باللغة الانجليزية</value></data>
 <data name="ServiceTypes" xml:space="preserve"><value>أنواع الخدمة</value></data>
+<data name="Subscription" xml:space="preserve"><value>الاشتراك</value></data>
+<data name="Subscription_Amount" xml:space="preserve"><value>المبلغ</value></data>
+<data name="Subscription_CreatedBy" xml:space="preserve"><value>تم إنشاؤه بواسطة</value></data>
+<data name="Subscription_CreationDate" xml:space="preserve"><value>تاريخ الإنشاء</value></data>
+<data name="Subscription_EndDate" xml:space="preserve"><value>تاريخ الانتهاء</value></data>
+<data name="Subscription_IsAvailable" xml:space="preserve"><value>متاح؟</value></data>
+<data name="Subscription_ModifiedBy" xml:space="preserve"><value>تم تعديل بواسطة</value></data>
+<data name="Subscription_ModifiedDate" xml:space="preserve"><value>التاريخ المعدل</value></data>
+<data name="Subscription_PaymentMethod" xml:space="preserve"><value>طريقة الدفع</value></data>
+<data name="Subscription_StartDate" xml:space="preserve"><value>تاريخ البدء</value></data>
+<data name="Subscription_SubscriptionPlan" xml:space="preserve"><value>معرف خطة الاشتراك</value></data>
+<data name="Subscription_SubscriptionPlanChoose" xml:space="preserve"><value>اختر معرف خطة الاشتراك</value></data>
+<data name="Subscription_SubscriptionStatus" xml:space="preserve"><value>معرف حالة الاشتراك</value></data>
+<data name="Subscription_SubscriptionStatusChoose" xml:space="preserve"><value>اختر معرّف حالة الاشتراك</value></data>
+<data name="Subscription_User" xml:space="preserve"><value>معرف المستخدم</value></data>
+<data name="Subscription_UserChoose" xml:space="preserve"><value>اختر معرف المستخدم</value></data>
+<data name="Subscriptions" xml:space="preserve"><value>الاشتراكات</value></data>
+<data name="SubscriptionPlan" xml:space="preserve"><value>خطة الاشتراك</value></data>
+<data name="SubscriptionPlan_CreatedBy" xml:space="preserve"><value>تم إنشاؤه بواسطة</value></data>
+<data name="SubscriptionPlan_CreationDate" xml:space="preserve"><value>تاريخ الإنشاء</value></data>
+<data name="SubscriptionPlan_Description" xml:space="preserve"><value>الوصف</value></data>
+<data name="SubscriptionPlan_DescriptionAr" xml:space="preserve"><value>الوصف باللغة العربية</value></data>
+<data name="SubscriptionPlan_DescriptionEn" xml:space="preserve"><value>الوصف باللغة الإنجليزية</value></data>
+<data name="SubscriptionPlan_IsAvailable" xml:space="preserve"><value>متاح؟</value></data>
+<data name="SubscriptionPlan_ModifiedBy" xml:space="preserve"><value>تم تعديل بواسطة</value></data>
+<data name="SubscriptionPlan_ModifiedDate" xml:space="preserve"><value>التاريخ المعدل</value></data>
+<data name="SubscriptionPlan_Name" xml:space="preserve"><value>الاسم</value></data>
+<data name="SubscriptionPlan_NameAr" xml:space="preserve"><value>الإسم باللغة العربية</value></data>
+<data name="SubscriptionPlan_NameEn" xml:space="preserve"><value>الإسم باللغة الانجليزية</value></data>
+<data name="SubscriptionPlan_Price" xml:space="preserve"><value>السعر</value></data>
+<data name="SubscriptionPlans" xml:space="preserve"><value>خطط الاشتراك</value></data>
+<data name="SubscriptionStatu" xml:space="preserve"><value>حالة الاشتراك</value></data>
+<data name="SubscriptionStatus_CreatedBy" xml:space="preserve"><value>تم إنشاؤه بواسطة</value></data>
+<data name="SubscriptionStatus_CreationDate" xml:space="preserve"><value>تاريخ الإنشاء</value></data>
+<data name="SubscriptionStatus_Description" xml:space="preserve"><value>الوصف</value></data>
+<data name="SubscriptionStatus_DescriptionAr" xml:space="preserve"><value>الوصف باللغة العربية</value></data>
+<data name="SubscriptionStatus_DescriptionEn" xml:space="preserve"><value>الوصف باللغة الإنجليزية</value></data>
+<data name="SubscriptionStatus_IsAvailable" xml:space="preserve"><value>متاح؟</value></data>
+<data name="SubscriptionStatus_ModifiedBy" xml:space="preserve"><value>تم تعديل بواسطة</value></data>
+<data name="SubscriptionStatus_ModifiedDate" xml:space="preserve"><value>التاريخ المعدل</value></data>
+<data name="SubscriptionStatus_Name" xml:space="preserve"><value>الاسم</value></data>
+<data name="SubscriptionStatus_NameAr" xml:space="preserve"><value>الإسم باللغة العربية</value></data>
+<data name="SubscriptionStatus_NameEn" xml:space="preserve"><value>الإسم باللغة الانجليزية</value></data>
+<data name="SubscriptionStatuses" xml:space="preserve"><value>حالات الاشتراك</value></data>
+<data name="Tag" xml:space="preserve"><value>الوسم</value></data>
+<data name="Tag_CreatedBy" xml:space="preserve"><value>تم إنشاؤه بواسطة</value></data>
+<data name="Tag_CreationDate" xml:space="preserve"><value>تاريخ الإنشاء</value></data>
+<data name="Tag_IsAvailable" xml:space="preserve"><value>متاح؟</value></data>
+<data name="Tag_ModifiedBy" xml:space="preserve"><value>تم تعديل بواسطة</value></data>
+<data name="Tag_ModifiedDate" xml:space="preserve"><value>التاريخ المعدل</value></data>
+<data name="Tag_Title" xml:space="preserve"><value>العنوان</value></data>
+<data name="Tag_TitleAr" xml:space="preserve"><value>العنوان باللغة العربية</value></data>
+<data name="Tag_TitleEn" xml:space="preserve"><value>العنوان باللغة الانجليزية</value></data>
+<data name="Tags" xml:space="preserve"><value>العلامات</value></data>
+<data name="User" xml:space="preserve"><value>المستخدم</value></data>
+<data name="Users" xml:space="preserve"><value>المستخدمين</value></data>
+<data name="Users_CreatedBy" xml:space="preserve"><value>تم إنشاؤه بواسطة</value></data>
+<data name="Users_CreationDate" xml:space="preserve"><value>تاريخ الإنشاء</value></data>
+<data name="Users_Email" xml:space="preserve"><value>البريد الإلكتروني</value></data>
+<data name="Users_FirstName" xml:space="preserve"><value>الاسم الأول</value></data>
+<data name="Users_IsAvailable" xml:space="preserve"><value>متاح؟</value></data>
+<data name="Users_LastLoginAt" xml:space="preserve"><value>آخر تسجيل دخول في</value></data>
+<data name="Users_LastName" xml:space="preserve"><value>الاسم الأخير</value></data>
+<data name="Users_ModifiedBy" xml:space="preserve"><value>تم تعديل بواسطة</value></data>
+<data name="Users_ModifiedDate" xml:space="preserve"><value>التاريخ المعدل</value></data>
+<data name="Users_PasswordHash" xml:space="preserve"><value>تجزئة كلمة المرور</value></data>
+<data name="Users_ProfileInfo" xml:space="preserve"><value>معلومات الملف الشخصي</value></data>
+<data name="Users_Username" xml:space="preserve"><value>اسم المستخدم</value></data>
 
 </root>

@@ -15,9 +15,9 @@ namespace TemplateFw.Dtos
 		public bool IsDefault { get; set; }
 		public bool IsAvailable { get; set; }
 		public string CreatedBy { get; set; }
-		public DateTime? CreationDate { get; set; }
-		public string LastModifiedBy { get; set; }
-		public DateTime? LastModificationDate { get; set; }
+		public DateTime CreationDate { get; set; }
+		public string ModifiedBy { get; set; }
+		public DateTime? ModifiedDate { get; set; }
 
     }
 
@@ -29,9 +29,9 @@ namespace TemplateFw.Dtos
 		public bool IsDefault { get; set; }
 		public bool IsAvailable { get; set; }
 		public string CreatedBy { get; set; }
-		public DateTime? CreationDate { get; set; }
-		public string LastModifiedBy { get; set; }
-		public DateTime? LastModificationDate { get; set; }
+		public DateTime CreationDate { get; set; }
+		public string ModifiedBy { get; set; }
+		public DateTime? ModifiedDate { get; set; }
     }
 
     public class LanguageFilter
@@ -54,7 +54,6 @@ namespace TemplateFw.Dtos
 			RuleFor(x => x.Name)
 			    .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
 			    .MaximumLength(50).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "50"))
-			    .Matches(@"/^[A-Za-z]{5,50}$/").WithMessage(validationLocalizer["Pattern"])
 			    .WithName("Language_Name");
 
 			RuleFor(x => x.Code)
@@ -88,7 +87,6 @@ namespace TemplateFw.Dtos
         {
 			RuleFor(x => x.Name)
 			    .MaximumLength(50).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "50"))
-			    .Matches(@"/^[A-Za-z]{5,50}$/").WithMessage(validationLocalizer["Pattern"])
 			    .WithName("Language_Name");
 
 

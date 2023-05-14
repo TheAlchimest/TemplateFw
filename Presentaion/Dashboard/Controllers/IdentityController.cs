@@ -14,7 +14,7 @@ using Urls = Dashboard.Common.WebClientHelpers.InternalApiDictionary.AdminUrls;
 
 namespace TemplateFw.Dashboard.Controllers
 {
-    [Authorize(Roles = RoleProvider.SUPER_ADMIN)]
+    //[Authorize(Roles = RoleProvider.SUPER_ADMIN)]
     public class IdentityController : WebBaseController<IdentityController>
     {
         private readonly RequestUrlHelper _api = ApiRequestHelper.InternalAPI;

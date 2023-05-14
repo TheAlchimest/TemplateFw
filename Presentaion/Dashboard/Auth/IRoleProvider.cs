@@ -18,8 +18,19 @@ namespace TemplateFw.Dashboard.Auth
         public const string Language = "Language";
         public const string Portal = "Portal";
         public const string ServiceType = "ServiceType";
+        public const string Article = "Article";
+        public const string Author = "Author";
+        public const string Category = "Category";
         public const string Service = "Service";
-        
+        public const string Comment = "Comment";
+        public const string ContactUs = "ContactUs";
+        public const string Payment = "Payment";
+        public const string Subscription = "Subscription";
+        public const string SubscriptionPlan = "SubscriptionPlan";
+        public const string SubscriptionStatus = "SubscriptionStatus";
+        public const string Users = "Users";
+        public const string Tag = "Tag";
+
         public const string POLLS_ADMIN = "Polls";
         public const string VOTINGS_ADMIN = "Votings";
         public const string COMPLAINTS_ADMIN = "Complaints";

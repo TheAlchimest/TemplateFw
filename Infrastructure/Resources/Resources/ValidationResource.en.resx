@@ -117,11 +117,26 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="InvalidPattern" xml:space="preserve">
+    <value>الصيغة المدخلة ل {PropertyName} غير صحيحة</value>
+  </data>
   <data name="MaxLengthCharacters" xml:space="preserve">
     <value>الحد الأقصى لعدد أحرف {PropertyName} {Length} حرف</value>
   </data>
   <data name="MaxLengthNumers" xml:space="preserve">
     <value>الحد الأقصى لعدد أرقام {PropertyName} {Length} رقم</value>
+  </data>
+  <data name="MinLengthCharacters" xml:space="preserve">
+    <value>الحد الأدنى لعدد أحرف {PropertyName} {Length} حرف</value>
+  </data>
+  <data name="MinLengthNumers" xml:space="preserve">
+    <value>الحد الأدنى لعدد أرقام {PropertyName} {Length} رقم</value>
+  </data>
+  <data name="RangeLengthCharacters" xml:space="preserve">
+    <value>يجب أن يكون {PropertyName} في حدود من {MinLength} وحتى {MaxLength} حرف</value>
+  </data>
+  <data name="RangeLengthNumbers" xml:space="preserve">
+    <value>يجب أن يكون {PropertyName} في حدود من {MinLength} وحتى {MaxLength} رقم</value>
   </data>
   <data name="RequiredChoose" xml:space="preserve">
     <value>{PropertyName} يجب تحديد</value>

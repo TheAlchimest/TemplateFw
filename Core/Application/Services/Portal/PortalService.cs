@@ -40,7 +40,7 @@ namespace TemplateFw.Application.Services
         public async Task<bool> UpdateAsync(PortalDto dto)
         {
             string user = _userInfoService.GetCurrentUserName();
-            dto.LastModifiedBy = user;
+            dto.ModifiedBy = user;
             return await _repository.UpdateAsync(dto);
         }
         #endregion

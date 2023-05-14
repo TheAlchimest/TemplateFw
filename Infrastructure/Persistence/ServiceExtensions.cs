@@ -37,12 +37,23 @@ namespace TemplateFw.Persistence
             services.AddScoped<IDbHelper, DbHelper>();
 
             
+			services.AddScoped<IArticleRepository, ArticleRepository>();
+			services.AddScoped<IAuthorRepository, AuthorRepository>();
+			services.AddScoped<ICategoryRepository, CategoryRepository>();
+			services.AddScoped<ICommentRepository, CommentRepository>();
+			services.AddScoped<IContactUsRepository, ContactUsRepository>();
 			services.AddScoped<ICountryRepository, CountryRepository>();
 			services.AddScoped<IFaqRepository, FaqRepository>();
 			services.AddScoped<ILanguageRepository, LanguageRepository>();
+			services.AddScoped<IPaymentRepository, PaymentRepository>();
 			services.AddScoped<IPortalRepository, PortalRepository>();
 			services.AddScoped<IServiceRepository, ServiceRepository>();
 			services.AddScoped<IServiceTypeRepository, ServiceTypeRepository>();
+			services.AddScoped<ISubscriptionRepository, SubscriptionRepository>();
+			services.AddScoped<ISubscriptionPlanRepository, SubscriptionPlanRepository>();
+			services.AddScoped<ISubscriptionStatusRepository, SubscriptionStatusRepository>();
+			services.AddScoped<ITagRepository, TagRepository>();
+			services.AddScoped<IUsersRepository, UsersRepository>();
 
             services.AddScoped<ILookupRepository, LookupRepository>();
             services.AddScoped<IActionLogRepository, ActionLogRepository>();

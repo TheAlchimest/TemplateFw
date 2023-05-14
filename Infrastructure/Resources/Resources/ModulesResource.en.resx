@@ -117,10 +117,92 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Countries" xml:space="preserve"><value>Countries</value></data>
+  <data name="Articles" xml:space="preserve"><value>Articles</value></data>
+<data name="Article" xml:space="preserve"><value>Article</value></data>
+<data name="Management" xml:space="preserve"><value>Articles management</value></data>
+<data name="Information" xml:space="preserve"><value>Article information</value></data>
+<data name="Article_TitleAr" xml:space="preserve"><value>Title in Arabic</value></data>
+<data name="Article_Title" xml:space="preserve"><value>Title</value></data>
+<data name="Article_TitleEn" xml:space="preserve"><value>Title in English</value></data>
+<data name="Article_BriefAr" xml:space="preserve"><value>Brief in Arabic</value></data>
+<data name="Article_Brief" xml:space="preserve"><value>Brief</value></data>
+<data name="Article_BriefEn" xml:space="preserve"><value>Brief in English</value></data>
+<data name="Article_ContentAr" xml:space="preserve"><value>Content in Arabic</value></data>
+<data name="Article_Content" xml:space="preserve"><value>Content</value></data>
+<data name="Article_ContentEn" xml:space="preserve"><value>Content in English</value></data>
+<data name="Article_Author" xml:space="preserve"><value>Author id</value></data>
+<data name="Article_AuthorChoose" xml:space="preserve"><value>Choose author id</value></data>
+<data name="Article_Category" xml:space="preserve"><value>Category id</value></data>
+<data name="Article_CategoryChoose" xml:space="preserve"><value>Choose category id</value></data>
+<data name="Article_IsPublished" xml:space="preserve"><value>Is published?</value></data>
+<data name="Article_PublicationDate" xml:space="preserve"><value>Publication date</value></data>
+<data name="Article_PublishedAt" xml:space="preserve"><value>Published at</value></data>
+<data name="Article_IsAvailable" xml:space="preserve"><value>Is available?</value></data>
+<data name="Article_CreationDate" xml:space="preserve"><value>Creation date</value></data>
+<data name="Article_CreatedBy" xml:space="preserve"><value>Created by</value></data>
+<data name="Article_ModifiedDate" xml:space="preserve"><value>Modified date</value></data>
+<data name="Article_ModifiedBy" xml:space="preserve"><value>Modified by</value></data>
+<data name="Authors" xml:space="preserve"><value>Authors</value></data>
+<data name="Author" xml:space="preserve"><value>Author</value></data>
+<data name="Author_FirstName" xml:space="preserve"><value>First name</value></data>
+<data name="Author_LastName" xml:space="preserve"><value>Last name</value></data>
+<data name="Author_Email" xml:space="preserve"><value>Email</value></data>
+<data name="Author_Phone" xml:space="preserve"><value>Phone</value></data>
+<data name="Author_Mobile" xml:space="preserve"><value>Mobile</value></data>
+<data name="Author_Biography" xml:space="preserve"><value>Biography</value></data>
+<data name="Author_ProfileUrl" xml:space="preserve"><value>Profile url</value></data>
+<data name="Author_IDNumber" xml:space="preserve"><value>ID number</value></data>
+<data name="Author_Country" xml:space="preserve"><value>Country</value></data>
+<data name="Author_CountryChoose" xml:space="preserve"><value>Choose country id</value></data>
+<data name="Author_PostalCode" xml:space="preserve"><value>Postal code</value></data>
+<data name="Author_Address" xml:space="preserve"><value>Address</value></data>
+<data name="Author_Website" xml:space="preserve"><value>Website</value></data>
+<data name="Author_ProfileLink" xml:space="preserve"><value>Profile link</value></data>
+<data name="Author_IsAvailable" xml:space="preserve"><value>Is available?</value></data>
+<data name="Author_CreationDate" xml:space="preserve"><value>Creation date</value></data>
+<data name="Author_CreatedBy" xml:space="preserve"><value>Created by</value></data>
+<data name="Author_ModifiedDate" xml:space="preserve"><value>Modified date</value></data>
+<data name="Author_ModifiedBy" xml:space="preserve"><value>Modified by</value></data>
+<data name="Categories" xml:space="preserve"><value>Categories</value></data>
+<data name="Category" xml:space="preserve"><value>Category</value></data>
+<data name="Category_NameAr" xml:space="preserve"><value>Name in Arabic</value></data>
+<data name="Category_Name" xml:space="preserve"><value>Name</value></data>
+<data name="Category_NameEn" xml:space="preserve"><value>Name in English</value></data>
+<data name="Category_DescriptionAr" xml:space="preserve"><value>Description in Arabic</value></data>
+<data name="Category_Description" xml:space="preserve"><value>Description</value></data>
+<data name="Category_DescriptionEn" xml:space="preserve"><value>Description in English</value></data>
+<data name="Category_IsAvailable" xml:space="preserve"><value>Is available?</value></data>
+<data name="Category_CreationDate" xml:space="preserve"><value>Creation date</value></data>
+<data name="Category_CreatedBy" xml:space="preserve"><value>Created by</value></data>
+<data name="Category_ModifiedDate" xml:space="preserve"><value>Modified date</value></data>
+<data name="Category_ModifiedBy" xml:space="preserve"><value>Modified by</value></data>
+<data name="Comments" xml:space="preserve"><value>Comments</value></data>
+<data name="Comment" xml:space="preserve"><value>Comment</value></data>
+<data name="Comment_Content" xml:space="preserve"><value>Content</value></data>
+<data name="Comment_Article" xml:space="preserve"><value>Article id</value></data>
+<data name="Comment_ArticleChoose" xml:space="preserve"><value>Choose article id</value></data>
+<data name="Comment_User" xml:space="preserve"><value>User id</value></data>
+<data name="Comment_UserChoose" xml:space="preserve"><value>Choose user id</value></data>
+<data name="Comment_LanguageId" xml:space="preserve"><value>Language id</value></data>
+<data name="Comment_IsAvailable" xml:space="preserve"><value>Is available?</value></data>
+<data name="Comment_CreationDate" xml:space="preserve"><value>Creation date</value></data>
+<data name="Comment_CreatedBy" xml:space="preserve"><value>Created by</value></data>
+<data name="Comment_ModifiedDate" xml:space="preserve"><value>Modified date</value></data>
+<data name="Comment_ModifiedBy" xml:space="preserve"><value>Modified by</value></data>
+<data name="ContactUs" xml:space="preserve"><value>Contact us</value></data>
+<data name="ContactU" xml:space="preserve"><value>Contact u</value></data>
+<data name="ContactUs_Name" xml:space="preserve"><value>Name</value></data>
+<data name="ContactUs_Email" xml:space="preserve"><value>Email</value></data>
+<data name="ContactUs_Phone" xml:space="preserve"><value>Phone</value></data>
+<data name="ContactUs_Message" xml:space="preserve"><value>Message</value></data>
+<data name="ContactUs_LanguageId" xml:space="preserve"><value>Language id</value></data>
+<data name="ContactUs_CreationDate" xml:space="preserve"><value>Creation date</value></data>
+<data name="ContactUs_IsAvailable" xml:space="preserve"><value>Is available?</value></data>
+<data name="ContactUs_CreatedBy" xml:space="preserve"><value>Created by</value></data>
+<data name="ContactUs_ModifiedDate" xml:space="preserve"><value>Modified date</value></data>
+<data name="ContactUs_ModifiedBy" xml:space="preserve"><value>Modified by</value></data>
+<data name="Countries" xml:space="preserve"><value>Countries</value></data>
 <data name="Country" xml:space="preserve"><value>Country</value></data>
-<data name="Management" xml:space="preserve"><value>Countries management</value></data>
-<data name="Information" xml:space="preserve"><value>Country information</value></data>
 <data name="Country_NameAr" xml:space="preserve"><value>Name in Arabic</value></data>
 <data name="Country_Name" xml:space="preserve"><value>Name</value></data>
 <data name="Country_NameEn" xml:space="preserve"><value>Name in English</value></data>
@@ -128,8 +210,8 @@
 <data name="Country_IsAvailable" xml:space="preserve"><value>Is available?</value></data>
 <data name="Country_CreatedBy" xml:space="preserve"><value>Created by</value></data>
 <data name="Country_CreationDate" xml:space="preserve"><value>Creation date</value></data>
-<data name="Country_LastModifiedBy" xml:space="preserve"><value>Last modified by</value></data>
-<data name="Country_LastModificationDate" xml:space="preserve"><value>Last modification date</value></data>
+<data name="Country_ModifiedBy" xml:space="preserve"><value>Modified by</value></data>
+<data name="Country_ModifiedDate" xml:space="preserve"><value>Modified date</value></data>
 <data name="Faqs" xml:space="preserve"><value>Faqs</value></data>
 <data name="Faq" xml:space="preserve"><value>FAQ</value></data>
 <data name="Faq_QuestionAr" xml:space="preserve"><value>Question in Arabic</value></data>
@@ -145,8 +227,8 @@
 <data name="Faq_IsAvailable" xml:space="preserve"><value>Is available?</value></data>
 <data name="Faq_CreatedBy" xml:space="preserve"><value>Created by</value></data>
 <data name="Faq_CreationDate" xml:space="preserve"><value>Creation date</value></data>
-<data name="Faq_LastModifiedBy" xml:space="preserve"><value>Last modified by</value></data>
-<data name="Faq_LastModificationDate" xml:space="preserve"><value>Last modification date</value></data>
+<data name="Faq_ModifiedBy" xml:space="preserve"><value>Modified by</value></data>
+<data name="Faq_ModifiedDate" xml:space="preserve"><value>Modified date</value></data>
 <data name="Languages" xml:space="preserve"><value>Languages</value></data>
 <data name="Language" xml:space="preserve"><value>Language</value></data>
 <data name="Language_Name" xml:space="preserve"><value>Name</value></data>
@@ -155,8 +237,19 @@
 <data name="Language_IsAvailable" xml:space="preserve"><value>Is available?</value></data>
 <data name="Language_CreatedBy" xml:space="preserve"><value>Created by</value></data>
 <data name="Language_CreationDate" xml:space="preserve"><value>Creation date</value></data>
-<data name="Language_LastModifiedBy" xml:space="preserve"><value>Last modified by</value></data>
-<data name="Language_LastModificationDate" xml:space="preserve"><value>Last modification date</value></data>
+<data name="Language_ModifiedBy" xml:space="preserve"><value>Modified by</value></data>
+<data name="Language_ModifiedDate" xml:space="preserve"><value>Modified date</value></data>
+<data name="Payments" xml:space="preserve"><value>Payments</value></data>
+<data name="Payment" xml:space="preserve"><value>Payment</value></data>
+<data name="Payment_Subscription" xml:space="preserve"><value>Subscription id</value></data>
+<data name="Payment_SubscriptionChoose" xml:space="preserve"><value>Choose subscription id</value></data>
+<data name="Payment_Amount" xml:space="preserve"><value>Amount</value></data>
+<data name="Payment_PaymentDate" xml:space="preserve"><value>Payment date</value></data>
+<data name="Payment_CreationDate" xml:space="preserve"><value>Creation date</value></data>
+<data name="Payment_ModifiedDate" xml:space="preserve"><value>Modified date</value></data>
+<data name="Payment_IsAvailable" xml:space="preserve"><value>Is available?</value></data>
+<data name="Payment_CreatedBy" xml:space="preserve"><value>Created by</value></data>
+<data name="Payment_ModifiedBy" xml:space="preserve"><value>Modified by</value></data>
 <data name="Portals" xml:space="preserve"><value>Portals</value></data>
 <data name="Portal" xml:space="preserve"><value>Portal</value></data>
 <data name="Portal_NameAr" xml:space="preserve"><value>Name in Arabic</value></data>
@@ -167,10 +260,10 @@
 <data name="Portal_DescriptionEn" xml:space="preserve"><value>Description in English</value></data>
 <data name="Portal_Link" xml:space="preserve"><value>Link</value></data>
 <data name="Portal_IsAvailable" xml:space="preserve"><value>Is available?</value></data>
-<data name="Portal_CreatedBy" xml:space="preserve"><value>Created by</value></data>
 <data name="Portal_CreationDate" xml:space="preserve"><value>Creation date</value></data>
-<data name="Portal_LastModifiedBy" xml:space="preserve"><value>Last modified by</value></data>
-<data name="Portal_LastModificationDate" xml:space="preserve"><value>Last modification date</value></data>
+<data name="Portal_CreatedBy" xml:space="preserve"><value>Created by</value></data>
+<data name="Portal_ModifiedDate" xml:space="preserve"><value>Modified date</value></data>
+<data name="Portal_ModifiedBy" xml:space="preserve"><value>Modified by</value></data>
 <data name="Services" xml:space="preserve"><value>Services</value></data>
 <data name="Service" xml:space="preserve"><value>Service</value></data>
 <data name="Service_NameAr" xml:space="preserve"><value>Name in Arabic</value></data>
@@ -223,8 +316,8 @@
 <data name="Service_IsAvailable" xml:space="preserve"><value>Is available?</value></data>
 <data name="Service_CreatedBy" xml:space="preserve"><value>Created by</value></data>
 <data name="Service_CreationDate" xml:space="preserve"><value>Creation date</value></data>
-<data name="Service_LastModifiedBy" xml:space="preserve"><value>Last modified by</value></data>
-<data name="Service_LastModificationDate" xml:space="preserve"><value>Last modification date</value></data>
+<data name="Service_ModifiedBy" xml:space="preserve"><value>Modified by</value></data>
+<data name="Service_ModifiedDate" xml:space="preserve"><value>Modified date</value></data>
 <data name="ServiceTypes" xml:space="preserve"><value>Service types</value></data>
 <data name="ServiceType" xml:space="preserve"><value>Service type</value></data>
 <data name="ServiceType_NameAr" xml:space="preserve"><value>Name in Arabic</value></data>
@@ -233,7 +326,75 @@
 <data name="ServiceType_IsAvailable" xml:space="preserve"><value>Is available?</value></data>
 <data name="ServiceType_CreatedBy" xml:space="preserve"><value>Created by</value></data>
 <data name="ServiceType_CreationDate" xml:space="preserve"><value>Creation date</value></data>
-<data name="ServiceType_LastModifiedBy" xml:space="preserve"><value>Last modified by</value></data>
-<data name="ServiceType_LastModificationDate" xml:space="preserve"><value>Last modification date</value></data>
+<data name="ServiceType_ModifiedBy" xml:space="preserve"><value>Modified by</value></data>
+<data name="ServiceType_ModifiedDate" xml:space="preserve"><value>Modified date</value></data>
+<data name="Subscriptions" xml:space="preserve"><value>Subscriptions</value></data>
+<data name="Subscription" xml:space="preserve"><value>Subscription</value></data>
+<data name="Subscription_User" xml:space="preserve"><value>User id</value></data>
+<data name="Subscription_UserChoose" xml:space="preserve"><value>Choose user id</value></data>
+<data name="Subscription_SubscriptionPlan" xml:space="preserve"><value>Subscription plan id</value></data>
+<data name="Subscription_SubscriptionPlanChoose" xml:space="preserve"><value>Choose subscription plan id</value></data>
+<data name="Subscription_StartDate" xml:space="preserve"><value>Start date</value></data>
+<data name="Subscription_EndDate" xml:space="preserve"><value>End date</value></data>
+<data name="Subscription_SubscriptionStatus" xml:space="preserve"><value>Subscription status id</value></data>
+<data name="Subscription_SubscriptionStatusChoose" xml:space="preserve"><value>Choose subscription status id</value></data>
+<data name="Subscription_PaymentMethod" xml:space="preserve"><value>Payment method</value></data>
+<data name="Subscription_Amount" xml:space="preserve"><value>Amount</value></data>
+<data name="Subscription_IsAvailable" xml:space="preserve"><value>Is available?</value></data>
+<data name="Subscription_CreationDate" xml:space="preserve"><value>Creation date</value></data>
+<data name="Subscription_ModifiedDate" xml:space="preserve"><value>Modified date</value></data>
+<data name="Subscription_CreatedBy" xml:space="preserve"><value>Created by</value></data>
+<data name="Subscription_ModifiedBy" xml:space="preserve"><value>Modified by</value></data>
+<data name="SubscriptionPlans" xml:space="preserve"><value>Subscription plans</value></data>
+<data name="SubscriptionPlan" xml:space="preserve"><value>Subscription plan</value></data>
+<data name="SubscriptionPlan_NameAr" xml:space="preserve"><value>Name in Arabic</value></data>
+<data name="SubscriptionPlan_Name" xml:space="preserve"><value>Name</value></data>
+<data name="SubscriptionPlan_NameEn" xml:space="preserve"><value>Name in English</value></data>
+<data name="SubscriptionPlan_DescriptionAr" xml:space="preserve"><value>Description in Arabic</value></data>
+<data name="SubscriptionPlan_Description" xml:space="preserve"><value>Description</value></data>
+<data name="SubscriptionPlan_DescriptionEn" xml:space="preserve"><value>Description in English</value></data>
+<data name="SubscriptionPlan_Price" xml:space="preserve"><value>Price</value></data>
+<data name="SubscriptionPlan_IsAvailable" xml:space="preserve"><value>Is available?</value></data>
+<data name="SubscriptionPlan_CreationDate" xml:space="preserve"><value>Creation date</value></data>
+<data name="SubscriptionPlan_CreatedBy" xml:space="preserve"><value>Created by</value></data>
+<data name="SubscriptionPlan_ModifiedDate" xml:space="preserve"><value>Modified date</value></data>
+<data name="SubscriptionPlan_ModifiedBy" xml:space="preserve"><value>Modified by</value></data>
+<data name="SubscriptionStatuses" xml:space="preserve"><value>Subscription statuses</value></data>
+<data name="SubscriptionStatu" xml:space="preserve"><value>Subscription status</value></data>
+<data name="SubscriptionStatus_NameAr" xml:space="preserve"><value>Name in Arabic</value></data>
+<data name="SubscriptionStatus_Name" xml:space="preserve"><value>Name</value></data>
+<data name="SubscriptionStatus_NameEn" xml:space="preserve"><value>Name in English</value></data>
+<data name="SubscriptionStatus_DescriptionAr" xml:space="preserve"><value>Description in Arabic</value></data>
+<data name="SubscriptionStatus_Description" xml:space="preserve"><value>Description</value></data>
+<data name="SubscriptionStatus_DescriptionEn" xml:space="preserve"><value>Description in English</value></data>
+<data name="SubscriptionStatus_IsAvailable" xml:space="preserve"><value>Is available?</value></data>
+<data name="SubscriptionStatus_CreationDate" xml:space="preserve"><value>Creation date</value></data>
+<data name="SubscriptionStatus_CreatedBy" xml:space="preserve"><value>Created by</value></data>
+<data name="SubscriptionStatus_ModifiedDate" xml:space="preserve"><value>Modified date</value></data>
+<data name="SubscriptionStatus_ModifiedBy" xml:space="preserve"><value>Modified by</value></data>
+<data name="Tags" xml:space="preserve"><value>Tags</value></data>
+<data name="Tag" xml:space="preserve"><value>Tag</value></data>
+<data name="Tag_TitleAr" xml:space="preserve"><value>Title in Arabic</value></data>
+<data name="Tag_Title" xml:space="preserve"><value>Title</value></data>
+<data name="Tag_TitleEn" xml:space="preserve"><value>Title in English</value></data>
+<data name="Tag_IsAvailable" xml:space="preserve"><value>Is available?</value></data>
+<data name="Tag_CreationDate" xml:space="preserve"><value>Creation date</value></data>
+<data name="Tag_CreatedBy" xml:space="preserve"><value>Created by</value></data>
+<data name="Tag_ModifiedDate" xml:space="preserve"><value>Modified date</value></data>
+<data name="Tag_ModifiedBy" xml:space="preserve"><value>Modified by</value></data>
+<data name="Users" xml:space="preserve"><value>Users</value></data>
+<data name="User" xml:space="preserve"><value>User</value></data>
+<data name="Users_FirstName" xml:space="preserve"><value>First name</value></data>
+<data name="Users_LastName" xml:space="preserve"><value>Last name</value></data>
+<data name="Users_Email" xml:space="preserve"><value>Email</value></data>
+<data name="Users_Username" xml:space="preserve"><value>Username</value></data>
+<data name="Users_PasswordHash" xml:space="preserve"><value>Password hash</value></data>
+<data name="Users_ProfileInfo" xml:space="preserve"><value>Profile info</value></data>
+<data name="Users_LastLoginAt" xml:space="preserve"><value>Last login at</value></data>
+<data name="Users_CreationDate" xml:space="preserve"><value>Creation date</value></data>
+<data name="Users_ModifiedDate" xml:space="preserve"><value>Modified date</value></data>
+<data name="Users_IsAvailable" xml:space="preserve"><value>Is available?</value></data>
+<data name="Users_CreatedBy" xml:space="preserve"><value>Created by</value></data>
+<data name="Users_ModifiedBy" xml:space="preserve"><value>Modified by</value></data>
 
 </root>

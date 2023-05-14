@@ -1,0 +1,65 @@
+﻿@inject IOptions<WebSettings> webSettings
+@model TemplateFw.Dtos.SubscriptionFilter
+<div class="card master-form">
+    <div class="card-body">
+        <form id="grid-filter" class="grid-filter"
+              action="/subscription/IndexContent"
+              data-container-id="containerBox"
+              onsubmit="actionsController.search(this,event)">
+            <input type="hidden" id="PageNumber" name="PageNumber" value="@Model.PageNumber" />
+            <div class="row">
+                <div class="col-md-4 eng-form-element">
+<div class="form-group select2-lg">
+    <label class="form-label-small px-3" for="UserId">@modulesLocalizer["Users"] :</label>
+    <select class="form-control form-select select2 select2-control select-dynamic"   id="UserId" name="UserId" data-api-url="lookup/users" data-default-val="" data-default-text="@localizer["All"]" value="@(Model?.UserId)"  data-smk-max="9999999999" data-smk-min="-9999999999">
+    </select>
+    
+</div>
+</div>
+<div class="col-md-4 eng-form-element">
+<div class="form-group select2-lg">
+    <label class="form-label-small px-3" for="SubscriptionPlanId">@modulesLocalizer["SubscriptionPlan"] :</label>
+    <select class="form-control form-select select2 select2-control select-dynamic"   id="SubscriptionPlanId" name="SubscriptionPlanId" data-api-url="lookup/subscriptionplans" data-default-val="" data-default-text="@localizer["All"]" value="@(Model?.SubscriptionPlanId)"  data-smk-max="9999999999" data-smk-min="-9999999999">
+    </select>
+    
+</div>
+</div>
+<div class="col-md-4 eng-form-element">
+<div class="form-group select2-lg">
+    <label class="form-label-small px-3" for="SubscriptionStatusId">@modulesLocalizer["SubscriptionStatus"] :</label>
+    <select class="form-control form-select select2 select2-control select-dynamic"   id="SubscriptionStatusId" name="SubscriptionStatusId" data-api-url="lookup/subscriptionstatuses" data-default-val="" data-default-text="@localizer["All"]" value="@(Model?.SubscriptionStatusId)"  data-smk-max="9999999999" data-smk-min="-9999999999">
+    </select>
+    
+</div>
+</div>
+<div class="col-md-4 eng-form-element">
+<div class="form-group select2-lg">
+    <label class="form-label-small px-3" for="PageSize">@modulesLocalizer[""] :</label>
+    <select class="form-control form-select select2 select2-control static-select"   id="PageSize" name="PageSize" value="@(Model?.PageSize)">
+        <option value="20">20</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
+    </select>
+    
+</div>
+</div>
+<div class="col-md-12 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="PaymentMethod">@modulesLocalizer["Subscription_PaymentMethod"] :</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="PaymentMethod" name="PaymentMethod" placeholder="" maxlength="50" value="@(Model?.PaymentMethod)">
+    
+    <i class="accent"></i>
+</div>
+</div>
+
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    $('#grid-filter').find('select,input').change(function () {
+        $('#PageNumber').val('1');
+        $('#grid-filter').trigger('submit');
+
+    });
+</script>   

@@ -15,7 +15,7 @@ using Urls = Dashboard.Common.WebClientHelpers.InternalApiDictionary.CountryUrls
 
 namespace TemplateFw.Dashboard.Controllers
 {
-    [Authorize(Roles = RoleProvider.Country)]
+    //[Authorize(Roles = RoleProvider.Country)]
     public class CountryController : WebBaseController<CountryController>
     {
         private readonly RequestUrlHelper _api = ApiRequestHelper.InternalAPI;
@@ -34,9 +34,8 @@ namespace TemplateFw.Dashboard.Controllers
         {
             try
             {
-                var dto = new CountryDto();
                 ViewBag.ActionUrl = "/country/create";
-                return View("Save", dto);
+                return View("Save");
     }
             catch (System.Exception ex)
             {

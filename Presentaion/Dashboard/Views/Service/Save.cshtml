@@ -9,8 +9,8 @@
 <form method="post" id="frmForm" name="frmForm" action="@(ViewBag.ActionUrl)">
     <div class="form-head mb-sm-5 mb-3 d-flex flex-wrap align-items-center ">
         <div class=" mr-auto">
-            <h3 class="font-w600 mb-2">@localizer["Service"]</h3>
-            <p class="mb-0">@localizer["ServiceManagement"]</p>
+            <h3 class="font-w600 mb-2">@modulesLocalizer["Service"]</h3>
+            <p class="mb-0">@modulesLocalizer["ServiceManagement"]</p>
         </div>
     </div>
     <div class="card master-form">
@@ -20,65 +20,65 @@
         </div>
         <div class="card-body">
             <div class="row">
-                <input class="form-control"   type="hidden" data-type="hidden" data-smk-type="hidden" id="ServiceId" name="ServiceId" placeholder="" required maxlength="4" value="@(Model.ServiceId)"  smk-error-msg-required="" data-smk-max="9999999999" data-smk-min="-9999999999"><div class="col-md-6 eng-form-element">
+                <input class="form-control"   type="hidden" data-type="hidden" data-smk-type="hidden" id="ServiceId" name="ServiceId" placeholder="" required maxlength="4" value="@(Model?.ServiceId)"  smk-error-msg-required="" data-smk-max="9999999999" data-smk-min="-9999999999"><div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="NameAr">@localizer["Service_NameAr"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="NameAr" name="NameAr" placeholder="" required maxlength="120" value="@(Model.NameAr)"  smk-error-msg-required="">
+    <label class="form-label-small px-3" for="NameAr">@modulesLocalizer["Service_NameAr"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="NameAr" name="NameAr" placeholder="" required maxlength="120" value="@(Model?.NameAr)"  smk-error-msg-required="">
     
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="NameEn">@localizer["Service_NameEn"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="NameEn" name="NameEn" placeholder="" required maxlength="120" value="@(Model.NameEn)"  smk-error-msg-required="">
+    <label class="form-label-small px-3" for="NameEn">@modulesLocalizer["Service_NameEn"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="NameEn" name="NameEn" placeholder="" required maxlength="120" value="@(Model?.NameEn)"  smk-error-msg-required="">
     
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="Icon">@localizer["Service_Icon"] :</label>
-    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="Icon" name="Icon" placeholder="" maxlength="30" value="@(Model.Icon)">
+    <label class="form-label-small px-3" for="Icon">@modulesLocalizer["Service_Icon"] :</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="Icon" name="Icon" placeholder="" maxlength="30" value="@(Model?.Icon)">
     
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="LogInRequired">@localizer["Service_LogInRequired"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <label class="form-label-small px-3" for="LogInRequired">@modulesLocalizer["Service_LogInRequired"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="LogInRequired" name="LogInRequired" placeholder="" required maxlength="1" value="@(Model?.LogInRequired)"  smk-error-msg-required="">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="Url">@modulesLocalizer["Service_Url"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
     <textarea rows="4"
               class="form-control"
-               id="LogInRequired" name="LogInRequired" placeholder="" required maxlength="1" value="@(Model.LogInRequired)"  smk-error-msg-required="">@(Model.LogInRequired)</textarea>
+               id="Url" name="Url" placeholder="" required maxlength="500" value="@(Model?.Url)"  smk-error-msg-required="">@(Model?.Url)</textarea>
               
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="Url">@localizer["Service_Url"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="Url" name="Url" placeholder="" required maxlength="500" value="@(Model.Url)"  smk-error-msg-required="">
-    
-    <i class="accent"></i>
-</div>
-</div>
-<div class="col-md-6 eng-form-element">
-<div class="form-group">
-    <label class="form-label-small px-3" for="MobileUrl">@localizer["Service_MobileUrl"] :</label>
-    <input class="form-control"   type="tel" data-type="tel" data-smk-type="tel" id="MobileUrl" name="MobileUrl" placeholder="" maxlength="12" value="@(Model.MobileUrl)">
+    <label class="form-label-small px-3" for="MobileUrl">@modulesLocalizer["Service_MobileUrl"] :</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="MobileUrl" name="MobileUrl" placeholder="" maxlength="12" value="@(Model?.MobileUrl)">
     
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group select2-lg">
-    <label class="form-label-small px-3" for="ServiceTypeId">@localizer["ServiceType"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <label class="form-label-small px-3" for="ServiceTypeId">@modulesLocalizer["ServiceType"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
 @await Html.PartialAsync("/Views/RunTimeControls/Select.cshtml",
                new TemplateFw.Shared.Dto.RunTimeSelectControl(){
                   Id="ServiceTypeId",
                    AdditionalAttributes = "",
                    ApiUrl = webSettings.Value.LookupApiUrl+ "lookup/servicetypes", 
-                   Value = Model.ServiceTypeId.ToString(),
+                   Value = Model?.ServiceTypeId.ToString(),
                    AddDefaultOption=(!isUpdateMode)
                });
     
@@ -86,29 +86,31 @@
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="PdfMediaId">@localizer["Service_PdfMediaId"] :</label>
-    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="PdfMediaId" name="PdfMediaId" placeholder="" maxlength="250" value="@(Model.PdfMediaId)">
-    
+    <label class="form-label-small px-3" for="PdfMediaId">@modulesLocalizer["Service_PdfMediaId"] :</label>
+    <textarea rows="4"
+              class="form-control"
+               id="PdfMediaId" name="PdfMediaId" placeholder="" maxlength="250" value="@(Model?.PdfMediaId)">@(Model?.PdfMediaId)</textarea>
+              
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="Video">@localizer["Service_Video"] :</label>
-    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="Video" name="Video" placeholder="" maxlength="20" value="@(Model.Video)">
+    <label class="form-label-small px-3" for="Video">@modulesLocalizer["Service_Video"] :</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="Video" name="Video" placeholder="" maxlength="20" value="@(Model?.Video)">
     
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group select2-lg">
-    <label class="form-label-small px-3" for="PortalId">@localizer["Portal"] :</label>
+    <label class="form-label-small px-3" for="PortalId">@modulesLocalizer["Portal"] :</label>
 @await Html.PartialAsync("/Views/RunTimeControls/Select.cshtml",
                new TemplateFw.Shared.Dto.RunTimeSelectControl(){
                   Id="PortalId",
                    AdditionalAttributes = "",
                    ApiUrl = webSettings.Value.LookupApiUrl+ "lookup/portals", 
-                   Value = Model.PortalId.ToString(),
+                   Value = Model?.PortalId.ToString(),
                    AddDefaultOption=(!isUpdateMode)
                });
     
@@ -116,212 +118,224 @@
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="ServiceCode">@localizer["Service_ServiceCode"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="ServiceCode" name="ServiceCode" placeholder="" required maxlength="40" value="@(Model.ServiceCode)"  smk-error-msg-required="">
+    <label class="form-label-small px-3" for="ServiceCode">@modulesLocalizer["Service_ServiceCode"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="ServiceCode" name="ServiceCode" placeholder="" required maxlength="40" value="@(Model?.ServiceCode)"  smk-error-msg-required="">
     
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="ShowInCatalog">@localizer["Service_ShowInCatalog"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <input class="form-control"   data-type="yesno" data-smk-type="yesno" id="ShowInCatalog" name="ShowInCatalog" placeholder="" required maxlength="1" value="@(Model.ShowInCatalog)"  smk-error-msg-required="">
+    <label class="form-label-small px-3" for="ShowInCatalog">@modulesLocalizer["Service_ShowInCatalog"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   data-type="yesno" data-smk-type="yesno" id="ShowInCatalog" name="ShowInCatalog" placeholder="" required maxlength="1" value="@(Model?.ShowInCatalog)"  smk-error-msg-required="">
     
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="ShowInFollowUp">@localizer["Service_ShowInFollowUp"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <input class="form-control"   data-type="yesno" data-smk-type="yesno" id="ShowInFollowUp" name="ShowInFollowUp" placeholder="" required maxlength="1" value="@(Model.ShowInFollowUp)"  smk-error-msg-required="">
+    <label class="form-label-small px-3" for="ShowInFollowUp">@modulesLocalizer["Service_ShowInFollowUp"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   data-type="yesno" data-smk-type="yesno" id="ShowInFollowUp" name="ShowInFollowUp" placeholder="" required maxlength="1" value="@(Model?.ShowInFollowUp)"  smk-error-msg-required="">
     
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="ShowInAssets">@localizer["Service_ShowInAssets"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <input class="form-control"   data-type="yesno" data-smk-type="yesno" id="ShowInAssets" name="ShowInAssets" placeholder="" required maxlength="1" value="@(Model.ShowInAssets)"  smk-error-msg-required="">
+    <label class="form-label-small px-3" for="ShowInAssets">@modulesLocalizer["Service_ShowInAssets"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   data-type="yesno" data-smk-type="yesno" id="ShowInAssets" name="ShowInAssets" placeholder="" required maxlength="1" value="@(Model?.ShowInAssets)"  smk-error-msg-required="">
     
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="IsPublished">@localizer["Service_IsPublished"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <input class="form-control"   data-type="yesno" data-smk-type="yesno" id="IsPublished" name="IsPublished" placeholder="" required maxlength="1" value="@(Model.IsPublished)"  smk-error-msg-required="">
+    <label class="form-label-small px-3" for="IsPublished">@modulesLocalizer["Service_IsPublished"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   data-type="yesno" data-smk-type="yesno" id="IsPublished" name="IsPublished" placeholder="" required maxlength="1" value="@(Model?.IsPublished)"  smk-error-msg-required="">
     
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="PublishedBy">@localizer["Service_PublishedBy"] :</label>
-    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="PublishedBy" name="PublishedBy" placeholder="" maxlength="30" value="@(Model.PublishedBy)">
+    <label class="form-label-small px-3" for="PublishedBy">@modulesLocalizer["Service_PublishedBy"] :</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="PublishedBy" name="PublishedBy" placeholder="" maxlength="30" value="@(Model?.PublishedBy)">
     
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="PublishedAt">@localizer["Service_PublishedAt"] :</label>
-    <input class="form-control"   type="text" data-type="datetime" data-smk-type="datetime" id="PublishedAt" name="PublishedAt" placeholder="" maxlength="8" readonly value="@(Model.PublishedAt)">
+    <label class="form-label-small px-3" for="PublishedAt">@modulesLocalizer["Service_PublishedAt"] :</label>
+    <input class="form-control"   type="text" data-type="datetime" data-smk-type="datetime" id="PublishedAt" name="PublishedAt" placeholder="" maxlength="8" readonly value="@(Model?.PublishedAt)">
     
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="StoppedBy">@localizer["Service_StoppedBy"] :</label>
-    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="StoppedBy" name="StoppedBy" placeholder="" maxlength="30" value="@(Model.StoppedBy)">
+    <label class="form-label-small px-3" for="StoppedBy">@modulesLocalizer["Service_StoppedBy"] :</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="StoppedBy" name="StoppedBy" placeholder="" maxlength="30" value="@(Model?.StoppedBy)">
     
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="StoppedAt">@localizer["Service_StoppedAt"] :</label>
-    <input class="form-control"   type="text" data-type="datetime" data-smk-type="datetime" id="StoppedAt" name="StoppedAt" placeholder="" maxlength="8" readonly value="@(Model.StoppedAt)">
+    <label class="form-label-small px-3" for="StoppedAt">@modulesLocalizer["Service_StoppedAt"] :</label>
+    <input class="form-control"   type="text" data-type="datetime" data-smk-type="datetime" id="StoppedAt" name="StoppedAt" placeholder="" maxlength="8" readonly value="@(Model?.StoppedAt)">
     
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="ViewOrder">@localizer["Service_ViewOrder"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <input class="form-control"   type="number" data-type="number" data-smk-type="number" id="ViewOrder" name="ViewOrder" placeholder="" required maxlength="4" value="@(Model.ViewOrder)"  smk-error-msg-required="" data-smk-max="9999999999" data-smk-min="-9999999999" max="9999999999" min="-9999999999">
+    <label class="form-label-small px-3" for="ViewOrder">@modulesLocalizer["Service_ViewOrder"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   type="number" data-type="number" data-smk-type="number" id="ViewOrder" name="ViewOrder" placeholder="" required maxlength="4" value="@(Model?.ViewOrder)"  smk-error-msg-required="" data-smk-max="9999999999" data-smk-min="-9999999999" max="9999999999" min="-9999999999">
     
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="ShortDescriptionAr">@localizer["Service_ShortDescriptionAr"] :</label>
-    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="ShortDescriptionAr" name="ShortDescriptionAr" placeholder="" maxlength="120" value="@(Model.ShortDescriptionAr)">
+    <label class="form-label-small px-3" for="ShortDescriptionAr">@modulesLocalizer["Service_ShortDescriptionAr"] :</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="ShortDescriptionAr" name="ShortDescriptionAr" placeholder="" maxlength="120" value="@(Model?.ShortDescriptionAr)">
     
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="ShortDescriptionEn">@localizer["Service_ShortDescriptionEn"] :</label>
-    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="ShortDescriptionEn" name="ShortDescriptionEn" placeholder="" maxlength="120" value="@(Model.ShortDescriptionEn)">
+    <label class="form-label-small px-3" for="ShortDescriptionEn">@modulesLocalizer["Service_ShortDescriptionEn"] :</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="ShortDescriptionEn" name="ShortDescriptionEn" placeholder="" maxlength="120" value="@(Model?.ShortDescriptionEn)">
     
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="DescriptionAr">@localizer["Service_DescriptionAr"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <label class="form-label-small px-3" for="DescriptionAr">@modulesLocalizer["Service_DescriptionAr"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="DescriptionAr" name="DescriptionAr" placeholder="" required maxlength="500" value="@(Model?.DescriptionAr)"  smk-error-msg-required="">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="DescriptionEn">@modulesLocalizer["Service_DescriptionEn"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="DescriptionEn" name="DescriptionEn" placeholder="" required maxlength="500" value="@(Model?.DescriptionEn)"  smk-error-msg-required="">
+    
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="ConditionsAr">@modulesLocalizer["Service_ConditionsAr"] :</label>
     <textarea rows="4"
               class="form-control"
-               id="DescriptionAr" name="DescriptionAr" placeholder="" required maxlength="500" value="@(Model.DescriptionAr)"  smk-error-msg-required="">@(Model.DescriptionAr)</textarea>
+               id="ConditionsAr" name="ConditionsAr" placeholder="" maxlength="1000" value="@(Model?.ConditionsAr)">@(Model?.ConditionsAr)</textarea>
               
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="DescriptionEn">@localizer["Service_DescriptionEn"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
+    <label class="form-label-small px-3" for="ConditionsEn">@modulesLocalizer["Service_ConditionsEn"] :</label>
     <textarea rows="4"
               class="form-control"
-               id="DescriptionEn" name="DescriptionEn" placeholder="" required maxlength="500" value="@(Model.DescriptionEn)"  smk-error-msg-required="">@(Model.DescriptionEn)</textarea>
+               id="ConditionsEn" name="ConditionsEn" placeholder="" maxlength="1000" value="@(Model?.ConditionsEn)">@(Model?.ConditionsEn)</textarea>
               
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="ConditionsAr">@localizer["Service_ConditionsAr"] :</label>
-    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="ConditionsAr" name="ConditionsAr" placeholder="" maxlength="1000" value="@(Model.ConditionsAr)">
+    <label class="form-label-small px-3" for="DocumentRequiredAr">@modulesLocalizer["Service_DocumentRequiredAr"] :</label>
+    <textarea rows="4"
+              class="form-control"
+               id="DocumentRequiredAr" name="DocumentRequiredAr" placeholder="" maxlength="1000" value="@(Model?.DocumentRequiredAr)">@(Model?.DocumentRequiredAr)</textarea>
+              
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="DocumentRequiredEn">@modulesLocalizer["Service_DocumentRequiredEn"] :</label>
+    <textarea rows="4"
+              class="form-control"
+               id="DocumentRequiredEn" name="DocumentRequiredEn" placeholder="" maxlength="1000" value="@(Model?.DocumentRequiredEn)">@(Model?.DocumentRequiredEn)</textarea>
+              
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="FeesAr">@modulesLocalizer["Service_FeesAr"] :</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="FeesAr" name="FeesAr" placeholder="" maxlength="120" value="@(Model?.FeesAr)">
     
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="ConditionsEn">@localizer["Service_ConditionsEn"] :</label>
-    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="ConditionsEn" name="ConditionsEn" placeholder="" maxlength="1000" value="@(Model.ConditionsEn)">
+    <label class="form-label-small px-3" for="FeesEn">@modulesLocalizer["Service_FeesEn"] :</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="FeesEn" name="FeesEn" placeholder="" maxlength="120" value="@(Model?.FeesEn)">
     
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="DocumentRequiredAr">@localizer["Service_DocumentRequiredAr"] :</label>
-    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="DocumentRequiredAr" name="DocumentRequiredAr" placeholder="" maxlength="1000" value="@(Model.DocumentRequiredAr)">
+    <label class="form-label-small px-3" for="NotesAr">@modulesLocalizer["Service_NotesAr"] :</label>
+    <textarea rows="4"
+              class="form-control"
+               id="NotesAr" name="NotesAr" placeholder="" maxlength="1000" value="@(Model?.NotesAr)">@(Model?.NotesAr)</textarea>
+              
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="NotesEn">@modulesLocalizer["Service_NotesEn"] :</label>
+    <textarea rows="4"
+              class="form-control"
+               id="NotesEn" name="NotesEn" placeholder="" maxlength="1000" value="@(Model?.NotesEn)">@(Model?.NotesEn)</textarea>
+              
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="StepsAr">@modulesLocalizer["Service_StepsAr"] :</label>
+    <textarea rows="4"
+              class="form-control"
+               id="StepsAr" name="StepsAr" placeholder="" maxlength="1000" value="@(Model?.StepsAr)">@(Model?.StepsAr)</textarea>
+              
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="StepsEn">@modulesLocalizer["Service_StepsEn"] :</label>
+    <textarea rows="4"
+              class="form-control"
+               id="StepsEn" name="StepsEn" placeholder="" maxlength="1000" value="@(Model?.StepsEn)">@(Model?.StepsEn)</textarea>
+              
+    <i class="accent"></i>
+</div>
+</div>
+<div class="col-md-6 eng-form-element">
+<div class="form-group">
+    <label class="form-label-small px-3" for="TimeRequiredAr">@modulesLocalizer["Service_TimeRequiredAr"] :</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="TimeRequiredAr" name="TimeRequiredAr" placeholder="" maxlength="120" value="@(Model?.TimeRequiredAr)">
     
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="DocumentRequiredEn">@localizer["Service_DocumentRequiredEn"] :</label>
-    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="DocumentRequiredEn" name="DocumentRequiredEn" placeholder="" maxlength="1000" value="@(Model.DocumentRequiredEn)">
-    
-    <i class="accent"></i>
-</div>
-</div>
-<div class="col-md-6 eng-form-element">
-<div class="form-group">
-    <label class="form-label-small px-3" for="FeesAr">@localizer["Service_FeesAr"] :</label>
-    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="FeesAr" name="FeesAr" placeholder="" maxlength="120" value="@(Model.FeesAr)">
-    
-    <i class="accent"></i>
-</div>
-</div>
-<div class="col-md-6 eng-form-element">
-<div class="form-group">
-    <label class="form-label-small px-3" for="FeesEn">@localizer["Service_FeesEn"] :</label>
-    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="FeesEn" name="FeesEn" placeholder="" maxlength="120" value="@(Model.FeesEn)">
-    
-    <i class="accent"></i>
-</div>
-</div>
-<div class="col-md-6 eng-form-element">
-<div class="form-group">
-    <label class="form-label-small px-3" for="NotesAr">@localizer["Service_NotesAr"] :</label>
-    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="NotesAr" name="NotesAr" placeholder="" maxlength="1000" value="@(Model.NotesAr)">
-    
-    <i class="accent"></i>
-</div>
-</div>
-<div class="col-md-6 eng-form-element">
-<div class="form-group">
-    <label class="form-label-small px-3" for="NotesEn">@localizer["Service_NotesEn"] :</label>
-    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="NotesEn" name="NotesEn" placeholder="" maxlength="1000" value="@(Model.NotesEn)">
-    
-    <i class="accent"></i>
-</div>
-</div>
-<div class="col-md-6 eng-form-element">
-<div class="form-group">
-    <label class="form-label-small px-3" for="StepsAr">@localizer["Service_StepsAr"] :</label>
-    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="StepsAr" name="StepsAr" placeholder="" maxlength="1000" value="@(Model.StepsAr)">
-    
-    <i class="accent"></i>
-</div>
-</div>
-<div class="col-md-6 eng-form-element">
-<div class="form-group">
-    <label class="form-label-small px-3" for="StepsEn">@localizer["Service_StepsEn"] :</label>
-    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="StepsEn" name="StepsEn" placeholder="" maxlength="1000" value="@(Model.StepsEn)">
-    
-    <i class="accent"></i>
-</div>
-</div>
-<div class="col-md-6 eng-form-element">
-<div class="form-group">
-    <label class="form-label-small px-3" for="TimeRequiredAr">@localizer["Service_TimeRequiredAr"] :</label>
-    <input class="form-control"   type="time" data-type="time" data-smk-type="time" id="TimeRequiredAr" name="TimeRequiredAr" placeholder="" maxlength="120" value="@(Model.TimeRequiredAr)">
-    
-    <i class="accent"></i>
-</div>
-</div>
-<div class="col-md-6 eng-form-element">
-<div class="form-group">
-    <label class="form-label-small px-3" for="TimeRequiredEn">@localizer["Service_TimeRequiredEn"] :</label>
-    <input class="form-control"   type="time" data-type="time" data-smk-type="time" id="TimeRequiredEn" name="TimeRequiredEn" placeholder="" maxlength="120" value="@(Model.TimeRequiredEn)">
+    <label class="form-label-small px-3" for="TimeRequiredEn">@modulesLocalizer["Service_TimeRequiredEn"] :</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="TimeRequiredEn" name="TimeRequiredEn" placeholder="" maxlength="120" value="@(Model?.TimeRequiredEn)">
     
     <i class="accent"></i>
 </div>

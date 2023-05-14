@@ -10,24 +10,24 @@
             <div class="row">
                 <div class="col-md-4 eng-form-element">
 <div class="form-group select2-lg">
-    <label class="form-label-small px-3" for="PortalId">@localizer["Portal"] :</label>
-    <select class="form-control form-select select2 select2-control select-dynamic"   id="PortalId" name="PortalId" data-api-url="lookup/portals" data-default-val="" data-default-text="@localizer["All"]" value="@(Model.PortalId)"  data-smk-max="9999999999" data-smk-min="-9999999999">
+    <label class="form-label-small px-3" for="PortalId">@modulesLocalizer["Portal"] :</label>
+    <select class="form-control form-select select2 select2-control select-dynamic"   id="PortalId" name="PortalId" data-api-url="lookup/portals" data-default-val="" data-default-text="@localizer["All"]" value="@(Model?.PortalId)"  data-smk-max="9999999999" data-smk-min="-9999999999">
     </select>
     
 </div>
 </div>
 <div class="col-md-4 eng-form-element">
 <div class="form-group select2-lg">
-    <label class="form-label-small px-3" for="ServiceId">@localizer["Service"] :</label>
-    <select class="form-control form-select select2 select2-control select-dynamic"   id="ServiceId" name="ServiceId" data-api-url="lookup/services" data-default-val="" data-default-text="@localizer["All"]" data-cascade-with="PortalId" data-cascade-api-url="lookup/services?portalId=" value="@(Model.ServiceId)"  data-smk-max="9999999999" data-smk-min="-9999999999">
+    <label class="form-label-small px-3" for="ServiceId">@modulesLocalizer["Service"] :</label>
+    <select class="form-control form-select select2 select2-control select-dynamic"   id="ServiceId" name="ServiceId" data-api-url="lookup/services" data-default-val="" data-default-text="@localizer["All"]" data-cascade-with="PortalId" data-cascade-api-url="lookup/services?portalId=" value="@(Model?.ServiceId)"  data-smk-max="9999999999" data-smk-min="-9999999999">
     </select>
     
 </div>
 </div>
 <div class="col-md-4 eng-form-element">
 <div class="form-group select2-lg">
-    <label class="form-label-small px-3" for="PageSize">@localizer[""] :</label>
-    <select class="form-control form-select select2 select2-control static-select"   id="PageSize" name="PageSize" value="@(Model.PageSize)">
+    <label class="form-label-small px-3" for="PageSize">@modulesLocalizer[""] :</label>
+    <select class="form-control form-select select2 select2-control static-select"   id="PageSize" name="PageSize" value="@(Model?.PageSize)">
         <option value="20">20</option>
         <option value="50">50</option>
         <option value="100">100</option>
@@ -37,11 +37,9 @@
 </div>
 <div class="col-md-12 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="Question">@localizer["Faq_QuestionAr"] :</label>
-    <textarea rows="4"
-              class="form-control"
-               id="Question" name="Question" placeholder="" maxlength="150" value="@(Model.Question)">@(Model.Question)</textarea>
-              
+    <label class="form-label-small px-3" for="Question">@modulesLocalizer["Faq_QuestionAr"] :</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="Question" name="Question" placeholder="" maxlength="256" value="@(Model?.Question)">
+    
     <i class="accent"></i>
 </div>
 </div>

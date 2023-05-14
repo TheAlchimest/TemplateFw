@@ -19,7 +19,7 @@
 <th><strong>@modulesLocalizer["Portal"]</strong></th>
 <th><strong>@modulesLocalizer["Service"]</strong></th>
 <th><strong>@modulesLocalizer["Faq_CreationDate"]</strong></th>
-<th><strong>@modulesLocalizer["Faq_LastModificationDate"]</strong></th>
+<th><strong>@modulesLocalizer["Faq_ModifiedDate"]</strong></th>
 <th class="text-center"><strong>@commonResource["ActionEdit"]</strong></th>
 <th class="text-center"><strong>@commonResource["ActionDelete"]</strong></th>
             </tr>
@@ -34,7 +34,7 @@
 <td><b>@item.PortalName</b></td>
 <td><b>@item.ServiceName</b></td>
 <td>@Html.Raw(item.CreationDate.ConvertToGridDateTime())</td>
-<td>@Html.Raw(item.LastModificationDate.ConvertToGridDateTime())</td>
+<td>@Html.Raw(item.ModifiedDate.ConvertToGridDateTime())</td>
 <td class="text-center"><a href="#!/faq/edit/@(StringCipher.Encrypt(item.FaqId.ToString()))" class="btn btn-outline-primary btn-sm py-1 mx-1">@localizer["ActionEdit"]</a></td>
 <td class="text-center"><button onclick="actionsController.delete(this);" data-title="@item.Question" data-action-url="/faq/Delete/@item.FaqId" data-to-post='{"id":@(item.FaqId)}' class="btn btn-outline-danger btn-md py-1">@localizer["ActionDelete"]</button></td>
                 </tr>

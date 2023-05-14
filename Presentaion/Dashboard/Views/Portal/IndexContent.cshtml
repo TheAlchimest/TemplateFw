@@ -17,7 +17,7 @@
 <th><strong>#</strong></th>
 <th><strong>@modulesLocalizer["Portal_NameAr"]</strong></th>
 <th><strong>@modulesLocalizer["Portal_CreationDate"]</strong></th>
-<th><strong>@modulesLocalizer["Portal_LastModificationDate"]</strong></th>
+<th><strong>@modulesLocalizer["Portal_ModifiedDate"]</strong></th>
 <th class="text-center"><strong>@commonResource["ActionEdit"]</strong></th>
 <th class="text-center"><strong>@commonResource["ActionDelete"]</strong></th>
             </tr>
@@ -30,7 +30,7 @@
 <td><strong>@(itemNo++)</strong></td>
 <td><b>@item.Name</b></td>
 <td>@Html.Raw(item.CreationDate.ConvertToGridDateTime())</td>
-<td>@Html.Raw(item.LastModificationDate.ConvertToGridDateTime())</td>
+<td>@Html.Raw(item.ModifiedDate.ConvertToGridDateTime())</td>
 <td class="text-center"><a href="#!/portal/edit/@(StringCipher.Encrypt(item.PortalId.ToString()))" class="btn btn-outline-primary btn-sm py-1 mx-1">@localizer["ActionEdit"]</a></td>
 <td class="text-center"><button onclick="actionsController.delete(this);" data-title="@item.Name" data-action-url="/portal/Delete/@item.PortalId" data-to-post='{"id":@(item.PortalId)}' class="btn btn-outline-danger btn-md py-1">@localizer["ActionDelete"]</button></td>
                 </tr>

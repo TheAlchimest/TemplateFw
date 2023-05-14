@@ -15,7 +15,7 @@ using Urls = Dashboard.Common.WebClientHelpers.InternalApiDictionary.LanguageUrl
 
 namespace TemplateFw.Dashboard.Controllers
 {
-    [Authorize(Roles = RoleProvider.Language)]
+    //[Authorize(Roles = RoleProvider.Language)]
     public class LanguageController : WebBaseController<LanguageController>
     {
         private readonly RequestUrlHelper _api = ApiRequestHelper.InternalAPI;
@@ -34,9 +34,8 @@ namespace TemplateFw.Dashboard.Controllers
         {
             try
             {
-                var dto = new LanguageDto();
                 ViewBag.ActionUrl = "/language/create";
-                return View("Save", dto);
+                return View("Save");
     }
             catch (System.Exception ex)
             {

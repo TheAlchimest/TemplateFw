@@ -15,9 +15,9 @@ namespace TemplateFw.Dtos
 		public string Code { get; set; }
 		public bool IsAvailable { get; set; }
 		public string CreatedBy { get; set; }
-		public DateTime? CreationDate { get; set; }
-		public string LastModifiedBy { get; set; }
-		public DateTime? LastModificationDate { get; set; }
+		public DateTime CreationDate { get; set; }
+		public string ModifiedBy { get; set; }
+		public DateTime? ModifiedDate { get; set; }
 
     }
 
@@ -28,9 +28,9 @@ namespace TemplateFw.Dtos
 		public string Code { get; set; }
 		public bool IsAvailable { get; set; }
 		public string CreatedBy { get; set; }
-		public DateTime? CreationDate { get; set; }
-		public string LastModifiedBy { get; set; }
-		public DateTime? LastModificationDate { get; set; }
+		public DateTime CreationDate { get; set; }
+		public string ModifiedBy { get; set; }
+		public DateTime? ModifiedDate { get; set; }
     }
 
     public class CountryFilter
@@ -53,13 +53,11 @@ namespace TemplateFw.Dtos
 			RuleFor(x => x.NameAr)
 			    .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
 			    .MaximumLength(120).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "120"))
-			    .Matches(@"/^[A-Za-z]{5,120}$/").WithMessage(validationLocalizer["Pattern"])
 			    .WithName("Country_NameAr");
 
 			RuleFor(x => x.NameEn)
 			    .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
 			    .MaximumLength(120).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "120"))
-			    .Matches(@"/^[A-Za-z]{5,120}$/").WithMessage(validationLocalizer["Pattern"])
 			    .WithName("Country_NameEn");
 
 			RuleFor(x => x.Code)
@@ -89,7 +87,6 @@ namespace TemplateFw.Dtos
         {
 			RuleFor(x => x.Name)
 			    .MaximumLength(120).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "120"))
-			    .Matches(@"/^[A-Za-z]{5,120}$/").WithMessage(validationLocalizer["Pattern"])
 			    .WithName("Country_NameAr");
 
 

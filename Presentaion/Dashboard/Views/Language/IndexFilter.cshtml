@@ -10,8 +10,8 @@
             <div class="row">
                 <div class="col-md-4 eng-form-element">
 <div class="form-group select2-lg">
-    <label class="form-label-small px-3" for="PageSize">@localizer[""] :</label>
-    <select class="form-control form-select select2 select2-control static-select"   id="PageSize" name="PageSize" value="@(Model.PageSize)">
+    <label class="form-label-small px-3" for="PageSize">@modulesLocalizer[""] :</label>
+    <select class="form-control form-select select2 select2-control static-select"   id="PageSize" name="PageSize" value="@(Model?.PageSize)">
         <option value="20">20</option>
         <option value="50">50</option>
         <option value="100">100</option>
@@ -21,8 +21,8 @@
 </div>
 <div class="col-md-12 eng-form-element">
 <div class="form-group">
-    <label class="form-label-small px-3" for="Name">@localizer["Language_Name"] :</label>
-    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="Name" name="Name" placeholder="" maxlength="50" value="@(Model.Name)">
+    <label class="form-label-small px-3" for="Name">@modulesLocalizer["Language_Name"] :</label>
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="Name" name="Name" placeholder="" maxlength="50" value="@(Model?.Name)">
     
     <i class="accent"></i>
 </div>

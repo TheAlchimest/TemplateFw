@@ -25,7 +25,7 @@ namespace TemplateFw.Persistence.Repositories
         #region InsertAsync
         public async Task<bool> CreateAsync(ServiceTypeDto dto)
         {
-            List<SqlParameter> plist = dto.ConvertToParametersExcept(e => e.ServiceTypeId, e => e.CreationDate, e => e.LastModifiedBy, e => e.LastModificationDate, e => e.IsAvailable);
+            List<SqlParameter> plist = dto.ConvertToParametersExcept(e => e.ServiceTypeId, e => e.CreationDate, e => e.ModifiedBy, e => e.ModifiedDate, e => e.IsAvailable);
             var serviceTypeId = plist.AddOutputParameterInteger("ServiceTypeId");
             int affectedRows = await dbHelper.SqlHelperWrite.ExecuteNonQueryAsync("[dbo].[ServiceType_Create]", plist);
             return (affectedRows > 0);
@@ -35,7 +35,7 @@ namespace TemplateFw.Persistence.Repositories
         #region UpdateAsync
         public async Task<bool> UpdateAsync(ServiceTypeDto dto)
         {
-            List<SqlParameter> plist = dto.ConvertToParametersExcept(e => e.CreatedBy, e => e.CreationDate, e => e.LastModificationDate, e => e.IsAvailable);
+            List<SqlParameter> plist = dto.ConvertToParametersExcept(e => e.CreatedBy, e => e.CreationDate, e => e.ModifiedDate, e => e.IsAvailable);
             int affectedRows = await dbHelper.SqlHelperWrite.ExecuteNonQueryAsync("[dbo].[ServiceType_Update]", plist);
             return (affectedRows > 0);
         }
@@ -47,7 +47,7 @@ namespace TemplateFw.Persistence.Repositories
         {
             dynamic parameters = new ExpandoObject();
             parameters.ServiceTypeId = id;
-            parameters.LastModifiedBy = user;
+            parameters.ModifiedBy = user;
             int affectedRows = await dbHelper.SqlHelperWrite.ExecuteNonQueryAsync("[dbo].[ServiceType_DeleteVirtually]", parameters);
             return (affectedRows > 0);
         }

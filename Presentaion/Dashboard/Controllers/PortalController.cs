@@ -15,7 +15,7 @@ using Urls = Dashboard.Common.WebClientHelpers.InternalApiDictionary.PortalUrls;
 
 namespace TemplateFw.Dashboard.Controllers
 {
-    [Authorize(Roles = RoleProvider.Portal)]
+    //[Authorize(Roles = RoleProvider.Portal)]
     public class PortalController : WebBaseController<PortalController>
     {
         private readonly RequestUrlHelper _api = ApiRequestHelper.InternalAPI;
@@ -34,9 +34,8 @@ namespace TemplateFw.Dashboard.Controllers
         {
             try
             {
-                var dto = new PortalDto();
                 ViewBag.ActionUrl = "/portal/create";
-                return View("Save", dto);
+                return View("Save");
     }
             catch (System.Exception ex)
             {

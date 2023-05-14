@@ -15,7 +15,7 @@ using Urls = Dashboard.Common.WebClientHelpers.InternalApiDictionary.ServiceType
 
 namespace TemplateFw.Dashboard.Controllers
 {
-    [Authorize(Roles = RoleProvider.ServiceType)]
+    //[Authorize(Roles = RoleProvider.ServiceType)]
     public class ServiceTypeController : WebBaseController<ServiceTypeController>
     {
         private readonly RequestUrlHelper _api = ApiRequestHelper.InternalAPI;
@@ -34,9 +34,8 @@ namespace TemplateFw.Dashboard.Controllers
         {
             try
             {
-                var dto = new ServiceTypeDto();
                 ViewBag.ActionUrl = "/serviceType/create";
-                return View("Save", dto);
+                return View("Save");
     }
             catch (System.Exception ex)
             {
