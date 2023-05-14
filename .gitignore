@@ -226,3 +226,4 @@ __pycache__/
 # Windows thumbnail cache files
 Thumbs.db
 /Mock/UnifiedServiceIntegerationApiPoc.V2/Services/OperatorService.zip
+/Infrastructure/Persistence/Repositories/Country
