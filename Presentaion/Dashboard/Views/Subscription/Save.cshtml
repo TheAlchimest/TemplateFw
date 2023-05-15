@@ -51,7 +51,7 @@
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
     <label class="form-label-small px-3" for="StartDate">@modulesLocalizer["Subscription_StartDate"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <input class="form-control"   type="text" data-type="date" data-smk-type="date" id="StartDate" name="StartDate" placeholder="" required maxlength="19" readonly value="@(Model?.StartDate)"  smk-error-msg-required="">
+    <input class="form-control"   type="text" data-type="date" data-smk-type="date" id="StartDate" name="StartDate" placeholder="" required maxlength="19" readonly value="@((Model?.StartDate>DateTime.MinValue)? Model?.StartDate.ToString("yyyy/MM/dd"):"")"  smk-error-msg-required="">
     
     <i class="accent"></i>
 </div>
@@ -59,7 +59,7 @@
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
     <label class="form-label-small px-3" for="EndDate">@modulesLocalizer["Subscription_EndDate"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <input class="form-control"   type="text" data-type="date" data-smk-type="date" id="EndDate" name="EndDate" placeholder="" required maxlength="19" readonly value="@(Model?.EndDate)"  smk-error-msg-required="">
+    <input class="form-control"   type="text" data-type="date" data-smk-type="date" id="EndDate" name="EndDate" placeholder="" required maxlength="19" readonly value="@((Model?.EndDate>DateTime.MinValue)? Model?.EndDate.ToString("yyyy/MM/dd"):"")"  smk-error-msg-required="">
     
     <i class="accent"></i>
 </div>

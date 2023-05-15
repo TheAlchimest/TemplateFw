@@ -176,7 +176,7 @@
 <data name="Category_Information" xml:space="preserve"><value>معلومات الفئة</value></data>
 <data name="Category_IsAvailable" xml:space="preserve"><value>متاح؟</value></data>
 <data name="Category_Management" xml:space="preserve"><value>إدارة الفئات</value></data>
-<data name="Category_ModifiedBy" xml:space="preserve"><value>تم تعديل بواسطة</value></data>
+<data name="Category_ModifiedBy" xml:space="preserve"><value>المعدل بواسطة</value></data>
 <data name="Category_ModifiedDate" xml:space="preserve"><value>التاريخ المعدل</value></data>
 <data name="Category_Name" xml:space="preserve"><value>الاسم</value></data>
 <data name="Category_NameAr" xml:space="preserve"><value>الإسم باللغة العربية</value></data>
@@ -201,7 +201,7 @@
 <data name="ContactUs_CreatedBy" xml:space="preserve"><value>تم إنشاؤه بواسطة</value></data>
 <data name="ContactUs_CreationDate" xml:space="preserve"><value>تاريخ الإنشاء</value></data>
 <data name="ContactUs_Email" xml:space="preserve"><value>البريد الإلكتروني</value></data>
-<data name="ContactUs_Information" xml:space="preserve"><value>معلومات الاتصال u</value></data>
+<data name="ContactUs_Information" xml:space="preserve"><value>معلومات الاتصال ش</value></data>
 <data name="ContactUs_IsAvailable" xml:space="preserve"><value>متاح؟</value></data>
 <data name="ContactUs_LanguageId" xml:space="preserve"><value>معرف اللغة</value></data>
 <data name="ContactUs_Management" xml:space="preserve"><value>إدارة الاتصال بنا</value></data>

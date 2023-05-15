@@ -45,7 +45,7 @@
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
     <label class="form-label-small px-3" for="PaymentDate">@modulesLocalizer["Payment_PaymentDate"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <input class="form-control"   type="text" data-type="date" data-smk-type="date" id="PaymentDate" name="PaymentDate" placeholder="" required maxlength="10" readonly value="@(Model?.PaymentDate)"  smk-error-msg-required="">
+    <input class="form-control"   type="text" data-type="date" data-smk-type="date" id="PaymentDate" name="PaymentDate" placeholder="" required maxlength="10" readonly value="@((Model?.PaymentDate>DateTime.MinValue)? Model?.PaymentDate.ToString("yyyy/MM/dd"):"")"  smk-error-msg-required="">
     
     <i class="accent"></i>
 </div>

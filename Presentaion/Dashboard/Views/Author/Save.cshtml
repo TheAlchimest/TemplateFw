@@ -147,7 +147,7 @@
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
     <label class="form-label-small px-3" for="BirthDate">@modulesLocalizer["Author_BirthDate"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <input class="form-control"   type="text" data-type="date" data-smk-type="date" id="BirthDate" name="BirthDate" placeholder="" required maxlength="10" readonly value="@(Model?.BirthDate)"  smk-error-msg-required="">
+    <input class="form-control"   type="text" data-type="date" data-smk-type="date" id="BirthDate" name="BirthDate" placeholder="" required maxlength="10" readonly value="@((Model?.BirthDate>DateTime.MinValue)? Model?.BirthDate.ToString("yyyy/MM/dd"):"")"  smk-error-msg-required="">
     
     <i class="accent"></i>
 </div>
