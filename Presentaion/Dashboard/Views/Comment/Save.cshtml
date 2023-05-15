@@ -20,7 +20,7 @@
         </div>
         <div class="card-body">
             <div class="row">
-                <input class="form-control"   type="hidden" data-type="hidden" data-smk-type="hidden" id="CommentId" name="CommentId" placeholder="" required maxlength="4" value="@(Model?.CommentId)"  smk-error-msg-required="" data-smk-max="9999999999" data-smk-min="-9999999999"><div class="col-md-6 eng-form-element">
+                <input class="form-control"   type="hidden" data-type="hidden" data-smk-type="hidden" id="CommentId" name="CommentId" placeholder="" required maxlength="10" value="@(Model?.CommentId)"  smk-error-msg-required="" data-smk-max="9999999999" data-smk-min="-9999999999"><div class="col-md-6 eng-form-element">
 <div class="form-group">
     <label class="form-label-small px-3" for="Content">@modulesLocalizer["Comment_Content"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
     <textarea rows="4"
@@ -61,7 +61,7 @@
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
     <label class="form-label-small px-3" for="LanguageId">@modulesLocalizer["Comment_LanguageId"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <input class="form-control"   type="number" data-type="number" data-smk-type="number" id="LanguageId" name="LanguageId" placeholder="" required maxlength="4" value="@(Model?.LanguageId)"  smk-error-msg-required="" data-smk-max="9999999999" data-smk-min="-9999999999" max="9999999999" min="-9999999999">
+    <input class="form-control"   type="number" data-type="number" data-smk-type="number" id="LanguageId" name="LanguageId" placeholder="" required maxlength="10" value="@(Model?.LanguageId)"  smk-error-msg-required="" data-smk-max="9999999999" data-smk-min="-9999999999" max="9999999999" min="-9999999999">
     
     <i class="accent"></i>
 </div>

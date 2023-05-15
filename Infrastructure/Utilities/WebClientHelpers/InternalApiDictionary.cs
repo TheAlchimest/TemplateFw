@@ -2,28 +2,7 @@ namespace Dashboard.Common.WebClientHelpers
 {
     public class InternalApiDictionary
     {
-        public static class LoggingSystemUrls
-        {
-            public const string LogData = "LoggingSystem/log_data";
-        }
-
-        public static class LookupsUrls
-        {
-            public const string Portals = "lookup/portals";
-            public const string Services = "lookup/services/{0}";
-            public const string ServicesWithLanguage = "lookup/ServicesWithLanguage/{0}/{1}";
-            public const string Languages = "lookup/languages";
-            public const string ServiceCategories = "lookup/serviceCategory";
-            public const string ServiceSectors = "lookup/serviceSector";
-            public const string ServiceBases = "lookup/serviceBase";
-            public const string CommunicationType = "lookup/communicationtype";
-            public const string FoundationCategories = "lookup/get-foundations-categories";
-
-            //public const string GetAllCategories        = "lookup/get-all-category";
-            //public const string GetAllMassageType       = "lookup/get-all-MassageType";
-            //public const string GetAllPaymentOptions    = "lookup/get-all-PaymentOptions";
-            //public const string GetAllServiceUsers      = "lookup/get-all-ServiceUsers";
-        }
+        
         public static class FaqUrls
         {
             public const string Create = "Faq/Create";
@@ -35,7 +14,7 @@ namespace Dashboard.Common.WebClientHelpers
             public const string GetViewAll = "Faq/getallview";
             public const string GetOne = "Faq/getone/{0}";
             public const string Info = "Faq/info/{0}";
-            public const string GetLookup = "Faq/lookup?portalId={0}&serviceId{1}";
+            public const string GetLookup = "Faq/lookup?portalId={0}&serviceId={1}";
         }
         public static class CountryUrls
         {
@@ -44,7 +23,6 @@ namespace Dashboard.Common.WebClientHelpers
             public const string Delete = "Country/Delete/{0}";
             public const string GetAll = "Country/getall";
             public const string GetPaged = "Country/get-paged";
-
             public const string GetViewAll = "Country/getallview";
             public const string GetOne = "Country/getone/{0}";
             public const string Info = "Country/info/{0}";
@@ -102,13 +80,6 @@ namespace Dashboard.Common.WebClientHelpers
             public const string Info = "ServiceType/info/{0}";
             public const string GetLookup = "ServiceType/lookup";
         }
-        public static class SourceUIApplicationUrls
-        {
-            public const string GetSourceUIApplication = "SourceUIApplication/GetSourceUIApplication/{0}";
-        }
-
-
-
         public static class AdminUrls
         {
             public const string Save = "Identity/Save";
@@ -119,35 +90,7 @@ namespace Dashboard.Common.WebClientHelpers
             public const string Getfullname = "Identity/getfullname/{0}";
         }
 
-        public static class IdentityUrls
-        {
-            public const string Login = "Account/Login";
-            public const string UserData = "Account/GetUserData";
-        }
-
-        public static class AttachmentsUrls
-        {
-            public const string Download = "Attachment/Download";
-            public const string Save = "Attachment/Save";
-        }
-
-        
-        
-        public static class IdentityAdminUrls
-        {
-            public const string SendAdminNotificationForFoundationCreated = "IdentityAdmin/send-foundation-notification/{0}";
-        }
-
-        
-
-        public static class NotificationsUrls
-        {
-            public const string GetAll = "Notifications/getall";
-            public const string GetOne = "Notifications/getone/{0}";
-            public const string GetCount = "Notifications/get-count";
-            public const string UpdateSeen = "Notifications/update-seen";
-            public const string RegisterWebToken = "Notifications/register-web-token/{0}";
-        }
+       
         public static class ArticleUrls
         {
             public const string Create = "Article/Create";
@@ -159,7 +102,8 @@ namespace Dashboard.Common.WebClientHelpers
             public const string GetViewAll = "Article/getallview";
             public const string GetOne = "Article/getone/{0}";
             public const string Info = "Article/info/{0}";
-            public const string GetLookup = "Article/lookup?portalId={0}&serviceId{1}";
+            public const string GetLookup = "Article/lookup?authorId={0}&categoryId={1}";
+
         }
 
         public static class AuthorUrls
@@ -173,7 +117,8 @@ namespace Dashboard.Common.WebClientHelpers
             public const string GetViewAll = "Author/getallview";
             public const string GetOne = "Author/getone/{0}";
             public const string Info = "Author/info/{0}";
-            public const string GetLookup = "Author/lookup?portalId={0}&serviceId{1}";
+            public const string GetLookup = "Author/lookup?countryId={0}";
+
         }
         public static class CategoryUrls
         {
@@ -186,7 +131,8 @@ namespace Dashboard.Common.WebClientHelpers
             public const string GetViewAll = "Category/getallview";
             public const string GetOne = "Category/getone/{0}";
             public const string Info = "Category/info/{0}";
-            public const string GetLookup = "Category/lookup?portalId={0}&serviceId{1}";
+            public const string GetLookup = "Category/lookup";
+
         }
 
         public static class CommentUrls
@@ -200,7 +146,7 @@ namespace Dashboard.Common.WebClientHelpers
             public const string GetViewAll = "Comment/getallview";
             public const string GetOne = "Comment/getone/{0}";
             public const string Info = "Comment/info/{0}";
-            public const string GetLookup = "Comment/lookup?portalId={0}&serviceId{1}";
+            public const string GetLookup = "Comment/lookup?articleId={0}&userId={1}";
         }
 
         public static class ContactUsUrls
@@ -214,7 +160,7 @@ namespace Dashboard.Common.WebClientHelpers
             public const string GetViewAll = "ContactUs/getallview";
             public const string GetOne = "ContactUs/getone/{0}";
             public const string Info = "ContactUs/info/{0}";
-            public const string GetLookup = "ContactUs/lookup?portalId={0}&serviceId{1}";
+            public const string GetLookup = "ContactUs/lookup";
         }
         public static class PaymentUrls
         {
@@ -227,7 +173,7 @@ namespace Dashboard.Common.WebClientHelpers
             public const string GetViewAll = "Payment/getallview";
             public const string GetOne = "Payment/getone/{0}";
             public const string Info = "Payment/info/{0}";
-            public const string GetLookup = "Payment/lookup?portalId={0}&serviceId{1}";
+            public const string GetLookup = "Payment/lookup?subscriptionId={0}";
         }
         public static class SubscriptionUrls
         {
@@ -240,7 +186,7 @@ namespace Dashboard.Common.WebClientHelpers
             public const string GetViewAll = "Subscription/getallview";
             public const string GetOne = "Subscription/getone/{0}";
             public const string Info = "Subscription/info/{0}";
-            public const string GetLookup = "Subscription/lookup?portalId={0}&serviceId{1}";
+            public const string GetLookup = "Subscription/lookup?userId={0}&subscriptionPlanId={1}&subscriptionStatusId={2}";
         }
         public static class SubscriptionPlanUrls
         {
@@ -253,7 +199,7 @@ namespace Dashboard.Common.WebClientHelpers
             public const string GetViewAll = "SubscriptionPlan/getallview";
             public const string GetOne = "SubscriptionPlan/getone/{0}";
             public const string Info = "SubscriptionPlan/info/{0}";
-            public const string GetLookup = "SubscriptionPlan/lookup?portalId={0}&serviceId{1}";
+            public const string GetLookup = "SubscriptionPlan/lookup";
         }
 
         public static class SubscriptionStatusUrls
@@ -267,7 +213,7 @@ namespace Dashboard.Common.WebClientHelpers
             public const string GetViewAll = "SubscriptionStatus/getallview";
             public const string GetOne = "SubscriptionStatus/getone/{0}";
             public const string Info = "SubscriptionStatus/info/{0}";
-            public const string GetLookup = "SubscriptionStatus/lookup?portalId={0}&serviceId{1}";
+            public const string GetLookup = "SubscriptionStatus/lookup";
         }
 
         public static class TagUrls
@@ -281,7 +227,7 @@ namespace Dashboard.Common.WebClientHelpers
             public const string GetViewAll = "Tag/getallview";
             public const string GetOne = "Tag/getone/{0}";
             public const string Info = "Tag/info/{0}";
-            public const string GetLookup = "Tag/lookup?portalId={0}&serviceId{1}";
+            public const string GetLookup = "Tag/lookup";
         }
         public static class UsersUrls
         {
@@ -294,7 +240,42 @@ namespace Dashboard.Common.WebClientHelpers
             public const string GetViewAll = "Users/getallview";
             public const string GetOne = "Users/getone/{0}";
             public const string Info = "Users/info/{0}";
-            public const string GetLookup = "Users/lookup?portalId={0}&serviceId{1}";
+            public const string GetLookup = "Users/lookup";
+        }
+
+
+        public static class IdentityUrls
+        {
+            public const string Login = "Account/Login";
+            public const string UserData = "Account/GetUserData";
+        }
+        public static class LoggingSystemUrls
+        {
+            public const string LogData = "LoggingSystem/log_data";
+        }
+
+        public static class AttachmentsUrls
+        {
+            public const string Download = "Attachment/Download";
+            public const string Save = "Attachment/Save";
+        }
+
+
+
+        public static class IdentityAdminUrls
+        {
+            public const string SendAdminNotificationForFoundationCreated = "IdentityAdmin/send-foundation-notification/{0}";
+        }
+
+
+
+        public static class NotificationsUrls
+        {
+            public const string GetAll = "Notifications/getall";
+            public const string GetOne = "Notifications/getone/{0}";
+            public const string GetCount = "Notifications/get-count";
+            public const string UpdateSeen = "Notifications/update-seen";
+            public const string RegisterWebToken = "Notifications/register-web-token/{0}";
         }
     }
 }

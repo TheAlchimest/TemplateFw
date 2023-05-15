@@ -23,7 +23,7 @@
                 <div class="col-md-6 eng-form-element">
 <div class="form-group">
     <label class="form-label-small px-3" for="PortalId">@modulesLocalizer["Portal_PortalId"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <input class="form-control"   type="number" data-type="number" data-smk-type="number" id="PortalId" name="PortalId" placeholder="" required maxlength="4" value="@(Model?.PortalId)"  smk-error-msg-required="" data-smk-max="9999999999" data-smk-min="-9999999999" max="9999999999" min="-9999999999">
+    <input class="form-control"   type="number" data-type="number" data-smk-type="number" id="PortalId" name="PortalId" placeholder="" required maxlength="10" value="@(Model?.PortalId)"  smk-error-msg-required="" data-smk-max="9999999999" data-smk-min="-9999999999" max="9999999999" min="-9999999999">
     
     <i class="accent"></i>
 </div>
@@ -47,23 +47,27 @@
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
     <label class="form-label-small px-3" for="DescriptionAr">@modulesLocalizer["Portal_DescriptionAr"] :</label>
-    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="DescriptionAr" name="DescriptionAr" placeholder="" maxlength="500" value="@(Model?.DescriptionAr)">
-    
+    <textarea rows="4"
+              class="form-control"
+               id="DescriptionAr" name="DescriptionAr" placeholder="" maxlength="500" value="@(Model?.DescriptionAr)">@(Model?.DescriptionAr)</textarea>
+              
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
     <label class="form-label-small px-3" for="DescriptionEn">@modulesLocalizer["Portal_DescriptionEn"] :</label>
-    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="DescriptionEn" name="DescriptionEn" placeholder="" maxlength="500" value="@(Model?.DescriptionEn)">
-    
+    <textarea rows="4"
+              class="form-control"
+               id="DescriptionEn" name="DescriptionEn" placeholder="" maxlength="500" value="@(Model?.DescriptionEn)">@(Model?.DescriptionEn)</textarea>
+              
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
     <label class="form-label-small px-3" for="Link">@modulesLocalizer["Portal_Link"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="Link" name="Link" placeholder="" required maxlength="200" value="@(Model?.Link)"  smk-error-msg-required="">
+    <input class="form-control"   type="url" data-type="url" data-smk-type="url" id="Link" name="Link" placeholder="" required maxlength="200" value="@(Model?.Link)"  smk-error-msg-required="">
     
     <i class="accent"></i>
 </div>

@@ -10,7 +10,7 @@ using TemplateFw.Shared.Domain.Enums;
 using TemplateFw.Shared.Domain.GenericResponse;
 using TemplateFw.Shared.Dtos.Collections;
 using TemplateFw.Shared.Helpers;
-using LookupsUrls = Dashboard.Common.WebClientHelpers.InternalApiDictionary.LookupsUrls;
+
 using Urls = Dashboard.Common.WebClientHelpers.InternalApiDictionary.CategoryUrls;
 
 namespace TemplateFw.Dashboard.Controllers
@@ -28,7 +28,7 @@ namespace TemplateFw.Dashboard.Controllers
             _updateValidator = updateValidator;
         }
 
-    #region Add
+        #region Add
     [HttpGet]
         public async Task<IActionResult> Add()
         {
@@ -128,8 +128,6 @@ namespace TemplateFw.Dashboard.Controllers
             return ReturnViewResponse(apiResult, OperationTypes.GetContent);
         }
         #endregion
-
-
 
         #region Delete
 

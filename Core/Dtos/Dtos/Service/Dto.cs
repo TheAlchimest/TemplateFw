@@ -110,142 +110,146 @@ namespace TemplateFw.Dtos
         {
 			RuleFor(x => x.NameAr)
 			    .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
-			    .MaximumLength(120).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "120"))
-			    .WithName("Service_NameAr");
+			    .Length(5,100).WithMessage(validationLocalizer["RangeLengthCharacters"].Value.Replace("{MinLength}", "5").Replace("{MaxLength}", "100"))
+			    .Matches(@"^(?:[A-Za-z\u0600-\u06FF][A-Za-z0-9\u0600-\u06FF.,'""\- ]{3,149})$").WithMessage(validationLocalizer["InvalidPattern"])
+			    .WithName(modulesLocalizer["Service_NameAr"]);
 
 			RuleFor(x => x.NameEn)
 			    .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
-			    .MaximumLength(120).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "120"))
-			    .WithName("Service_NameEn");
+			    .Length(5,100).WithMessage(validationLocalizer["RangeLengthCharacters"].Value.Replace("{MinLength}", "5").Replace("{MaxLength}", "100"))
+			    .Matches(@"^(?:[A-Za-z\u0600-\u06FF][A-Za-z0-9\u0600-\u06FF.,'""\- ]{3,149})$").WithMessage(validationLocalizer["InvalidPattern"])
+			    .WithName(modulesLocalizer["Service_NameEn"]);
 
 			RuleFor(x => x.Icon)
 			    .MaximumLength(30).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "30"))
-			    .WithName("Service_Icon");
+			    .WithName(modulesLocalizer["Service_Icon"]);
 
 			RuleFor(x => x.LogInRequired)
 			    .NotNull().WithMessage(validationLocalizer["RequiredEnter"])
-			    .WithName("Service_LogInRequired");
+			    .WithName(modulesLocalizer["Service_LogInRequired"]);
 
 			RuleFor(x => x.Url)
 			    .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
 			    .MaximumLength(500).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "500"))
-			    .WithName("Service_Url");
+			    .WithName(modulesLocalizer["Service_Url"]);
 
 			RuleFor(x => x.MobileUrl)
-			    .MaximumLength(12).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "12"))
-			    .MinimumLength(10).WithMessage(validationLocalizer["MinLengthCharacters"].Value.Replace("{Length}", "10"))
-			    .WithName("Service_MobileUrl");
+			    .Length(10,12).WithMessage(validationLocalizer["RangeLengthCharacters"].Value.Replace("{MinLength}", "10").Replace("{MaxLength}", "12"))
+			    .Matches(@"^(\+?966|0)?5\d{8}$").WithMessage(validationLocalizer["InvalidPattern"])
+			    .WithName(modulesLocalizer["Service_MobileUrl"]);
 
 			RuleFor(x => x.ServiceTypeId)
 			    .NotNull().WithMessage(validationLocalizer["RequiredChoose"])
-			    .WithName("Service_ServiceType");
+			    .WithName(modulesLocalizer["Service_ServiceType"]);
 
 			RuleFor(x => x.PdfMediaId)
 			    .MaximumLength(250).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "250"))
-			    .WithName("Service_PdfMediaId");
+			    .WithName(modulesLocalizer["Service_PdfMediaId"]);
 
 			RuleFor(x => x.Video)
 			    .MaximumLength(20).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "20"))
-			    .WithName("Service_Video");
+			    .WithName(modulesLocalizer["Service_Video"]);
 
 			RuleFor(x => x.ServiceCode)
 			    .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
 			    .MaximumLength(40).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "40"))
-			    .WithName("Service_ServiceCode");
+			    .WithName(modulesLocalizer["Service_ServiceCode"]);
 
 			RuleFor(x => x.ShowInCatalog)
 			    .NotNull().WithMessage(validationLocalizer["RequiredEnter"])
-			    .WithName("Service_ShowInCatalog");
+			    .WithName(modulesLocalizer["Service_ShowInCatalog"]);
 
 			RuleFor(x => x.ShowInFollowUp)
 			    .NotNull().WithMessage(validationLocalizer["RequiredEnter"])
-			    .WithName("Service_ShowInFollowUp");
+			    .WithName(modulesLocalizer["Service_ShowInFollowUp"]);
 
 			RuleFor(x => x.ShowInAssets)
 			    .NotNull().WithMessage(validationLocalizer["RequiredEnter"])
-			    .WithName("Service_ShowInAssets");
+			    .WithName(modulesLocalizer["Service_ShowInAssets"]);
 
 			RuleFor(x => x.IsPublished)
 			    .NotNull().WithMessage(validationLocalizer["RequiredEnter"])
-			    .WithName("Service_IsPublished");
+			    .WithName(modulesLocalizer["Service_IsPublished"]);
 
 			RuleFor(x => x.PublishedBy)
 			    .MaximumLength(30).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "30"))
-			    .WithName("Service_PublishedBy");
+			    .WithName(modulesLocalizer["Service_PublishedBy"]);
 
 			RuleFor(x => x.StoppedBy)
 			    .MaximumLength(30).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "30"))
-			    .WithName("Service_StoppedBy");
+			    .WithName(modulesLocalizer["Service_StoppedBy"]);
 
 			RuleFor(x => x.ViewOrder)
 			    .NotNull().WithMessage(validationLocalizer["RequiredEnter"])
-			    .WithName("Service_ViewOrder");
+			    .WithName(modulesLocalizer["Service_ViewOrder"]);
 
 			RuleFor(x => x.ShortDescriptionAr)
 			    .MaximumLength(120).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "120"))
-			    .WithName("Service_ShortDescriptionAr");
+			    .WithName(modulesLocalizer["Service_ShortDescriptionAr"]);
 
 			RuleFor(x => x.ShortDescriptionEn)
 			    .MaximumLength(120).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "120"))
-			    .WithName("Service_ShortDescriptionEn");
+			    .WithName(modulesLocalizer["Service_ShortDescriptionEn"]);
 
 			RuleFor(x => x.DescriptionAr)
 			    .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
-			    .MaximumLength(500).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "500"))
-			    .WithName("Service_DescriptionAr");
+			    .Length(10,500).WithMessage(validationLocalizer["RangeLengthCharacters"].Value.Replace("{MinLength}", "10").Replace("{MaxLength}", "500"))
+			    .WithName(modulesLocalizer["Service_DescriptionAr"]);
 
 			RuleFor(x => x.DescriptionEn)
 			    .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
-			    .MaximumLength(500).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "500"))
-			    .WithName("Service_DescriptionEn");
+			    .Length(10,500).WithMessage(validationLocalizer["RangeLengthCharacters"].Value.Replace("{MinLength}", "10").Replace("{MaxLength}", "500"))
+			    .WithName(modulesLocalizer["Service_DescriptionEn"]);
 
 			RuleFor(x => x.ConditionsAr)
 			    .MaximumLength(1000).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "1000"))
-			    .WithName("Service_ConditionsAr");
+			    .WithName(modulesLocalizer["Service_ConditionsAr"]);
 
 			RuleFor(x => x.ConditionsEn)
 			    .MaximumLength(1000).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "1000"))
-			    .WithName("Service_ConditionsEn");
+			    .WithName(modulesLocalizer["Service_ConditionsEn"]);
 
 			RuleFor(x => x.DocumentRequiredAr)
 			    .MaximumLength(1000).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "1000"))
-			    .WithName("Service_DocumentRequiredAr");
+			    .WithName(modulesLocalizer["Service_DocumentRequiredAr"]);
 
 			RuleFor(x => x.DocumentRequiredEn)
 			    .MaximumLength(1000).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "1000"))
-			    .WithName("Service_DocumentRequiredEn");
+			    .WithName(modulesLocalizer["Service_DocumentRequiredEn"]);
 
 			RuleFor(x => x.FeesAr)
 			    .MaximumLength(120).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "120"))
-			    .WithName("Service_FeesAr");
+			    .WithName(modulesLocalizer["Service_FeesAr"]);
 
 			RuleFor(x => x.FeesEn)
 			    .MaximumLength(120).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "120"))
-			    .WithName("Service_FeesEn");
+			    .WithName(modulesLocalizer["Service_FeesEn"]);
 
 			RuleFor(x => x.NotesAr)
 			    .MaximumLength(1000).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "1000"))
-			    .WithName("Service_NotesAr");
+			    .WithName(modulesLocalizer["Service_NotesAr"]);
 
 			RuleFor(x => x.NotesEn)
 			    .MaximumLength(1000).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "1000"))
-			    .WithName("Service_NotesEn");
+			    .WithName(modulesLocalizer["Service_NotesEn"]);
 
 			RuleFor(x => x.StepsAr)
 			    .MaximumLength(1000).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "1000"))
-			    .WithName("Service_StepsAr");
+			    .WithName(modulesLocalizer["Service_StepsAr"]);
 
 			RuleFor(x => x.StepsEn)
 			    .MaximumLength(1000).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "1000"))
-			    .WithName("Service_StepsEn");
+			    .WithName(modulesLocalizer["Service_StepsEn"]);
 
 			RuleFor(x => x.TimeRequiredAr)
 			    .MaximumLength(120).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "120"))
-			    .WithName("Service_TimeRequiredAr");
+			    .Matches(@"^(0?[1-9]|1[0-2]):[0-5][0-9](\\s?[AP][M])?$").WithMessage(validationLocalizer["InvalidPattern"])
+			    .WithName(modulesLocalizer["Service_TimeRequiredAr"]);
 
 			RuleFor(x => x.TimeRequiredEn)
 			    .MaximumLength(120).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "120"))
-			    .WithName("Service_TimeRequiredEn");
+			    .Matches(@"^(0?[1-9]|1[0-2]):[0-5][0-9](\\s?[AP][M])?$").WithMessage(validationLocalizer["InvalidPattern"])
+			    .WithName(modulesLocalizer["Service_TimeRequiredEn"]);
 
 
         }
@@ -257,7 +261,7 @@ namespace TemplateFw.Dtos
         {
 			RuleFor(x => x.ServiceId)
 			    .GreaterThan(0).WithMessage(validationLocalizer["RequiredEnter"])
-			    .WithName("Service_ServiceId");
+			    .WithName(modulesLocalizer["Service_ServiceId"]);
 
 
         }
@@ -268,8 +272,9 @@ namespace TemplateFw.Dtos
         public ServiceFilterValidator(IStringLocalizer<ValidationResource> validationLocalizer, IStringLocalizer<ModulesResource> modulesLocalizer)
         {
 			RuleFor(x => x.Name)
-			    .MaximumLength(120).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "120"))
-			    .WithName("Service_NameAr");
+			    .Length(5,100).WithMessage(validationLocalizer["RangeLengthCharacters"].Value.Replace("{MinLength}", "5").Replace("{MaxLength}", "100"))
+			    .Matches(@"^(?:[A-Za-z\u0600-\u06FF][A-Za-z0-9\u0600-\u06FF.,'""\- ]{3,149})$").WithMessage(validationLocalizer["InvalidPattern"])
+			    .WithName(modulesLocalizer["Service_NameAr"]);
 
 
         }

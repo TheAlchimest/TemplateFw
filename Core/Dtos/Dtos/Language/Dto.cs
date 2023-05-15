@@ -49,21 +49,22 @@ namespace TemplateFw.Dtos
         {
 			RuleFor(x => x.LanguageId)
 			    .GreaterThan(0).WithMessage(validationLocalizer["RequiredEnter"])
-			    .WithName("Language_LanguageId");
+			    .WithName(modulesLocalizer["Language_LanguageId"]);
 
 			RuleFor(x => x.Name)
 			    .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
-			    .MaximumLength(50).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "50"))
-			    .WithName("Language_Name");
+			    .Length(5,50).WithMessage(validationLocalizer["RangeLengthCharacters"].Value.Replace("{MinLength}", "5").Replace("{MaxLength}", "50"))
+			    .Matches(@"^(?:[A-Za-z\u0600-\u06FF][A-Za-z0-9\u0600-\u06FF.,'""\- ]{3,149})$").WithMessage(validationLocalizer["InvalidPattern"])
+			    .WithName(modulesLocalizer["Language_Name"]);
 
 			RuleFor(x => x.Code)
 			    .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
 			    .MaximumLength(2).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "2"))
-			    .WithName("Language_Code");
+			    .WithName(modulesLocalizer["Language_Code"]);
 
 			RuleFor(x => x.IsDefault)
 			    .NotNull().WithMessage(validationLocalizer["RequiredEnter"])
-			    .WithName("Language_IsDefault");
+			    .WithName(modulesLocalizer["Language_IsDefault"]);
 
 
         }
@@ -75,7 +76,7 @@ namespace TemplateFw.Dtos
         {
 			RuleFor(x => x.LanguageId)
 			    .GreaterThan(0).WithMessage(validationLocalizer["RequiredEnter"])
-			    .WithName("Language_LanguageId");
+			    .WithName(modulesLocalizer["Language_LanguageId"]);
 
 
         }
@@ -86,8 +87,9 @@ namespace TemplateFw.Dtos
         public LanguageFilterValidator(IStringLocalizer<ValidationResource> validationLocalizer, IStringLocalizer<ModulesResource> modulesLocalizer)
         {
 			RuleFor(x => x.Name)
-			    .MaximumLength(50).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "50"))
-			    .WithName("Language_Name");
+			    .Length(5,50).WithMessage(validationLocalizer["RangeLengthCharacters"].Value.Replace("{MinLength}", "5").Replace("{MaxLength}", "50"))
+			    .Matches(@"^(?:[A-Za-z\u0600-\u06FF][A-Za-z0-9\u0600-\u06FF.,'""\- ]{3,149})$").WithMessage(validationLocalizer["InvalidPattern"])
+			    .WithName(modulesLocalizer["Language_Name"]);
 
 
         }

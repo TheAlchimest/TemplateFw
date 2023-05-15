@@ -23,7 +23,7 @@
                 <div class="col-md-6 eng-form-element">
 <div class="form-group">
     <label class="form-label-small px-3" for="SubscriptionPlanId">@modulesLocalizer["SubscriptionPlan_SubscriptionPlanId"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <input class="form-control"   type="number" data-type="number" data-smk-type="number" id="SubscriptionPlanId" name="SubscriptionPlanId" placeholder="" required maxlength="4" value="@(Model?.SubscriptionPlanId)"  smk-error-msg-required="" data-smk-max="9999999999" data-smk-min="-9999999999" max="9999999999" min="-9999999999">
+    <input class="form-control"   type="number" data-type="number" data-smk-type="number" id="SubscriptionPlanId" name="SubscriptionPlanId" placeholder="" required maxlength="10" value="@(Model?.SubscriptionPlanId)"  smk-error-msg-required="" data-smk-max="9999999999" data-smk-min="-9999999999" max="9999999999" min="-9999999999">
     
     <i class="accent"></i>
 </div>
@@ -47,23 +47,27 @@
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
     <label class="form-label-small px-3" for="DescriptionAr">@modulesLocalizer["SubscriptionPlan_DescriptionAr"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="DescriptionAr" name="DescriptionAr" placeholder="" required maxlength="200" value="@(Model?.DescriptionAr)"  smk-error-msg-required="">
-    
+    <textarea rows="4"
+              class="form-control"
+               id="DescriptionAr" name="DescriptionAr" placeholder="" required maxlength="200" value="@(Model?.DescriptionAr)"  smk-error-msg-required="">@(Model?.DescriptionAr)</textarea>
+              
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
     <label class="form-label-small px-3" for="DescriptionEn">@modulesLocalizer["SubscriptionPlan_DescriptionEn"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="DescriptionEn" name="DescriptionEn" placeholder="" required maxlength="200" value="@(Model?.DescriptionEn)"  smk-error-msg-required="">
-    
+    <textarea rows="4"
+              class="form-control"
+               id="DescriptionEn" name="DescriptionEn" placeholder="" required maxlength="200" value="@(Model?.DescriptionEn)"  smk-error-msg-required="">@(Model?.DescriptionEn)</textarea>
+              
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
     <label class="form-label-small px-3" for="Price">@modulesLocalizer["SubscriptionPlan_Price"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="Price" name="Price" placeholder="" required maxlength="9" value="@(Model?.Price)"  smk-error-msg-required="" data-smk-max="99999999.99" data-smk-min="-99999999.99">
+    <input class="form-control"   type="number" data-type="number" data-smk-type="number" id="Price" name="Price" placeholder="" required maxlength="13" value="@(Model?.Price)"  smk-error-msg-required="" data-smk-max="99999999.99" data-smk-min="-99999999.99" max="99999999.99" min="-99999999.99">
     
     <i class="accent"></i>
 </div>

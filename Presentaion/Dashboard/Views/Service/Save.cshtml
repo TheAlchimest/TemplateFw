@@ -20,10 +20,10 @@
         </div>
         <div class="card-body">
             <div class="row">
-                <input class="form-control"   type="hidden" data-type="hidden" data-smk-type="hidden" id="ServiceId" name="ServiceId" placeholder="" required maxlength="4" value="@(Model?.ServiceId)"  smk-error-msg-required="" data-smk-max="9999999999" data-smk-min="-9999999999"><div class="col-md-6 eng-form-element">
+                <input class="form-control"   type="hidden" data-type="hidden" data-smk-type="hidden" id="ServiceId" name="ServiceId" placeholder="" required maxlength="10" value="@(Model?.ServiceId)"  smk-error-msg-required="" data-smk-max="9999999999" data-smk-min="-9999999999"><div class="col-md-6 eng-form-element">
 <div class="form-group">
     <label class="form-label-small px-3" for="NameAr">@modulesLocalizer["Service_NameAr"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="NameAr" name="NameAr" placeholder="" required maxlength="120" value="@(Model?.NameAr)"  smk-error-msg-required="">
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="NameAr" name="NameAr" placeholder="" required maxlength="100" value="@(Model?.NameAr)"  smk-error-msg-required="">
     
     <i class="accent"></i>
 </div>
@@ -31,7 +31,7 @@
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
     <label class="form-label-small px-3" for="NameEn">@modulesLocalizer["Service_NameEn"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="NameEn" name="NameEn" placeholder="" required maxlength="120" value="@(Model?.NameEn)"  smk-error-msg-required="">
+    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="NameEn" name="NameEn" placeholder="" required maxlength="100" value="@(Model?.NameEn)"  smk-error-msg-required="">
     
     <i class="accent"></i>
 </div>
@@ -65,7 +65,7 @@
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
     <label class="form-label-small px-3" for="MobileUrl">@modulesLocalizer["Service_MobileUrl"] :</label>
-    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="MobileUrl" name="MobileUrl" placeholder="" maxlength="12" value="@(Model?.MobileUrl)">
+    <input class="form-control"   type="tel" data-type="tel" data-smk-type="tel" id="MobileUrl" name="MobileUrl" placeholder="" maxlength="12" value="@(Model?.MobileUrl)">
     
     <i class="accent"></i>
 </div>
@@ -167,7 +167,7 @@
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
     <label class="form-label-small px-3" for="PublishedAt">@modulesLocalizer["Service_PublishedAt"] :</label>
-    <input class="form-control"   type="text" data-type="datetime" data-smk-type="datetime" id="PublishedAt" name="PublishedAt" placeholder="" maxlength="8" readonly value="@(Model?.PublishedAt)">
+    <input class="form-control"   type="text" data-type="datetime" data-smk-type="datetime" id="PublishedAt" name="PublishedAt" placeholder="" maxlength="19" readonly value="@(Model?.PublishedAt)">
     
     <i class="accent"></i>
 </div>
@@ -183,7 +183,7 @@
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
     <label class="form-label-small px-3" for="StoppedAt">@modulesLocalizer["Service_StoppedAt"] :</label>
-    <input class="form-control"   type="text" data-type="datetime" data-smk-type="datetime" id="StoppedAt" name="StoppedAt" placeholder="" maxlength="8" readonly value="@(Model?.StoppedAt)">
+    <input class="form-control"   type="text" data-type="datetime" data-smk-type="datetime" id="StoppedAt" name="StoppedAt" placeholder="" maxlength="19" readonly value="@(Model?.StoppedAt)">
     
     <i class="accent"></i>
 </div>
@@ -191,7 +191,7 @@
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
     <label class="form-label-small px-3" for="ViewOrder">@modulesLocalizer["Service_ViewOrder"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <input class="form-control"   type="number" data-type="number" data-smk-type="number" id="ViewOrder" name="ViewOrder" placeholder="" required maxlength="4" value="@(Model?.ViewOrder)"  smk-error-msg-required="" data-smk-max="9999999999" data-smk-min="-9999999999" max="9999999999" min="-9999999999">
+    <input class="form-control"   type="number" data-type="number" data-smk-type="number" id="ViewOrder" name="ViewOrder" placeholder="" required maxlength="10" value="@(Model?.ViewOrder)"  smk-error-msg-required="" data-smk-max="9999999999" data-smk-min="-9999999999" max="9999999999" min="-9999999999">
     
     <i class="accent"></i>
 </div>
@@ -215,16 +215,20 @@
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
     <label class="form-label-small px-3" for="DescriptionAr">@modulesLocalizer["Service_DescriptionAr"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="DescriptionAr" name="DescriptionAr" placeholder="" required maxlength="500" value="@(Model?.DescriptionAr)"  smk-error-msg-required="">
-    
+    <textarea rows="4"
+              class="form-control"
+               id="DescriptionAr" name="DescriptionAr" placeholder="" required maxlength="500" value="@(Model?.DescriptionAr)"  smk-error-msg-required="">@(Model?.DescriptionAr)</textarea>
+              
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
     <label class="form-label-small px-3" for="DescriptionEn">@modulesLocalizer["Service_DescriptionEn"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="DescriptionEn" name="DescriptionEn" placeholder="" required maxlength="500" value="@(Model?.DescriptionEn)"  smk-error-msg-required="">
-    
+    <textarea rows="4"
+              class="form-control"
+               id="DescriptionEn" name="DescriptionEn" placeholder="" required maxlength="500" value="@(Model?.DescriptionEn)"  smk-error-msg-required="">@(Model?.DescriptionEn)</textarea>
+              
     <i class="accent"></i>
 </div>
 </div>
@@ -327,7 +331,7 @@
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
     <label class="form-label-small px-3" for="TimeRequiredAr">@modulesLocalizer["Service_TimeRequiredAr"] :</label>
-    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="TimeRequiredAr" name="TimeRequiredAr" placeholder="" maxlength="120" value="@(Model?.TimeRequiredAr)">
+    <input class="form-control"   type="time" data-type="time" data-smk-type="time" id="TimeRequiredAr" name="TimeRequiredAr" placeholder="" maxlength="120" value="@(Model?.TimeRequiredAr)">
     
     <i class="accent"></i>
 </div>
@@ -335,7 +339,7 @@
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
     <label class="form-label-small px-3" for="TimeRequiredEn">@modulesLocalizer["Service_TimeRequiredEn"] :</label>
-    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="TimeRequiredEn" name="TimeRequiredEn" placeholder="" maxlength="120" value="@(Model?.TimeRequiredEn)">
+    <input class="form-control"   type="time" data-type="time" data-smk-type="time" id="TimeRequiredEn" name="TimeRequiredEn" placeholder="" maxlength="120" value="@(Model?.TimeRequiredEn)">
     
     <i class="accent"></i>
 </div>

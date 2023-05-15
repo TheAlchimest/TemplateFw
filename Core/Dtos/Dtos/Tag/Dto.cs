@@ -46,13 +46,13 @@ namespace TemplateFw.Dtos
         {
 			RuleFor(x => x.TitleAr)
 			    .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
-			    .MaximumLength(100).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "100"))
-			    .WithName("Tag_TitleAr");
+			    .Length(2,100).WithMessage(validationLocalizer["RangeLengthCharacters"].Value.Replace("{MinLength}", "2").Replace("{MaxLength}", "100"))
+			    .WithName(modulesLocalizer["Tag_TitleAr"]);
 
 			RuleFor(x => x.TitleEn)
 			    .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
-			    .MaximumLength(100).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "100"))
-			    .WithName("Tag_TitleEn");
+			    .Length(2,100).WithMessage(validationLocalizer["RangeLengthCharacters"].Value.Replace("{MinLength}", "2").Replace("{MaxLength}", "100"))
+			    .WithName(modulesLocalizer["Tag_TitleEn"]);
 
 
         }
@@ -64,7 +64,7 @@ namespace TemplateFw.Dtos
         {
 			RuleFor(x => x.TagId)
 			    .GreaterThan(0).WithMessage(validationLocalizer["RequiredEnter"])
-			    .WithName("Tag_TagId");
+			    .WithName(modulesLocalizer["Tag_TagId"]);
 
 
         }
@@ -75,8 +75,8 @@ namespace TemplateFw.Dtos
         public TagFilterValidator(IStringLocalizer<ValidationResource> validationLocalizer, IStringLocalizer<ModulesResource> modulesLocalizer)
         {
 			RuleFor(x => x.Title)
-			    .MaximumLength(100).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "100"))
-			    .WithName("Tag_TitleAr");
+			    .Length(2,100).WithMessage(validationLocalizer["RangeLengthCharacters"].Value.Replace("{MinLength}", "2").Replace("{MaxLength}", "100"))
+			    .WithName(modulesLocalizer["Tag_TitleAr"]);
 
 
         }

@@ -63,28 +63,28 @@ namespace TemplateFw.Dtos
         {
 			RuleFor(x => x.UserId)
 			    .NotNull().WithMessage(validationLocalizer["RequiredChoose"])
-			    .WithName("Subscription_User");
+			    .WithName(modulesLocalizer["Subscription_User"]);
 
 			RuleFor(x => x.SubscriptionPlanId)
 			    .NotNull().WithMessage(validationLocalizer["RequiredChoose"])
-			    .WithName("Subscription_SubscriptionPlan");
+			    .WithName(modulesLocalizer["Subscription_SubscriptionPlan"]);
 
 			RuleFor(x => x.StartDate)
 			    .NotNull().WithMessage(validationLocalizer["RequiredEnter"])
-			    .WithName("Subscription_StartDate");
+			    .WithName(modulesLocalizer["Subscription_StartDate"]);
 
 			RuleFor(x => x.EndDate)
 			    .NotNull().WithMessage(validationLocalizer["RequiredEnter"])
-			    .WithName("Subscription_EndDate");
+			    .WithName(modulesLocalizer["Subscription_EndDate"]);
 
 			RuleFor(x => x.PaymentMethod)
 			    .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
 			    .MaximumLength(50).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "50"))
-			    .WithName("Subscription_PaymentMethod");
+			    .WithName(modulesLocalizer["Subscription_PaymentMethod"]);
 
 			RuleFor(x => x.Amount)
 			    .NotNull().WithMessage(validationLocalizer["RequiredEnter"])
-			    .WithName("Subscription_Amount");
+			    .WithName(modulesLocalizer["Subscription_Amount"]);
 
 
         }
@@ -96,7 +96,7 @@ namespace TemplateFw.Dtos
         {
 			RuleFor(x => x.SubscriptionId)
 			    .GreaterThan(0).WithMessage(validationLocalizer["RequiredEnter"])
-			    .WithName("Subscription_SubscriptionId");
+			    .WithName(modulesLocalizer["Subscription_SubscriptionId"]);
 
 
         }
@@ -108,7 +108,7 @@ namespace TemplateFw.Dtos
         {
 			RuleFor(x => x.PaymentMethod)
 			    .MaximumLength(50).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "50"))
-			    .WithName("Subscription_PaymentMethod");
+			    .WithName(modulesLocalizer["Subscription_PaymentMethod"]);
 
 
         }

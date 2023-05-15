@@ -23,7 +23,7 @@
                 <div class="col-md-6 eng-form-element">
 <div class="form-group">
     <label class="form-label-small px-3" for="SubscriptionStatusId">@modulesLocalizer["SubscriptionStatus_SubscriptionStatusId"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <input class="form-control"   type="number" data-type="number" data-smk-type="number" id="SubscriptionStatusId" name="SubscriptionStatusId" placeholder="" required maxlength="4" value="@(Model?.SubscriptionStatusId)"  smk-error-msg-required="" data-smk-max="9999999999" data-smk-min="-9999999999" max="9999999999" min="-9999999999">
+    <input class="form-control"   type="number" data-type="number" data-smk-type="number" id="SubscriptionStatusId" name="SubscriptionStatusId" placeholder="" required maxlength="10" value="@(Model?.SubscriptionStatusId)"  smk-error-msg-required="" data-smk-max="9999999999" data-smk-min="-9999999999" max="9999999999" min="-9999999999">
     
     <i class="accent"></i>
 </div>
@@ -47,16 +47,20 @@
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
     <label class="form-label-small px-3" for="DescriptionAr">@modulesLocalizer["SubscriptionStatus_DescriptionAr"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="DescriptionAr" name="DescriptionAr" placeholder="" required maxlength="200" value="@(Model?.DescriptionAr)"  smk-error-msg-required="">
-    
+    <textarea rows="4"
+              class="form-control"
+               id="DescriptionAr" name="DescriptionAr" placeholder="" required maxlength="200" value="@(Model?.DescriptionAr)"  smk-error-msg-required="">@(Model?.DescriptionAr)</textarea>
+              
     <i class="accent"></i>
 </div>
 </div>
 <div class="col-md-6 eng-form-element">
 <div class="form-group">
     <label class="form-label-small px-3" for="DescriptionEn">@modulesLocalizer["SubscriptionStatus_DescriptionEn"] <small><i class="fas fa-asterisk text-danger fa-xs"></i></small>:</label>
-    <input class="form-control"   type="text" data-type="text" data-smk-type="text" id="DescriptionEn" name="DescriptionEn" placeholder="" required maxlength="200" value="@(Model?.DescriptionEn)"  smk-error-msg-required="">
-    
+    <textarea rows="4"
+              class="form-control"
+               id="DescriptionEn" name="DescriptionEn" placeholder="" required maxlength="200" value="@(Model?.DescriptionEn)"  smk-error-msg-required="">@(Model?.DescriptionEn)</textarea>
+              
     <i class="accent"></i>
 </div>
 </div>

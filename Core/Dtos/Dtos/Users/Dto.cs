@@ -57,33 +57,35 @@ namespace TemplateFw.Dtos
         {
 			RuleFor(x => x.FirstName)
 			    .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
-			    .MaximumLength(50).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "50"))
-			    .WithName("Users_FirstName");
+			    .Length(2,50).WithMessage(validationLocalizer["RangeLengthCharacters"].Value.Replace("{MinLength}", "2").Replace("{MaxLength}", "50"))
+			    .Matches(@"^[A-Za-z ]{3,50}$").WithMessage(validationLocalizer["InvalidPattern"])
+			    .WithName(modulesLocalizer["Users_FirstName"]);
 
 			RuleFor(x => x.LastName)
 			    .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
-			    .MaximumLength(50).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "50"))
-			    .WithName("Users_LastName");
+			    .Length(2,50).WithMessage(validationLocalizer["RangeLengthCharacters"].Value.Replace("{MinLength}", "2").Replace("{MaxLength}", "50"))
+			    .Matches(@"^[A-Za-z ]{3,50}$").WithMessage(validationLocalizer["InvalidPattern"])
+			    .WithName(modulesLocalizer["Users_LastName"]);
 
 			RuleFor(x => x.Email)
 			    .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
-			    .MaximumLength(255).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "255"))
-			    .MinimumLength(5).WithMessage(validationLocalizer["MinLengthCharacters"].Value.Replace("{Length}", "5"))
-			    .WithName("Users_Email");
+			    .Length(5,250).WithMessage(validationLocalizer["RangeLengthCharacters"].Value.Replace("{MinLength}", "5").Replace("{MaxLength}", "250"))
+			    .Matches(@"^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$").WithMessage(validationLocalizer["InvalidPattern"])
+			    .WithName(modulesLocalizer["Users_Email"]);
 
 			RuleFor(x => x.Username)
 			    .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
-			    .MaximumLength(20).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "20"))
-			    .MinimumLength(5).WithMessage(validationLocalizer["MinLengthCharacters"].Value.Replace("{Length}", "5"))
-			    .WithName("Users_Username");
+			    .Length(5,20).WithMessage(validationLocalizer["RangeLengthCharacters"].Value.Replace("{MinLength}", "5").Replace("{MaxLength}", "20"))
+			    .Matches(@"^[A-Za-z0-9_]{5,20}$").WithMessage(validationLocalizer["InvalidPattern"])
+			    .WithName(modulesLocalizer["Users_Username"]);
 
 			RuleFor(x => x.PasswordHash)
 			    .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
-			    .WithName("Users_PasswordHash");
+			    .WithName(modulesLocalizer["Users_PasswordHash"]);
 
 			RuleFor(x => x.LastLoginAt)
 			    .NotNull().WithMessage(validationLocalizer["RequiredEnter"])
-			    .WithName("Users_LastLoginAt");
+			    .WithName(modulesLocalizer["Users_LastLoginAt"]);
 
 
         }
@@ -95,7 +97,7 @@ namespace TemplateFw.Dtos
         {
 			RuleFor(x => x.UserId)
 			    .GreaterThan(0).WithMessage(validationLocalizer["RequiredEnter"])
-			    .WithName("Users_UserId");
+			    .WithName(modulesLocalizer["Users_UserId"]);
 
 
         }
@@ -106,8 +108,9 @@ namespace TemplateFw.Dtos
         public UsersFilterValidator(IStringLocalizer<ValidationResource> validationLocalizer, IStringLocalizer<ModulesResource> modulesLocalizer)
         {
 			RuleFor(x => x.FirstName)
-			    .MaximumLength(50).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "50"))
-			    .WithName("Users_FirstName");
+			    .Length(2,50).WithMessage(validationLocalizer["RangeLengthCharacters"].Value.Replace("{MinLength}", "2").Replace("{MaxLength}", "50"))
+			    .Matches(@"^[A-Za-z ]{3,50}$").WithMessage(validationLocalizer["InvalidPattern"])
+			    .WithName(modulesLocalizer["Users_FirstName"]);
 
 
         }

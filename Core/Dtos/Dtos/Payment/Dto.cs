@@ -51,15 +51,15 @@ namespace TemplateFw.Dtos
         {
 			RuleFor(x => x.SubscriptionId)
 			    .NotNull().WithMessage(validationLocalizer["RequiredChoose"])
-			    .WithName("Payment_Subscription");
+			    .WithName(modulesLocalizer["Payment_Subscription"]);
 
 			RuleFor(x => x.Amount)
 			    .NotNull().WithMessage(validationLocalizer["RequiredEnter"])
-			    .WithName("Payment_Amount");
+			    .WithName(modulesLocalizer["Payment_Amount"]);
 
 			RuleFor(x => x.PaymentDate)
 			    .NotNull().WithMessage(validationLocalizer["RequiredEnter"])
-			    .WithName("Payment_PaymentDate");
+			    .WithName(modulesLocalizer["Payment_PaymentDate"]);
 
 
         }
@@ -71,7 +71,7 @@ namespace TemplateFw.Dtos
         {
 			RuleFor(x => x.PaymentId)
 			    .GreaterThan(0).WithMessage(validationLocalizer["RequiredEnter"])
-			    .WithName("Payment_PaymentId");
+			    .WithName(modulesLocalizer["Payment_PaymentId"]);
 
 
         }

@@ -7,7 +7,7 @@
     },
     submit: function (formId, obj, event) {
         let $frm = $("#" + formId);
-        if ($frm.data("changed") && ) {
+        if ($frm.data("changed") ) {
             app.form.submit(obj, event)
         }
         else {

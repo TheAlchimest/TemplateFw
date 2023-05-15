@@ -66,47 +66,47 @@ namespace TemplateFw.Dtos
         {
 			RuleFor(x => x.TitleAr)
 			    .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
-			    .MaximumLength(100).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "100"))
-			    .WithName("Article_TitleAr");
+			    .Length(2,100).WithMessage(validationLocalizer["RangeLengthCharacters"].Value.Replace("{MinLength}", "2").Replace("{MaxLength}", "100"))
+			    .WithName(modulesLocalizer["Article_TitleAr"]);
 
 			RuleFor(x => x.TitleEn)
 			    .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
-			    .MaximumLength(100).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "100"))
-			    .WithName("Article_TitleEn");
+			    .Length(2,100).WithMessage(validationLocalizer["RangeLengthCharacters"].Value.Replace("{MinLength}", "2").Replace("{MaxLength}", "100"))
+			    .WithName(modulesLocalizer["Article_TitleEn"]);
 
 			RuleFor(x => x.BriefAr)
 			    .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
-			    .MaximumLength(250).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "250"))
-			    .WithName("Article_BriefAr");
+			    .Length(10,250).WithMessage(validationLocalizer["RangeLengthCharacters"].Value.Replace("{MinLength}", "10").Replace("{MaxLength}", "250"))
+			    .WithName(modulesLocalizer["Article_BriefAr"]);
 
 			RuleFor(x => x.BriefEn)
 			    .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
-			    .MaximumLength(250).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "250"))
-			    .WithName("Article_BriefEn");
+			    .Length(10,250).WithMessage(validationLocalizer["RangeLengthCharacters"].Value.Replace("{MinLength}", "10").Replace("{MaxLength}", "250"))
+			    .WithName(modulesLocalizer["Article_BriefEn"]);
 
 			RuleFor(x => x.ContentAr)
 			    .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
-			    .WithName("Article_ContentAr");
+			    .WithName(modulesLocalizer["Article_ContentAr"]);
 
 			RuleFor(x => x.ContentEn)
 			    .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
-			    .WithName("Article_ContentEn");
+			    .WithName(modulesLocalizer["Article_ContentEn"]);
 
 			RuleFor(x => x.AuthorId)
 			    .NotNull().WithMessage(validationLocalizer["RequiredChoose"])
-			    .WithName("Article_Author");
+			    .WithName(modulesLocalizer["Article_Author"]);
 
 			RuleFor(x => x.IsPublished)
 			    .NotNull().WithMessage(validationLocalizer["RequiredEnter"])
-			    .WithName("Article_IsPublished");
+			    .WithName(modulesLocalizer["Article_IsPublished"]);
 
 			RuleFor(x => x.PublicationDate)
 			    .NotNull().WithMessage(validationLocalizer["RequiredEnter"])
-			    .WithName("Article_PublicationDate");
+			    .WithName(modulesLocalizer["Article_PublicationDate"]);
 
 			RuleFor(x => x.PublishedAt)
 			    .NotNull().WithMessage(validationLocalizer["RequiredEnter"])
-			    .WithName("Article_PublishedAt");
+			    .WithName(modulesLocalizer["Article_PublishedAt"]);
 
 
         }
@@ -118,7 +118,7 @@ namespace TemplateFw.Dtos
         {
 			RuleFor(x => x.ArticleId)
 			    .GreaterThan(0).WithMessage(validationLocalizer["RequiredEnter"])
-			    .WithName("Article_ArticleId");
+			    .WithName(modulesLocalizer["Article_ArticleId"]);
 
 
         }
@@ -129,8 +129,8 @@ namespace TemplateFw.Dtos
         public ArticleFilterValidator(IStringLocalizer<ValidationResource> validationLocalizer, IStringLocalizer<ModulesResource> modulesLocalizer)
         {
 			RuleFor(x => x.Title)
-			    .MaximumLength(100).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "100"))
-			    .WithName("Article_TitleAr");
+			    .Length(2,100).WithMessage(validationLocalizer["RangeLengthCharacters"].Value.Replace("{MinLength}", "2").Replace("{MaxLength}", "100"))
+			    .WithName(modulesLocalizer["Article_TitleAr"]);
 
 
         }

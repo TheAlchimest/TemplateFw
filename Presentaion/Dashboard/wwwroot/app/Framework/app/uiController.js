@@ -49,13 +49,14 @@
     },
     bindDateTime: function () {
         let ctrl = this;
-        $().each(function () {
+        $('input[data-type="date"]').each(function () {
             let endDate = null;
             if ($(this).data('olddate') == true)
                 endDate = ctrl.date2str(new Date(), 'yyyy-MM-dd');
 
             if (endDate == null) {
                 $(this).hijriDatePicker({
+                    format: 'YYYY-MM-DD',
                     hijri: $(this).data('hijri'),
                     locale: $('body').hasClass('rtl') ? 'ar-SA' : 'en',
                     isRTL: $('body').hasClass('rtl'),
@@ -68,7 +69,7 @@
                         previous: $('body').hasClass('rtl') ? '<i class="far fa-chevron-right"></i>' : '<i class="far fa-chevron-left"></i>',
                         next: $('body').hasClass('rtl') ? '<i class="far fa-chevron-left"></i>' : '<i class="far fa-chevron-right"></i>',
                     },
-                }).on('dp.change', function (e) { accountValidations.dateChangeEvent(e); });
+                }).on('dp.change', function (e) { console.log(e); });
             }
             else {
                 $(this).hijriDatePicker({
@@ -85,7 +86,7 @@
                         previous: $('body').hasClass('rtl') ? '<i class="far fa-chevron-right"></i>' : '<i class="far fa-chevron-left"></i>',
                         next: $('body').hasClass('rtl') ? '<i class="far fa-chevron-left"></i>' : '<i class="far fa-chevron-right"></i>',
                     },
-                }).on('dp.change', function (e) { accountValidations.dateChangeEvent(e); });
+                }).on('dp.change', function (e) { console.log(e); });
             }
         });
     },

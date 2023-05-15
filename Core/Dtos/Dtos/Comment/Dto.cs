@@ -56,19 +56,19 @@ namespace TemplateFw.Dtos
 			RuleFor(x => x.Content)
 			    .NotEmpty().WithMessage(validationLocalizer["RequiredEnter"])
 			    .MaximumLength(500).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "500"))
-			    .WithName("Comment_Content");
+			    .WithName(modulesLocalizer["Comment_Content"]);
 
 			RuleFor(x => x.ArticleId)
 			    .NotNull().WithMessage(validationLocalizer["RequiredChoose"])
-			    .WithName("Comment_Article");
+			    .WithName(modulesLocalizer["Comment_Article"]);
 
 			RuleFor(x => x.UserId)
 			    .NotNull().WithMessage(validationLocalizer["RequiredChoose"])
-			    .WithName("Comment_User");
+			    .WithName(modulesLocalizer["Comment_User"]);
 
 			RuleFor(x => x.LanguageId)
 			    .NotNull().WithMessage(validationLocalizer["RequiredEnter"])
-			    .WithName("Comment_LanguageId");
+			    .WithName(modulesLocalizer["Comment_LanguageId"]);
 
 
         }
@@ -80,7 +80,7 @@ namespace TemplateFw.Dtos
         {
 			RuleFor(x => x.CommentId)
 			    .GreaterThan(0).WithMessage(validationLocalizer["RequiredEnter"])
-			    .WithName("Comment_CommentId");
+			    .WithName(modulesLocalizer["Comment_CommentId"]);
 
 
         }
@@ -92,7 +92,7 @@ namespace TemplateFw.Dtos
         {
 			RuleFor(x => x.Content)
 			    .MaximumLength(500).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "500"))
-			    .WithName("Comment_Content");
+			    .WithName(modulesLocalizer["Comment_Content"]);
 
 
         }
