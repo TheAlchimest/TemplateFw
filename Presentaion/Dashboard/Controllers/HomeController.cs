@@ -10,7 +10,6 @@ namespace TemplateFw.Dashboard.Controllers
         private readonly ILogger<HomeController> _logger;
 
         private readonly RequestUrlHelper _api = ApiRequestHelper.InternalAPI;
-        private readonly RequestUrlHelper _accountsApi = ApiRequestHelper.AcountsAPI;
 
         public HomeController(ILogger<HomeController> logger)
         {

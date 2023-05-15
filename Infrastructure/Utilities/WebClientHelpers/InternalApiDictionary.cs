@@ -1,246 +1,228 @@
-namespace Dashboard.Common.WebClientHelpers
+﻿namespace Dashboard.Common.WebClientHelpers
 {
     public class InternalApiDictionary
     {
         
-        public static class FaqUrls
-        {
-            public const string Create = "Faq/Create";
-            public const string Update = "Faq/Update";
-            public const string Delete = "Faq/Delete/{0}";
-            public const string GetAll = "Faq/getall";
-            public const string GetPaged = "Faq/get-paged";
-
-            public const string GetViewAll = "Faq/getallview";
-            public const string GetOne = "Faq/getone/{0}";
-            public const string Info = "Faq/info/{0}";
-            public const string GetLookup = "Faq/lookup?portalId={0}&serviceId={1}";
-        }
-        public static class CountryUrls
-        {
-            public const string Create = "Country/Create";
-            public const string Update = "Country/Update";
-            public const string Delete = "Country/Delete/{0}";
-            public const string GetAll = "Country/getall";
-            public const string GetPaged = "Country/get-paged";
-            public const string GetViewAll = "Country/getallview";
-            public const string GetOne = "Country/getone/{0}";
-            public const string Info = "Country/info/{0}";
-            public const string GetLookup = "Country/lookup";
-        }
-        public static class PortalUrls
-        {
-            public const string Create = "Portal/Create";
-            public const string Update = "Portal/Update";
-            public const string Delete = "Portal/Delete/{0}";
-            public const string GetAll = "Portal/getall";
-            public const string GetPaged = "Portal/get-paged";
-
-            public const string GetViewAll = "Portal/getallview";
-            public const string GetOne = "Portal/getone/{0}";
-            public const string Info = "Portal/info/{0}";
-            public const string GetLookup = "Portal/lookup";
-        }
-        public static class LanguageUrls
-        {
-            public const string Create = "Language/Create";
-            public const string Update = "Language/Update";
-            public const string Delete = "Language/Delete/{0}";
-            public const string GetAll = "Language/getall";
-            public const string GetPaged = "Language/get-paged";
-
-            public const string GetViewAll = "Language/getallview";
-            public const string GetOne = "Language/getone/{0}";
-            public const string Info = "Language/info/{0}";
-            public const string GetLookup = "Language/lookup";
-        }
-        public static class ServiceUrls
-        {
-            public const string Create = "Service/Create";
-            public const string Update = "Service/Update";
-            public const string Delete = "Service/Delete/{0}";
-            public const string GetAll = "Service/getall";
-            public const string GetPaged = "Service/get-paged";
-
-            public const string GetViewAll = "Service/getallview";
-            public const string GetOne = "Service/getone/{0}";
-            public const string Info = "Service/info/{0}";
-            public const string GetLookup = "Service/lookup?serviceTypeId={0}&portalId={1}";
-        }
-        public static class ServiceTypeUrls
-        {
-            public const string Create = "ServiceType/Create";
-            public const string Update = "ServiceType/Update";
-            public const string Delete = "ServiceType/Delete/{0}";
-            public const string GetAll = "ServiceType/getall";
-            public const string GetPaged = "ServiceType/get-paged";
-
-            public const string GetViewAll = "ServiceType/getallview";
-            public const string GetOne = "ServiceType/getone/{0}";
-            public const string Info = "ServiceType/info/{0}";
-            public const string GetLookup = "ServiceType/lookup";
-        }
-        public static class AdminUrls
-        {
-            public const string Save = "Identity/Save";
-            public const string Delete = "Identity/Delete/{0}";
-            public const string GetAll = "Identity/getall";
-            public const string GetAllAdmins = "Identity/get-all-admins";
-            public const string GetOne = "Identity/getone/{0}";
-            public const string Getfullname = "Identity/getfullname/{0}";
-        }
-
-       
         public static class ArticleUrls
         {
-            public const string Create = "Article/Create";
-            public const string Update = "Article/Update";
-            public const string Delete = "Article/Delete/{0}";
-            public const string GetAll = "Article/getall";
-            public const string GetPaged = "Article/get-paged";
+            public const string Create = "article/Create";
+            public const string Update = "article/Update";
+            public const string Delete = "article/Delete/{0}";
+            public const string GetAll = "article/getall";
+            public const string GetPaged = "article/get-paged";
 
-            public const string GetViewAll = "Article/getallview";
-            public const string GetOne = "Article/getone/{0}";
-            public const string Info = "Article/info/{0}";
-            public const string GetLookup = "Article/lookup?authorId={0}&categoryId={1}";
-
+            public const string GetViewAll = "article/getallview";
+            public const string GetOne = "article/getone/{0}";
+            public const string Info = "article/info/{0}";
+            public const string GetLookup = "article/lookup?authorId={0}&categoryId={1}";
         }
-
-        public static class AuthorUrls
+	public static class AuthorUrls
         {
-            public const string Create = "Author/Create";
-            public const string Update = "Author/Update";
-            public const string Delete = "Author/Delete/{0}";
-            public const string GetAll = "Author/getall";
-            public const string GetPaged = "Author/get-paged";
+            public const string Create = "author/Create";
+            public const string Update = "author/Update";
+            public const string Delete = "author/Delete/{0}";
+            public const string GetAll = "author/getall";
+            public const string GetPaged = "author/get-paged";
 
-            public const string GetViewAll = "Author/getallview";
-            public const string GetOne = "Author/getone/{0}";
-            public const string Info = "Author/info/{0}";
-            public const string GetLookup = "Author/lookup?countryId={0}";
-
+            public const string GetViewAll = "author/getallview";
+            public const string GetOne = "author/getone/{0}";
+            public const string Info = "author/info/{0}";
+            public const string GetLookup = "author/lookup?countryId={0}";
         }
-        public static class CategoryUrls
+	public static class CategoryUrls
         {
-            public const string Create = "Category/Create";
-            public const string Update = "Category/Update";
-            public const string Delete = "Category/Delete/{0}";
-            public const string GetAll = "Category/getall";
-            public const string GetPaged = "Category/get-paged";
+            public const string Create = "category/Create";
+            public const string Update = "category/Update";
+            public const string Delete = "category/Delete/{0}";
+            public const string GetAll = "category/getall";
+            public const string GetPaged = "category/get-paged";
 
-            public const string GetViewAll = "Category/getallview";
-            public const string GetOne = "Category/getone/{0}";
-            public const string Info = "Category/info/{0}";
-            public const string GetLookup = "Category/lookup";
-
+            public const string GetViewAll = "category/getallview";
+            public const string GetOne = "category/getone/{0}";
+            public const string Info = "category/info/{0}";
+            public const string GetLookup = "category/lookup";
         }
-
-        public static class CommentUrls
+	public static class CommentUrls
         {
-            public const string Create = "Comment/Create";
-            public const string Update = "Comment/Update";
-            public const string Delete = "Comment/Delete/{0}";
-            public const string GetAll = "Comment/getall";
-            public const string GetPaged = "Comment/get-paged";
+            public const string Create = "comment/Create";
+            public const string Update = "comment/Update";
+            public const string Delete = "comment/Delete/{0}";
+            public const string GetAll = "comment/getall";
+            public const string GetPaged = "comment/get-paged";
 
-            public const string GetViewAll = "Comment/getallview";
-            public const string GetOne = "Comment/getone/{0}";
-            public const string Info = "Comment/info/{0}";
-            public const string GetLookup = "Comment/lookup?articleId={0}&userId={1}";
+            public const string GetViewAll = "comment/getallview";
+            public const string GetOne = "comment/getone/{0}";
+            public const string Info = "comment/info/{0}";
+            public const string GetLookup = "comment/lookup?articleId={0}&userId={1}";
         }
-
-        public static class ContactUsUrls
+	public static class ContactUsUrls
         {
-            public const string Create = "ContactUs/Create";
-            public const string Update = "ContactUs/Update";
-            public const string Delete = "ContactUs/Delete/{0}";
-            public const string GetAll = "ContactUs/getall";
-            public const string GetPaged = "ContactUs/get-paged";
+            public const string Create = "contactus/Create";
+            public const string Update = "contactus/Update";
+            public const string Delete = "contactus/Delete/{0}";
+            public const string GetAll = "contactus/getall";
+            public const string GetPaged = "contactus/get-paged";
 
-            public const string GetViewAll = "ContactUs/getallview";
-            public const string GetOne = "ContactUs/getone/{0}";
-            public const string Info = "ContactUs/info/{0}";
-            public const string GetLookup = "ContactUs/lookup";
+            public const string GetViewAll = "contactus/getallview";
+            public const string GetOne = "contactus/getone/{0}";
+            public const string Info = "contactus/info/{0}";
+            public const string GetLookup = "contactus/lookup";
         }
-        public static class PaymentUrls
+	public static class CountryUrls
         {
-            public const string Create = "Payment/Create";
-            public const string Update = "Payment/Update";
-            public const string Delete = "Payment/Delete/{0}";
-            public const string GetAll = "Payment/getall";
-            public const string GetPaged = "Payment/get-paged";
+            public const string Create = "country/Create";
+            public const string Update = "country/Update";
+            public const string Delete = "country/Delete/{0}";
+            public const string GetAll = "country/getall";
+            public const string GetPaged = "country/get-paged";
 
-            public const string GetViewAll = "Payment/getallview";
-            public const string GetOne = "Payment/getone/{0}";
-            public const string Info = "Payment/info/{0}";
-            public const string GetLookup = "Payment/lookup?subscriptionId={0}";
+            public const string GetViewAll = "country/getallview";
+            public const string GetOne = "country/getone/{0}";
+            public const string Info = "country/info/{0}";
+            public const string GetLookup = "country/lookup";
         }
-        public static class SubscriptionUrls
+	public static class FaqUrls
         {
-            public const string Create = "Subscription/Create";
-            public const string Update = "Subscription/Update";
-            public const string Delete = "Subscription/Delete/{0}";
-            public const string GetAll = "Subscription/getall";
-            public const string GetPaged = "Subscription/get-paged";
+            public const string Create = "faq/Create";
+            public const string Update = "faq/Update";
+            public const string Delete = "faq/Delete/{0}";
+            public const string GetAll = "faq/getall";
+            public const string GetPaged = "faq/get-paged";
 
-            public const string GetViewAll = "Subscription/getallview";
-            public const string GetOne = "Subscription/getone/{0}";
-            public const string Info = "Subscription/info/{0}";
-            public const string GetLookup = "Subscription/lookup?userId={0}&subscriptionPlanId={1}&subscriptionStatusId={2}";
+            public const string GetViewAll = "faq/getallview";
+            public const string GetOne = "faq/getone/{0}";
+            public const string Info = "faq/info/{0}";
+            public const string GetLookup = "faq/lookup?portalId={0}&serviceId={1}";
         }
-        public static class SubscriptionPlanUrls
+	public static class LanguageUrls
         {
-            public const string Create = "SubscriptionPlan/Create";
-            public const string Update = "SubscriptionPlan/Update";
-            public const string Delete = "SubscriptionPlan/Delete/{0}";
-            public const string GetAll = "SubscriptionPlan/getall";
-            public const string GetPaged = "SubscriptionPlan/get-paged";
+            public const string Create = "language/Create";
+            public const string Update = "language/Update";
+            public const string Delete = "language/Delete/{0}";
+            public const string GetAll = "language/getall";
+            public const string GetPaged = "language/get-paged";
 
-            public const string GetViewAll = "SubscriptionPlan/getallview";
-            public const string GetOne = "SubscriptionPlan/getone/{0}";
-            public const string Info = "SubscriptionPlan/info/{0}";
-            public const string GetLookup = "SubscriptionPlan/lookup";
+            public const string GetViewAll = "language/getallview";
+            public const string GetOne = "language/getone/{0}";
+            public const string Info = "language/info/{0}";
+            public const string GetLookup = "language/lookup";
         }
-
-        public static class SubscriptionStatusUrls
+	public static class PaymentUrls
         {
-            public const string Create = "SubscriptionStatus/Create";
-            public const string Update = "SubscriptionStatus/Update";
-            public const string Delete = "SubscriptionStatus/Delete/{0}";
-            public const string GetAll = "SubscriptionStatus/getall";
-            public const string GetPaged = "SubscriptionStatus/get-paged";
+            public const string Create = "payment/Create";
+            public const string Update = "payment/Update";
+            public const string Delete = "payment/Delete/{0}";
+            public const string GetAll = "payment/getall";
+            public const string GetPaged = "payment/get-paged";
 
-            public const string GetViewAll = "SubscriptionStatus/getallview";
-            public const string GetOne = "SubscriptionStatus/getone/{0}";
-            public const string Info = "SubscriptionStatus/info/{0}";
-            public const string GetLookup = "SubscriptionStatus/lookup";
+            public const string GetViewAll = "payment/getallview";
+            public const string GetOne = "payment/getone/{0}";
+            public const string Info = "payment/info/{0}";
+            public const string GetLookup = "payment/lookup?subscriptionId={0}";
         }
-
-        public static class TagUrls
+	public static class PortalUrls
         {
-            public const string Create = "Tag/Create";
-            public const string Update = "Tag/Update";
-            public const string Delete = "Tag/Delete/{0}";
-            public const string GetAll = "Tag/getall";
-            public const string GetPaged = "Tag/get-paged";
+            public const string Create = "portal/Create";
+            public const string Update = "portal/Update";
+            public const string Delete = "portal/Delete/{0}";
+            public const string GetAll = "portal/getall";
+            public const string GetPaged = "portal/get-paged";
 
-            public const string GetViewAll = "Tag/getallview";
-            public const string GetOne = "Tag/getone/{0}";
-            public const string Info = "Tag/info/{0}";
-            public const string GetLookup = "Tag/lookup";
+            public const string GetViewAll = "portal/getallview";
+            public const string GetOne = "portal/getone/{0}";
+            public const string Info = "portal/info/{0}";
+            public const string GetLookup = "portal/lookup";
         }
-        public static class UsersUrls
+	public static class ServiceUrls
         {
-            public const string Create = "Users/Create";
-            public const string Update = "Users/Update";
-            public const string Delete = "Users/Delete/{0}";
-            public const string GetAll = "Users/getall";
-            public const string GetPaged = "Users/get-paged";
+            public const string Create = "service/Create";
+            public const string Update = "service/Update";
+            public const string Delete = "service/Delete/{0}";
+            public const string GetAll = "service/getall";
+            public const string GetPaged = "service/get-paged";
 
-            public const string GetViewAll = "Users/getallview";
-            public const string GetOne = "Users/getone/{0}";
-            public const string Info = "Users/info/{0}";
-            public const string GetLookup = "Users/lookup";
+            public const string GetViewAll = "service/getallview";
+            public const string GetOne = "service/getone/{0}";
+            public const string Info = "service/info/{0}";
+            public const string GetLookup = "service/lookup?serviceTypeId={0}&portalId={1}";
+        }
+	public static class ServiceTypeUrls
+        {
+            public const string Create = "servicetype/Create";
+            public const string Update = "servicetype/Update";
+            public const string Delete = "servicetype/Delete/{0}";
+            public const string GetAll = "servicetype/getall";
+            public const string GetPaged = "servicetype/get-paged";
+
+            public const string GetViewAll = "servicetype/getallview";
+            public const string GetOne = "servicetype/getone/{0}";
+            public const string Info = "servicetype/info/{0}";
+            public const string GetLookup = "servicetype/lookup";
+        }
+	public static class SubscriptionUrls
+        {
+            public const string Create = "subscription/Create";
+            public const string Update = "subscription/Update";
+            public const string Delete = "subscription/Delete/{0}";
+            public const string GetAll = "subscription/getall";
+            public const string GetPaged = "subscription/get-paged";
+
+            public const string GetViewAll = "subscription/getallview";
+            public const string GetOne = "subscription/getone/{0}";
+            public const string Info = "subscription/info/{0}";
+            public const string GetLookup = "subscription/lookup?userId={0}&subscriptionPlanId={1}&subscriptionStatusId={2}";
+        }
+	public static class SubscriptionPlanUrls
+        {
+            public const string Create = "subscriptionplan/Create";
+            public const string Update = "subscriptionplan/Update";
+            public const string Delete = "subscriptionplan/Delete/{0}";
+            public const string GetAll = "subscriptionplan/getall";
+            public const string GetPaged = "subscriptionplan/get-paged";
+
+            public const string GetViewAll = "subscriptionplan/getallview";
+            public const string GetOne = "subscriptionplan/getone/{0}";
+            public const string Info = "subscriptionplan/info/{0}";
+            public const string GetLookup = "subscriptionplan/lookup";
+        }
+	public static class SubscriptionStatusUrls
+        {
+            public const string Create = "subscriptionstatus/Create";
+            public const string Update = "subscriptionstatus/Update";
+            public const string Delete = "subscriptionstatus/Delete/{0}";
+            public const string GetAll = "subscriptionstatus/getall";
+            public const string GetPaged = "subscriptionstatus/get-paged";
+
+            public const string GetViewAll = "subscriptionstatus/getallview";
+            public const string GetOne = "subscriptionstatus/getone/{0}";
+            public const string Info = "subscriptionstatus/info/{0}";
+            public const string GetLookup = "subscriptionstatus/lookup";
+        }
+	public static class TagUrls
+        {
+            public const string Create = "tag/Create";
+            public const string Update = "tag/Update";
+            public const string Delete = "tag/Delete/{0}";
+            public const string GetAll = "tag/getall";
+            public const string GetPaged = "tag/get-paged";
+
+            public const string GetViewAll = "tag/getallview";
+            public const string GetOne = "tag/getone/{0}";
+            public const string Info = "tag/info/{0}";
+            public const string GetLookup = "tag/lookup";
+        }
+	public static class UsersUrls
+        {
+            public const string Create = "users/Create";
+            public const string Update = "users/Update";
+            public const string Delete = "users/Delete/{0}";
+            public const string GetAll = "users/getall";
+            public const string GetPaged = "users/get-paged";
+
+            public const string GetViewAll = "users/getallview";
+            public const string GetOne = "users/getone/{0}";
+            public const string Info = "users/info/{0}";
+            public const string GetLookup = "users/lookup";
         }
 
 
@@ -260,7 +242,15 @@ namespace Dashboard.Common.WebClientHelpers
             public const string Save = "Attachment/Save";
         }
 
-
+        public static class AdminUrls
+        {
+            public const string Save = "Identity/Save";
+            public const string Delete = "Identity/Delete/{0}";
+            public const string GetAll = "Identity/getall";
+            public const string GetAllAdmins = "Identity/get-all-admins";
+            public const string GetOne = "Identity/getone/{0}";
+            public const string Getfullname = "Identity/getfullname/{0}";
+        }
 
         public static class IdentityAdminUrls
         {

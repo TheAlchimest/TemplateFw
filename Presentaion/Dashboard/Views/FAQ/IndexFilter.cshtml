@@ -11,7 +11,7 @@
                 <div class="col-md-4 eng-form-element">
 <div class="form-group select2-lg">
     <label class="form-label-small px-3" for="PortalId">@modulesLocalizer["Portal"] :</label>
-    <select class="form-control form-select select2 select2-control select-dynamic"   id="PortalId" name="PortalId" data-api-url="lookup/portals" data-default-val="" data-default-text="@localizer["All"]" value="@(Model?.PortalId)"  data-smk-max="9999999999" data-smk-min="-9999999999">
+    <select class="form-control form-select select2 select2-control select-dynamic"   id="PortalId" name="PortalId" data-api-url="portal/lookup" data-default-val="" data-default-text="@localizer["All"]" value="@(Model?.PortalId)"  data-smk-max="9999999999" data-smk-min="-9999999999">
     </select>
     
 </div>
@@ -19,7 +19,7 @@
 <div class="col-md-4 eng-form-element">
 <div class="form-group select2-lg">
     <label class="form-label-small px-3" for="ServiceId">@modulesLocalizer["Service"] :</label>
-    <select class="form-control form-select select2 select2-control select-dynamic"   id="ServiceId" name="ServiceId" data-api-url="lookup/services" data-default-val="" data-default-text="@localizer["All"]" data-cascade-with="PortalId" data-cascade-api-url="lookup/services?portalId=" value="@(Model?.ServiceId)"  data-smk-max="9999999999" data-smk-min="-9999999999">
+    <select class="form-control form-select select2 select2-control select-dynamic"   id="ServiceId" name="ServiceId" data-api-url="service/lookup" data-default-val="" data-default-text="@localizer["All"]" data-cascade-with="PortalId" data-cascade-api-url="service/lookup?portalId=" value="@(Model?.ServiceId)"  data-smk-max="9999999999" data-smk-min="-9999999999">
     </select>
     
 </div>

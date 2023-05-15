@@ -151,6 +151,18 @@ namespace TemplateFw.Dashboard.Controllers
                 return ReturnJsonException(ex, OperationTypes.Delete);
             }
 
+}
+        #endregion
+
+
+        #region Lookup
+        
+        [HttpGet]
+        public async Task<JsonResult> Lookup(int? portalId = null, int? serviceId = null)
+        {
+            string url = string.Format(Urls.GetLookup, portalId, serviceId);
+            var apiResult = await _api.GetAsync<GenericApiResponse<List<LookupDto>>>(url);
+            return ReturnJsonResponse(apiResult, OperationTypes.GetList);
         }
         #endregion
 

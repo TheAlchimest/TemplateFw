@@ -9,8 +9,8 @@
 <form method="post" id="frmForm" name="frmForm" action="@(ViewBag.ActionUrl)">
     <div class="form-head mb-sm-5 mb-3 d-flex flex-wrap align-items-center ">
         <div class=" mr-auto">
-            <h3 class="font-w600 mb-2">@modulesLocalizer["Faq"]</h3>
-            <p class="mb-0">@modulesLocalizer["FaqManagement"]</p>
+            <h3 class="font-w600 mb-2">@modulesLocalizer["Faqs"]</h3>
+            <p class="mb-0">@modulesLocalizer["Faq_Management"]</p>
         </div>
     </div>
     <div class="card master-form">
@@ -67,7 +67,7 @@
                new TemplateFw.Shared.Dto.RunTimeSelectControl(){
                   Id="PortalId",
                    AdditionalAttributes = "",
-                   ApiUrl = webSettings.Value.LookupApiUrl+ "lookup/portals", 
+                   ApiUrl = webSettings.Value.ApiLookupApiUrl+ "portal/lookup", 
                    Value = Model?.PortalId.ToString(),
                    AddDefaultOption=(!isUpdateMode)
                });
@@ -81,9 +81,9 @@
                new TemplateFw.Shared.Dto.RunTimeSelectControl(){
                   Id="ServiceId",
                    AdditionalAttributes = "",
-                   ApiUrl = webSettings.Value.LookupApiUrl+ "lookup/services", 
+                   ApiUrl = webSettings.Value.ApiLookupApiUrl+ "service/lookup", 
                    CascadeWith = "PortalId", 
-                   CascadeApiUrl = webSettings.Value.LookupApiUrl+ "lookup/services?portalId=", 
+                   CascadeApiUrl = webSettings.Value.ApiLookupApiUrl+ "service/lookup?portalId=", 
                    Value = Model?.ServiceId.ToString(),
                    AddDefaultOption=(!isUpdateMode)
                });

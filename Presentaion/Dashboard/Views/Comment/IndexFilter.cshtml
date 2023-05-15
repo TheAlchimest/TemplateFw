@@ -11,7 +11,7 @@
                 <div class="col-md-4 eng-form-element">
 <div class="form-group select2-lg">
     <label class="form-label-small px-3" for="ArticleId">@modulesLocalizer["Article"] :</label>
-    <select class="form-control form-select select2 select2-control select-dynamic"   id="ArticleId" name="ArticleId" data-api-url="lookup/articles" data-default-val="" data-default-text="@localizer["All"]" value="@(Model?.ArticleId)"  data-smk-max="9999999999" data-smk-min="-9999999999">
+    <select class="form-control form-select select2 select2-control select-dynamic"   id="ArticleId" name="ArticleId" data-api-url="article/lookup" data-default-val="" data-default-text="@localizer["All"]" value="@(Model?.ArticleId)"  data-smk-max="9999999999" data-smk-min="-9999999999">
     </select>
     
 </div>
@@ -19,7 +19,7 @@
 <div class="col-md-4 eng-form-element">
 <div class="form-group select2-lg">
     <label class="form-label-small px-3" for="UserId">@modulesLocalizer["Users"] :</label>
-    <select class="form-control form-select select2 select2-control select-dynamic"   id="UserId" name="UserId" data-api-url="lookup/users" data-default-val="" data-default-text="@localizer["All"]" value="@(Model?.UserId)"  data-smk-max="9999999999" data-smk-min="-9999999999">
+    <select class="form-control form-select select2 select2-control select-dynamic"   id="UserId" name="UserId" data-api-url="users/lookup" data-default-val="" data-default-text="@localizer["All"]" value="@(Model?.UserId)"  data-smk-max="9999999999" data-smk-min="-9999999999">
     </select>
     
 </div>

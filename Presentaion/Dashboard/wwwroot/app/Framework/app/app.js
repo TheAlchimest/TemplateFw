@@ -10,7 +10,7 @@
     lookupApiUrl: "",
 
     run: function () {
-        app.lookupApiUrl = $("#LookupApiUrl").val();
+        app.lookupApiUrl = $("#WebLookupApiUrl").val();
         app.navigation.run();
         app.ui.run();
     },

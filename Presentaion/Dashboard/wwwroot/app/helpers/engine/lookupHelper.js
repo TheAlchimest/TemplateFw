@@ -65,7 +65,6 @@ var lookupHelper = {
 
     loadSelectDataFromApi: function ($element, apiUrl) {
         let helper = lookupHelper;
-        debugger;
         if ($element.hasClass("select2")) {
             $element.parent().find(".select2-container").addClass("partial-loading-box");
         }

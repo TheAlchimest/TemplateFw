@@ -10,7 +10,6 @@ using TemplateFw.Shared.Domain.Enums;
 using TemplateFw.Shared.Domain.GenericResponse;
 using TemplateFw.Shared.Dtos.Collections;
 using TemplateFw.Shared.Helpers;
-
 using Urls = Dashboard.Common.WebClientHelpers.InternalApiDictionary.AuthorUrls;
 
 namespace TemplateFw.Dashboard.Controllers
@@ -152,6 +151,18 @@ namespace TemplateFw.Dashboard.Controllers
                 return ReturnJsonException(ex, OperationTypes.Delete);
             }
 
+}
+        #endregion
+
+
+        #region Lookup
+        
+        [HttpGet]
+        public async Task<JsonResult> Lookup(int? countryId = null)
+        {
+            string url = string.Format(Urls.GetLookup, countryId);
+            var apiResult = await _api.GetAsync<GenericApiResponse<List<LookupDto>>>(url);
+            return ReturnJsonResponse(apiResult, OperationTypes.GetList);
         }
         #endregion
 

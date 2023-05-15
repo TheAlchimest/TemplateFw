@@ -25,7 +25,6 @@
         //window.document.title = $activeLink.length ? $activeLink.text() + ' | Celebrate You' : 'Celebrate You';
         app.ui.showPreloader();
         let url = '/' + targetPage;
-        debugger;
         let jqxhr = $.get(url)
             .done(function (html, status, xhr) {
                 if (jqxhr.Target == null || jqxhr.Target == location.hash) {

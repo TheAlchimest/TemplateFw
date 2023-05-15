@@ -17,19 +17,15 @@ namespace Dashboard.Common.WebClientHelpers
     {
         private static IServiceCollection _serviceProvider;
         private static RequestUrlHelper _internalApiHelper;
-        private static RequestUrlHelper _accountsInternalApiHelper;
         public static IServiceCollection SetWebClientHelpersConfigurations(this IServiceCollection serviceProvider,
-            string internalApiUrl, string accountsApiUrl)
+            string internalApiUrl)
         {
             _internalApiHelper = new RequestUrlHelper(internalApiUrl);
-            _accountsInternalApiHelper = new RequestUrlHelper(accountsApiUrl);
             _serviceProvider = serviceProvider;
             return serviceProvider;
         }
 
         public static RequestUrlHelper InternalAPI { get { return _internalApiHelper; } }
-        public static RequestUrlHelper AcountsAPI { get { return _accountsInternalApiHelper; } }
-
         public static string GetLoggedInUSer()
         {
             if (_serviceProvider != null)

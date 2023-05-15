@@ -9,8 +9,8 @@
 <form method="post" id="frmForm" name="frmForm" action="@(ViewBag.ActionUrl)">
     <div class="form-head mb-sm-5 mb-3 d-flex flex-wrap align-items-center ">
         <div class=" mr-auto">
-            <h3 class="font-w600 mb-2">@modulesLocalizer["Service"]</h3>
-            <p class="mb-0">@modulesLocalizer["ServiceManagement"]</p>
+            <h3 class="font-w600 mb-2">@modulesLocalizer["Services"]</h3>
+            <p class="mb-0">@modulesLocalizer["Service_Management"]</p>
         </div>
     </div>
     <div class="card master-form">
@@ -77,7 +77,7 @@
                new TemplateFw.Shared.Dto.RunTimeSelectControl(){
                   Id="ServiceTypeId",
                    AdditionalAttributes = "",
-                   ApiUrl = webSettings.Value.LookupApiUrl+ "lookup/servicetypes", 
+                   ApiUrl = webSettings.Value.ApiLookupApiUrl+ "servicetype/lookup", 
                    Value = Model?.ServiceTypeId.ToString(),
                    AddDefaultOption=(!isUpdateMode)
                });
@@ -109,7 +109,7 @@
                new TemplateFw.Shared.Dto.RunTimeSelectControl(){
                   Id="PortalId",
                    AdditionalAttributes = "",
-                   ApiUrl = webSettings.Value.LookupApiUrl+ "lookup/portals", 
+                   ApiUrl = webSettings.Value.ApiLookupApiUrl+ "portal/lookup", 
                    Value = Model?.PortalId.ToString(),
                    AddDefaultOption=(!isUpdateMode)
                });

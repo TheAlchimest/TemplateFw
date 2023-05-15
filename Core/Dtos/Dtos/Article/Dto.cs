@@ -18,9 +18,7 @@ namespace TemplateFw.Dtos
 		public string ContentEn { get; set; }
 		public int AuthorId { get; set; }
 		public int? CategoryId { get; set; }
-		public bool IsPublished { get; set; }
-		public DateTime PublicationDate { get; set; }
-		public DateTime PublishedAt { get; set; }
+		public DateTime PublishingDate { get; set; }
 		public bool IsAvailable { get; set; }
 		public DateTime CreationDate { get; set; }
 		public string CreatedBy { get; set; }
@@ -39,9 +37,7 @@ namespace TemplateFw.Dtos
 		public string FirstName { get; set; }
 		public int? CategoryId { get; set; }
 		public string CategoryName { get; set; }
-		public bool IsPublished { get; set; }
-		public DateTime PublicationDate { get; set; }
-		public DateTime PublishedAt { get; set; }
+		public DateTime PublishingDate { get; set; }
 		public bool IsAvailable { get; set; }
 		public DateTime CreationDate { get; set; }
 		public string CreatedBy { get; set; }
@@ -96,17 +92,9 @@ namespace TemplateFw.Dtos
 			    .NotNull().WithMessage(validationLocalizer["RequiredChoose"])
 			    .WithName(modulesLocalizer["Article_Author"]);
 
-			RuleFor(x => x.IsPublished)
+			RuleFor(x => x.PublishingDate)
 			    .NotNull().WithMessage(validationLocalizer["RequiredEnter"])
-			    .WithName(modulesLocalizer["Article_IsPublished"]);
-
-			RuleFor(x => x.PublicationDate)
-			    .NotNull().WithMessage(validationLocalizer["RequiredEnter"])
-			    .WithName(modulesLocalizer["Article_PublicationDate"]);
-
-			RuleFor(x => x.PublishedAt)
-			    .NotNull().WithMessage(validationLocalizer["RequiredEnter"])
-			    .WithName(modulesLocalizer["Article_PublishedAt"]);
+			    .WithName(modulesLocalizer["Article_PublishingDate"]);
 
 
         }

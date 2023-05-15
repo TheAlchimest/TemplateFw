@@ -11,7 +11,7 @@
                 <div class="col-md-4 eng-form-element">
 <div class="form-group select2-lg">
     <label class="form-label-small px-3" for="ServiceTypeId">@modulesLocalizer["ServiceType"] :</label>
-    <select class="form-control form-select select2 select2-control select-dynamic"   id="ServiceTypeId" name="ServiceTypeId" data-api-url="lookup/servicetypes" data-default-val="" data-default-text="@localizer["All"]" value="@(Model?.ServiceTypeId)"  data-smk-max="9999999999" data-smk-min="-9999999999">
+    <select class="form-control form-select select2 select2-control select-dynamic"   id="ServiceTypeId" name="ServiceTypeId" data-api-url="servicetype/lookup" data-default-val="" data-default-text="@localizer["All"]" value="@(Model?.ServiceTypeId)"  data-smk-max="9999999999" data-smk-min="-9999999999">
     </select>
     
 </div>
@@ -19,7 +19,7 @@
 <div class="col-md-4 eng-form-element">
 <div class="form-group select2-lg">
     <label class="form-label-small px-3" for="PortalId">@modulesLocalizer["Portal"] :</label>
-    <select class="form-control form-select select2 select2-control select-dynamic"   id="PortalId" name="PortalId" data-api-url="lookup/portals" data-default-val="" data-default-text="@localizer["All"]" value="@(Model?.PortalId)"  data-smk-max="9999999999" data-smk-min="-9999999999">
+    <select class="form-control form-select select2 select2-control select-dynamic"   id="PortalId" name="PortalId" data-api-url="portal/lookup" data-default-val="" data-default-text="@localizer["All"]" value="@(Model?.PortalId)"  data-smk-max="9999999999" data-smk-min="-9999999999">
     </select>
     
 </div>

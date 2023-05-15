@@ -24,7 +24,7 @@ namespace TemplateFw.Dashboard
             var webSettingsSection = Configuration.GetSection("WebSettings");
             services.Configure<WebSettings>(webSettingsSection);
             var webSettings = webSettingsSection.Get<WebSettings>();
-            services.SetWebClientHelpersConfigurations(webSettings.ModulesInternalApiUrl, webSettings.AccountsInternalApiUrl);
+            services.SetWebClientHelpersConfigurations(webSettings.ModulesInternalApiUrl);
             services.AddControllersWithViews();
 
             services.AddWindowsAuth();

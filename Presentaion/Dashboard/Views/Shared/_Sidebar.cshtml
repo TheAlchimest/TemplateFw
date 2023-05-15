@@ -2,147 +2,126 @@
 <div class="deznav">
     <div class="deznav-scroll">
         <ul class="metismenu" id="menu">
+            
             <li>
-                <a href="/" class="ai-icon" aria-expanded="false">
-                    <img src="~/images/icons/dashboard.svg" width="48" class="icon-img" />
-                    <span class="nav-text">الاحصائيات العامة</span>
-                </a>
-            </li>
-
-            <li>
-                <a href="#!/Article/" class="ai-icon" aria-expanded="false">
+                <a href="#!/article/" class="ai-icon" aria-expanded="false">
                     <img src="~/images/icons/file-question-alt.svg" width="48" class="icon-img" />
-                    <span class="nav-text">Article </span>
-                </a>
-            </li>
-            <li>
-                <a href="#!/Author/" class="ai-icon" aria-expanded="false">
-                    <img src="~/images/icons/file-question-alt.svg" width="48" class="icon-img" />
-                    <span class="nav-text">Author </span>
-                </a>
-            </li>
-            <li>
-                <a href="#!/Category/" class="ai-icon" aria-expanded="false">
-                    <img src="~/images/icons/file-question-alt.svg" width="48" class="icon-img" />
-                    <span class="nav-text">Category </span>
-                </a>
-            </li>
-            <li>
-                <a href="#!/Comment/" class="ai-icon" aria-expanded="false">
-                    <img src="~/images/icons/file-question-alt.svg" width="48" class="icon-img" />
-                    <span class="nav-text">Comment </span>
-                </a>
-            </li>
-            <li>
-                <a href="#!/ContactUs/" class="ai-icon" aria-expanded="false">
-                    <img src="~/images/icons/file-question-alt.svg" width="48" class="icon-img" />
-                    <span class="nav-text">ContactUs </span>
-                </a>
-            </li>
-            <li>
-                <a href="#!/Country/" class="ai-icon" aria-expanded="false">
-                    <img src="~/images/icons/file-question-alt.svg" width="48" class="icon-img" />
-                    <span class="nav-text">Country </span>
-                </a>
-            </li>
-            <li>
-                <a href="#!/Language/" class="ai-icon" aria-expanded="false">
-                    <img src="~/images/icons/file-question-alt.svg" width="48" class="icon-img" />
-                    <span class="nav-text">Language </span>
-                </a>
-            </li>
-            <li>
-                <a href="#!/Payment/" class="ai-icon" aria-expanded="false">
-                    <img src="~/images/icons/file-question-alt.svg" width="48" class="icon-img" />
-                    <span class="nav-text">Payment </span>
-                </a>
-            </li>
-            <li>
-                <a href="#!/Subscription/" class="ai-icon" aria-expanded="false">
-                    <img src="~/images/icons/file-question-alt.svg" width="48" class="icon-img" />
-                    <span class="nav-text">Subscription </span>
-                </a>
-            </li>
-            <li>
-                <a href="#!/SubscriptionPlan/" class="ai-icon" aria-expanded="false">
-                    <img src="~/images/icons/file-question-alt.svg" width="48" class="icon-img" />
-                    <span class="nav-text">SubscriptionPlan </span>
-                </a>
-            </li>
-            <li>
-                <a href="#!/SubscriptionStatus/" class="ai-icon" aria-expanded="false">
-                    <img src="~/images/icons/file-question-alt.svg" width="48" class="icon-img" />
-                    <span class="nav-text">SubscriptionStatus </span>
-                </a>
-            </li>
-            <li>
-                <a href="#!/Tag/" class="ai-icon" aria-expanded="false">
-                    <img src="~/images/icons/file-question-alt.svg" width="48" class="icon-img" />
-                    <span class="nav-text">Tag </span>
-                </a>
-            </li>
-            <li>
-                <a href="#!/Users/" class="ai-icon" aria-expanded="false">
-                    <img src="~/images/icons/file-question-alt.svg" width="48" class="icon-img" />
-                    <span class="nav-text">Users </span>
+                    <span class="nav-text">@modulesLocalizer["Articles"] </span>
                 </a>
             </li>
             
-            @if (User.IsInRole(RoleProvider.Faq))
-            {
-                <li>
-                    <a href="#!/faq/" class="ai-icon" aria-expanded="false">
-                        <img src="~/images/icons/file-question-alt.svg" width="48" class="icon-img" />
-                        <span class="nav-text">الأسئلة الشائعة</span>
-                    </a>
-                </li>
-            }
-            @*@if (User.IsInRole(RoleProvider.Service))
-            {*@
-                <li>
-                    <a href="#!/Service/" class="ai-icon" aria-expanded="false">
-                        <img src="~/images/icons/file-question-alt.svg" width="48" class="icon-img" />
-                        <span class="nav-text">الخدمات </span>
-                    </a>
-                </li>
-            @*}
-            @if (User.IsInRole(RoleProvider.Country))
-            {*@
-                <li>
-                    <a href="#!/Country/" class="ai-icon" aria-expanded="false">
-                        <img src="~/images/icons/file-question-alt.svg" width="48" class="icon-img" />
-                        <span class="nav-text">الدول </span>
-                    </a>
-                </li>
-            @*}
-            @if (User.IsInRole(RoleProvider.ServiceType))
-            {*@
-                <li>
-                    <a href="#!/ServiceType/" class="ai-icon" aria-expanded="false">
-                        <img src="~/images/icons/file-question-alt.svg" width="48" class="icon-img" />
-                        <span class="nav-text">أنواع الخدمات </span>
-                    </a>
-                </li>
-            @*}
-            @if (User.IsInRole(RoleProvider.Portal))
-            {*@
-                <li>
-                    <a href="#!/Portal/" class="ai-icon" aria-expanded="false">
-                        <img src="~/images/icons/file-question-alt.svg" width="48" class="icon-img" />
-                        <span class="nav-text">البوابات </span>
-                    </a>
-                </li>
-            @*}*@
-            @if (User.IsInRole(RoleProvider.ANNOUNCING_ADMIN))
-            {
-                <li>
-                    <a href="#!/Announce/" class="ai-icon" aria-expanded="false">
-                        <img src="~/images/icons/megaphone.svg" width="48" class="icon-img" />
-                        <span class="nav-text">التعاميم</span>
-                    </a>
-                </li>
-            }
-
+            <li>
+                <a href="#!/author/" class="ai-icon" aria-expanded="false">
+                    <img src="~/images/icons/file-question-alt.svg" width="48" class="icon-img" />
+                    <span class="nav-text">@modulesLocalizer["Authors"] </span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="#!/category/" class="ai-icon" aria-expanded="false">
+                    <img src="~/images/icons/file-question-alt.svg" width="48" class="icon-img" />
+                    <span class="nav-text">@modulesLocalizer["Categories"] </span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="#!/comment/" class="ai-icon" aria-expanded="false">
+                    <img src="~/images/icons/file-question-alt.svg" width="48" class="icon-img" />
+                    <span class="nav-text">@modulesLocalizer["Comments"] </span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="#!/contactUs/" class="ai-icon" aria-expanded="false">
+                    <img src="~/images/icons/file-question-alt.svg" width="48" class="icon-img" />
+                    <span class="nav-text">@modulesLocalizer["ContactUs"] </span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="#!/country/" class="ai-icon" aria-expanded="false">
+                    <img src="~/images/icons/file-question-alt.svg" width="48" class="icon-img" />
+                    <span class="nav-text">@modulesLocalizer["Countries"] </span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="#!/faq/" class="ai-icon" aria-expanded="false">
+                    <img src="~/images/icons/file-question-alt.svg" width="48" class="icon-img" />
+                    <span class="nav-text">@modulesLocalizer["Faqs"] </span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="#!/language/" class="ai-icon" aria-expanded="false">
+                    <img src="~/images/icons/file-question-alt.svg" width="48" class="icon-img" />
+                    <span class="nav-text">@modulesLocalizer["Languages"] </span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="#!/payment/" class="ai-icon" aria-expanded="false">
+                    <img src="~/images/icons/file-question-alt.svg" width="48" class="icon-img" />
+                    <span class="nav-text">@modulesLocalizer["Payments"] </span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="#!/portal/" class="ai-icon" aria-expanded="false">
+                    <img src="~/images/icons/file-question-alt.svg" width="48" class="icon-img" />
+                    <span class="nav-text">@modulesLocalizer["Portals"] </span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="#!/service/" class="ai-icon" aria-expanded="false">
+                    <img src="~/images/icons/file-question-alt.svg" width="48" class="icon-img" />
+                    <span class="nav-text">@modulesLocalizer["Services"] </span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="#!/serviceType/" class="ai-icon" aria-expanded="false">
+                    <img src="~/images/icons/file-question-alt.svg" width="48" class="icon-img" />
+                    <span class="nav-text">@modulesLocalizer["ServiceTypes"] </span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="#!/subscription/" class="ai-icon" aria-expanded="false">
+                    <img src="~/images/icons/file-question-alt.svg" width="48" class="icon-img" />
+                    <span class="nav-text">@modulesLocalizer["Subscriptions"] </span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="#!/subscriptionPlan/" class="ai-icon" aria-expanded="false">
+                    <img src="~/images/icons/file-question-alt.svg" width="48" class="icon-img" />
+                    <span class="nav-text">@modulesLocalizer["SubscriptionPlans"] </span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="#!/subscriptionStatus/" class="ai-icon" aria-expanded="false">
+                    <img src="~/images/icons/file-question-alt.svg" width="48" class="icon-img" />
+                    <span class="nav-text">@modulesLocalizer["SubscriptionStatuses"] </span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="#!/tag/" class="ai-icon" aria-expanded="false">
+                    <img src="~/images/icons/file-question-alt.svg" width="48" class="icon-img" />
+                    <span class="nav-text">@modulesLocalizer["Tags"] </span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="#!/users/" class="ai-icon" aria-expanded="false">
+                    <img src="~/images/icons/file-question-alt.svg" width="48" class="icon-img" />
+                    <span class="nav-text">@modulesLocalizer["Users"] </span>
+                </a>
+            </li>
+            
            @* @if (User.IsInRole(RoleProvider.SUPER_ADMIN))
             {
                 <li>

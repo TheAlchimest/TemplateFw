@@ -134,9 +134,7 @@
 <data name="Article_AuthorChoose" xml:space="preserve"><value>Choose author id</value></data>
 <data name="Article_Category" xml:space="preserve"><value>Category id</value></data>
 <data name="Article_CategoryChoose" xml:space="preserve"><value>Choose category id</value></data>
-<data name="Article_IsPublished" xml:space="preserve"><value>Is published?</value></data>
-<data name="Article_PublicationDate" xml:space="preserve"><value>Publication date</value></data>
-<data name="Article_PublishedAt" xml:space="preserve"><value>Published at</value></data>
+<data name="Article_PublishingDate" xml:space="preserve"><value>Publishing date</value></data>
 <data name="Article_IsAvailable" xml:space="preserve"><value>Is available?</value></data>
 <data name="Article_CreationDate" xml:space="preserve"><value>Creation date</value></data>
 <data name="Article_CreatedBy" xml:space="preserve"><value>Created by</value></data>

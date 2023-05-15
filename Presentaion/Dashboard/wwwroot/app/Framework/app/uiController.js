@@ -49,7 +49,7 @@
     },
     bindDateTime: function () {
         let ctrl = this;
-        $('input[data-type="date"]').each(function () {
+        $('input[data-type="date"],input[data-type="datehijri"]').each(function () {
             let endDate = null;
             if ($(this).data('olddate') == true)
                 endDate = ctrl.date2str(new Date(), 'yyyy-MM-dd');
