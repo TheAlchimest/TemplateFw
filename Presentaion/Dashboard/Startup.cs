@@ -1,10 +1,9 @@
-using Dashboard.Common.WebClientHelpers;
+﻿using Dashboard.Common.WebClientHelpers;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Mvc.Razor;
 using TemplateFw.Dashboard.Auth;
 using TemplateFw.Dtos;
-using TemplateFw.Resources;
 using TemplateFw.Shared.Configuration;
 
 namespace TemplateFw.Dashboard
@@ -32,53 +31,83 @@ namespace TemplateFw.Dashboard
             var config = new SystemConfiguration();
             Configuration.Bind(config);
             services.AddSingleton(config);
-            services.AddTransient<FaqDtoInsertValidator, FaqDtoInsertValidator>();
-            services.AddTransient<FaqDtoUpdateValidator, FaqDtoUpdateValidator>();
-
-            services.AddTransient<CountryDtoInsertValidator, CountryDtoInsertValidator>();
-            services.AddTransient<CountryDtoInsertValidator, CountryDtoUpdateValidator>();
-
-            services.AddTransient<CountryDtoInsertValidator, CountryDtoInsertValidator>();
-            services.AddTransient<CountryDtoUpdateValidator, CountryDtoUpdateValidator>();
-
-            services.AddTransient<ServiceTypeDtoInsertValidator, ServiceTypeDtoInsertValidator>();
-            services.AddTransient<ServiceTypeDtoUpdateValidator, ServiceTypeDtoUpdateValidator>();
-
-            services.AddTransient<ArticleDtoInsertValidator, ArticleDtoInsertValidator>();
-            services.AddTransient<ArticleDtoUpdateValidator, ArticleDtoUpdateValidator>();
-
-            services.AddTransient<AuthorDtoInsertValidator, AuthorDtoInsertValidator>();
-            services.AddTransient<AuthorDtoUpdateValidator, AuthorDtoUpdateValidator>();
-
-            services.AddTransient<CategoryDtoInsertValidator, CategoryDtoInsertValidator>();
-            services.AddTransient<CategoryDtoUpdateValidator, CategoryDtoUpdateValidator>();
-
-            services.AddTransient<CommentDtoInsertValidator, CommentDtoInsertValidator>();
-            services.AddTransient<CommentDtoUpdateValidator, CommentDtoUpdateValidator>();
-
-            services.AddTransient<ContactUsDtoInsertValidator, ContactUsDtoInsertValidator>();
-            services.AddTransient<ContactUsDtoUpdateValidator, ContactUsDtoUpdateValidator>();
-
-            services.AddTransient<PaymentDtoInsertValidator, PaymentDtoInsertValidator>();
-            services.AddTransient<PaymentDtoUpdateValidator, PaymentDtoUpdateValidator>();
-
-            services.AddTransient<SubscriptionDtoInsertValidator, SubscriptionDtoInsertValidator>();
-            services.AddTransient<SubscriptionDtoUpdateValidator, SubscriptionDtoUpdateValidator>();
-
-            services.AddTransient<SubscriptionPlanDtoInsertValidator, SubscriptionPlanDtoInsertValidator>();
-            services.AddTransient<SubscriptionPlanDtoUpdateValidator, SubscriptionPlanDtoUpdateValidator>();
-
-            services.AddTransient<SubscriptionStatusDtoInsertValidator, SubscriptionStatusDtoInsertValidator>();
-            services.AddTransient<SubscriptionStatusDtoUpdateValidator, SubscriptionStatusDtoUpdateValidator>();
-
-            services.AddTransient<TagDtoInsertValidator, TagDtoInsertValidator>();
-            services.AddTransient<TagDtoUpdateValidator, TagDtoUpdateValidator>();
-
-            services.AddTransient<UsersDtoInsertValidator, UsersDtoInsertValidator>();
-            services.AddTransient<UsersDtoUpdateValidator, UsersDtoUpdateValidator>();
-
-
-
+            
+			//Article
+			services.AddTransient<ArticleDtoInsertValidator>();
+			services.AddTransient<ArticleDtoUpdateValidator>();
+			services.AddTransient<ArticleFilterValidator>();
+			//Author
+			services.AddTransient<AuthorDtoInsertValidator>();
+			services.AddTransient<AuthorDtoUpdateValidator>();
+			services.AddTransient<AuthorFilterValidator>();
+			//Category
+			services.AddTransient<CategoryDtoInsertValidator>();
+			services.AddTransient<CategoryDtoUpdateValidator>();
+			services.AddTransient<CategoryFilterValidator>();
+			//Comment
+			services.AddTransient<CommentDtoInsertValidator>();
+			services.AddTransient<CommentDtoUpdateValidator>();
+			services.AddTransient<CommentFilterValidator>();
+			//ContactUs
+			services.AddTransient<ContactUsDtoInsertValidator>();
+			services.AddTransient<ContactUsDtoUpdateValidator>();
+			services.AddTransient<ContactUsFilterValidator>();
+			//Country
+			services.AddTransient<CountryDtoInsertValidator>();
+			services.AddTransient<CountryDtoUpdateValidator>();
+			services.AddTransient<CountryFilterValidator>();
+			//Faq
+			services.AddTransient<FaqDtoInsertValidator>();
+			services.AddTransient<FaqDtoUpdateValidator>();
+			services.AddTransient<FaqFilterValidator>();
+			//Language
+			services.AddTransient<LanguageDtoInsertValidator>();
+			services.AddTransient<LanguageDtoUpdateValidator>();
+			services.AddTransient<LanguageFilterValidator>();
+			//Model
+			services.AddTransient<ModelDtoInsertValidator>();
+			services.AddTransient<ModelDtoUpdateValidator>();
+			services.AddTransient<ModelFilterValidator>();
+			//ModelStatus
+			services.AddTransient<ModelStatusDtoInsertValidator>();
+			services.AddTransient<ModelStatusDtoUpdateValidator>();
+			services.AddTransient<ModelStatusFilterValidator>();
+			//Payment
+			services.AddTransient<PaymentDtoInsertValidator>();
+			services.AddTransient<PaymentDtoUpdateValidator>();
+			services.AddTransient<PaymentFilterValidator>();
+			//Portal
+			services.AddTransient<PortalDtoInsertValidator>();
+			services.AddTransient<PortalDtoUpdateValidator>();
+			services.AddTransient<PortalFilterValidator>();
+			//Service
+			services.AddTransient<ServiceDtoInsertValidator>();
+			services.AddTransient<ServiceDtoUpdateValidator>();
+			services.AddTransient<ServiceFilterValidator>();
+			//ServiceType
+			services.AddTransient<ServiceTypeDtoInsertValidator>();
+			services.AddTransient<ServiceTypeDtoUpdateValidator>();
+			services.AddTransient<ServiceTypeFilterValidator>();
+			//Subscription
+			services.AddTransient<SubscriptionDtoInsertValidator>();
+			services.AddTransient<SubscriptionDtoUpdateValidator>();
+			services.AddTransient<SubscriptionFilterValidator>();
+			//SubscriptionPlan
+			services.AddTransient<SubscriptionPlanDtoInsertValidator>();
+			services.AddTransient<SubscriptionPlanDtoUpdateValidator>();
+			services.AddTransient<SubscriptionPlanFilterValidator>();
+			//SubscriptionStatus
+			services.AddTransient<SubscriptionStatusDtoInsertValidator>();
+			services.AddTransient<SubscriptionStatusDtoUpdateValidator>();
+			services.AddTransient<SubscriptionStatusFilterValidator>();
+			//Tag
+			services.AddTransient<TagDtoInsertValidator>();
+			services.AddTransient<TagDtoUpdateValidator>();
+			services.AddTransient<TagFilterValidator>();
+			//Users
+			services.AddTransient<UsersDtoInsertValidator>();
+			services.AddTransient<UsersDtoUpdateValidator>();
+			services.AddTransient<UsersFilterValidator>();
 
             // Add Localizations
             services.AddLocalization();

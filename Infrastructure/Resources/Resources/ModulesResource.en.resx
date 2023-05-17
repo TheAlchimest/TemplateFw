@@ -149,7 +149,9 @@
 <data name="Author_Email" xml:space="preserve"><value>Email</value></data>
 <data name="Author_Phone" xml:space="preserve"><value>Phone</value></data>
 <data name="Author_Mobile" xml:space="preserve"><value>Mobile</value></data>
+<data name="Author_BiographyAr" xml:space="preserve"><value>Biography in Arabic</value></data>
 <data name="Author_Biography" xml:space="preserve"><value>Biography</value></data>
+<data name="Author_BiographyEn" xml:space="preserve"><value>Biography in English</value></data>
 <data name="Author_ProfileUrl" xml:space="preserve"><value>Profile url</value></data>
 <data name="Author_IDNumber" xml:space="preserve"><value>ID number</value></data>
 <data name="Author_Country" xml:space="preserve"><value>Country</value></data>
@@ -254,6 +256,68 @@
 <data name="Language_CreationDate" xml:space="preserve"><value>Creation date</value></data>
 <data name="Language_ModifiedBy" xml:space="preserve"><value>Modified by</value></data>
 <data name="Language_ModifiedDate" xml:space="preserve"><value>Modified date</value></data>
+<data name="Models" xml:space="preserve"><value>Models</value></data>
+<data name="Model" xml:space="preserve"><value>Model</value></data>
+<data name="Model_Management" xml:space="preserve"><value>Models management</value></data>
+<data name="Model_Information" xml:space="preserve"><value>Model information</value></data>
+<data name="Model_TitleAr" xml:space="preserve"><value>Title in Arabic</value></data>
+<data name="Model_Title" xml:space="preserve"><value>Title</value></data>
+<data name="Model_TitleEn" xml:space="preserve"><value>Title in English</value></data>
+<data name="Model_BriefAr" xml:space="preserve"><value>Brief in Arabic</value></data>
+<data name="Model_Brief" xml:space="preserve"><value>Brief</value></data>
+<data name="Model_BriefEn" xml:space="preserve"><value>Brief in English</value></data>
+<data name="Model_ContentAr" xml:space="preserve"><value>Content in Arabic</value></data>
+<data name="Model_Content" xml:space="preserve"><value>Content</value></data>
+<data name="Model_ContentEn" xml:space="preserve"><value>Content in English</value></data>
+<data name="Model_FirstName" xml:space="preserve"><value>First name</value></data>
+<data name="Model_LastName" xml:space="preserve"><value>Last name</value></data>
+<data name="Model_Email" xml:space="preserve"><value>Email</value></data>
+<data name="Model_Phone" xml:space="preserve"><value>Phone</value></data>
+<data name="Model_Mobile" xml:space="preserve"><value>Mobile</value></data>
+<data name="Model_ProfileUrl" xml:space="preserve"><value>Profile url</value></data>
+<data name="Model_IDNumber" xml:space="preserve"><value>ID number</value></data>
+<data name="Model_Amount" xml:space="preserve"><value>Amount</value></data>
+<data name="Model_Price" xml:space="preserve"><value>Price</value></data>
+<data name="Model_Country" xml:space="preserve"><value>Country</value></data>
+<data name="Model_CountryChoose" xml:space="preserve"><value>Choose country id</value></data>
+<data name="Model_PostalCode" xml:space="preserve"><value>Postal code</value></data>
+<data name="Model_Address" xml:space="preserve"><value>Address</value></data>
+<data name="Model_Website" xml:space="preserve"><value>Website</value></data>
+<data name="Model_StartDate" xml:space="preserve"><value>Start date</value></data>
+<data name="Model_EndDate" xml:space="preserve"><value>End date</value></data>
+<data name="Model_StartHijriDate" xml:space="preserve"><value>Start hijri date</value></data>
+<data name="Model_EndHijriDate" xml:space="preserve"><value>End hijri date</value></data>
+<data name="Model_Category" xml:space="preserve"><value>Category id</value></data>
+<data name="Model_CategoryChoose" xml:space="preserve"><value>Choose category id</value></data>
+<data name="Model_Portal" xml:space="preserve"><value>Portal id</value></data>
+<data name="Model_PortalChoose" xml:space="preserve"><value>Choose portal id</value></data>
+<data name="Model_Service" xml:space="preserve"><value>Service id</value></data>
+<data name="Model_ServiceChoose" xml:space="preserve"><value>Choose service id</value></data>
+<data name="Model_ModelStatus" xml:space="preserve"><value>Model status id</value></data>
+<data name="Model_ModelStatusChoose" xml:space="preserve"><value>Choose model status id</value></data>
+<data name="Model_IsPublished" xml:space="preserve"><value>Is published?</value></data>
+<data name="Model_PublishingDate" xml:space="preserve"><value>Publishing date</value></data>
+<data name="Model_PublishedBy" xml:space="preserve"><value>Published by</value></data>
+<data name="Model_IsAvailable" xml:space="preserve"><value>Is available?</value></data>
+<data name="Model_CreationDate" xml:space="preserve"><value>Creation date</value></data>
+<data name="Model_CreatedBy" xml:space="preserve"><value>Created by</value></data>
+<data name="Model_ModifiedDate" xml:space="preserve"><value>Modified date</value></data>
+<data name="Model_ModifiedBy" xml:space="preserve"><value>Modified by</value></data>
+<data name="ModelStatuses" xml:space="preserve"><value>Model statuses</value></data>
+<data name="ModelStatu" xml:space="preserve"><value>Model status</value></data>
+<data name="ModelStatus_Management" xml:space="preserve"><value>Model statuses management</value></data>
+<data name="ModelStatus_Information" xml:space="preserve"><value>Model status information</value></data>
+<data name="ModelStatus_NameAr" xml:space="preserve"><value>Name in Arabic</value></data>
+<data name="ModelStatus_Name" xml:space="preserve"><value>Name</value></data>
+<data name="ModelStatus_NameEn" xml:space="preserve"><value>Name in English</value></data>
+<data name="ModelStatus_DescriptionAr" xml:space="preserve"><value>Description in Arabic</value></data>
+<data name="ModelStatus_Description" xml:space="preserve"><value>Description</value></data>
+<data name="ModelStatus_DescriptionEn" xml:space="preserve"><value>Description in English</value></data>
+<data name="ModelStatus_IsAvailable" xml:space="preserve"><value>Is available?</value></data>
+<data name="ModelStatus_CreationDate" xml:space="preserve"><value>Creation date</value></data>
+<data name="ModelStatus_CreatedBy" xml:space="preserve"><value>Created by</value></data>
+<data name="ModelStatus_ModifiedDate" xml:space="preserve"><value>Modified date</value></data>
+<data name="ModelStatus_ModifiedBy" xml:space="preserve"><value>Modified by</value></data>
 <data name="Payments" xml:space="preserve"><value>Payments</value></data>
 <data name="Payment" xml:space="preserve"><value>Payment</value></data>
 <data name="Payment_Management" xml:space="preserve"><value>Payments management</value></data>

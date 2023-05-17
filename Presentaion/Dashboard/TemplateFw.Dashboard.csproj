@@ -19,7 +19,6 @@
 
   <ItemGroup>
     <Compile Remove="Controllers\AnnounceController.cs" />
-    <Compile Remove="Controllers\LanguageController.cs" />
     <Compile Remove="Extensions\ControllersExtensions.cs" />
     <Compile Remove="InternalApiConsumer\AnnounceConsumer.cs" />
   </ItemGroup>

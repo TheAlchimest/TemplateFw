@@ -107,6 +107,32 @@
             public const string Info = "language/info/{0}";
             public const string GetLookup = "language/lookup";
         }
+	public static class ModelUrls
+        {
+            public const string Create = "model/Create";
+            public const string Update = "model/Update";
+            public const string Delete = "model/Delete/{0}";
+            public const string GetAll = "model/getall";
+            public const string GetPaged = "model/get-paged";
+
+            public const string GetViewAll = "model/getallview";
+            public const string GetOne = "model/getone/{0}";
+            public const string Info = "model/info/{0}";
+            public const string GetLookup = "model/lookup?countryId={0}&categoryId={1}&portalId={2}&serviceId={3}&modelStatusId={4}";
+        }
+	public static class ModelStatusUrls
+        {
+            public const string Create = "modelstatus/Create";
+            public const string Update = "modelstatus/Update";
+            public const string Delete = "modelstatus/Delete/{0}";
+            public const string GetAll = "modelstatus/getall";
+            public const string GetPaged = "modelstatus/get-paged";
+
+            public const string GetViewAll = "modelstatus/getallview";
+            public const string GetOne = "modelstatus/getone/{0}";
+            public const string Info = "modelstatus/info/{0}";
+            public const string GetLookup = "modelstatus/lookup";
+        }
 	public static class PaymentUrls
         {
             public const string Create = "payment/Create";

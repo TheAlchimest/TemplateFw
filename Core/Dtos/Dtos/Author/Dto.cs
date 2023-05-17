@@ -15,7 +15,8 @@ namespace TemplateFw.Dtos
 		public string Email { get; set; }
 		public string Phone { get; set; }
 		public string Mobile { get; set; }
-		public string Biography { get; set; }
+		public string BiographyAr { get; set; }
+		public string BiographyEn { get; set; }
 		public string ProfileUrl { get; set; }
 		public long IDNumber { get; set; }
 		public int CountryId { get; set; }
@@ -104,9 +105,13 @@ namespace TemplateFw.Dtos
 			    .Matches(@"^(\+?966|0)?5\d{8}$").WithMessage(validationLocalizer["InvalidPattern"])
 			    .WithName(modulesLocalizer["Author_Mobile"]);
 
-			RuleFor(x => x.Biography)
+			RuleFor(x => x.BiographyAr)
 			    .MaximumLength(500).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "500"))
-			    .WithName(modulesLocalizer["Author_Biography"]);
+			    .WithName(modulesLocalizer["Author_BiographyAr"]);
+
+			RuleFor(x => x.BiographyEn)
+			    .MaximumLength(500).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "500"))
+			    .WithName(modulesLocalizer["Author_BiographyEn"]);
 
 			RuleFor(x => x.ProfileUrl)
 			    .MaximumLength(150).WithMessage(validationLocalizer["MaxLengthCharacters"].Value.Replace("{Length}", "150"))

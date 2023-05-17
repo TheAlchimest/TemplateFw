@@ -45,6 +45,8 @@ namespace TemplateFw.Persistence
 			services.AddScoped<ICountryRepository, CountryRepository>();
 			services.AddScoped<IFaqRepository, FaqRepository>();
 			services.AddScoped<ILanguageRepository, LanguageRepository>();
+			services.AddScoped<IModelRepository, ModelRepository>();
+			services.AddScoped<IModelStatusRepository, ModelStatusRepository>();
 			services.AddScoped<IPaymentRepository, PaymentRepository>();
 			services.AddScoped<IPortalRepository, PortalRepository>();
 			services.AddScoped<IServiceRepository, ServiceRepository>();

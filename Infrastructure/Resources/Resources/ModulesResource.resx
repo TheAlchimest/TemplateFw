@@ -143,6 +143,8 @@
 <data name="Author" xml:space="preserve"><value>المؤلف</value></data>
 <data name="Author_Address" xml:space="preserve"><value>العنوان</value></data>
 <data name="Author_Biography" xml:space="preserve"><value>السيرة الذاتية</value></data>
+<data name="Author_BiographyAr" xml:space="preserve"><value>السيرة الذاتية باللغة العربية</value></data>
+<data name="Author_BiographyEn" xml:space="preserve"><value>السيرة الذاتية باللغة الإنجليزية</value></data>
 <data name="Author_BirthDate" xml:space="preserve"><value>تاريخ الميلاد</value></data>
 <data name="Author_BirthHijriDate" xml:space="preserve"><value>تاريخ الميلاد الهجري</value></data>
 <data name="Author_Country" xml:space="preserve"><value>الدولة</value></data>
@@ -176,7 +178,7 @@
 <data name="Category_Information" xml:space="preserve"><value>معلومات الفئة</value></data>
 <data name="Category_IsAvailable" xml:space="preserve"><value>متاح؟</value></data>
 <data name="Category_Management" xml:space="preserve"><value>إدارة الفئات</value></data>
-<data name="Category_ModifiedBy" xml:space="preserve"><value>المعدل بواسطة</value></data>
+<data name="Category_ModifiedBy" xml:space="preserve"><value>تم تعديل بواسطة</value></data>
 <data name="Category_ModifiedDate" xml:space="preserve"><value>التاريخ المعدل</value></data>
 <data name="Category_Name" xml:space="preserve"><value>الاسم</value></data>
 <data name="Category_NameAr" xml:space="preserve"><value>الإسم باللغة العربية</value></data>
@@ -254,6 +256,68 @@
 <data name="Language_ModifiedDate" xml:space="preserve"><value>التاريخ المعدل</value></data>
 <data name="Language_Name" xml:space="preserve"><value>الاسم</value></data>
 <data name="Languages" xml:space="preserve"><value>اللغات</value></data>
+<data name="Model" xml:space="preserve"><value>الموديل</value></data>
+<data name="Model_Address" xml:space="preserve"><value>العنوان</value></data>
+<data name="Model_Amount" xml:space="preserve"><value>المبلغ</value></data>
+<data name="Model_Brief" xml:space="preserve"><value>الموجز</value></data>
+<data name="Model_BriefAr" xml:space="preserve"><value>الملخص باللغة العربية</value></data>
+<data name="Model_BriefEn" xml:space="preserve"><value>الموجز باللغة الإنجليزية</value></data>
+<data name="Model_Category" xml:space="preserve"><value>معرف الفئة</value></data>
+<data name="Model_CategoryChoose" xml:space="preserve"><value>اختر معرف الفئة</value></data>
+<data name="Model_Content" xml:space="preserve"><value>المحتوى</value></data>
+<data name="Model_ContentAr" xml:space="preserve"><value>المحتوى باللغة العربية</value></data>
+<data name="Model_ContentEn" xml:space="preserve"><value>المحتوى باللغة الإنجليزية</value></data>
+<data name="Model_Country" xml:space="preserve"><value>الدولة</value></data>
+<data name="Model_CountryChoose" xml:space="preserve"><value>اختر معرف البلد</value></data>
+<data name="Model_CreatedBy" xml:space="preserve"><value>تم إنشاؤه بواسطة</value></data>
+<data name="Model_CreationDate" xml:space="preserve"><value>تاريخ الإنشاء</value></data>
+<data name="Model_Email" xml:space="preserve"><value>البريد الإلكتروني</value></data>
+<data name="Model_EndDate" xml:space="preserve"><value>تاريخ الانتهاء</value></data>
+<data name="Model_EndHijriDate" xml:space="preserve"><value>تاريخ النهاية الهجري</value></data>
+<data name="Model_FirstName" xml:space="preserve"><value>الاسم الأول</value></data>
+<data name="Model_IDNumber" xml:space="preserve"><value>رقم الهوية</value></data>
+<data name="Model_Information" xml:space="preserve"><value>معلومات النموذج</value></data>
+<data name="Model_IsAvailable" xml:space="preserve"><value>متاح؟</value></data>
+<data name="Model_IsPublished" xml:space="preserve"><value>يتم نشر؟</value></data>
+<data name="Model_LastName" xml:space="preserve"><value>الاسم الأخير</value></data>
+<data name="Model_Management" xml:space="preserve"><value>إدارة النماذج</value></data>
+<data name="Model_Mobile" xml:space="preserve"><value>الجوال</value></data>
+<data name="Model_ModelStatus" xml:space="preserve"><value>معرف حالة النموذج</value></data>
+<data name="Model_ModelStatusChoose" xml:space="preserve"><value>اختر معرّف حالة النموذج</value></data>
+<data name="Model_ModifiedBy" xml:space="preserve"><value>تم تعديل بواسطة</value></data>
+<data name="Model_ModifiedDate" xml:space="preserve"><value>التاريخ المعدل</value></data>
+<data name="Model_Phone" xml:space="preserve"><value>الهاتف</value></data>
+<data name="Model_Portal" xml:space="preserve"><value>معرف البوابة</value></data>
+<data name="Model_PortalChoose" xml:space="preserve"><value>اختر معرف البوابة</value></data>
+<data name="Model_PostalCode" xml:space="preserve"><value>الرمز البريدي</value></data>
+<data name="Model_Price" xml:space="preserve"><value>السعر</value></data>
+<data name="Model_ProfileUrl" xml:space="preserve"><value>عنوان url للملف الشخصي</value></data>
+<data name="Model_PublishedBy" xml:space="preserve"><value>تم نشره بواسطة</value></data>
+<data name="Model_PublishingDate" xml:space="preserve"><value>تاريخ النشر</value></data>
+<data name="Model_Service" xml:space="preserve"><value>معرف الخدمة</value></data>
+<data name="Model_ServiceChoose" xml:space="preserve"><value>اختر معرف الخدمة</value></data>
+<data name="Model_StartDate" xml:space="preserve"><value>تاريخ البدء</value></data>
+<data name="Model_StartHijriDate" xml:space="preserve"><value>تاريخ البدء الهجري</value></data>
+<data name="Model_Title" xml:space="preserve"><value>العنوان</value></data>
+<data name="Model_TitleAr" xml:space="preserve"><value>العنوان باللغة العربية</value></data>
+<data name="Model_TitleEn" xml:space="preserve"><value>العنوان باللغة الانجليزية</value></data>
+<data name="Model_Website" xml:space="preserve"><value>الموقع</value></data>
+<data name="Models" xml:space="preserve"><value>نماذج</value></data>
+<data name="ModelStatu" xml:space="preserve"><value>حالة النموذج</value></data>
+<data name="ModelStatus_CreatedBy" xml:space="preserve"><value>تم إنشاؤه بواسطة</value></data>
+<data name="ModelStatus_CreationDate" xml:space="preserve"><value>تاريخ الإنشاء</value></data>
+<data name="ModelStatus_Description" xml:space="preserve"><value>الوصف</value></data>
+<data name="ModelStatus_DescriptionAr" xml:space="preserve"><value>الوصف باللغة العربية</value></data>
+<data name="ModelStatus_DescriptionEn" xml:space="preserve"><value>الوصف باللغة الإنجليزية</value></data>
+<data name="ModelStatus_Information" xml:space="preserve"><value>معلومات حالة النموذج</value></data>
+<data name="ModelStatus_IsAvailable" xml:space="preserve"><value>متاح؟</value></data>
+<data name="ModelStatus_Management" xml:space="preserve"><value>نموذج حالات الإدارة</value></data>
+<data name="ModelStatus_ModifiedBy" xml:space="preserve"><value>تم تعديل بواسطة</value></data>
+<data name="ModelStatus_ModifiedDate" xml:space="preserve"><value>التاريخ المعدل</value></data>
+<data name="ModelStatus_Name" xml:space="preserve"><value>الاسم</value></data>
+<data name="ModelStatus_NameAr" xml:space="preserve"><value>الإسم باللغة العربية</value></data>
+<data name="ModelStatus_NameEn" xml:space="preserve"><value>الإسم باللغة الانجليزية</value></data>
+<data name="ModelStatuses" xml:space="preserve"><value>حالات النموذج</value></data>
 <data name="Payment" xml:space="preserve"><value>الدفع</value></data>
 <data name="Payment_Amount" xml:space="preserve"><value>المبلغ</value></data>
 <data name="Payment_CreatedBy" xml:space="preserve"><value>تم إنشاؤه بواسطة</value></data>
@@ -277,7 +341,7 @@
 <data name="Portal_IsAvailable" xml:space="preserve"><value>متاح؟</value></data>
 <data name="Portal_Link" xml:space="preserve"><value>الرابط</value></data>
 <data name="Portal_Management" xml:space="preserve"><value>إدارة البوابات</value></data>
-<data name="Portal_ModifiedBy" xml:space="preserve"><value>تم تعديل بواسطة</value></data>
+<data name="Portal_ModifiedBy" xml:space="preserve"><value>المعدل بواسطة</value></data>
 <data name="Portal_ModifiedDate" xml:space="preserve"><value>التاريخ المعدل</value></data>
 <data name="Portal_Name" xml:space="preserve"><value>الاسم</value></data>
 <data name="Portal_NameAr" xml:space="preserve"><value>الإسم باللغة العربية</value></data>
@@ -407,7 +471,7 @@
 <data name="Tag_Information" xml:space="preserve"><value>معلومات العلامة</value></data>
 <data name="Tag_IsAvailable" xml:space="preserve"><value>متاح؟</value></data>
 <data name="Tag_Management" xml:space="preserve"><value>إدارة العلامات</value></data>
-<data name="Tag_ModifiedBy" xml:space="preserve"><value>تم تعديل بواسطة</value></data>
+<data name="Tag_ModifiedBy" xml:space="preserve"><value>المعدل بواسطة</value></data>
 <data name="Tag_ModifiedDate" xml:space="preserve"><value>التاريخ المعدل</value></data>
 <data name="Tag_Title" xml:space="preserve"><value>العنوان</value></data>
 <data name="Tag_TitleAr" xml:space="preserve"><value>العنوان باللغة العربية</value></data>

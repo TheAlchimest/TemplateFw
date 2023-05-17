@@ -87,6 +87,22 @@ namespace TemplateFw.Dashboard.Controllers
         }
 	
         [HttpGet]
+        public async Task<JsonResult> Models(int? countryId = null, int? categoryId = null, int? portalId = null, int? serviceId = null, int? modelStatusId = null)
+        {
+            string url = string.Format(ModelUrls.GetLookup, countryId, categoryId, portalId, serviceId, modelStatusId);
+            var apiResult = await _api.GetAsync<GenericApiResponse<List<LookupDto>>>(url);
+            return ReturnJsonResponse(apiResult, OperationTypes.GetList);
+        }
+	
+        [HttpGet]
+        public async Task<JsonResult> ModelStatuses()
+        {
+            string url = ModelStatusUrls.GetLookup;
+            var apiResult = await _api.GetAsync<GenericApiResponse<List<LookupDto>>>(url);
+            return ReturnJsonResponse(apiResult, OperationTypes.GetList);
+        }
+	
+        [HttpGet]
         public async Task<JsonResult> Payments(int? subscriptionId = null)
         {
             string url = string.Format(PaymentUrls.GetLookup, subscriptionId);
