@@ -8,30 +8,30 @@ using TemplateFw.Shared.Configuration;
 
 namespace TemplateFw.Dashboard
 {
-    public class Startup
-    {
-        public Startup(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
+	public class Startup
+	{
+		public Startup(IConfiguration configuration)
+		{
+			Configuration = configuration;
+		}
 
-        public IConfiguration Configuration { get; }
+		public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
-        {
-            var webSettingsSection = Configuration.GetSection("WebSettings");
-            services.Configure<WebSettings>(webSettingsSection);
-            var webSettings = webSettingsSection.Get<WebSettings>();
-            services.SetWebClientHelpersConfigurations(webSettings.ModulesInternalApiUrl);
-            services.AddControllersWithViews();
+		// This method gets called by the runtime. Use this method to add services to the container.
+		public void ConfigureServices(IServiceCollection services)
+		{
+			var webSettingsSection = Configuration.GetSection("WebSettings");
+			services.Configure<WebSettings>(webSettingsSection);
+			var webSettings = webSettingsSection.Get<WebSettings>();
+			services.SetWebClientHelpersConfigurations(webSettings.ModulesInternalApiUrl);
+			services.AddControllersWithViews();
 
-            services.AddWindowsAuth();
+			services.AddWindowsAuth();
 
-            var config = new SystemConfiguration();
-            Configuration.Bind(config);
-            services.AddSingleton(config);
-            
+			var config = new SystemConfiguration();
+			Configuration.Bind(config);
+			services.AddSingleton(config);
+			
 			//Article
 			services.AddTransient<ArticleDtoInsertValidator>();
 			services.AddTransient<ArticleDtoUpdateValidator>();
@@ -109,78 +109,78 @@ namespace TemplateFw.Dashboard
 			services.AddTransient<UsersDtoUpdateValidator>();
 			services.AddTransient<UsersFilterValidator>();
 
-            // Add Localizations
-            services.AddLocalization();
-            services.AddMvc(o =>
-            {
-                o.Conventions.Add(new AddAuthorizeFiltersControllerConvention());
-            })
-            .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<IValidator>())
-            .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
-            .AddDataAnnotationsLocalization()
-            .AddJsonOptions(jsonOptions =>
-            {
-                jsonOptions.JsonSerializerOptions.PropertyNamingPolicy = null;
-            });
+			// Add Localizations
+			services.AddLocalization();
+			services.AddMvc(o =>
+			{
+				o.Conventions.Add(new AddAuthorizeFiltersControllerConvention());
+			})
+			.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<IValidator>())
+			.AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
+			.AddDataAnnotationsLocalization()
+			.AddJsonOptions(jsonOptions =>
+			{
+				jsonOptions.JsonSerializerOptions.PropertyNamingPolicy = null;
+			});
 
-            #region Log
+			#region Log
 
-            LogConfiguration.SetLogConfiguration(Configuration);
+			LogConfiguration.SetLogConfiguration(Configuration);
 
-            #endregion
+			#endregion
 
-            services.AddControllersWithViews().AddRazorRuntimeCompilation().AddDataAnnotationsLocalization()
-                .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix);
-        }
+			services.AddControllersWithViews().AddRazorRuntimeCompilation().AddDataAnnotationsLocalization()
+				.AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix);
+		}
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-        {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-            else
-            {
-                app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
-            }
+		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+		public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+		{
+			if (env.IsDevelopment())
+			{
+				app.UseDeveloperExceptionPage();
+			}
+			else
+			{
+				app.UseExceptionHandler("/Home/Error");
+				// The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+				app.UseHsts();
+			}
 
-            app.UseStatusCodePages(sub =>
-            {
-                sub.Run(async context =>
-                {
-                    if (context.Response.StatusCode == 403)
-                    {
-                        context.Response.Redirect("/Home/UnauthorizedAction");
-                        await Task.CompletedTask;
-                    }
-                });
-            });
-            app.UseRequestLocalization();//to support multi languages
+			app.UseStatusCodePages(sub =>
+			{
+				sub.Run(async context =>
+				{
+					if (context.Response.StatusCode == 403)
+					{
+						context.Response.Redirect("/Home/UnauthorizedAction");
+						await Task.CompletedTask;
+					}
+				});
+			});
+			app.UseRequestLocalization();//to support multi languages
 
-            app.UseHttpsRedirection();
-            app.UseStaticFiles();
-            //
-            app.UseAppRequestLocalization();
-            app.UseRouting();
+			app.UseHttpsRedirection();
+			app.UseStaticFiles();
+			//
+			app.UseAppRequestLocalization();
+			app.UseRouting();
 
-            app.UseAuthentication();
-            app.UseAuthorization();
+			app.UseAuthentication();
+			app.UseAuthorization();
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllerRoute(
-                   name: "BlockReasonNote",
-                   pattern: "{controller=Home}/{action=Index}/{id?}/{foundationType?}");
+			app.UseEndpoints(endpoints =>
+			{
+				endpoints.MapControllerRoute(
+				   name: "BlockReasonNote",
+				   pattern: "{controller=Home}/{action=Index}/{id?}/{foundationType?}");
 
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+				endpoints.MapControllerRoute(
+					name: "default",
+					pattern: "{controller=Home}/{action=Index}/{id?}");
 
 
-            });
-        }
-    }
+			});
+		}
+	}
 }
