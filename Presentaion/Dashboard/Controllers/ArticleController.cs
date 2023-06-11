@@ -27,7 +27,7 @@ namespace TemplateFw.Dashboard.Controllers
             _updateValidator = updateValidator;
         }
 
-    #region Add
+        #region Add
     [HttpGet]
         public async Task<IActionResult> Add()
         {
