@@ -57,7 +57,6 @@ namespace TemplateFw.Persistence
 			services.AddScoped<ITagRepository, TagRepository>();
 			services.AddScoped<IUsersRepository, UsersRepository>();
 
-            services.AddScoped<ILookupRepository, LookupRepository>();
             services.AddScoped<IActionLogRepository, ActionLogRepository>();
 
             return services;

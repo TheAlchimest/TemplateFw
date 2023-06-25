@@ -3,7 +3,6 @@ using System.Reflection;
 using TemplateFw.Application.Services.ActionLogs;
 
 using TemplateFw.Application.Services;
-using TemplateFw.Application.Services.Lookup;
 using TemplateFw.Shared.Application.Services;
 using TemplateFw.Shared.Configuration;
 using TemplateFw.Dtos;
@@ -44,7 +43,6 @@ namespace TemplateFw.Application
 			
             services.AddScoped<IUserInfoService, UserInfoService>();
             //services.AddScoped<IAttachmentService, AttachmentService>();
-            services.AddScoped<ILookupService, LookupService>();
             services.AddScoped<IActionLogService, ActionLogService>();
             services.AddScoped<IActionLogService, ActionLogService>();
             return services;
